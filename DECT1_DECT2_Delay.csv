@@ -1,0 +1,15 @@
+DECT1:
+Threshold:0.45
+Tension: 2000V
+Width: 26ns
+
+DECT2:
+Threshold: 0.05
+Tension: 1950
+Width: 41ns
+
+
+Sans delay: 93 , 89, 88, 94
+Avec delay (63ns): 10, 10, 17, 12
+
+Plot
