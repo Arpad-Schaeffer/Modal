@@ -13,12 +13,12 @@ Sans delay: 93 , 89, 88, 94
 Avec delay (63ns): 10, 10, 17, 12
 
 Plot
-Temps d'acquisition: 2min
+Temps d'acquisition: 4min
 Delay = 63ns
 
 Width,Count_WO,Count
 50,380,221
 40,341,147
 30,324,39
-20,,13
-10
+20,357,27
+10,
