@@ -7,16 +7,17 @@ DECT2:
 Threshold: 0.05
 Tension: 2020
 Count (1min):
+Delay = 63ns
 
 DECT3:
 Threshold: 0.3
 Tension: 2060
 Count (1min): 
+delay = 31ns
 
 Plot
-Temps d'acquisition: 4min
-Delay = 63ns
+Temps d'acquisition: 10min
 
 18/04/2025
 Width,Count_WO,Count
-40, 27, 
+10,, 
