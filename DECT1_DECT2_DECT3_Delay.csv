@@ -1,0 +1,22 @@
+DECT1:
+Threshold:0.45
+Tension: 2000V
+Count (1min):
+
+DECT2:
+Threshold: 0.05
+Tension: 2020
+Count (1min):
+
+DECT3:
+Threshold: 0.3
+Tension: 2060
+Count (1min): 
+
+Plot
+Temps d'acquisition: 4min
+Delay = 63ns
+
+18/04/2025
+Width,Count_WO,Count
+40, 27, 
