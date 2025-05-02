@@ -1,0 +1,146 @@
+% il existe plusieures classes de documents
+% pour des documents plus longs, vous pouvez utiliser
+% book ou report
+\documentclass[a4paper]{article} 
+
+
+
+% vous pouvez changer les paramètres : voici les options dispoinibles :
+% - a4paper
+% - fancysections
+% - notitlepage ou titlepage
+% - onside ou twoside selon si vous voulez l'imprimer en recto-verso ou en recto
+% - sectionmark
+% - chaptermark (pour les 
+% - pagenumber
+% - enmanquedinspiration
+% en cas de doutes, pas de doutes, la documentation est sur :
+%  https://gitlab.binets.fr/typographix/polytechnique/-/blob/master/source/polytechnique.pdf
+\usepackage[a4paper,  fancysections,  titlepage]{polytechnique}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath, amssymb}
+
+
+% nous avons défini deux commandes :
+\newcommand{\code}[1]{%
+    \mbox{\ttfamily%
+        \detokenize{#1}%
+    }%
+}
+
+\newcommand{\resultat}[1]{%
+    \quad \rightsquigarrow \quad #1%
+}
+
+\author{Arpad Schaeffer et Malo Tamalet}
+\date{\today}
+\title{Rapport de Modal}
+\subtitle{Physique des particules, détection de muons}%
+% pour changer de logo, ajoutez l'image dans un fomat PDF
+% ou image en la glissant à droite et remplacez typographix
+% par le nom de l'image, si vous ne voulez pas de logo, 
+% supprimze la ligne. 
+\logo{typographix}
+
+
+
+
+\begin{document}
+	\maketitle 
+	
+	\tableofcontents
+	
+	\section{Th\'eorie et fonctionnement des instruments}
+
+    \begin
+
+    % Contenu de cette section : Origine des muons, scintillateurs, PMT, traitement du signal
+    % Voir notes précédentes, contenu à insérer ici par blocs
+    
+    \subsection{Origine et propri\'et\'es des muons cosmiques}
+    % Contenu détaillé sur la formation des muons, flux, spectre d\'\'energie, etc.
+    
+    \subsection{Principe du scintillateur organique plastique}
+    % Explication du fonctionnement, fluorescence, d\'\'eclenchement, rendement lumineux
+    
+    \subsection{Photomultiplicateur (PMT)}
+    % Description du fonctionnement interne, gain, dynodes, réponse temporelle
+    
+    \subsection{Traitement du signal}
+    % Circuit RC, discrim., coïncidences, délai, forme d\'\'onde attendue
+    
+    \section{MANIPULATIONS, AVANCEMENT ET R\'ESULTATS}
+    
+    \subsection{Montage exp\'erimental}
+    % Description de la configuration des scintillateurs, PMT, câblage, oscilloscope
+    
+    \subsection{Visualisation du signal et ajustement exponentiel}
+    % Forme d\'\'onde + fit exponentiel
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{chemin/vers/signal_exponentiel.pdf}
+        \caption{Signal analogique typique mesur\'e sur oscilloscope et ajustement exponentiel.}
+        \label{fig:signal_exp}
+    \end{figure}
+    
+    \subsection{Mesures du taux de comptage}
+    
+    \subsubsection{Variation du seuil}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{chemin/vers/graph_seuil.pdf}
+        \caption{Taux de comptage en fonction du seuil de discrimination.}
+        \label{fig:taux_vs_seuil}
+    \end{figure}
+    
+    \subsubsection{Variation de la haute tension}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{chemin/vers/graph_HT.pdf}
+        \caption{Taux de comptage en fonction de la tension appliqu\'ee aux PMT.}
+        \label{fig:taux_vs_HT}
+    \end{figure}
+    
+    \subsection{Co\"incidences et taux de bruit}
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{lcc}
+            \toprule
+            \textbf{Configuration} & \textbf{Align\'ee} & \textbf{Avec d\'elai (fortuite)} \\
+            \midrule
+            Simple A & 120 /min & 118 /min \\
+            Simple B & 122 /min & 121 /min \\
+            Simple C & 119 /min & 120 /min \\
+            A $\wedge$ B & 95 /min & 2 /min \\
+            A $\wedge$ C & 93 /min & 1 /min \\
+            B $\wedge$ C & 94 /min & 1 /min \\
+            A $\wedge$ B $\wedge$ C & 80 /min & 0 /min \\
+            \bottomrule
+        \end{tabular}
+        \caption{Taux de co\"incidences mesur\'es avec et sans d\'elai.}
+        \label{tab:coincidences}
+    \end{table}
+    
+    \subsection{Mesure angulaire des muons}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{chemin/vers/hist_angle.pdf}
+        \caption{Histogramme des angles d\'incidence des muons.}
+        \label{fig:hist_angle}
+    \end{figure}
+    
+    \section{RETOUR CRITIQUE}
+    
+    % Discussion sur la qualité des mesures, la reproductibilité, les limites instrumentales, extensions possibles, etc.
+    
+    \begin{thebibliography}{}
+        \bibitem{knoll} Glenn F. Knoll. \textit{Radiation Detection and Measurement}, 4e \'edition.
+    \end{thebibliography}
+	
+\end{document}
