@@ -1,7 +1,17 @@
-caracteristiques :
+DECT1:
+Threshold:0.45
+Tension: 2000V
 
-DECT_1 : 2000
-Dect_2 : 2050
-Dect_3 : 2060
+DECT2:
+Threshold: 0.05
+Tension: 2020
+Delay = 63ns
+
+DECT3:
+Threshold: 0.3
+Tension: 2060
+delay = 31ns
+
+temps d'acquisition : 10min
 
 Angle,coincidences, coincidences_fortuites
