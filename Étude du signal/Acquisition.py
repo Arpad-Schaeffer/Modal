@@ -1,3 +1,9 @@
+import pyvisa
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import re
+
 # Définissez cette constante sur True pour enregistrer les données
 SAVE_DATA = True
 
@@ -60,7 +66,7 @@ print("Identification de l'instrument :", idn_response)
 scope.timeout = 15000
 
 # Liste des canaux à tester
-channels = ["CH1", "CH2", "CH3"]
+channels = ["CH1", "CH2", "CH3", "CH4"]
 active_channels = {}
 
 # Pour chaque canal, on tente de récupérer ses données.
@@ -129,13 +135,13 @@ if SAVE_DATA:
     channels_used = "_".join(active_channels.keys())
     
     # Création du nom de fichier avec la date et les canaux utilisés
-    filename = f"/Users/malotamalet/Desktop/Modal/Modal/Data/Data_{date_str}_{channels_used}.csv"
-    
+    filename = f"/Users/malotamalet/Desktop/2A/Modal/Modal/Temps de vie/Data_{date_str}_{channels_used}.csv"
+
     df.to_csv(filename, index=False)
     print(f"Données enregistrées dans {filename}")
 
     # Enregistrement du plot dans le même dossier
-    plot_filename = f"/Users/malotamalet/Desktop/Modal/Modal/Data/Plot_{date_str}_{channels_used}.png"
+    plot_filename = f"/Users/malotamalet/Desktop/2A/Modal/Modal/Temps de vie/Plot_{date_str}_{channels_used}.png"
     plt.savefig(plot_filename, bbox_inches='tight')
     print(f"Plot enregistré dans {plot_filename}")
 

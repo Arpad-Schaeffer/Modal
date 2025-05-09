@@ -3,15 +3,19 @@
 \contentsline {subsection}{\numberline {1.1}Les Muons}{4}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Objectifs de l’étude}{5}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Montage expérimental}{5}{section.2}%
-\contentsline {section}{\numberline {3}Détection par coïncidence}{8}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Principe de coïncidence}{8}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Résultats expérimentaux}{10}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Caractéristique des scintillateurs}{10}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Coïncidence à 2 scintillateurs}{10}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Coïncidence à 3 scintillateurs}{11}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {2.1}Principe de détection par scintillation}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Chaîne d’électronique rapide}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Montage en télescope à muons}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Réglages et étalonnages}{7}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Détection par coïncidence}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Principe de coïncidence}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Résultats expérimentaux}{9}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Caractéristique des scintillateurs}{9}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Coïncidence à 2 scintillateurs}{9}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Coïncidence à 3 scintillateurs}{10}{subsubsection.3.2.3}%
 \contentsline {section}{\numberline {4}Distribution angulaire du flux muonique}{11}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Mise en œuvre expérimentale}{12}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Mesure de l’énergie d’un muon}{14}{section.5}%
+\contentsline {subsection}{\numberline {4.1}Mise en œuvre expérimentale}{11}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Mesure de l’énergie d’un muon}{13}{section.5}%
 \contentsline {section}{\numberline {6}Mesure du temps de vie de muon}{17}{section.6}%
 \contentsline {section}{\numberline {7}Amélioration du TREX}{20}{section.7}%
 \contentsline {section}{\numberline {8}Perspectives supplémentaires}{24}{section.8}%

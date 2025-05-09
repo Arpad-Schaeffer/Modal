@@ -21,7 +21,7 @@ except Exception as e:
 
 deltaT = data['deltaT']
 channel = data['channel']
-err_channel = data['err_channel']
+err_channel = data['error']
 
 err_deltaT = 1
 
@@ -101,6 +101,7 @@ textstr = (
     f"χ²/ndf = {red_chi2:.2f}\n"
     f"R² = {r2:.2f}"
 )
+print(textstr)
 ax.text(
     0.95, 0.95, textstr,
     transform=ax.transAxes, va='top', ha='right'
@@ -109,7 +110,7 @@ ax.text(
 # graduations automatiques sur les deux axes
 ax.xaxis.set_major_locator(AutoLocator())
 ax.xaxis.set_minor_locator(AutoMinorLocator())
-ax.yaxis.set_major_locator(MultipleLocator())
+ax.yaxis.set_major_locator(AutoLocator())
 ax.yaxis.set_minor_locator(AutoMinorLocator())
 
 # ticks sur tous les côtés, vers l'intérieur
@@ -120,9 +121,9 @@ ax.tick_params(axis='both', which='minor', direction='in', top=True, right=True,
 ax.relim()
 ax.autoscale_view()
 
-# augmenter ymax de 1
+# ajuster la limite y : passer de ymax+1 à ymax*1.2
 ymin, ymax = ax.get_ylim()
-ax.set_ylim(ymin, ymax + 1)
+ax.set_ylim(ymin, ymax * 1.3)
 
 plt.tight_layout(h_pad=0.1)
 plt.show()

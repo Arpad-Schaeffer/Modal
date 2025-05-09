@@ -48,63 +48,87 @@
 
 \section{Présentation et objectifs}
 \subsection{Les Muons}
-Les muons cosmiques sont des particules élémentaires de la famille des leptons, analogues à l’électron mais environ 207 fois plus massifs (masse $m_\mu \approx 105{,}7\ \mathrm{MeV}/c^2$) et dotés d’une charge électrique de $-e$ (muon négatif $\mu^-$) ou $+e$ (antimuon $\mu^+$) \cite{wiki:muon,knoll2010}. Leur durée de vie propre est exceptionnellement courte, de l’ordre de $\tau_\mu = 2{,}2\ \mu\mathrm{s}$. 
+Les muons cosmiques sont des particules élémentaires de la famille des leptons, analogues à l’électron mais environ 207 fois plus massifs (masse $m_\mu \approx 105{,}7\ \mathrm{MeV}/c^2$) et dotés d’une charge électrique de $-e$ (muon négatif $\mu^-$) ou $+e$ (antimuon $\mu^+$) \cite{wikimuon,knoll2010}. Leur durée de vie propre est courte, de l’ordre de $\tau_\mu = 2{,}2\ \mu\mathrm{s}$. 
 
 Malgré cette brièveté, les muons cosmiques sont abondamment observés au niveau du sol grâce au mécanisme de dilatation temporelle de la relativité restreinte\,:
-se déplaçant à des vitesses relativistes, leurs horloges internes \og ralentissent\fg{} dans le référentiel du laboratoire, ce qui leur permet de parcourir de grandes distances avant de se désintégrer. se désintégrer.
+se déplaçant à des vitesses relativistes, leurs horloges internes \og ralentissent\fg{} dans le référentiel du laboratoire, ce qui leur permet de parcourir de grandes distances avant de se désintégrer.
 
-En effet, produits à environ 15~km d’altitude par la décomposition de mésons~$\pi$ dans les gerbes de rayons cosmiques, la plupart des muons atteignent le sol avant de se désintégrer en un électron (ou positron) et deux neutrinos, selon la réaction :
-\[
-\mu^- \;\to\; e^- \;+\; \bar{\nu}_e \;+\; \nu_\mu.
-\]
+En effet, produits à environ 15~km d’altitude par la décomposition de mésons~$\pi$ dans les gerbes de rayons cosmiques, la plupart des muons atteignent le sol avant de se désintégrer en un électron (ou positron) et deux neutrinos, selon la réaction : $\mu^- \to e^- + \bar{\nu}_e + \nu_\mu$.
 
-Ils constituent la \textbf{composante} chargée dominante du rayonnement cosmique au niveau de la mer, avec un flux typique d’environ 
-\[
-1\ \text{muon}\,\mathrm{cm^{-2}}\,\mathrm{min^{-1}}
-\]
-pour les détecteurs horizontaux. Ce flux dépend fortement de l’angle zénithal d’arrivée des muons, suivant approximativement une loi en $\cos^2\theta$ (flux maximal à la verticale, $\theta=0$) du fait de l’absorption accrue dans l’atmosphère pour les trajets inclinés.
+Ils ont un flux typique d’environ $1\ \text{muon}\,\mathrm{cm^{-2}}\,\mathrm{min^{-1}}$
+pour les détecteurs horizontaux. Ce flux dépend fortement de l’angle d’arrivée des muons, suivant approximativement une loi en $\cos^2\theta$ (flux maximal à la verticale, $\theta=0$) du fait de l’absorption accrue dans l’atmosphère pour les trajets inclinés.
 
-Par ailleurs, les muons cosmiques, en tant que particules très pénétrantes, interagissent peu avec la matière sur de faibles épaisseurs : ils perdent en moyenne $\sim2\ \mathrm{GeV}$ par ionisation lors de leur traversée de toute l’atmosphère, ce qui correspond à un dépôt d’énergie d’environ 
-\[
-1\text{-}2\ \mathrm{MeV}\,\mathrm{g^{-1}}\,\mathrm{cm^2}
-\]
+Par ailleurs, les muons cosmiques, en tant que particules très pénétrantes, interagissent peu avec la matière sur de faibles épaisseurs : ils perdent en moyenne $\sim2\ \mathrm{GeV}$ par ionisation lors de leur traversée de toute l’atmosphère, ce qui correspond à un dépôt d’énergie d’environ $1\text{-}2\ \mathrm{MeV}\,\mathrm{g^{-1}}\,\mathrm{cm^2}$
 dans la matière solide (valeur typique pour un muon minimum ionisant) – une perte modeste comparée à leur énergie totale souvent de l’ordre de plusieurs GeV en arrivant au sol (énergie moyenne $\approx4\ \mathrm{GeV}$) \cite{bethe1930}.
+\newpage
 
 \subsection{Objectifs de l’étude}
+
 \begin{itemize}
-  \item Détection des muons par scintillation et coïncidence : mise en œuvre d’un dispositif à scintillateurs plastiques couplés à des photomultiplicateurs, capable de détecter les muons individuels et de discriminer les vrais signaux des bruits de fond.
-  \item Distribution angulaire des muons : enregistrement du taux de comptage en fonction de l’angle d’incidence et vérification de la loi en $\cos^2\theta$.
-  \item Dépôt d’énergie et pouvoir de pénétration : insertion d’absorbeurs de plomb et mesure du dépôt d’énergie pour estimer le parcours des muons.
-  \item Mesure du temps de vie du muon : chronométrage de la désintégration des muons arrêtés pour extraire la constante de temps moyenne.
-  \item Améliorations technologiques : utilisation de SiPM et FPGA pour optimiser la compacité, la résolution temporelle et la fiabilité du montage.
+  \item \textbf{Détection et coïncidence}  
+    Mettre en place un télescope à scintillateurs plastiques et isoler les muons réels du bruit de fond.
+  \item \textbf{Distribution angulaire}  
+    Mesurer le flux en fonction de l’angle et vérifier la loi $I(\theta)\propto\cos^2\!\theta$.
+  \item \textbf{Dépôt d’énergie}  
+    Étudier le pouvoir de pénétration des muons à l’aide d’absorbeurs de plomb.
+  \item \textbf{Temps de vie du muon}  
+    Chronométrer la désintégration des muons arrêtés pour déterminer $\tau_\mu$.
+  \item \textbf{Modernisation technique}  
+    Adopter des détecteurs SiPM et un traitement FPGA pour gagner en compacité et en rapidité.
 \end{itemize}
 
-Cette expérience de physique des particules à petite échelle a un double intérêt. D’une part, elle permet de valider expérimentalement des lois physiques (telles que la distribution angulaire des secondaires cosmiques, les processus de perte d’énergie par ionisation, ou les lois de désintégration radioactive) dans un contexte didactique. D’autre part, elle offre une initiation aux techniques de détection nucléaire (scintillation, photomultiplication, électronique rapide) utilisées couramment dans les grands instruments de physique des particules et en astroparticules. Le présent rapport détaille le montage expérimental et enrichit chaque partie par des apports théoriques et des interprétations rigoureuses, afin de relier étroitement l’observation pratique aux grandeurs physiques fondamentales. Des ordres de grandeur utiles seront fournis tout au long du texte pour cadrer les phénomènes, et les résultats obtenus seront confrontés à ceux de la littérature scientifique. Enfin, l’introduction de solutions technologiques récentes (SiPM, FPGA) sera discutée dans la perspective d’améliorer la précision et la fiabilité du dispositif de mesure.
-
 \section{Montage expérimental}
-Principe de détection par scintillation : Le détecteur de base utilisé pour identifier les muons cosmiques est un compteur à scintillateur plastique couplé à un photomultiplicateur (PM). Lorsqu’une particule chargée traverse un matériau scintillant, elle perd une partie de son énergie par collision avec les atomes du milieu, provoquant l’excitation ou l’ionisation de ces derniers. Dans un scintillateur organique (typiquement un plastique à base de polymère organique dopé de fluorophores), l’énergie déposée est rapidement convertie en photons de fluorescence dans le domaine UV/visible, émis le long de la trajectoire de la particule. Un muon minimum ionisant traversant un scintillateur de quelques centimètres d’épaisseur va typiquement produire quelques milliers de photons de scintillation. Ces photons, émis isotropiquement, sont en grande partie retenus à l’intérieur du volume scintillant par réflexion interne totale (des revêtements réfléchissants ou du Téflon peuvent entourer le scintillateur pour améliorer la collection de lumière).
+Cette expérience repose sur un système de détection à scintillateur plastique couplé à un photomultiplicateur (PM). Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les éléments clés, illustrés par des schémas et photos.
 
-Un photomultiplicateur tubulaire est optiquement couplé au scintillateur pour convertir cette faible lumière en un signal électrique exploitable. Le PM est un tube sous vide comportant une photocathode semi-transparente à l’avant, suivie d’une chaîne d’électrodes (dynodes) polarisées par un haut voltage (typiquement ~1000 V) réparti en cascade. Chaque photon scintillant incident sur la photocathode peut extraire un électron par effet photoélectrique. L’électron initial est ensuite attiré et accéléré vers la première dynode, où son impact libère par effet secondaire plusieurs électrons. Chacun de ces électrons secondaires est à son tour accéléré vers la dynode suivante, produisant une amplification multiplicative. Après une dizaine de dynodes, on obtient une avalanche de $10^6$ à $10^8$ électrons pour chaque photoélectron initial. Finalement, la charge est collectée sur l’anode du tube et convertie en une impulsion de tension. Figure 1 ci-dessous illustre schématiquement ce principe : le scintillateur transforme l’énergie déposée par la particule en photons, lesquels sont ensuite multipliés en cascade dans le photomultiplicateur jusqu’à fournir une impulsion électrique mesurable.
+\subsection{Principe de détection par scintillation}
+Un muon traversant un scintillateur plastique perd de l’énergie par collisions avec les atomes du milieu. Cette énergie est convertie rapidement en photons dans l’UV/visible. La plupart de ces photons restent piégés par réflexion interne et sont récoltés par le photomultiplicateur placé en contact optique.
 
-Figure 1 : Schéma de principe d’un détecteur à scintillation couplé à un photomultiplicateur. Une particule ionisante (ici un rayon $\gamma$ incident en violet) interagit dans le scintillateur et y produit des photons (rouge). Ces photons provoquent l’émission d’électrons depuis la photocathode du PM (barrette rouge) par effet photoélectrique. Les électrons sont focalisés (électrode verte) puis accélérés vers une série de dynodes (en zigzag gris) où ils sont multipliés par émissions secondaires successives. L’anode (à droite) collecte le signal électrique proportionnel à la lumière initiale. (Figure adaptée d’une source Wikimedia.)
+\vspace{1em}
+\noindent
+\textbf{Suggérer ici un schéma :} \emph{“Schéma global d’un scintillateur couplé à un photomultiplicateur. Illustration disponible sur~:}
+\url{https://commons.wikimedia.org/wiki/File:Photomultiplier_tube_schematic.png}
+\emph{.”}
 
-Dans le montage réalisé, on utilise un scintillateur plastique de dimensions suffisantes (quelques dizaines de cm² de surface et ~1 cm d’épaisseur typiquement) couplé à un photomultiplicateur rapide. Un tel compteur scintillant produit à chaque passage de muon une brève impulsion de lumière ($\sim$ quelque ns de durée), convertie en une impulsion de courant de l’ordre du milli-volt en sortie du PM. Ce signal analogique est acheminé vers une chaîne d’électronique rapide afin d’être exploité :
-	•	Tout d’abord, un amplificateur et discriminateur traite l’impulsion analogique du PM. L’amplification augmente l’amplitude du signal et le discriminateur applique un seuil afin de ne délivrer en sortie qu’un signal logique numérique (“oui/non”) si l’impulsion dépasse un certain seuil de tension. Cela permet d’éliminer les petites fluctuations de bruit électronique du PM et de normaliser les différentes impulsions en signaux logiques standards (de type NIM ou TTL). La largeur temporelle de ces signaux peut être ajustée (par exemple 20 ns) pour la logique de coïncidence à venir.
-	•	Ensuite, les signaux numériques issus des différents détecteurs (plusieurs scintillateurs peuvent être utilisés simultanément, voir section suivante) sont combinés via des modules de logique (porte ET de coïncidence, porte OU, etc.). Dans le montage classique, ces fonctions sont réalisées par des modules logiques NIM dédiés. En particulier, une porte de coïncidence fournit un signal de sortie uniquement si des impulsions sont présentes simultanément sur toutes ses entrées, condition requise pour identifier un muon ayant traversé plusieurs détecteurs en même temps.
-	•	Pour la mesure du temps de vol ou temps de vie, un module spécialisé appelé TAC (“Time-to-Amplitude Converter”) est utilisé. Le TAC reçoit un signal de start (déclenchement) lorsqu’un événement initial survient (par ex. un muon stoppé) et un signal de stop lorsqu’un second événement se produit (par ex. la désintégration du muon). Il délivre en sortie une impulsion analogique dont l’amplitude est proportionnelle au délai entre start et stop. En calibrant cette conversion temps → amplitude, on peut enregistrer ces amplitudes (via un convertisseur analogique-numérique, CAN, ou un oscilloscope numérique) et reconstituer l’histogramme des temps mesurés.
-	•	Enfin, un système d’acquisition de données (compteur numérique, chronomètre, ou ordinateur via une interface) permet d’enregistrer le nombre de coïncidences comptées pendant un temps donné, ou de stocker les valeurs de temps converties par le TAC. Dans notre montage, un module compteur/timer NIM ou un système d’acquisition piloté par PC (par exemple via LabVIEW) est employé pour accumuler les données de comptage et de chronométrie.
+\vspace{1em}
 
-Plus concrètement, l’installation expérimentale comporte plusieurs détecteurs scintillateurs montés de manière à former un télescope à muons. Pour l’étude angulaire, deux modules scintillants identiques sont disposés l’un au-dessus de l’autre, séparés par une distance fixe, et montés sur une structure orientable (permettant de changer l’angle $\theta$ par rapport à la verticale) – voir figure 2 plus loin. Pour la mesure du temps de vie, un troisième scintillateur peut être ajouté en dessous en jouant le rôle d’absorbeur/stop (détails en section 6). Chaque scintillateur est relié à son photomultiplicateur et à l’électronique décrite (discriminateur, etc.). Le photomultiplicateur nécessite une alimentation haute tension stable (typiquement une alimentation fournissant ~1000 V DC) et on ajuste cette tension pour obtenir un gain suffisant sans saturer (un réglage fin permet d’équilibrer le taux de comptage sur une source de calibration par exemple). L’ensemble de l’appareillage est monté dans un environnement obscurci (les PM sont sensibles à la lumière ambiante et doivent être protégés de toute illumination directe).
+\subsubsection*{Photomultiplicateur (PM)}
+Ce tube sous vide comporte une photocathode (effet photoélectrique) et une série de dynodes en cascade. Chaque électron initial est multiplié en une avalanche ($10^6$ à $10^8$ électrons), amplifiant le signal jusqu’à une impulsion mesurable en sortie. 
 
-En résumé, le montage expérimental standard associe les éléments suivants :
-	•	Détecteurs scintillateurs (A, B, C…) : plaques plastiques produisant des flashs lumineux lorsqu’un muon passe.
-	•	Photomultiplicateurs (PM) : convertissent les flashs en impulsions électriques amplifiées.
-	•	Discriminateurs : filtrent et transforment ces impulsions en signaux logiques numériques standard.
-	•	Portes de coïncidence : réalisent l’AND logique entre signaux de plusieurs détecteurs pour ne valider que les événements simultanés.
-	•	Modules de comptage/chronométrie : compteurs de coïncidences par unité de temps, et convertisseur temps-amplitude pour mesurer les intervalles temporels (durée de vie).
-	•	Système d’acquisition : chronomètre et enregistre les données (taux, histogrammes), généralement un ordinateur pilotant des modules NIM ou CAMAC, ou une électronique intégrée.
+\subsection{Chaîne d’électronique rapide}
+\begin{itemize}
+  \item \textbf{Amplificateur et discriminateur} : L’amplificateur augmente l’amplitude du signal du PM. Le discriminateur applique ensuite un seuil pour ne délivrer qu’un signal logique standard (NIM ou TTL).  
+  \item \textbf{Logique de coïncidence} : Les signaux issus de plusieurs détecteurs (ex. plusieurs scintillateurs) sont combinés par porte AND (coïncidence), OR, etc. Une coïncidence valide indique le passage simultané d’un muon à travers plusieurs plaques.  
+  \item \textbf{Modules de mesure} : Pour mesurer le temps de vol ou de vie, on utilise un “Time-to-Amplitude Converter” (TAC) convertissant un intervalle de temps en amplitude électrique, analysable par un convertisseur analogique-numérique.  
+  \item \textbf{Système d’acquisition} : Un compteur/timer NIM ou un dispositif piloté par PC (LabVIEW, etc.) enregistre le nombre de coïncidences ou les histogrammes temporels.  
+\end{itemize}
 
-L’étalonnage du système peut être effectué en utilisant une source radioactive bêta/gamma connue (pour vérifier que chaque scintillateur détecte correctement, calibrer les seuils, etc.) ou en observant le taux de comptage des muons en fonction de la haute tension du PM et du seuil du discriminateur afin d’optimiser le rapport signal/bruit. Une attention particulière est apportée à la synchronisation des canaux : on s’assure que les câbles reliant les détecteurs à la logique de coïncidence ont des longueurs similaires (afin de minimiser les décalages temporels) et on règle éventuellement des retards électroniques pour aligner les impulsions dans la fenêtre de coïncidence avec une précision de l’ordre de la nanoseconde. Tous ces réglages garantissent que la coïncidence effective traduit bien l’occurrence physique “un même muon a traversé plusieurs détecteurs simultanément”.
+\vspace{1em}
+\noindent
+\textbf{Suggérer ici un schéma :} \emph{“Diagramme d’architecture de l’électronique SiPM/PM + discri + coïncidence + acquisition. Par exemple :}
+\url{https://www.nupecc.org/presentations/pictures/detector_electronics_diagram.png}
+\emph{.”}
+
+\subsection{Montage en télescope à muons}
+Pour l’étude angulaire, deux scintillateurs identiques sont superposés à une distance fixe et montés sur une structure orientable. L’idée est de changer l’angle $\theta$ pour mesurer la répartition angulaire du flux muonique. 
+
+Pour la mesure du temps de vie, on ajoute un troisième scintillateur faisant office de “stop” : un muon y est mesuré lorsqu’il s’y arrête, et sa désintégration déclenche un second signal (start-stop sur le TAC).
+
+\vspace{1em}
+\noindent
+\textbf{Suggérer ici une photo du montage :}  
+\emph{“Photo du télescope à 3 plaques scintillantes, aimablement fournie par le laboratoire, ou trouvée sur :}
+\url{https://commons.wikimedia.org/wiki/File:Muon_telescope_example.jpg}
+\emph{.”}
+
+\subsection{Réglages et étalonnages}
+\begin{itemize}
+  \item \textbf{Haute tension} : Le PM nécessite typiquement 1000 V. On ajuste cette tension pour un gain optimal.  
+  \item \textbf{Seuil du discriminateur} : Un réglage adéquat permet de filtrer le bruit de fond tout en conservant les impulsions des muons.  
+  \item \textbf{Synchronisation} : On égalise les longueurs de câbles et on peut insérer des retards pour aligner les impulsions dans la fenêtre de coïncidence à quelques nanosecondes près.  
+  \item \textbf{Calibration} : Possible via une source radioactive bêta/gamma ou en étudiant la variation du taux de comptage en fonction de la haute tension et du seuil.  
+\end{itemize}
+
+Tous ces réglages garantissent une coïncidence fiable, traduisant le passage réel d’un même muon à travers plusieurs détecteurs presque simultanément.
 
 \section{Détection par coïncidence}
 \subsection{Principe de coïncidence}
@@ -317,7 +341,7 @@ Dans un matériau riche en protons (scintillateur plastique = CH, Z faible), la 
 
 Un autre aspect est la vérification de la relativité : notre mesure de $\tau \approx 2,1~\mu$s concerne des muons au repos dans le détecteur. Mais ces mêmes muons avaient une durée de vie beaucoup plus longue durant leur vol du ciel vers la Terre. Par exemple, un muon de 3 GeV ($\gamma \approx 30$) a une durée de vie dilatée $\gamma \tau \sim 66~\mu$s dans le référentiel terrestre, ce qui lui permet de parcourir près de 20 km (suffisant pour descendre de la haute atmosphère). Une expérience que nous réalisons implicitement est de sélectionner les muons ayant assez ralenti pour s’arrêter : ces muons ont en fait perdu toute leur énergie cinétique, donc dans notre référentiel ils ne sont plus relativistes (ou faiblement, $\gamma \approx 1$), et l’on mesure donc leur temps de vie propre. Ainsi, la cohérence de notre résultat avec les mesures en laboratoire de muons stoppés** confirme rétroactivement que la dilatation du temps a bien opéré en vol pour les muons cosmiques rapides. Si on mesurait le temps de vie de muons en vol sans les arrêter, on trouverait une valeur beaucoup plus grande proportionnelle à leur $\gamma$.
 
-Technique TAC et limites : Le recours au TAC s’est avéré efficace pour mesurer des temps de l’ordre de la microseconde avec une bonne résolution (~10 ns). Nous avons tout de même dû tenir compte de sa limite de durée : notre TAC était réglé pour une pleine échelle de 10 μs (par exemple), ce qui signifie qu’au-delà de 10 μs sans stop, il arrête la conversion (soit en saturant, soit en annulant l’événement). Ainsi, les muons dont la désintégration prend plus de cette fenêtre d’observation ne sont pas comptés correctement. Cependant, étant donné que 10 μs correspond à plus de 4 fois $\tau$, la fraction de muons se désintégrant plus tard est faible ($e^{-10/2,2} \approx 0,006$ soit <1%). Nous avons donc négligé l’effet de coupure à 10 μs sur l’ajustement, ou le cas échéant, nous l’avons inclus dans le fond constant.
+Technique TAC et limites : Le recours au TAC s’est avéré efficace pour mesurer des temps de l’ordre de la microseconde avec une bonne résolution (~10 ns). Nous avons tout de même dû tenir compte de sa limite de durée : notre TAC était réglé pour une pleine échelle de 10 μs (par exemple), ce qui signifie qu’au-delà de 10 μs sans stop, il arrête la conversion (soit en saturant, soit en annulant l’événement). Ainsi, les muons dont la désintégration prend plus de cette fenêtre d’observation ne sont pas comptés correctement. Cependant, étant donné que 10 μs correspond à plus de 4 fois $\tau$, la fraction de muons se désintègrant plus tard est faible ($e^{-10/2,2} \approx 0,006$ soit <1%). Nous avons donc négligé l’effet de coupure à 10 μs sur l’ajustement, ou le cas échéant, nous l’avons inclus dans le fond constant.
 
 En définitive, la mesure du temps de vie du muon constitue le point culminant de cette série d’expériences, en combinant toutes les techniques : détection par coïncidence (pour trouver les muons arrêtés), chronométrage rapide, analyse statistique. Le résultat obtenu est en accord avec les prédictions du Modèle Standard (la désintégration muonique est un processus de type interaction faible, dont la probabilité par unité de temps est $\lambda = 1/\tau \approx 0,45~\mu\text{s}^{-1}$, indépendante du temps). C’est une confirmation expérimentale importante de plus, réalisée ici avec un appareillage de paillasse. De plus, cela nous relie aux expériences historiques de garnissage de chambres à brouillard par les muons (où l’on découvrit en 1941 que les “mesotrons” avaient une durée de vie d’environ 2 microsecondes). Aujourd’hui, des mesures modernes beaucoup plus précises (expérience MuLan, etc.) atteignent une exactitude de l’ordre de $10^{-6}$ sur $\tau_\mu$, car ce paramètre sert de test précis de l’universalité des interactions faibles et permet de déduire la constante de Fermi. Notre mesure didactique reste bien sûr loin de ces précisions, mais elle n’en illustre pas moins la validité du principe.
 
@@ -383,8 +407,8 @@ En conclusion, le travail réalisé a atteint ses objectifs : nous disposons d�
 \begin{thebibliography}{9}
 \bibitem{knoll2010} G.~F. Knoll, \emph{Radiation Detection and Measurement}, 4th ed., Wiley, 2010.
 \bibitem{bethe1930} H. Bethe, ``Zur Theorie des Durchgangs schneller Korpuskularstrahlen durch Materie,'' \emph{Ann. Phys.}, vol.~5, no.~3, 1930.
-\bibitem{wiki:muon} Muon, Wikipedia, \url{https://en.wikipedia.org/wiki/Muon} (consulté le 4 mai 2025).
-\bibitem{wiki:cosmic_rays} Cosmic ray, Wikipedia, \url{https://en.wikipedia.org/wiki/Cosmic_ray} (consulté le 4 mai 2025).
+\bibitem{wikimuon} Muon, Wikipedia, \url{https://en.wikipedia.org/wiki/Muon}.
+\bibitem{wikicosmic_rays} Cosmic ray, Wikipedia, \url{https://en.wikipedia.org/wiki/Cosmic_ray}.
 \end{thebibliography}
 
 \end{document}
