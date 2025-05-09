@@ -66,18 +66,17 @@ dans la matière solide (valeur typique pour un muon minimum ionisant) – une 
 
 \subsection{Objectifs de l’étude}
 
-\subsubsection*{Détection et coïncidence}
-Mettre en place un télescope à scintillateurs plastiques et isoler les muons réels du bruit de fond.
-\subsubsection*{Distribution angulaire}
-Mesurer le flux en fonction de l’angle et vérifier la loi $I(\theta)\propto\cos^2\!\theta$.
-\subsubsection*{Dépôt d’énergie}
-Étudier le pouvoir de pénétration des muons à l’aide d’absorbeurs de plomb.
-\subsubsection*{Temps de vie du muon}
-Chronométrer la désintégration des muons arrêtés pour déterminer $\tau_\mu$.
-\subsubsection*{Modernisation technique}
-Adopter des détecteurs SiPM et un traitement FPGA pour gagner en compacité et en rapidité.
+\textbf{Détection et coïncidence}~: Mettre en place un télescope à scintillateurs plastiques afin de détecter les muons cosmiques et d’isoler les véritables événements muoniques du bruit de fond (bruit électronique, radioactivité naturelle, etc.). L’objectif est de comprendre l’importance de la coïncidence temporelle entre plusieurs détecteurs pour éliminer les faux signaux et garantir que seuls les muons traversant successivement plusieurs plaques sont comptés. Cette étape permet de valider la méthode de détection et d’estimer l’efficacité du dispositif.
 
+\textbf{Distribution angulaire}~: Mesurer le flux de muons en fonction de l’angle d’incidence $\theta$ par rapport à la verticale, et vérifier expérimentalement la loi $I(\theta)\propto\cos^2\!\theta$. Cette étude met en évidence l’anisotropie du rayonnement cosmique au sol, liée à la géométrie du montage et à l’atténuation atmosphérique accrue pour les muons venant de directions inclinées. L’objectif est de confronter les mesures au modèle théorique et de comprendre l’origine physique de cette loi angulaire.
 
+\textbf{Dépôt d’énergie}~: Étudier le pouvoir de pénétration des muons à l’aide d’absorbeurs de plomb placés sur leur trajectoire. On cherche à observer comment l’ajout d’une épaisseur de plomb réduit le flux détecté et modifie le dépôt d’énergie dans le scintillateur. Cette expérience permet de caractériser la nature très pénétrante des muons cosmiques, de quantifier leur perte d’énergie par ionisation, et d’illustrer la distribution de Landau du dépôt d’énergie.
+
+\textbf{Temps de vie du muon}~: Chronométrer la désintégration des muons arrêtés dans un absorbeur pour déterminer expérimentalement leur temps de vie propre $\tau_\mu$. Cette mesure met en évidence la décroissance exponentielle caractéristique des particules instables et permet de comparer la valeur obtenue à la valeur de référence du modèle standard. Elle illustre aussi la dilatation du temps relativiste vécue par les muons cosmiques en vol.
+
+\textbf{Modernisation technique}~: Remplacer les photomultiplicateurs traditionnels par des détecteurs SiPM (Silicon Photomultiplier) et utiliser un traitement numérique par FPGA pour gagner en compacité, robustesse et rapidité. L’objectif est de montrer l’apport des technologies modernes en instrumentation, d’améliorer la portabilité du dispositif, et de faciliter l’acquisition et l’analyse des données. Cette étape ouvre la voie à des applications avancées (muographie, mesures en altitude, etc.).
+
+\newpage
 
 \section{Montage expérimental}
 Cette expérience repose sur un système de détection à scintillateur plastique couplé à un photomultiplicateur (PM). Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les éléments clés, illustrés par des schémas et photos.
@@ -90,8 +89,32 @@ Cette expérience repose sur un système de détection à scintillateur plastiqu
 \end{figure}
 
 \subsection{Principe de détection par scintillation}
-Un muon traversant un scintillateur plastique perd de l’énergie par collisions avec les atomes du milieu. Cette énergie est convertie rapidement en photons dans l’UV/visible. La plupart de ces photons restent piégés par réflexion interne et sont récoltés par le photomultiplicateur placé en contact optique.
 
+\subsubsection*{Scintillateur plastique}
+
+Les scintillateurs plastiques sont des matériaux organiques capables de convertir l'énergie déposée par une particule chargée en lumière visible (scintillation). Cette technique, parmi les plus anciennes et les plus répandues pour la détection de rayonnements ionisants, repose sur la fluorescence rapide de molécules organiques intégrées dans une matrice polymère (typiquement polystyrène ou polyvinyltoluène).
+
+Un scintillateur plastique idéal doit :
+\begin{itemize}
+    \item Posséder une efficacité élevée de conversion de l'énergie déposée en lumière détectable ;
+    \item Présenter une réponse linéaire (le rendement lumineux est proportionnel à l'énergie déposée sur une large gamme) ;
+    \item Être transparent à sa propre émission pour maximiser la collecte de lumière ;
+    \item Avoir un temps de décroissance de la luminescence très court (typiquement 1--3~ns), permettant la génération de signaux rapides ;
+    \item Être de bonne qualité optique et disponible en grandes dimensions ;
+    \item Avoir un indice de réfraction proche de celui du verre ($\sim$1,5) pour un couplage efficace avec les photodétecteurs.
+\end{itemize}
+Aucun matériau ne satisfait parfaitement tous ces critères, mais les scintillateurs plastiques constituent un compromis très avantageux pour la détection de particules chargées (électrons, muons, protons, etc.), en particulier lorsqu'une grande rapidité et une géométrie flexible sont requises.
+
+\paragraph{Mécanisme de scintillation organique~:} L'excitation d'une molécule organique par le passage d'une particule ionisante conduit à la formation d'états électroniques excités (singlets et triplets). Après relaxation rapide vers le premier état excité singulet, la désexcitation vers l'état fondamental s'accompagne de l'émission d'un photon (fluorescence rapide). La majeure partie de la lumière utile provient de cette fluorescence prompte, dont la durée de vie est de l'ordre de quelques nanosecondes. Les processus plus lents (phosphorescence, fluorescence retardée) sont négligeables pour la détection en mode impulsionnel.
+
+\paragraph{Caractéristiques pratiques~:} Les scintillateurs plastiques sont disponibles sous forme de plaques, barres, fibres ou formes personnalisées. Leur rendement lumineux atteint typiquement 60--70\% de celui de l'anthracène (référence), avec une émission maximale autour de 400--430~nm (bleu/violet), bien adaptée aux photomultiplicateurs et SiPM. Leur atténuation optique (distance sur laquelle l'intensité lumineuse est divisée par deux) varie de quelques dizaines à plusieurs centaines de centimètres selon la pureté et la formulation. Leur densité ($\sim$1,03~g/cm$^3$) et leur forte teneur en hydrogène les rendent également sensibles aux neutrons rapides.
+
+\paragraph{Avantages et limites~:} Les scintillateurs plastiques sont rapides, robustes, peu coûteux et facilement usinables en grandes surfaces. Leur rendement lumineux est inférieur à celui des cristaux inorganiques (NaI, CsI), mais leur rapidité et leur flexibilité géométrique les rendent incontournables en physique des particules (détecteurs de trajectoire, calorimètres, télescopes à muons, etc.). Leur réponse est linéaire pour les électrons et muons relativistes, mais moins efficace pour les particules lourdes (protons, $\alpha$) à cause du quenching (effet de Birks).
+
+
+\begin{remarque}
+\textbf{Résumé~:} Les scintillateurs plastiques permettent une détection rapide, fiable et économique des muons cosmiques. Lorsqu’un muon les traverse, il perd de l’énergie par ionisation, rapidement convertie en photons UV/visible. Grâce à la réflexion interne, une grande partie de cette lumière est guidée vers le photodétecteur, assurant une collecte efficace du signal.
+\end{remarque}
 
 \subsubsection*{Photomultiplicateur (PM)}
 Ce tube sous vide comporte une photocathode (effet photoélectrique) et une série de dynodes en cascade. Chaque électron initial est multiplié en une avalanche ($10^6$ à $10^8$ électrons), amplifiant le signal jusqu’à une impulsion mesurable en sortie.
@@ -103,62 +126,192 @@ Ce tube sous vide comporte une photocathode (effet photoélectrique) et une sér
   \label{fig:pm_scintillator}
 \end{figure}
 
-\subsection{Chaîne d’électronique rapide}
+\paragraph{Principe et structure des tubes photomultiplicateurs (PM)}
+Les tubes photomultiplicateurs (PM) sont essentiels pour convertir la faible lumière émise par un scintillateur en un signal électrique exploitable, avec un excellent rapport signal/bruit. Un PM est constitué d'une enveloppe sous vide, d'une photocathode photosensible et d'une chaîne de dynodes (multiplicateur d'électrons). La photocathode convertit les photons incidents en électrons (photoélectrons) par effet photoélectrique. Ces électrons sont ensuite accélérés et multipliés à chaque dynode par émission secondaire, aboutissant à un signal final amplifié de $10^6$ à $10^{10}$ électrons collectés à l'anode.
+
+La réponse temporelle d'un PM est rapide (quelques ns), et la linéarité de l'amplification permet de conserver l'information sur l'intensité lumineuse initiale. Les PM sont disponibles dans une grande variété de tailles et de sensibilités spectrales (UV, visible, proche IR). Leur efficacité quantique (rapport entre le nombre d'électrons émis et le nombre de photons incidents) atteint typiquement 20--30\%.
+
+\paragraph{Caractéristiques et limitations}
+Les PM présentent une excellente linéarité, une faible contribution au bruit, et une grande rapidité. Cependant, ils sont sensibles aux champs magnétiques, nécessitent une alimentation haute tension (typiquement 1500 V), et doivent être protégés de la lumière ambiante pour éviter les dommages. Le bruit de fond (courant d'obscurité) provient principalement de l'émission thermique d'électrons à la photocathode, mais reste négligeable pour la détection de signaux intenses comme ceux des muons cosmiques.
+
+\begin{remarque}
+\textbf{Résumé~:} Les tubes photomultiplicateurs restent la référence pour la détection de faibles signaux lumineux en physique des particules, grâce à leur gain élevé, leur rapidité et leur faible bruit. Toutefois, ils nécessitent une alimentation haute tension et sont sensibles aux champs magnétiques et à la lumière ambiante.
+\end{remarque}
+
+\subsection{Chaîne électronique}
+
+La détection des muons nécessite une chaîne électronique rapide et fiable, composée de plusieurs instruments analogiques spécialisés. Voici les principaux modules utilisés et leur rôle dans l’expérience :
+
 \begin{itemize}
-  \item \textbf{Amplificateur et discriminateur} : L’amplificateur augmente l’amplitude du signal du PM. Le discriminateur applique ensuite un seuil pour ne délivrer qu’un signal logique standard (NIM ou TTL).  
-  \item \textbf{Logique de coïncidence} : Les signaux issus de plusieurs détecteurs (ex. plusieurs scintillateurs) sont combinés par porte AND (coïncidence), OR, etc. Une coïncidence valide indique le passage simultané d’un muon à travers plusieurs plaques.  
-  \item \textbf{Modules de mesure} : Pour mesurer le temps de vol ou de vie, on utilise un “Time-to-Amplitude Converter” (TAC) convertissant un intervalle de temps en amplitude électrique, analysable par un convertisseur analogique-numérique.  
-  \item \textbf{Système d’acquisition} : Un compteur/timer NIM ou un dispositif piloté par PC (LabVIEW, etc.) enregistre le nombre de coïncidences ou les histogrammes temporels.  
+  \item \textbf{Générateur haute tension} : Alimente les photomultiplicateurs (PM) avec une tension réglable typiquement entre 800 et 2000~V. Un réglage précis de la HT permet d’optimiser le gain du PM.
+  \item \textbf{Circuit RC (filtre passe-haut)} : Placé en sortie du PM, il permet de supprimer la composante continue et d’adapter la forme du signal pour l’amplification. Le circuit RC élimine les signaux lents et ne laisse passer que les impulsions rapides des muons.
+  \item \textbf{Amplificateur rapide} : Il augmente l’amplitude des signaux issus du PM pour les rendre exploitables par les modules suivants.
+  \item \textbf{Discriminateur} : Ce module compare le signal amplifié à un seuil réglable (THR). Seules les impulsions dépassant ce seuil génèrent une sortie logique standard.
+  \item \textbf{Retardateur} : Permet de décaler temporellement un signal logique afin d’ajuster la synchronisation entre plusieurs voies. Il est utile pour tester le taux de coïncidences fortuites ou pour compenser des différences de longueur de câble.
+  \item \textbf{Module de coïncidence} : Combine les signaux logiques issus de plusieurs discriminateurs. Il délivre une impulsion uniquement si tous les signaux d’entrée arrivent dans une fenêtre temporelle variable (typiquement 10–50~ns). Cela permet de sélectionner les événements où un muon traverse plusieurs détecteurs simultanément.
+  \item \textbf{Compteur} : Enregistre le nombre d’impulsions issues du module de coïncidence pendant une durée donnée. Il permet de mesurer le taux de détection.
+  \item \textbf{Oscilloscope} : Permet de visualiser en temps réel les signaux analogiques à chaque étape de la chaîne (sortie PM, amplificateur, discriminateur). Il est essentiel pour ajuster les seuils et vérifier la forme des impulsions.
+  \item \textbf{TAC} : Convertit le délai entre deux signaux en une tension proportionnelle. Il est utilisé pour mesurer le temps de vie des muons.
 \end{itemize}
+
+\begin{remarque}
+\textbf{Résumé~:} Le circuit électronique permet de récupérer le signal issu du photomultiplicateur, de l’afficher (oscilloscope) et de l’exploiter pour compter le nombre de muons, détecter les coïncidences, éliminer le bruit de fond, et mesurer le temps de vie des muons.
+\end{remarque}
 
 \vspace{1em}
 \noindent
-\textbf{Suggérer ici un schéma :} \emph{“Diagramme d’architecture de l’électronique SiPM/PM + discri + coïncidence + acquisition. Par exemple :}
-\url{https://www.nupecc.org/presentations/pictures/detector_electronics_diagram.png}
-\emph{.”}
+\textbf{Schéma de la chaîne électronique analogique :}
 
-\subsection{Montage en télescope à muons}
-Pour l’étude angulaire, deux scintillateurs identiques sont superposés à une distance fixe et montés sur une structure orientable. L’idée est de changer l’angle $\theta$ pour mesurer la répartition angulaire du flux muonique. 
-
-Pour la mesure du temps de vie, on ajoute un troisième scintillateur faisant office de “stop” : un muon y est mesuré lorsqu’il s’y arrête, et sa désintégration déclenche un second signal (start-stop sur le TAC).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Images/PhotoMultiplierTubeAndScintillator.png}
+  \caption{Schéma fonctionnel de la chaîne électronique : PM alimenté par HT, suivi d’un circuit RC, amplificateur, discriminateur, delay, module de coïncidence, puis compteur. L’oscilloscope permet de visualiser les signaux à chaque étape.}
+  \label{fig:schema_elec_analogique}
+\end{figure}
 
 \vspace{1em}
 \noindent
-\textbf{Suggérer ici une photo du montage :}  
-\emph{“Photo du télescope à 3 plaques scintillantes, aimablement fournie par le laboratoire, ou trouvée sur :}
-\url{https://commons.wikimedia.org/wiki/File:Muon_telescope_example.jpg}
-\emph{.”}
+\textbf{Photo des instruments utilisés :}
 
-\subsection{Réglages et étalonnages}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Images/PhotoMultiplierTubeAndScintillator.png}
+  \caption{Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}
+  \label{fig:photo_instruments}
+\end{figure}
+
+\vspace{1em}
+\noindent
+\textbf{Schéma d’architecture globale (SiPM/PM + discri + coïncidence + acquisition) :}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Images/PhotoMultiplierTubeAndScintillator.png}
+  \caption{Diagramme d’architecture de l’électronique de détection (inspiré de \url{https://www.nupecc.org/presentations/pictures/detector_electronics_diagram.png}).}
+  \label{fig:diagramme_architecture}
+\end{figure}
+
+\newpage
+
+\section{Étude du signal}
+
+\subsection{Observation du signal et décroissance temporelle}
+
+Pour caractériser la réponse du scintillateur plastique, nous avons observé à l’oscilloscope la forme du signal généré lors du passage d’un muon. Le signal présente une décroissance exponentielle, reflet de la désexcitation du matériau scintillant, convoluée avec la réponse du circuit RC de lecture.
+
+\paragraph{Méthode :} Nous avons enregistré la courbe de tension en sortie du photomultiplicateur, puis ajusté la décroissance par une régression exponentielle de la forme :
+\[
+V(t) = V_0 \exp\left(-\frac{t}{\tau_{\text{eff}}}\right)
+\]
+où $\tau_{\text{eff}}$ est la constante de temps mesurée.
+
+\paragraph{Résultats :} En répétant la mesure sur plusieurs événements, nous avons extrait deux constantes :
 \begin{itemize}
-  \item \textbf{Haute tension} : Le PM nécessite typiquement 1000 V. On ajuste cette tension pour un gain optimal.  
-  \item \textbf{Seuil du discriminateur} : Un réglage adéquat permet de filtrer le bruit de fond tout en conservant les impulsions des muons.  
-  \item \textbf{Synchronisation} : On égalise les longueurs de câbles et on peut insérer des retards pour aligner les impulsions dans la fenêtre de coïncidence à quelques nanosecondes près.  
-  \item \textbf{Calibration} : Possible via une source radioactive bêta/gamma ou en étudiant la variation du taux de comptage en fonction de la haute tension et du seuil.  
+    \item Le temps de désexcitation du scintillateur plastique, $\tau_{\text{scint}}$ (typiquement 2–3 ns).
+    \item Le temps de relaxation du circuit RC, $\tau_{RC}$ (typiquement 10–20 ns).
 \end{itemize}
+Le signal observé est donc la convolution de ces deux décroissances exponentielles.
 
-Tous ces réglages garantissent une coïncidence fiable, traduisant le passage réel d’un même muon à travers plusieurs détecteurs presque simultanément.
+\begin{figure}[H]
+    \centering
+    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_signal.png}
+    \caption{Exemple de signal mesuré en sortie du PM : points expérimentaux et ajustement exponentiel. On distingue la composante rapide (scintillateur) et la composante plus lente (circuit RC).}
+\end{figure}
+
+\paragraph{Interprétation :} La mesure de $\tau_{\text{scint}}$ est cohérente avec les valeurs attendues pour ce type de plastique. La prise en compte de $\tau_{RC}$ permet d’optimiser le traitement du signal pour la suite des analyses.
+
+\subsection{Variation de la haute tension du photomultiplicateur}
+
+Nous avons ensuite étudié l’influence de la tension d’alimentation du photomultiplicateur (PM) sur le taux de détection.
+
+\paragraph{Méthode :} Pour chaque scintillateur/PM, nous avons fait varier la haute tension (HT) appliquée et mesuré le nombre de signaux détectés par unité de temps.
+
+\paragraph{Théorie :} Une tension trop basse conduit à un gain insuffisant : peu de signaux dépassent le seuil du discriminateur. À l’inverse, une tension trop élevée augmente le gain mais aussi le bruit de fond (courant d’obscurité, bruit thermique), ce qui accroît le nombre de faux signaux.
+
+\paragraph{Résultats :} On observe une zone optimale où le nombre de signaux “vrais” est maximal, avant que le bruit ne devienne prépondérant.
+
+\begin{figure}[H]
+    \centering
+    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_HT.png}
+    \caption{Nombre de signaux détectés en fonction de la haute tension appliquée au PM.}
+\end{figure}
+
+\paragraph{Conclusion :} Le choix de la tension optimale est un compromis entre sensibilité et bruit. Nous avons retenu une valeur de HT assurant un taux de détection élevé tout en limitant les faux positifs.
+
+\subsection{Variation du seuil du discriminateur}
+
+Enfin, nous avons étudié l’effet du seuil (threshold, THR) du discriminateur sur le nombre de signaux détectés.
+
+\paragraph{Méthode :} Pour une tension de PM fixée, nous avons fait varier le seuil du discriminateur et compté le nombre d’événements enregistrés.
+
+\paragraph{Théorie :} Un seuil trop bas laisse passer tout le bruit (bruit thermique, radioactivité), tandis qu’un seuil trop haut élimine aussi les vrais signaux de muons.
+
+\paragraph{Résultats :} On observe une courbe typique : beaucoup d’événements à seuil bas (bruit dominant), puis un plateau correspondant aux vrais signaux, enfin une chute rapide lorsque le seuil dépasse l’amplitude des signaux muoniques.
+
+\begin{figure}[H]
+    \centering
+    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_threshold.png}
+    \caption{Nombre d’événements détectés en fonction du seuil du discriminateur.}
+\end{figure}
+
+\paragraph{Conclusion :} Le réglage du seuil est crucial pour optimiser le rapport signal/bruit. Nous avons choisi un seuil situé juste au-dessus du niveau de bruit, de façon à ne conserver que les signaux dus aux muons.
+
+\newpage
 
 \section{Détection par coïncidence}
 \subsection{Principe de coïncidence}
-Rôle de la coïncidence : Dans un détecteur isolé, le taux de comptage brut inclut non seulement les événements véritables (ici des muons cosmiques traversant le scintillateur), mais aussi des détections parasites : bruit thermique du photomultiplicateur (émission spontanée d’électrons à la photocathode), radioactivité naturelle (rayons $\gamma$ ou particules $\beta$ ambiants pouvant exciter le scintillateur), ou encore rayons cosmiques secondaires autres que les muons (particules $\alpha$, neutrons, électrons) stoppés dans le matériau. Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes fictifs à un taux non négligeable. Par exemple, un photomultiplicateur à température ambiante peut avoir un bruit d’obscurité de quelques centaines de comptes par seconde. De même, l’environnement radioactif (rayonnement cosmique diffus, $\gamma$ du sol, etc.) peut induire des lueurs dans le scintillateur. Il est donc essentiel de discriminer les signaux “muon” authentiques du bruit de fond.
 
-La technique employée est la coïncidence temporelle entre deux détecteurs ou plus. On dispose deux scintillateurs en série sur la trajectoire des muons : seuls les muons (particules pénétrantes) pourront traverser successivement les deux détecteurs en quasi-ligne droite, produisant des signaux quasi simultanés dans chacun. Les bruits aléatoires, en revanche, n’ont qu’une probabilité infime d’apparaître exactement en même temps dans deux détecteurs distincts. En imposant que le système de comptage enregistre un événement uniquement lorsqu’il y a deux impulsions concomitantes (ou dans une fenêtre de temps très courte $T$) sur les deux scintillateurs (coïncidence à 2-fold), on élimine la majorité des faux déclenchements. Cette méthode est illustrée schématiquement par la figure 2a : le passage d’un muon à travers deux plaques A et B produit deux impulsions synchrones, détectées par la logique de coïncidence (porte ET).
+\paragraph{Pourquoi la coïncidence ?}
 
-Bien entendu, pour que la coïncidence ne laisse passer que les \og vrais\fg{} muons et non des coïncidences purement fortuites de bruits indépendants, il faut que le taux de comptage parasite soit suffisamment plus faible que le taux de coïncidence attendu des muons. A contrario, si chaque détecteur a un taux de bruit très élevé, le risque de coïncidences aléatoires augmente. On peut quantifier ce phénomène~: soit $N_A$ et $N_B$ les taux de comptage individuels (en~s$^{-1}$) dans les détecteurs~A et~B pris séparément (incluant signaux de toutes origines). La probabilité qu’un comptage de~A et un comptage de~B se produisent par hasard dans la même fenêtre temporelle~$T$ est approximativement
+Dans un détecteur isolé, le taux de comptage brut inclut non seulement les événements véritables (ici des muons cosmiques traversant le scintillateur), mais aussi des détections parasites :
+\begin{itemize}
+    \item \textbf{Bruit thermique du photomultiplicateur} (émission spontanée d’électrons à la photocathode) ;
+    \item \textbf{Radioactivité naturelle} (rayons $\gamma$ ou particules $\beta$ ambiants pouvant exciter le scintillateur) ;
+    \item \textbf{Rayons cosmiques secondaires} autres que les muons (particules $\alpha$, neutrons, électrons) stoppés dans le matériau.
+\end{itemize}
+
+Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes fictifs à un taux non négligeable. Par exemple, un photomultiplicateur à température ambiante peut avoir un bruit d’obscurité de quelques centaines de comptes par seconde. De même, l’environnement radioactif (rayonnement cosmique diffus, $\gamma$ du sol, etc.) peut induire des lueurs dans le scintillateur. Il est donc essentiel de discriminer les signaux “muon” authentiques du bruit de fond.
+
+\vspace{1em}
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la coïncidence]
+\textbf{Idée clé :} Seuls les muons, très pénétrants, peuvent traverser plusieurs détecteurs alignés en quasi-ligne droite et produire des signaux quasi simultanés dans chacun. Les bruits aléatoires, eux, n’ont qu’une probabilité infime d’apparaître exactement en même temps dans deux détecteurs distincts.
+\end{tcolorbox}
+\end{center}
+
+\paragraph{Schéma explicatif}
+
+\begin{figure}[H]
+    \centering
+    %\includegraphics[width=0.6\textwidth]{figures/schema_coincidence.pdf}
+    \fbox{\parbox{0.6\textwidth}{\centering\textit{Schéma à insérer : deux scintillateurs A et B alignés, un muon traverse les deux, signaux synchrones. Les bruits parasites (étoiles, zigzags) ne traversent qu'un seul détecteur à la fois.}}}
+    \caption{Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}
+\end{figure}
+
+\paragraph{Définition de la coïncidence temporelle}
+
+On dispose donc deux scintillateurs en série sur la trajectoire des muons. Le système de comptage enregistre un événement uniquement lorsqu’il y a deux impulsions concomitantes (ou dans une fenêtre de temps très courte $T$) sur les deux scintillateurs (\textbf{coïncidence à 2-fold}). Cela permet d’éliminer la majorité des faux déclenchements.
+
+\begin{center}
+\begin{tcolorbox}[colback=gray!10!white, colframe=gray!80!black, boxrule=0.5pt, arc=2pt, left=2pt, right=2pt, top=2pt, bottom=2pt]
+\textbf{Logique de coïncidence :} 
 \[
-P \approx N_A \times N_B \times T
+\text{Événement détecté} \iff \text{Signal dans A} \land \text{Signal dans B} \text{ (dans une fenêtre } T)
 \]
-(pour $T$ petit devant l’intervalle moyen entre deux événements). Ainsi, le taux de coïncidences fortuites (dites accidentelles) est
-\[
-N_{\mathrm{acc}} \approx N_A\,N_B\,T.
-\]
+\end{tcolorbox}
+\end{center}
 
-Dans notre expérience, nous pouvons estimer l’efficacité en comparant le taux de coïncidences 2-fold réel aux prédictions théoriques de flux de muons. Par exemple, le flux vertical de muons au sol est d’environ $70~\text{m}^{-2}\text{s}^{-1}\text{sr}^{-1}$ pour $E_\mu > 1$ GeV. Si chaque scintillateur fait une surface $S$ (en m²) et que l’angle solide commun correspondant (défini par leur chevauchement) est $\Omega$, le taux attendu de muons traversant les deux devrait être $N_{\mu,\text{attendu}} \approx 70 \times S \times \Omega$ (en s⁻¹). En pratique, on mesure un taux de coïncidence $N_{\mu,\text{mesuré}}$. Le rapport $N_{\mu,\text{mesuré}} / N_{\mu,\text{attendu}}$ fournit le produit des efficacités des deux détecteurs ($\varepsilon_A \varepsilon_B$) multiplié par la fraction du flux effectivement couverte par la géométrie (l’acceptance du télescope, voir ci-dessous). Des écarts notables peuvent provenir d’une efficacité moindre ou d’une géométrie non idéale. Dans nos résultats, le taux de coïncidence mesuré et les estimations théoriques concordent à mieux que 10%, ce qui suggère une efficacité individuelle de l’ordre de 95%. Autrement dit, nos scintillateurs détectent ~95% des muons les traversant, ce qui est conforme aux standards pour des plaques plastiques de 1 cm d’épaisseur lues par PM.
+\paragraph{Probabilité de coïncidences fortuites}
 
-Acceptation géométrique : Il convient de mentionner que le taux de coïncidence dépend aussi de la géométrie du montage. Deux détecteurs de surface finie définissent un cône de détection commun. Par exemple, si deux plaques de surface $S$ sont placées parallèlement à une distance $d$, le système ne compte que les muons dont la trajectoire les fait passer par les deux surfaces. L’acceptation (aire solide effective) de ce télescope est $A_{\text{eff}} = S \cdot \cos\alpha \cdot \Omega$, où $\Omega$ est l’angle solide sous lequel les deux plaques se “voient” mutuellement, et $\alpha$ est un éventuel angle d’inclinaison. Pour des détecteurs identiques bien alignés ($\alpha=0$) et suffisamment proches, l’acceptation est approximativement $A_{\text{eff}} \approx S$·(angle solide correspondant). À grande distance, l’aire effective se réduit car le chevauchement des solides diminue. Dans notre cas, l’espacement entre scintillateurs est assez faible (quelques dizaines de cm), de sorte que l’acceptation couvre l’essentiel du ciel au-dessus de la surface de la plaque. Nous négligeons donc cette correction dans un premier temps, mais en section 4 (distribution angulaire) nous ferons varier l’angle et noterons l’importance de la géométrie.
+Pour que la coïncidence ne laisse passer que les \og vrais\fg{} muons et non des coïncidences purement fortuites de bruits indépendants, il faut que le taux de comptage parasite soit suffisamment plus faible que le taux de coïncidence attendu des muons.
 
-En résumé, la configuration en coïncidence à deux scintillateurs permet de fiabiliser la détection des muons cosmiques en supprimant presque totalement le bruit de fond aléatoire. Le rapport signal/bruit est ainsi grandement amélioré, rendant possible les mesures quantitatives précises du flux de muons. L’efficacité de détection élevée garantit que très peu de muons traversant le dispositif échappent à la mesure. Ces précautions étant établies, on peut passer à l’étude des propriétés des muons détectés, en commençant par leur distribution en incidence angulaire.
+\vspace{1em}
+\begin{remarque}
+\textbf{Résumé~:} La configuration en coïncidence à deux scintillateurs permet de fiabiliser la détection des muons cosmiques en supprimant le bruit de fond aléatoire. Le rapport signal/bruit est ainsi grandement amélioré, rendant possible les mesures quantitatives précises du flux de muons.
+\end{remarque}
+
+\vspace{1em}
+\noindent
 
 \subsection{Résultats expérimentaux}
 \subsubsection{Caractéristique des scintillateurs}

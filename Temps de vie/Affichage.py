@@ -11,7 +11,7 @@ fig, ax = plt.subplots(figsize=(10,6))
 # -----------------------------
 # Lecture des données
 # -----------------------------
-filename = "Temps de vie/Data/etalonageTAC.csv"  # Remplacez par le chemin réel
+filename = "Temps de vie/Data/etalongaev2.csv"  # Remplacez par le chemin réel
 skip_lines = 0  # Nombre de lignes à ignorer au début du fichier
 try:
     data = pd.read_csv(filename, skiprows=skip_lines)
@@ -23,7 +23,7 @@ deltaT = data['deltaT']
 channel = data['channel']
 err_channel = data['error']
 
-err_deltaT = 1
+err_deltaT = 0.001
 
 # grille fine pour la courbe
 x_fit = np.linspace(deltaT.min(), deltaT.max(), 500)
@@ -82,7 +82,7 @@ ax.errorbar(
 )
     
 ax.set_ylabel("Channel (proportionnel au délai)")
-ax.set_xlabel("deltaT (ns)")
+ax.set_xlabel("deltaT (us)")
 
 # légende des points en haut à gauche sans cadre, avec marge
 ax.legend(
