@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 from scipy.optimize import curve_fit
 import scipy.stats as st
+from matplotlib.ticker import MultipleLocator, AutoLocator, AutoMinorLocator
 
 fig, ax = plt.subplots(figsize=(10,6))
 
@@ -50,7 +51,7 @@ err_diff   = np.sqrt(err_count**2 + err_random**2) / 10
 err_ratio = np.sqrt((err_diff/count_diff_min)**2 + (err_random/ratio)**2)
 
 # grille fine pour la courbe
-x_fit = np.linspace(0, angles.max(), 500)
+x_fit = np.linspace(angles.min(), angles.max(), 500)
 
 # Fit en cos²
 def cos2(theta, A, offset):
@@ -70,13 +71,20 @@ dof = len(angles) - len(params)
 t_vals = params / se
 p_vals = 2 * (1 - st.t.cdf(np.abs(t_vals), dof))
 
+# ajout du χ² et du χ² réduit
+chi2 = np.sum(((eff_count_min - cos2(angles, *params)) / err_eff_count)**2)
+red_chi2 = chi2 / dof
+
+# calcul de R²
+y_pred = cos2(angles, *params)
+ss_res = np.sum((eff_count_min - y_pred)**2)
+ss_tot = np.sum((eff_count_min - np.mean(eff_count_min))**2)
+r2 = 1 - ss_res/ss_tot
+
 y_fit = cos2(x_fit, *params)
 ax.plot(
-    x_fit, y_fit, '-', color='red',
-    label=(
-        f'Fit cos²: A={params[0]:.1f}±{se[0]:.1f} (p={p_vals[0]:.2f}), '
-        f'offset={params[1]:.1f}±{se[1]:.1f} (p={p_vals[1]:.2f})'
-    )
+    x_fit, y_fit, '-', color='red'
+    # label supprimé pour usage dans textbox
 )
 
 # -----------------------------
@@ -94,11 +102,46 @@ ax.errorbar(
     
 ax.set_ylabel("Nombre de coïncidences par minute")
 ax.set_xlabel("θ (degrés)")
-ax.legend(loc='upper right', fontsize=10)
-ax.grid(True, which='both', ls='--', alpha=0.3)
 
-xmin, xmax = angles.min()*0.8, angles.max()*1.2
-ymin, ymax = None, None  # ou définir manuellement
+# légende des points en haut à gauche sans cadre, avec marge
+ax.legend(
+    loc='upper left',
+    fontsize=10,
+    borderpad=0.5,           # espace entre le texte et le bord de la légende
+    bbox_to_anchor=(0.03, 0.95)  # décalage depuis le coin supérieur gauche
+)
+
+# encadré texte en haut à droite, à l’intérieur du graphe
+textstr = (
+    f"TREX\n"
+    f"N_eff = {params[0]:.1f} cos²(θ) + {params[1]:.1f}\n"
+    f"A={params[0]:.1f}±{se[0]:.1f} (p={p_vals[0]:.2f})\n"
+    f"B={params[1]:.1f}±{se[1]:.1f} (p={p_vals[1]:.2f})\n"
+    f"χ²/ndf = {red_chi2:.2f}\n"
+    f"R² = {r2:.2f}"
+)
+ax.text(
+    0.95, 0.95, textstr,
+    transform=ax.transAxes, va='top', ha='right'
+)
+
+# graduations automatiques sur les deux axes
+ax.xaxis.set_major_locator(AutoLocator())
+ax.xaxis.set_minor_locator(AutoMinorLocator())
+ax.yaxis.set_major_locator(MultipleLocator())
+ax.yaxis.set_minor_locator(AutoMinorLocator())
+
+# ticks sur tous les côtés, vers l'intérieur
+ax.tick_params(axis='both', which='major', direction='in', top=True, right=True, length=10)
+ax.tick_params(axis='both', which='minor', direction='in', top=True, right=True, length=5)
+
+# échelle automatique
+ax.relim()
+ax.autoscale_view()
+
+# augmenter ymax de 1
+ymin, ymax = ax.get_ylim()
+ax.set_ylim(ymin, ymax + 1)
 
 plt.tight_layout(h_pad=0.1)
 plt.show()
