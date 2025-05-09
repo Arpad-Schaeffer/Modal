@@ -13,6 +13,8 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{cleveref}
+\usepackage{float}
+\usepackage{caption}
 \graphicspath{{figures/}}
 % allow common Unicode in math
 \DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
@@ -64,35 +66,42 @@ dans la matière solide (valeur typique pour un muon minimum ionisant) – une 
 
 \subsection{Objectifs de l’étude}
 
-\begin{itemize}
-  \item \textbf{Détection et coïncidence}  
-    Mettre en place un télescope à scintillateurs plastiques et isoler les muons réels du bruit de fond.
-  \item \textbf{Distribution angulaire}  
-    Mesurer le flux en fonction de l’angle et vérifier la loi $I(\theta)\propto\cos^2\!\theta$.
-  \item \textbf{Dépôt d’énergie}  
-    Étudier le pouvoir de pénétration des muons à l’aide d’absorbeurs de plomb.
-  \item \textbf{Temps de vie du muon}  
-    Chronométrer la désintégration des muons arrêtés pour déterminer $\tau_\mu$.
-  \item \textbf{Modernisation technique}  
-    Adopter des détecteurs SiPM et un traitement FPGA pour gagner en compacité et en rapidité.
-\end{itemize}
+\subsubsection*{Détection et coïncidence}
+Mettre en place un télescope à scintillateurs plastiques et isoler les muons réels du bruit de fond.
+\subsubsection*{Distribution angulaire}
+Mesurer le flux en fonction de l’angle et vérifier la loi $I(\theta)\propto\cos^2\!\theta$.
+\subsubsection*{Dépôt d’énergie}
+Étudier le pouvoir de pénétration des muons à l’aide d’absorbeurs de plomb.
+\subsubsection*{Temps de vie du muon}
+Chronométrer la désintégration des muons arrêtés pour déterminer $\tau_\mu$.
+\subsubsection*{Modernisation technique}
+Adopter des détecteurs SiPM et un traitement FPGA pour gagner en compacité et en rapidité.
+
+
 
 \section{Montage expérimental}
 Cette expérience repose sur un système de détection à scintillateur plastique couplé à un photomultiplicateur (PM). Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les éléments clés, illustrés par des schémas et photos.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Images/PhotoMultiplierTubeAndScintillator.png}
+  \caption{Photo du montage de détection}
+  \label{fig:setup}
+\end{figure}
+
 \subsection{Principe de détection par scintillation}
 Un muon traversant un scintillateur plastique perd de l’énergie par collisions avec les atomes du milieu. Cette énergie est convertie rapidement en photons dans l’UV/visible. La plupart de ces photons restent piégés par réflexion interne et sont récoltés par le photomultiplicateur placé en contact optique.
 
-\vspace{1em}
-\noindent
-\textbf{Suggérer ici un schéma :} \emph{“Schéma global d’un scintillateur couplé à un photomultiplicateur. Illustration disponible sur~:}
-\url{https://commons.wikimedia.org/wiki/File:Photomultiplier_tube_schematic.png}
-\emph{.”}
-
-\vspace{1em}
 
 \subsubsection*{Photomultiplicateur (PM)}
-Ce tube sous vide comporte une photocathode (effet photoélectrique) et une série de dynodes en cascade. Chaque électron initial est multiplié en une avalanche ($10^6$ à $10^8$ électrons), amplifiant le signal jusqu’à une impulsion mesurable en sortie. 
+Ce tube sous vide comporte une photocathode (effet photoélectrique) et une série de dynodes en cascade. Chaque électron initial est multiplié en une avalanche ($10^6$ à $10^8$ électrons), amplifiant le signal jusqu’à une impulsion mesurable en sortie.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Images/PhotoMultiplierTubeAndScintillator.png}
+  \caption{Schéma global d’un scintillateur couplé à un photomultiplicateur}
+  \label{fig:pm_scintillator}
+\end{figure}
 
 \subsection{Chaîne d’électronique rapide}
 \begin{itemize}
