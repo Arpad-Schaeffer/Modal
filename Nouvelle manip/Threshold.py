@@ -1,16 +1,17 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator, AutoLocator, AutoMinorLocator
+
 
 # Option : mettre à True pour échelle log en ordonnée
-log = False
 
 # Option : définir limites axe x (None pour auto)
 xmin = 0.1   # ex: 0.0
 xmax = None   # ex: 5.0
 
 # Chemin vers votre fichier CSV (à ajuster)
-csv_file = "/Users/malotamalet/Desktop/2A/Modal/Modal/Nouvelle manip/Threshold.csv"
+csv_file = "Nouvelle manip/Threshold_dect1.csv"
 
 # Lecture du CSV en sautant les deux premières lignes
 df = pd.read_csv(csv_file, skiprows=2)
@@ -19,29 +20,50 @@ df = pd.read_csv(csv_file, skiprows=2)
 x = df['Threshold']
 y = df['Count']
 
-# Tracé
-plt.figure(figsize=(8, 5))
-plt.plot(x, y, marker='o', linestyle='-')
+
 
 # application de l'échelle log si demandée
-if log:
-    plt.yscale('log')
 
-# application des limites sur l'axe x si demandées
-if xmin is not None or xmax is not None:
-    plt.xlim(xmin, xmax)
-    # mise à jour automatique de l'axe y selon la plage x visible
-    mask = pd.Series(True, index=x.index)
-    if xmin is not None:
-        mask &= x >= xmin
-    if xmax is not None:
-        mask &= x <= xmax
-    y_vis = y[mask]
-    if not y_vis.empty:
-        plt.ylim(y_vis.min(), y_vis.max())
 
-plt.xlabel('Threshold (V)')
-plt.ylabel('Count')
-plt.title('Count en fonction du Threshold' + (' [log]' if log else ''))
-plt.grid(True)
+
+
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(x, y, '-o', label="Données brutes", markersize=5)
+
+
+textstr = (
+    r"$\bf{TREX}$"
+    f"\n"
+        
+    )
+ax.text(
+        0.95, 0.95, textstr,
+        transform=ax.transAxes, fontsize=10,
+        verticalalignment='top', horizontalalignment='right',
+        bbox=dict(boxstyle="round", facecolor="white", alpha=0.8)
+    )
+
+    # Configuration du graphique
+ax.set_xlabel("Seuil")
+ax.set_ylabel("Nombre de coups (N)")
+ax.set_title("Reponse des scintillateurs en fonction du seuil")
+ax.legend()
+ax.grid(False)
+    # graduations automatiques sur les deux axes
+ax.xaxis.set_major_locator(AutoLocator())
+ax.xaxis.set_minor_locator(AutoMinorLocator())
+ax.yaxis.set_major_locator(AutoLocator())
+ax.yaxis.set_minor_locator(AutoMinorLocator())
+    
+    # ticks sur tous les côtés, vers l'intérieur
+ax.tick_params(axis='both', which='major', direction='in', top=True, right=True, length=10)
+ax.tick_params(axis='both', which='minor', direction='in', top=True, right=True, length=5)
+
+    # échelle automatique
+ax.relim()
+ax.autoscale_view()
+
+plt.tight_layout()
 plt.show()
+
+
