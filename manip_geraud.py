@@ -1,5 +1,5 @@
 # Ouvrir et lire le fichier
-with open("mesures_arpad.txt", "r") as file:
+with open("mesures.txt", "r") as file:
     lines = file.readlines()
 
 # Extraire les noms des colonnes depuis la première ligne
@@ -23,7 +23,8 @@ column_to_angle = {
     ('14','23','32'):-0.989,
     ('13','22','31'):-0.989,
     ('12','21'):-0.989,
-    
+
+
     
     # Ajouter d'autres combinaisons ici
 }
