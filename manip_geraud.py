@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
-
+from matplotlib.ticker import MultipleLocator, AutoLocator, AutoMinorLocator
+ 
 # Fonction cosinus carré pour le fit
 def cos_squared(x, a, b, c):
     return a * (np.cos(np.radians(x) + b) ** 2) + c
@@ -37,6 +38,18 @@ column_to_angle = {
     tuple(sorted(['33', '14'])): -0.65,
     tuple(sorted(['32', '13'])): -0.65,
     tuple(sorted(['31', '12'])): -0.65,
+    tuple(sorted(['34', '22'])): 1.355,
+    tuple(sorted(['33', '21'])): 1.355,
+    tuple(sorted(['24', '12'])): 1.355,
+    tuple(sorted(['23', '11'])): 1.355,
+    tuple(sorted(['32', '24'])): -1.355,
+    tuple(sorted(['31', '23'])): -1.355,
+    tuple(sorted(['14', '22'])): -1.355,
+    tuple(sorted(['13', '21'])): -1.355,
+    tuple(sorted(['34', '21'])): 1.408,
+    tuple(sorted(['11', '24'])): 1.408,
+    tuple(sorted(['31', '24'])): -1.408,
+    tuple(sorted(['21', '14'])): -1.408,
     
     # Ajouter d'autres combinaisons ici
 }
@@ -95,6 +108,14 @@ for angle in angle_counts:
         angle_counts[angle] /= 4  # Diviser par 4 pour l'angle 0.989
     elif angle == -0.65*180 / np.pi:
         angle_counts[angle] /= 3  # Diviser par 3 pour l'angle 0.65
+    elif angle == 1.355*180 / np.pi:
+        angle_counts[angle] /= 4
+    elif angle == -1.355*180 / np.pi:
+        angle_counts[angle] /= 4
+    elif angle == 1.408*180 / np.pi:
+        angle_counts[angle] /= 2
+    elif angle == -1.408*180 / np.pi:
+        angle_counts[angle] /= 2
 
 # Créer un histogramme des angles
 angles = list(angle_counts.keys())
@@ -108,24 +129,98 @@ counts.append(unknown_angle_count)
 angles_array = np.array(angles[:-1])  # Exclure l'angle inconnu (180)
 counts_array = np.array(counts[:-1])  # Exclure le compte inconnu
 popt, pcov = curve_fit(cos_squared, angles_array, counts_array, p0=[1, 0, 0])
+chi_squared = np.sum(((counts_array - cos_squared(angles_array, *popt)) ** 2) / counts_array)
+
+# Calcul des erreurs de Poisson pour les counts, en tenant compte des divisions
+errors = np.sqrt(np.array(counts))  # Erreurs de Poisson avant division
+for i, angle in enumerate(angles[:-1]):  # Exclure l'angle inconnu
+    if angle == 0:
+        errors[i] /= 4  # Diviser par 4 pour l'angle 0
+    elif angle == 0.989 * 180 / np.pi:
+        errors[i] /= 4  # Diviser par 4 pour l'angle 0.989
+    elif angle == 0.65 * 180 / np.pi:
+        errors[i] /= 3  # Diviser par 3 pour l'angle 0.65
+    elif angle == -0.989 * 180 / np.pi:
+        errors[i] /= 4  # Diviser par 4 pour l'angle -0.989
+    elif angle == -0.65 * 180 / np.pi:
+        errors[i] /= 3  # Diviser par 3 pour l'angle -0.65
+    elif angle == 1.355 * 180 / np.pi:
+        errors[i] /= 4  # Diviser par 4 pour l'angle 1.355
+    elif angle == -1.355 * 180 / np.pi:
+        errors[i] /= 4  # Diviser par 4 pour l'angle -1.355
+    elif angle == 1.408 * 180 / np.pi:
+        errors[i] /= 2  # Diviser par 2 pour l'angle 1.408
+    elif angle == -1.408 * 180 / np.pi:
+        errors[i] /= 2  # Diviser par 2 pour l'angle -1.408
 
 # Générer des données pour le fit
 fit_angles = np.linspace(min(angles_array), max(angles_array), 500)
 fit_counts = cos_squared(fit_angles, *popt)
+colors = ['blue'] * (len(angles) - 1) + ['red']  # Bleu pour les angles connus, rouge pour l'inconnu
+
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(fit_angles, fit_counts, color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")
+
+# Ajouter les points avec des erreurs verticales (Poisson)
+ax.errorbar(angles, counts, yerr=errors, fmt='o', color='blue', label="Données avec erreurs", zorder=3)
 
 # Ajouter le fit au graphique
-plt.plot(fit_angles, fit_counts, color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")
-plt.legend()
-# Créer un histogramme avec des couleurs différentes
-colors = ['blue'] * (len(angles) - 1) + ['red']  # Bleu pour les angles connus, rouge pour l'inconnu
-plt.bar(angles, counts, color=colors, alpha=0.7, width=3)
+textstr = (
+    r"$\bf{TREX}$"
+    f"\n"
+    r" Fit : $N = a\cos^2\left(x+b\right)+c$"
+    f"\n"
+    f"a = {popt[0]:.3f}\n"
+    f"b = {popt[1]:.3f}\n"
+    f"c = {popt[2]:.3f}\n"
+    r"$\chi^2 =$ "f"{chi_squared:.3f}"
+)
+ax.text(
+    0.95, 0.95, textstr,
+    transform=ax.transAxes, fontsize=10,
+    verticalalignment='top', horizontalalignment='right',
+    bbox=dict(boxstyle="round", facecolor="white", alpha=0.8)
+)
 
-# Ajouter des labels et un titre
-plt.xlabel("Angles")
-plt.ylabel("Nombre d'occurrences")
-plt.title("Histogramme des angles attribués")
-plt.xticks(rotation=45)
+# Configuration du graphique
+ax.set_xlabel("Canal (x)")
+ax.set_ylabel("Nombre de coups (N)")
+ax.set_title("Spectre extrait de .spe (Maestro), Aquisition sur trois jours")
+ax.legend()
+ax.grid(False)
+
+# Graduations automatiques sur les deux axes
+ax.xaxis.set_major_locator(AutoLocator())
+ax.xaxis.set_minor_locator(AutoMinorLocator())
+ax.yaxis.set_major_locator(AutoLocator())
+ax.yaxis.set_minor_locator(AutoMinorLocator())
+
+# Ticks sur tous les côtés, vers l'intérieur
+ax.tick_params(axis='both', which='major', direction='in', top=True, right=True, length=10)
+ax.tick_params(axis='both', which='minor', direction='in', top=True, right=True, length=5)
+
+# Échelle automatique
+ax.relim()
+ax.autoscale_view()
+
 plt.tight_layout()
-
-# Afficher l'histogramme
 plt.show()
+print(f"Paramètres du fit : {popt}")
+print(f"Covariance du fit : {pcov}")
+
+
+# plt.plot(fit_angles, fit_counts, color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")
+# plt.legend()
+# # Créer un histogramme avec des couleurs différentes
+# colors = ['blue'] * (len(angles) - 1) + ['red']  # Bleu pour les angles connus, rouge pour l'inconnu
+# plt.bar(angles, counts, color=colors, alpha=0.7, width=3)
+
+# # Ajouter des labels et un titre
+# plt.xlabel("Angles")
+# plt.ylabel("Nombre d'occurrences")
+# plt.title("Histogramme des angles attribués")
+# plt.xticks(rotation=45)
+# plt.tight_layout()
+
+# # Afficher l'histogramme
+# plt.show()
