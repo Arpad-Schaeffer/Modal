@@ -1,13 +1,21 @@
 \babel@toc {french}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Photo du montage de détection}}{6}{figure.caption.1}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Photo du montage de détection}}{7}{figure.caption.1}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Schéma global d’un scintillateur couplé à un photomultiplicateur}}{9}{figure.caption.2}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Schéma fonctionnel de la chaîne électronique : PM alimenté par HT, suivi d’un circuit RC, amplificateur, discriminateur, delay, module de coïncidence, puis compteur. L’oscilloscope permet de visualiser les signaux à chaque étape.}}{11}{figure.caption.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}}{11}{figure.caption.4}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}}{12}{figure.caption.4}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Diagramme d’architecture de l’électronique de détection (inspiré de \url {https://www.nupecc.org/presentations/pictures/detector_electronics_diagram.png}).}}{12}{figure.caption.5}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Exemple de signal mesuré en sortie du PM : points expérimentaux et ajustement exponentiel. On distingue la composante rapide (scintillateur) et la composante plus lente (circuit RC).}}{13}{figure.caption.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Nombre de signaux détectés en fonction de la haute tension appliquée au PM et du seuil du discriminateur.}}{15}{figure.caption.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}}{16}{figure.caption.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Nombre d’évènement en 1min en fonction du seuil}}{18}{figure.caption.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 2 scintillateurs en coïncidence, THR = -1.8V}}{18}{figure.caption.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 3 scintillateurs en coïncidence}}{18}{figure.caption.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Nombre d’évènement en 2min en fonction du seuil pour 3 scintillateurs en coïncidence}}{18}{figure.caption.12}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Schéma de la chaîne électronique utilisée pour faire varier la haute tension du PM}}{14}{figure.caption.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Nombre de signaux détectés en fonction de la haute tension appliquée au PM.}}{14}{figure.caption.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur}}{15}{figure.caption.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Nombre d’événements détectés en fonction du seuil du discriminateur.}}{15}{figure.caption.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Schéma de la chaîne électronique utilisée pour l'optimisation conjointe de la haute tension et du seuil du discriminateur}}{16}{figure.caption.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Résultats de l'optimisation conjointe : taux de détection en fonction de la haute tension et du seuil du discriminateur.}}{16}{figure.caption.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Montage electronique de coïncidence avec les scintillateurs.}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}}{18}{figure.caption.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Montage électronique de coïncidence avec un retardateur.}}{19}{figure.caption.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Caractéristique du scintillateur haut}}{19}{figure.caption.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Nombre d’évènement en 1min en fonction du seuil}}{20}{figure.caption.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 2 scintillateurs en coïncidence, THR = -1.8V}}{20}{figure.caption.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 3 scintillateurs en coïncidence}}{20}{figure.caption.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Nombre d’évènement en 2min en fonction du seuil pour 3 scintillateurs en coïncidence}}{21}{figure.caption.20}%
