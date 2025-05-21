@@ -1,0 +1,13 @@
+\babel@toc {french}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Photo du montage de détection}}{6}{figure.caption.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Schéma global d’un scintillateur couplé à un photomultiplicateur}}{9}{figure.caption.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Schéma fonctionnel de la chaîne électronique : PM alimenté par HT, suivi d’un circuit RC, amplificateur, discriminateur, delay, module de coïncidence, puis compteur. L’oscilloscope permet de visualiser les signaux à chaque étape.}}{11}{figure.caption.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}}{11}{figure.caption.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Diagramme d’architecture de l’électronique de détection (inspiré de \url {https://www.nupecc.org/presentations/pictures/detector_electronics_diagram.png}).}}{12}{figure.caption.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Exemple de signal mesuré en sortie du PM : points expérimentaux et ajustement exponentiel. On distingue la composante rapide (scintillateur) et la composante plus lente (circuit RC).}}{13}{figure.caption.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Nombre de signaux détectés en fonction de la haute tension appliquée au PM et du seuil du discriminateur.}}{15}{figure.caption.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}}{16}{figure.caption.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Nombre d’évènement en 1min en fonction du seuil}}{18}{figure.caption.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 2 scintillateurs en coïncidence, THR = -1.8V}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 3 scintillateurs en coïncidence}}{18}{figure.caption.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Nombre d’évènement en 2min en fonction du seuil pour 3 scintillateurs en coïncidence}}{18}{figure.caption.12}%
