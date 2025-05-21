@@ -1,5 +1,6 @@
 \documentclass[a4paper,12pt,twoside]{article}
 
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -140,6 +141,7 @@ Les PM présentent une excellente linéarité, une faible contribution au bruit,
 
 \subsection{Chaîne électronique}
 
+
 La détection des muons nécessite une chaîne électronique rapide et fiable, composée de plusieurs instruments analogiques spécialisés. Voici les principaux modules utilisés et leur rôle dans l’expérience :
 
 \begin{itemize}
@@ -221,6 +223,12 @@ Le signal observé est donc la convolution de ces deux décroissances exponentie
 \paragraph{Interprétation :} La mesure de $\tau_{\text{scint}}$ est cohérente avec les valeurs attendues pour ce type de plastique. La prise en compte de $\tau_{RC}$ permet d’optimiser le traitement du signal pour la suite des analyses.
 
 \subsection{Variation de la haute tension du photomultiplicateur}
+\begin{figure}[H]
+  \centering
+  \include{variationHT}
+  \caption{Schéma de la chaîne électronique utilisée pour faire varier la haute tension du PM}
+  \label{fig:variation_HT}
+\end{figure}
 
 Nous avons ensuite étudié l’influence de la tension d’alimentation du photomultiplicateur (PM) sur le taux de détection.
 
@@ -239,6 +247,13 @@ Nous avons ensuite étudié l’influence de la tension d’alimentation du phot
 \paragraph{Conclusion :} Le choix de la tension optimale est un compromis entre sensibilité et bruit. Nous avons retenu une valeur de HT assurant un taux de détection élevé tout en limitant les faux positifs.
 
 \subsection{Variation du seuil du discriminateur}
+
+\begin{figure}[H]
+  \centering
+  \include{treshold}
+  \caption{Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur}
+  \label{fig:variation_seuil}
+\end{figure}
 
 Enfin, nous avons étudié l’effet du seuil (threshold, THR) du discriminateur sur le nombre de signaux détectés.
 
@@ -271,6 +286,13 @@ Dans un détecteur isolé, le taux de comptage brut inclut non seulement les év
 \end{itemize}
 
 Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes fictifs à un taux non négligeable. Par exemple, un photomultiplicateur à température ambiante peut avoir un bruit d’obscurité de quelques centaines de comptes par seconde. De même, l’environnement radioactif (rayonnement cosmique diffus, $\gamma$ du sol, etc.) peut induire des lueurs dans le scintillateur. Il est donc essentiel de discriminer les signaux “muon” authentiques du bruit de fond.
+
+\begin{figure}[H]
+    \centering
+    \include{coincidence_sans_delais}
+    \caption{Montage electronique de coïncidence avec les scintillateurs.}
+    \label{fig:coincidence_sans_delais}
+\end{figure}
 
 \vspace{1em}
 \begin{center}
@@ -305,6 +327,12 @@ On dispose donc deux scintillateurs en série sur la trajectoire des muons. Le s
 
 Pour que la coïncidence ne laisse passer que les \og vrais\fg{} muons et non des coïncidences purement fortuites de bruits indépendants, il faut que le taux de comptage parasite soit suffisamment plus faible que le taux de coïncidence attendu des muons.
 
+\begin{figure}[H]
+    \centering
+    \include{coincidences_delai}
+    \caption{Montage électronique de coïncidence avec un retardateur.}
+    \label{fig:coincidence_avec_delais}
+\end{figure}
 \vspace{1em}
 \begin{remarque}
 \textbf{Résumé~:} La configuration en coïncidence à deux scintillateurs permet de fiabiliser la détection des muons cosmiques en supprimant le bruit de fond aléatoire. Le rapport signal/bruit est ainsi grandement amélioré, rendant possible les mesures quantitatives précises du flux de muons.

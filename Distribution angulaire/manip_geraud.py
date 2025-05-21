@@ -183,9 +183,9 @@ ax.text(
 )
 
 # Configuration du graphique
-ax.set_xlabel("Canal (x)")
+ax.set_xlabel("Angles (degrés)")
 ax.set_ylabel("Nombre de coups (N)")
-ax.set_title("Spectre extrait de .spe (Maestro), Aquisition sur trois jours")
+ax.set_title("Distribution des angulaire des muons pour un systeme à 12 scintillateurs")
 ax.legend()
 ax.grid(False)
 
