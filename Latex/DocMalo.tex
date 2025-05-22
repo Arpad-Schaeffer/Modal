@@ -233,7 +233,7 @@ Analyser la forme, l’amplitude et la dépendance du signal détecté pour opti
 
 L’étude du signal issu de la détection d’un muon cosmique à l’aide d’un scintillateur plastique permet d’accéder à des informations précieuses sur la dynamique de la chaîne d’acquisition. Le signal typique, mesuré à l’oscilloscope, présente une décroissance exponentielle caractéristique, liée à la désexcitation des molécules du scintillateur, ainsi qu’une remontée associée à la réponse de l’électronique (constante de temps RC).
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/Desexitation_Scintillateur_2.png}
     \caption{Exemple de signal mesuré sur un muon cosmique, avec ajustements exponentiels sur la descente et la montée.}
@@ -296,6 +296,24 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
     \label{fig:optimisation_scint3}
 \end{figure}
 
+% --- ENCADRÉ PROBLÈMES DÉBUT ---
+
+\vspace{1em}
+\begin{center}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Problèmes rencontrés lors de l'optimisation]
+Lors de l’optimisation conjointe du seuil et de la haute tension, plusieurs difficultés majeures ont été rencontrées :
+\begin{itemize}
+    \item \textbf{Comptes très différents entre scintillateurs} : pour un même seuil, on observe parfois un facteur 20 entre deux scintillateurs (ex : 40 000 pour l’un, 2 000 pour l’autre).
+    \item \textbf{Absence de palier net} : il était difficile d’identifier un palier clair dans la courbe de comptage ; lorsque l’on s’en approchait, le nombre de counts devenait trop faible pour modéliser correctement la zone.
+    \item \textbf{Durée d’acquisition limitée} : chaque point correspond à un count par minute ; augmenter la durée pour améliorer la statistique aurait nécessité un temps d’acquisition très long (nombre de seuils $\times$ temps d’acquisition $\times$ 3 scintillateurs $\times$ nombre de tensions).
+    \item \textbf{Variabilité d’un jour à l’autre} : les mesures n’étaient pas reproductibles d’un jour à l’autre, traduisant une grande sensibilité aux réglages de HT et de seuil.
+\end{itemize}
+Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispersion des résultats.
+\end{tcolorbox}
+\end{center}
+
+% --- FIN ENCADRÉ PROBLÈMES ---
+
 % --- Synthèse unique, concise, orientée résultats, avec trous à remplir ---
 
 \begin{remarque}
@@ -310,6 +328,7 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
 \newpage
 
 \section{Détection par coïncidence}
+
 \subsection{Principe de coïncidence}
 
 \vspace{1em}
@@ -328,7 +347,7 @@ Dans un détecteur isolé, le taux de comptage brut inclut non seulement les év
     \item \textbf{Rayons cosmiques secondaires} autres que les muons (particules $\alpha$, neutrons, électrons) stoppés dans le matériau.
 \end{itemize}
 
-Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes fictifs à un taux non négligeable. Par exemple, un photomultiplicateur à température ambiante peut avoir un bruit d’obscurité de quelques centaines de comptes par seconde. De même, l’environnement radioactif (rayonnement cosmique diffus, $\gamma$ du sol, etc.) peut induire des lueurs dans le scintillateur. Il est donc essentiel de discriminer les signaux “muon” authentiques du bruit de fond.
+Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes fictifs à un taux non négligeable. Par exemple, un photomultiplicateur à température ambiante peut avoir un bruit d’obscurité de quelques centaines de comptes par seconde. De même, l’environnement radioactif (rayonnement cosmique diffus, $\gamma$ du sol, etc.) peut induire des lueurs dans le scintillator. Il est donc essentiel de discriminer les signaux “muon” authentiques du bruit de fond.
 
 \begin{figure}[H]
     \centering
@@ -337,8 +356,6 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
     \label{fig:coincidence_sans_delais}
 \end{figure}
 
-\paragraph{Schéma explicatif}
-
 \begin{figure}[H]
     \centering
     %\includegraphics[width=0.6\textwidth]{figures/schema_coincidence.pdf}
@@ -346,83 +363,85 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
     \caption{Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}
 \end{figure}
 
-\paragraph{Définition de la coïncidence temporelle}
+% --- 4.2 Principe des coïncidences fortuites ---
 
-On dispose donc deux scintillateurs en série sur la trajectoire des muons. Le système de comptage enregistre un événement uniquement lorsqu’il y a deux impulsions concomitantes (ou dans une fenêtre de temps très courte $T$) sur les deux scintillateurs (\textbf{coïncidence à 2-fold}). Cela permet d’éliminer la majorité des faux déclenchements.
+\subsection{Principe des coïncidences fortuites}
 
-\begin{center}
-\begin{tcolorbox}[colback=gray!10!white, colframe=gray!80!black, boxrule=0.5pt, arc=2pt, left=2pt, right=2pt, top=2pt, bottom=2pt]
-\textbf{Logique de coïncidence :} 
-\[
-\text{Événement détecté} \iff \text{Signal dans A} \land \text{Signal dans B} \text{ (dans une fenêtre } T)
-\]
-\end{tcolorbox}
-\end{center}
+Nous avons aussi estimé le nombre de coïncidences fortuites, c’est-à-dire les coïncidences dues au bruit et non aux muons. Pour cela, nous avons utilisé la méthode du délai (delay) :
 
-\paragraph{Probabilité de coïncidences fortuites}
+\begin{itemize}
+    \item \textbf{Pour 2 scintillateurs}~: nous avons introduit un délai sur l’un des deux signaux avant son entrée dans le module de coïncidence. En choisissant un délai supérieur à la fenêtre temporelle (width) de la coïncidence, on s’assure que les impulsions issues d’un même muon ne peuvent plus être détectées simultanément. Ainsi, tous les événements enregistrés dans cette configuration sont nécessairement des coïncidences fortuites, c’est-à-dire dues à des bruits indépendants sur chaque détecteur. Le nombre de coïncidences mesuré avec ce décalage donne donc directement le taux de fond accidentel.
+    \item \textbf{Pour 3 scintillateurs}~: la même logique a été appliquée, mais cette fois en introduisant deux délais différents sur deux des trois signaux. Cela garantit qu’aucun muon ne peut produire une triple coïncidence réelle, et que tous les événements enregistrés sont fortuits. On mesure alors en parallèle le nombre de coïncidences avec et sans délai~: la différence entre les deux donne le nombre de “vrais” muons détectés, c’est-à-dire le signal purifié du bruit de fond.
+\end{itemize}
 
-Pour que la coïncidence ne laisse passer que les \og vrais\fg{} muons et non des coïncidences purement fortuites de bruits indépendants, il faut que le taux de comptage parasite soit suffisamment plus faible que le taux de coïncidence attendu des muons.
-
-\begin{figure}[H]
-    \centering
-    \include{coincidences_delai}
-    \caption{Montage électronique de coïncidence avec un retardateur.}
-    \label{fig:coincidence_avec_delais}
-\end{figure}
-\vspace{1em}
-\begin{remarque}
-\textbf{Résumé~:} La configuration en coïncidence à deux scintillateurs permet de fiabiliser la détection des muons cosmiques en supprimant le bruit de fond aléatoire. Le rapport signal/bruit est ainsi grandement amélioré, rendant possible les mesures quantitatives précises du flux de muons.
-\end{remarque}
-
-\vspace{1em}
-\noindent
+Cette méthode permet donc d’estimer précisément la pureté du signal et de quantifier la part de coïncidences réellement attribuables au passage de muons, en soustrayant le fond mesuré avec délai au signal total.
 
 \subsection{Résultats expérimentaux}
 \subsubsection{Coïncidence à 2 scintillateurs}
-Nous avons mis en place l’expérimentation décrite ci-dessus avec 2 scintillateurs.
 
-On trace le nombre d’évènement en fonction de seuil (THR) et de la largeur de créneau (width) du discriminateur, afin de se placer à l’optimum (beaucoup d’évènements et peu de bruit) pour la suite des expérimentations.
+Le graphique ci-dessous présente, pour le couple de scintillateurs 1 et 2, les résultats obtenus avec un seuil de 0{,}45~V et une haute tension de 2000~V pour le scintillateur 1, et un seuil de 0{,}05~V et une haute tension de 1950~V pour le scintillateur 2 (valeurs optimisées à partir des expériences précédentes).
 
-Nous avons aussi estimé le nombre de coïncidence fortuites, celles-ci désignent les coïncidences dues au bruit et non aux muons. Pour ce faire, nous avons introduit un delay sur l’un des signaux sortant des scintillateurs avant de l’envoyer vers le module de coïncidence. Ainsi, en utilisant un delay supérieur au width, le pic induit par le passage d’un muon par les scintillateurs ne sera pas détecté par le module de coïncidence.
+Pour chaque largeur de fenêtre de coïncidence (width), on a mesuré :
+\begin{itemize}
+    \item le nombre total de coïncidences enregistrées en 4 minutes (sans délai)~;
+    \item le nombre de coïncidences fortuites (avec un délai de 63~ns appliqué sur l’un des signaux, ce qui supprime les vraies coïncidences muoniques)~;
+    \item la différence entre les deux, qui correspond au nombre de “vrais” muons détectés.
+\end{itemize}
 
-Cela nous permet d’estimer la pureté de notre signal, ici il y a environ 10\% des évènements qui sont fortuits. Les coïncidences "réelles" désignent alors les 90\% restants.
+On observe que lorsque la fenêtre de coïncidence est large, le nombre de coïncidences fortuites augmente fortement, tandis que pour des fenêtres plus étroites, la proportion de vrais muons devient dominante. Ce protocole permet donc d’optimiser le réglage du width pour maximiser la pureté du signal muonique tout en conservant un nombre d’événements suffisant.
+
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/Coincidences_2_Scintillateurs.png}
-    \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 4min en fonction du seuil pour 2 scintillateurs en coïncidence, width = 30ns}
+    \caption[Nombre d’évènement en 4 min en fonction du seuil]{Nombre d’évènement en 4min en fonction du seuil pour 2 scintillateurs en coïncidence}
 \end{figure}
-
-Aussi, nous voyons que le signal permet d’avoir un grand nombre d’évènement aux alentours de THR = -1V, width = 40ns. Au-delà de ces valeurs, le nombre de coïncidence fortuite commence à beaucoup augmenter, montrant que le bruit devient important. Nous nous fixerons donc proche de ces valeurs pour les mesures suivantes.
 
 Enfin, l’ordre de grandeur de détection est à présent de 100 coïncidences par sec par m$^2$, qui correspond bien à l’ordre de grandeur attendu.
 
-\begin{figure}[h!]
-    \centering
-%    \includegraphics[width=0.7\textwidth]{coincidence_2scint_width.png}
-    \caption{Nombre d’évènement en 1min en fonction du width pour 2 scintillateurs en coïncidence, THR = -1.8V}
-\end{figure}
-
 \subsubsection{Coïncidence à 3 scintillateurs}
-Afin d’avoir un signal encore plus pur (faire diminuer le nombre de coïncidence fortuite), nous passons aux coïncidences avec 3 scintillateurs selon le même principe.
+
+Le graphique ci-dessous présente les résultats obtenus pour la coïncidence à 3 scintillateurs, avec les réglages suivants :
+\begin{itemize}
+    \item Scintillateur 1 : seuil de 0{,}45~V, haute tension de 2000~V
+    \item Scintillateur 2 : seuil de 0{,}05~V, haute tension de 2050~V, delay = 63~ns
+    \item Scintillateur 3 : seuil de 0{,}3~V, haute tension de 2060~V, delay = 31~ns
+\end{itemize}
+Ces valeurs ont été choisies à partir des optimisations précédentes.
+
+Pour chaque largeur de fenêtre de coïncidence (width), on a mesuré :
+\begin{itemize}
+    \item le nombre total de coïncidences enregistrées en 1 minute (sans délai)~;
+    \item le nombre de coïncidences fortuites (avec deux délais appliqués sur les signaux des scintillateurs 2 et 3, supprimant ainsi les vraies coïncidences muoniques)~;
+    \item la différence entre les deux, qui correspond au nombre de “vrais” muons détectés~;
+    \item le ratio entre le nombre de vraies coïncidences et le nombre de coïncidences fortuites, indicateur direct de la pureté du signal.
+\end{itemize}
+
+On constate que l’utilisation de trois scintillateurs permet de réduire drastiquement le nombre de coïncidences fortuites, et que le ratio signal/bruit devient très élevé pour des fenêtres de coïncidence raisonnables. Ce protocole permet donc d’obtenir un signal muonique extrêmement pur, au prix d’un nombre d’événements plus faible.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/Coincidences_3_Scintillateurs.png}
-    \caption{Nombre d’évènement en 10min en fonction du width pour 3 scintillateurs en coïncidence}
+    \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 10 min en fonction du seuil pour 3 scintillateurs en coïncidence}
 \end{figure}
 
-On remarque que le nombre de coïncidences fortuites est quasi-nul, nous pouvons donc, pour la suite des expériences, considérer qu’une coïncidence à 3 scintillateurs est une détection d’un muon.
+% --- Encadré Problèmes rencontrés lors des coïncidences ---
 
-\begin{figure}[h!]
-    \centering
-%    \includegraphics[width=0.7\textwidth]{coincidence_3scint_seuil.png}
-    \caption{Nombre d’évènement en 2min en fonction du seuil pour 3 scintillateurs en coïncidence}
-\end{figure}
+\vspace{1em}
+\begin{center}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Problèmes rencontrés lors des mesures de coïncidences]
+Lors des mesures de coïncidences (notamment à 3 scintillateurs), plusieurs difficultés majeures ont été rencontrées :
+\begin{itemize}
+    \item \textbf{Nombre de coïncidences très faible} : surtout avec 3 scintillateurs, le taux de coïncidences était très bas, nécessitant des temps d'acquisition très longs (parfois 10 minutes par point), ce qui a rendu les manipulations longues et sujettes à de grandes incertitudes statistiques.
+    \item \textbf{Différences entre scintillateurs} : le nombre de coïncidences à 2 scintillateurs dépendait fortement de la paire choisie, les scintillateurs étant très différents en efficacité. De nombreux tests ont été nécessaires pour choisir la meilleure combinaison.
+    \item \textbf{Choix du trigger} : il a fallu déterminer sur quel scintillateur déclencher la recherche de coïncidences (scintillateur 1, 2 ou 3), ce qui a nécessité des essais pour optimiser la détection.
+    \item \textbf{Retard dans les câbles} : le retard dû à la longueur des câbles diffère selon le scintillateur. Nous avons supposé cet effet négligeable, mais il a pu influencer les mesures.
+\end{itemize}
+Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispersion des résultats.
+\end{tcolorbox}
+\end{center}
 
-On a maintenant 0,1 coïncidence par sec par m$^2$, cet ordre de grandeur est 10 fois inférieur au flux muonique, cela s’explique par le fait que le seuil choisi (-1V) fait que le discriminateur ignore certains pics dus à des muons. Ce faible nombre d’évènement est la contrepartie d’un signal pur.
-
-Une autre explication vient du fait que les scintillateurs ne peuvent pas détecter les muons dont l’angle d’incidence dévie trop de la verticale, car les muons doivent passer par les 3 détecteurs pour être mesurés. Ici, seuls environ 10\% des incidences possibles peuvent être détectées par notre dispositif. Cela contribue à diminuer le nombre d’évènement mesurés, mais nous allons voir dans la partie suivante que les muons ayant un angle d’incidence élevé sont rares, la mesure n’est donc pas beaucoup perturbée par cette limitation.
+\newpage
 
 \section{Distribution angulaire du flux muonique}
 L'un des caract\`eres notables du rayonnement cosmique muonique au niveau du sol est son anisotropie en angle \text{\'enithal}. Les muons proviennent majoritairement de la verticale, c'est-\`a-dire de la direction du \text{\'enith} (car ils sont g\'en\'er\'es en haute atmosph\`ere et suivent grossi\`erement des trajectoires quasi-rectilignes vers le bas). Plus l'angle~$\theta$ par rapport \`a la verticale augmente (muons venant rasants de l'horizon), plus le parcours dans l'atmosph\`ere est long, et donc plus la probabilit\'e de survie du muon jusqu'au sol diminue. Ce ph\'enom\`ene se traduit par une loi empirique proche de
@@ -537,7 +556,7 @@ Principe expérimental~: Pour mesurer le temps de vie du muon, nous avons config
 
   \item Un signal de stop est produit lorsqu'un scintillement ultérieur survient dans B (ou éventuellement dans C) indiquant le passage de la particule de désintégration (un électron de quelques dizaines de MeV). Ici, on utilise typiquement le scintillateur C inférieur pour détecter l'électron émis vers le bas depuis B. Le stop peut ainsi être C seul (ou B seul, mais utiliser C permet d'éviter certains bruits, car l'électron de désintégration a de fortes chances de traverser C s'il est émis vers le bas). Dans notre montage, nous avons pris comme stop le signal C sur une seconde entrée du TAC. Ainsi, dès qu'un pulse est détecté dans C après le start, le TAC s'arrête.
 
-  \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique multi‑voies (MCA) qui remplit un histogramme du nombre d'événements en fonction de V, donc en fonction du temps écoulé. Après avoir accumulé suffisamment d'événements (plusieurs milliers idéalement), on obtient une distribution \(N(\Delta t)\), c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
+  \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique multi‑voies (MCA) qui remplit un histogramme du nombre d'événements en fonction de V, c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
 \end{itemize}
 
 Pour fiabiliser la mesure, on prend quelques précautions supplémentaires : par exemple, on insère un délai et une porte logique pour ne pas prendre en compte les désintégrations trop promptes (il peut y avoir un rayonnement induit dans B juste après l’arrêt du muon, comme des rayons X de désexcitation atomique, ou un muon prompt qui traverse trop vite). Dans notre cas, un veto de quelques dizaines de ns est appliqué autour du start pour éviter les contaminations. De plus, on doit tenir compte du bruit de fond de stop accidentel : il est possible qu’aucune désintégration ne soit détectée (muon capturé ou désintégré en émettant un électron vers le haut non intercepté) et qu’un autre muon indépendant passe plus tard déclenchant un stop fortuit. Cela crée un fond à long temps. Pour corriger, on peut mesurer séparément le niveau de ces arrêts aléatoires (par exemple en regardant les événements de stop très tardifs au-delà de quelques fois $\tau$) et le soustraire.

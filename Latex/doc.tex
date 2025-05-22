@@ -263,6 +263,24 @@ Pour maximiser la détection des muons cosmiques tout en minimisant le bruit de 
 
 % --- FIN ENCADRÉ DÉBUT ---
 
+% --- ENCADRÉ PROBLÈMES DÉBUT ---
+
+\vspace{1em}
+\begin{center}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Problèmes rencontrés lors de l'optimisation]
+Lors de l’optimisation conjointe du seuil et de la haute tension, plusieurs difficultés majeures ont été rencontrées :
+\begin{itemize}
+    \item \textbf{Comptes très différents entre scintillateurs} : pour un même seuil, on observe parfois un facteur 20 entre deux scintillateurs (ex : 40 000 pour l’un, 2 000 pour l’autre).
+    \item \textbf{Absence de palier net} : il était difficile d’identifier un palier clair dans la courbe de comptage ; lorsque l’on s’en approchait, le nombre de counts devenait trop faible pour modéliser correctement la zone.
+    \item \textbf{Durée d’acquisition limitée} : chaque point correspond à un count par minute ; augmenter la durée pour améliorer la statistique aurait nécessité un temps d’acquisition très long (nombre de seuils $\times$ temps d’acquisition $\times$ 3 scintillateurs $\times$ nombre de tensions).
+    \item \textbf{Variabilité d’un jour à l’autre} : les mesures n’étaient pas reproductibles d’un jour à l’autre, traduisant une grande sensibilité aux réglages de HT et de seuil.
+\end{itemize}
+Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispersion des résultats.
+\end{tcolorbox}
+\end{center}
+
+% --- FIN ENCADRÉ PROBLÈMES ---
+
 \paragraph{Démarche expérimentale~:}
 Pour chaque scintillateur, nous avons mesuré le nombre d’événements détectés en fonction du seuil du discriminateur, pour plusieurs valeurs de HT. Cette cartographie permet d’identifier la zone optimale où le taux de détection des muons est maximal et le bruit de fond minimal.
 
@@ -381,7 +399,7 @@ Pour que la coïncidence ne laisse passer que les \og vrais\fg{} muons et non de
 \subsubsection{Coïncidence à 2 scintillateurs}
 Nous avons mis en place l’expérimentation décrite ci-dessus avec 2 scintillateurs.
 
-On trace le nombre d’évènement en fonction de seuil (THR) et de la largeur de créneau (width) du discriminateur, afin de se placer à l’optimum (beaucoup d’évènements et peu de bruit) pour la suite des expérimentations.
+On trace le nombre d’évènement en fonction de seuil (THR) et de la largeur de créneau (width) du discriminateur, afin de se placer à l’optimum (beaucoup d’événements et peu de bruit) pour la suite des expérimentations.
 
 Nous avons aussi estimé le nombre de coïncidence fortuites, celles-ci désignent les coïncidences dues au bruit et non aux muons. Pour ce faire, nous avons introduit un delay sur l’un des signaux sortant des scintillateurs avant de l’envoyer vers le module de coïncidence. Ainsi, en utilisant un delay supérieur au width, le pic induit par le passage d’un muon par les scintillateurs ne sera pas détecté par le module de coïncidence.
 
