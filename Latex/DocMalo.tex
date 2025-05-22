@@ -101,7 +101,9 @@ Cette expérience repose sur un système de détection à scintillateur plastiqu
   \label{fig:setup}
 \end{figure}
 
-\subsection{Principe de détection par scintillation}
+\newpage
+
+\subsection{Scintillateur plastique}
 
 % --- ENCADRÉ DÉBUT ---
 
@@ -138,7 +140,9 @@ Aucun matériau ne satisfait parfaitement tous ces critères, mais les scintilla
 \textbf{Synthèse~:} Les scintillateurs plastiques offrent une détection rapide et fiable des particules chargées, avec un bon compromis entre rendement lumineux, rapidité et robustesse. Ici, le choix du scintillateur plastique est motivé par la recherche d’une excellente précision temporelle (et non énergétique), indispensable pour la détection en coïncidence des muons.
 \end{remarque}
 
-\subsubsection*{Photomultiplicateur (PM)}
+\newpage
+
+\subsection{Photomultiplicateur (PM)}
 
 % --- ENCADRÉ DÉBUT ---
 
@@ -172,6 +176,8 @@ Les PM présentent une excellente linéarité, une faible contribution au bruit,
 \textbf{Synthèse~:} Les PM permettent de convertir et d’amplifier efficacement la lumière en signal électrique, au prix de contraintes d’alimentation et de sensibilité à l’environnement.
 \end{remarque}
 
+\newpage
+
 \subsection{Chaîne électronique}
 
 % --- ENCADRÉ DÉBUT ---
@@ -199,10 +205,6 @@ La détection des muons nécessite une chaîne électronique rapide et fiable, c
   \item \textbf{TAC} : Convertit le délai entre deux signaux en une tension proportionnelle. Il est utilisé pour mesurer le temps de vie des muons.
 \end{itemize}
 
-\begin{remarque}
-\textbf{Synthèse~:} La chaîne électronique permet d’extraire efficacement les signaux utiles, d’éliminer le bruit et de garantir la fiabilité des mesures, condition essentielle pour toutes les analyses expérimentales du rapport.
-\end{remarque}
-
 \vspace{1em}
 \noindent
 \textbf{Photo des instruments utilisés :}
@@ -214,10 +216,14 @@ La détection des muons nécessite une chaîne électronique rapide et fiable, c
   \label{fig:photo_instruments}
 \end{figure}
 
+\begin{remarque}
+\textbf{Synthèse~:} La chaîne électronique permet d’extraire efficacement les signaux utiles, d’éliminer le bruit et de garantir la fiabilité des mesures, condition essentielle pour toutes les analyses expérimentales du rapport.
+\end{remarque}
+
+
 \newpage
 
 \section{Étude du signal}
-
 \subsection{Caractérisation temporelle du signal d’un muon}
 
 % --- ENCADRÉ DÉBUT ---
@@ -249,6 +255,8 @@ L’ajustement de deux exponentielles (descente et montée) sur les données exp
 \begin{remarque}
 \textbf{Synthèse~:} L’ajustement exponentiel du signal mesuré a permis d’extraire deux constantes caractéristiques~: $\tau_{\text{scint}} = 1{,}57$~ns (désexcitation du scintillateur) et $\tau_{RC} = 3{,}25$~ns (réponse de la chaîne électronique). La valeur obtenue pour $\tau_{\text{scint}}$ est parfaitement cohérente avec les propriétés attendues pour un scintillateur plastique, confirmant la qualité du montage et la validité de l’analyse temporelle réalisée.
 \end{remarque}
+
+\newpage
 
 \subsection{Optimisation conjointe de la haute tension et du seuil du discriminateur}
 
@@ -312,17 +320,12 @@ Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispe
 \end{tcolorbox}
 \end{center}
 
-% --- FIN ENCADRÉ PROBLÈMES ---
-
-% --- Synthèse unique, concise, orientée résultats, avec trous à remplir ---
+% --- Synthèse résultats coïncidences ---
 
 \begin{remarque}
-\textbf{Synthèse~:} L’analyse expérimentale a permis d’identifier, pour chaque scintillateur, le couple optimal (HT, seuil) assurant la meilleure efficacité de détection avec un bruit minimal. Les réglages retenus sont~:
-\begin{itemize}
-    \item \textbf{Scintillateur 1~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
-    \item \textbf{Scintillateur 2~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
-    \item \textbf{Scintillateur 3~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
-\end{itemize}
+\textbf{Synthèse~:} Pour la coïncidence à 2 scintillateurs, la largeur de fenêtre optimale retenue est de \textbf{20 ns}, ce qui permet d’obtenir un taux de coïncidences fortuites inférieur à \textbf{10\%} du total. Pour 3 scintillateurs, une fenêtre de \textbf{20 ns} rend le taux de coïncidences fortuites négligeable (inférieur à \textbf{1\%}).
+
+Ces résultats montrent que l’ajout d’un troisième scintillateur permet d’obtenir un signal muonique extrêmement pur, au prix d’un nombre d’événements plus faible. Le réglage fin de la fenêtre de coïncidence est donc crucial pour maximiser la pureté du signal tout en conservant une statistique exploitable.
 \end{remarque}
 
 \newpage
@@ -365,7 +368,15 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
 
 % --- 4.2 Principe des coïncidences fortuites ---
 
+\newpage
+
 \subsection{Principe des coïncidences fortuites}
+
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe des coïncidences fortuites]
+Même si la probabilité est faible, il peut arriver que deux signaux indépendants (issus du bruit de fond, de la radioactivité ou du bruit électronique) surviennent par hasard dans la même fenêtre temporelle de coïncidence. Le module de coïncidence les interprète alors à tort comme le passage d’un muon, alors qu’il s’agit d’un événement purement fortuit.
+\end{tcolorbox}
+\end{center}
 
 Nous avons aussi estimé le nombre de coïncidences fortuites, c’est-à-dire les coïncidences dues au bruit et non aux muons. Pour cela, nous avons utilisé la méthode du délai (delay) :
 
@@ -375,6 +386,8 @@ Nous avons aussi estimé le nombre de coïncidences fortuites, c’est-à-dire l
 \end{itemize}
 
 Cette méthode permet donc d’estimer précisément la pureté du signal et de quantifier la part de coïncidences réellement attribuables au passage de muons, en soustrayant le fond mesuré avec délai au signal total.
+
+\newpage
 
 \subsection{Résultats expérimentaux}
 \subsubsection{Coïncidence à 2 scintillateurs}
@@ -425,7 +438,7 @@ On constate que l’utilisation de trois scintillateurs permet de réduire drast
     \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 10 min en fonction du seuil pour 3 scintillateurs en coïncidence}
 \end{figure}
 
-% --- Encadré Problèmes rencontrés lors des coïncidences ---
+% --- Encadré Problèmes rencontrés lors des mesures de coïncidences ---
 
 \vspace{1em}
 \begin{center}
@@ -441,6 +454,14 @@ Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispe
 \end{tcolorbox}
 \end{center}
 
+% --- Synthèse résultats coïncidences ---
+
+\begin{remarque}
+\textbf{Synthèse~:} Pour la coïncidence à 2 scintillateurs, la largeur de fenêtre optimale retenue est de \textbf{20 ns}, ce qui permet d’obtenir un taux de coïncidences fortuites inférieur à \textbf{10\%} du total. Pour 3 scintillateurs, une fenêtre de \textbf{20 ns} rend le taux de coïncidences fortuites négligeable (inférieur à \textbf{1\%}).
+
+Ces résultats montrent que l’ajout d’un troisième scintillateur permet d’obtenir un signal muonique extrêmement pur, au prix d’un nombre d’événements plus faible. Le réglage fin de la fenêtre de coïncidence est donc crucial pour maximiser la pureté du signal tout en conservant une statistique exploitable.
+\end{remarque}
+
 \newpage
 
 \section{Distribution angulaire du flux muonique}
@@ -449,6 +470,8 @@ L'un des caract\`eres notables du rayonnement cosmique muonique au niveau du sol
   I(\theta) = I(0)\cos^n\theta,
 \]
 avec $n \approx 2$ aux 'energies cosmiques typiques. Autrement dit, le flux diff\'erentiel de muons est approximativement proportionnel \`a $\cos^2\theta$ pour des angles mod\'er\'es. Des mesures plus fines montrent qu'\`a tr\`es grands angles ($\theta > 60^\circ$), la distribution s'att\'enue plus fortement que le simple $\cos^2$ en raison de la courbure terrestre (au-del\`a d'un certain angle, les muons provenant de l'horizon ont parcouru une distance atmosph\`erique si grande qu'aucun n'atteint le sol) et de la s\'election en 'energie (seuls les muons les plus 'energiques arrivent depuis des angles rasants sans se d\'esint\'egrer). N\'eanmoins, dans l'intervalle $0^\circ \le \theta \leq 60^\circ$, on peut consid\'erer la loi $\cos^2\theta$ comme une bonne approximation pour le flux muonique au niveau de la mer.
+
+\newpage
 
 \subsection{Mise en œuvre expérimentale}
 Pour chaque angle~$\theta$, on enregistre le nombre de muons détectés (coïncidences $A\wedge B$) pendant une durée fixe (par ex.\ quelques minutes, suffisamment pour accumuler des centaines d’événements et réduire l’erreur statistique). On obtient ainsi un taux de comptage~$N(\theta)$ en fonction de~$\theta$. Les résultats bruts doivent être corrigés de deux effets géométriques~: (i) la projection de la surface du détecteur selon l'angle, et (ii) l'acceptation commune des deux plaques (qui varie légèrement avec l'angle dans notre montage). Le premier point est important~: lorsque le télescope est incliné de~$\theta$, la surface effective présentée aux muons venant du zénith est réduite d'un facteur~$\cos\theta$. Inversement, pour des muons venant réellement d'une direction inclinée~$\theta$, la surface présentée est maximale. En pratique, pour relier au flux angulaire~$I(\theta)$ (défini par unité de surface perpendiculaire à la direction d'arrivée), il faut diviser le taux mesuré par~$\cos\theta$ (correction de projection). Le second point concerne la portion de ciel vue par les deux détecteurs en coïncidence~: dans notre cas, pour des angles modérés, on peut considérer qu'elle reste constante tant que la superposition des deux scintillateurs est complète.
@@ -486,6 +509,17 @@ pour un certain~$n$. Les valeurs réalistes donnent effectivement un $n\approx2$
 Nos résultats expérimentaux confirment donc bien la diminution du flux de muons cosmiques aux grands angles. Cette anisotropie est en accord avec la compréhension actuelle des gerbes atmosphériques : les muons proviennent majoritairement des pions produits à une altitude d’environ 15 km et voyageant vers le sol. Le fait qu’on observe encore des muons à des angles assez rasants illustre leur grande énergie initiale et la dilatation du temps de vie (sans relativité, aucun muon formé à 15 km ne pourrait parcourir plus de 600 m avant de se désintégrer, et ne parviendrait pas jusqu’à nous). Ces mesures angulaires rejoignent des observations globales : par exemple, en intégrant sur tous les angles, on trouve un flux global d’environ $170\text{muons}/\text{m}^2/\text{s}$ au niveau de la mer, dont la composante quasi-horizontale est très minoritaire.
 
 En conclusion de cette partie, la mise en évidence expérimentale de la loi en $\cos^2\theta$ est une validation importante. Notre télescope à scintillateurs, en dépit de sa simplicité, a permis de cartographier l’intensité du rayonnement cosmique selon l’angle, en bon accord avec le modèle théorique. Cela illustre la nécessité de corriger de la projection géométrique lorsqu’on compare des taux de comptage entre configurations inclinées, et met en avant l’influence de l’absorption atmosphérique sur les particules cosmiques secondaires.
+
+% --- Encadré Problèmes rencontrés lors de la mesure angulaire ---
+
+\vspace{1em}
+\begin{center}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Problèmes rencontrés lors de la mesure angulaire]
+Les trois scintillateurs utilisés ne sont pas récents, et la surface d’un scintillateur n’absorbe pas uniformément sur toute sa surface. Ainsi, lorsque l’on incline les scintillateurs pour mesurer sous différents angles, la zone d’intersection peut se trouver sur des parties plus ou moins usées ou moins efficaces. Cela introduit une incertitude supplémentaire sur les mesures, car la réponse dépend localement de l’état d’usure et d’efficacité de chaque scintillateur.
+\end{tcolorbox}
+\end{center}
+
+\newpage
 
 \section{Mesure de l’énergie d’un muon}
 Les muons cosmiques arrivant au sol possèdent un spectre continu d’énergies s’étendant de centaines de MeV à plusieurs dizaines de GeV. Leur énergie moyenne est d’environ 3–4 GeV, et un grand nombre sont minimisants (c’est-à-dire déposent l’énergie minimum par unité de longueur dans la matière, comme des particules traversant vite sans se freiner complètement). Dans cette section, nous cherchons à caractériser expérimentalement la manière dont les muons interagissent avec la matière, en particulier en observant combien d’énergie ils déposent dans le détecteur et comment un absorbeur de plomb placé sur leur trajectoire affecte le comptage.
@@ -556,7 +590,7 @@ Principe expérimental~: Pour mesurer le temps de vie du muon, nous avons config
 
   \item Un signal de stop est produit lorsqu'un scintillement ultérieur survient dans B (ou éventuellement dans C) indiquant le passage de la particule de désintégration (un électron de quelques dizaines de MeV). Ici, on utilise typiquement le scintillateur C inférieur pour détecter l'électron émis vers le bas depuis B. Le stop peut ainsi être C seul (ou B seul, mais utiliser C permet d'éviter certains bruits, car l'électron de désintégration a de fortes chances de traverser C s'il est émis vers le bas). Dans notre montage, nous avons pris comme stop le signal C sur une seconde entrée du TAC. Ainsi, dès qu'un pulse est détecté dans C après le start, le TAC s'arrête.
 
-  \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique multi‑voies (MCA) qui remplit un histogramme du nombre d'événements en fonction de V, c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
+  \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique multi‑voies (MCA) qui remplit un histogramme du nombre d’événements en fonction de V, c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
 \end{itemize}
 
 Pour fiabiliser la mesure, on prend quelques précautions supplémentaires : par exemple, on insère un délai et une porte logique pour ne pas prendre en compte les désintégrations trop promptes (il peut y avoir un rayonnement induit dans B juste après l’arrêt du muon, comme des rayons X de désexcitation atomique, ou un muon prompt qui traverse trop vite). Dans notre cas, un veto de quelques dizaines de ns est appliqué autour du start pour éviter les contaminations. De plus, on doit tenir compte du bruit de fond de stop accidentel : il est possible qu’aucune désintégration ne soit détectée (muon capturé ou désintégré en émettant un électron vers le haut non intercepté) et qu’un autre muon indépendant passe plus tard déclenchant un stop fortuit. Cela crée un fond à long temps. Pour corriger, on peut mesurer séparément le niveau de ces arrêts aléatoires (par exemple en regardant les événements de stop très tardifs au-delà de quelques fois $\tau$) et le soustraire.
@@ -582,7 +616,7 @@ Les exp\'eriences d\'ecrites jusqu'ici ont \'et\'e r\'ealis\'ees avec des techno
 
 Photomultiplicateurs au silicium (SiPM) vs PMT classiques : Un SiPM est un capteur optique à semi-conducteur composé d’une multitude de micro-diodes avalanches (SPAD) connectées en parallèle sur une petite surface (typiquement quelques mm²). Chaque microcellule fonctionne en mode Geiger (polarisation au-dessus de sa tension d’avalanche) : la détection d’un photon y déclenche une avalanche de courant brève et quasi-quantique. Toutes les microcellules alimentées en parallèle fournissent ainsi une charge totale proportionnelle au nombre de cellules déclenchées, c’est-à-dire approximativement au nombre de photons incidents. Un SiPM moderne peut comporter jusqu’à ~10⁴ microcellules/mm², ce qui lui confère un gain interne de l’ordre de $10^6$, comparable à celui d’un PMT. En somme, le SiPM réalise la même fonction que le PMT (conversion photon→électron puis multiplication jusqu’à signal exploitable) mais dans un volume semi-conducteur de quelques millimètres, avec une tension d’alimentation basse (20 à 70 V typiquement, au lieu de ~1000 V). Voici les avantages principaux constatés lors du passage aux SiPM dans notre montage :
 	•	Compacité et robustesse : Les SiPM mesurent quelques mm seulement et sont solidaires du scintillateur (collés ou intégrés directement). Cela réduit drastiquement l’encombrement du détecteur : plus besoin de tubes longs ni de bases de PMT. De plus, le SiPM est un composant solide insensible aux chocs et aux champs magnétiques. On peut donc utiliser le détecteur en environnement non isolé (là où un PMT voit son gain affecté par un champ magnétique, un SiPM n’est pas perturbé) et sans précaution particulière de fragilité (pas de verre sous vide fragile). Dans notre nouveau montage, chaque scintillateur “tuile” intègre un petit SiPM monté dans un coin, l’électronique de préamplification étant sur une carte adjacente – l’ensemble tient dans la paume de la main. Ceci rend le télescope muon très portable et modulaire.
-	•	Basse tension et électronique simplifiée : L’élimination de la haute tension est un atout en termes de sécurité et de consommation. Une alimentation de 30 V suffit pour polariser un SiPM et en extraire le signal, ce qui peut facilement être fournie par batterie ou via un simple régulateur. Dans le montage renouvelé, un module d’alimentation basse tension (5 V et 30 V) alimente toute l’électronique, y compris les SiPM, ce qui permet d’envisager une utilisation autonome sur le terrain. De plus, comme le signal d’un SiPM est de l’ordre de quelques millivolts à quelques dizaines de millivolts (selon le nombre de photons), il peut être directement amplifié et discriminé par des composants électroniques standards (amplificateur opérationnel rapide, comparateur) sans nécessiter de transposition d’impédance comme sur un PMT (qui, certes, sort aussi quelques mV mais via une impédance qui peut nécessiter un adaptateur). Globalement, l’électronique analogique se miniaturise et peut être placée très près du capteur, minimisant le bruit et les pertes.
+	•	Basse tension et électronique simplifiée : L’élimination de la haute tension est un atout en termes de sécurité et de consommation. Une alimentation de 30 V suffit pour polariser un SiPM et en extraire le signal, ce qui peut facilement être fourni par batterie ou via un simple régulateur. Dans le montage renouvelé, un module d’alimentation basse tension (5 V et 30 V) alimente toute l’électronique, y compris les SiPM, ce qui permet d’envisager une utilisation autonome sur le terrain. De plus, comme le signal d’un SiPM est de l’ordre de quelques millivolts à quelques dizaines de millivolts (selon le nombre de photons), il peut être directement amplifié et discriminé par des composants électroniques standards (amplificateur opérationnel rapide, comparateur) sans nécessiter de transposition d’impédance comme sur un PMT (qui, certes, sort aussi quelques mV mais via une impédance qui peut nécessiter un adaptateur). Globalement, l’électronique analogique se miniaturise et peut être placée très près du capteur, minimisant le bruit et les pertes.
 	•	Performance et résolution temporelle : Les SiPM offrent des temps de réponse très courts (typiquement des montées de l’ordre de 100–200 ps), comparables aux meilleurs PMT rapides. Dans notre application, cela signifie qu’on peut obtenir une résolution temporelle de l’ordre de la ns pour les coïncidences, tout à fait suffisante. La détection de faible lumière est en revanche un paramètre plus délicat : un SiPM a souvent une efficacité photonique (PDE) proche de 20–50%, comparable voire supérieure à un PMT dans le bleu. Donc pour collecter la lumière d’un scintillateur, un petit SiPM peut faire aussi bien qu’un PMT (d’autant plus que le couplage optique peut être optimisé : plusieurs SiPM répartis, ou un lightguide acheminant la lumière concentrée sur le petit capteur). L’inconvénient majeur est le bruit d’obscurité des SiPM : chaque microdiode peut déclencher spontanément (courant d’obscurité) et vu leur nombre, le taux global de faux signaux est élevé, typiquement $10^5$ à $10^6$ impulsions par seconde par mm² de capteur. Cela correspond à un bruit ~MHz sur 1 mm² de SiPM – bien plus qu’un PMT classique. Toutefois, ce bruit consiste essentiellement en impulsions uniques (équivalent à 1 photoélectron). En réglant un seuil de discrimination un peu au-dessus du niveau d’une seule photon (par ex. 3–4 photoélectrons), on élimine l’essentiel de ce bruit thermique. Dans le contexte de la détection de muons, chaque muon produit des centaines de photons et donc une impulsion contenant des dizaines de photoélectrons dans le SiPM : il est aisé de discerner ces signaux multi-photons du bruit single-photon. Ainsi, avec un seuil bien choisi, le bruit de fond du SiPM est maîtrisé et n’impacte pas significativement les coïncidences. C’est ce que nous avons constaté : en comparant le taux de coïncidence du télescope SiPM avec le télescope PMT, nous n’avons pas noté d’augmentation de coïncidences fortuites notable, signe que les quelques faux pulses des SiPM ne coïncident quasiment jamais sur deux détecteurs simultanément (ce serait un hasard doublement improbable, comme deux PMT qui bruitent en même temps).
 	•	Linéarité et saturation : Un SiPM a une dynamique limitée par son nombre de cellules – au-delà d’un certain nombre de photons simultanés, il ne peut plus distinguer une augmentation de lumière car toutes ses microcellules sont déjà en avalanche. Dans nos conditions, le scintillateur produit un éclairement modéré (quelques centaines de photons arrivant sur le capteur répartis dans le temps de scintillation ~ns). Les SiPM employés (AdvanSiD 4x4 mm² avec ~3600 cellules) peuvent détecter jusqu’à 3600 photons simultanés avant saturation, ce qui n’est pas atteint ici. Nous avons vérifié la linéarité en exposant les scintillateurs à une source radioactive plus intense (une petite source beta), et le SiPM reproduit bien l’amplitude proportionnelle (jusqu’à une limite bien au-delà de nos signaux cosmiques). Donc la linéarité de réponse est satisfaisante sur la gamme utile.
 
@@ -619,7 +653,7 @@ Les résultats obtenus sont cohérents avec les attentes théoriques :
   \item La durée de vie du muon mesurée expérimentalement …
 \end{itemize}
 
-Sur le plan technique, nous avons montré comment un montage classique à scintillateurs et PMT peut être modernisé par l’emploi de SiPM et de logique FPGA. Les performances scientifiques (sensibilité, résolution temporelle) ont été maintenues voire améliorées, pour un encombrement et un coût réduits. Cette modernisation ouvre des perspectives pédagogiques intéressantes : un tel détecteur compact peut être utilisé en dehors du laboratoire, par exemple pour des mesures en altitude (prendre le télescope dans un avion ou en montagne et comparer le taux de muons à différentes altitudes, afin de mettre en évidence l’absorption atmosphérique) ou pour des expériences de muographie (imagerie par muons). En effet, une application d’actualité est la tomographie par muons de grandes structures (volcans, pyramides, cavernes) : on utilise le flux de muons cosmiques et son atténuation pour “scanner” l’intérieur d’objets, à la manière des rayons X mais à l’échelle géologique. Notre détecteur de muons, s’il était multiplié en plusieurs unités et disposé autour d’une cible, pourrait servir à une démonstration de principe de muographie (par exemple détecter une cavité dans une butte en observant un déficit directionnel de muons). Bien sûr, des développements supplémentaires seraient nécessaires (surface de détection plus grande pour augmenter la statistique, synchronisation GPS si on utilise des stations séparées, etc.), mais cela illustre l’ouverture possible vers des projets scientifiques concrets utilisant les muons cosmiques naturels.
+Sur le plan technique, nous avons montré comment un montage classique à scintillateurs et PMT peut être modernisé par l’emploi de SiPM et de logique FPGA. Les performances scientifiques (sensibilité, résolution temporelle) ont été maintenues voire améliorées, pour un encombrement et un coût réduits. Cette modernisation ouvre des perspectives pédagogiques intéressantes : un tel détecteur compact peut être utilisé en dehors du laboratoire, par exemple pour des mesures en altitude (prendre le télescope dans un avion ou en montagne et comparer le taux de muons à différentes altitudes, afin de mettre en évidence l’absorption atmosphérique) ou pour des expériences de muographie (imagerie par muons). En effet, une application d’actualité est la tomographie par muons de grandes structures (volcans, pyramides, cavernes) : on utilise le flux de muons cosmiques et son atténuation pour “scanner” l’intérieur d’objets, à la manière des rayons X mais à l’échelle géologique. Notre détecteur de muons, s’il était multiplié en plusieurs unités et disposé autour d’une cible, pourrait servir à une démonstration de principe de muographie (par exemple détecter une cavité dans une butte en observant un déficit directionnel de muons). Bien sûr, des développements supplémentaires seraient nécessaires (surface de détection plus grande pour augmenter la statistique, synchronisation GPS si on utilise des stations séparées, etc.), mais cela illustre l'ouverture possible vers des projets scientifiques concrets utilisant les muons cosmiques naturels.
 
 En termes d’incertitudes et d’erreurs, chaque mesure réalisée comporte des sources d’erreur connues : l’incertitude statistique domine pour la mesure de $\tau_\mu$ (nécessité d’accumuler suffisamment d’événements), tandis que des erreurs systématiques (calibration des angles, épaisseur effective de l’atmosphère selon la météo) peuvent légèrement affecter la loi angulaire. Nous avons pris soin de les estimer : par exemple, l’angle $\theta$ a été ajusté visuellement avec une précision d’environ $\pm 1^\circ$, ce qui induit une incertitude de quelques pourcentages sur $\cos^2\theta$ aux plus grands angles. De même, la stabilité de l’électronique a été vérifiée pour minimiser les biais (la fenêtre de coïncidence bien fixée, etc.). Ainsi, nous sommes confiants que les écarts entre nos mesures et les valeurs théoriques restent dans les marges d’erreur expérimentales.
 
