@@ -502,7 +502,7 @@ avec $n \approx 2$ aux 'energies cosmiques typiques. Autrement dit, le flux diff
 
 \subsection{Mise en œuvre expérimentale}
 
-\begin{figure}
+\begin{figure}[H]
   \begin{minipage}{0.3\textwidth}
     \centering
     \include{angle_nul}
@@ -526,17 +526,16 @@ avec $n \approx 2$ aux 'energies cosmiques typiques. Autrement dit, le flux diff
   \end{minipage}
   \caption{Montages expérimentaux pour la mesure angulaire des muons.}
 \end{figure}
-Pour chaque angle~$\theta$, on enregistre le nombre de muons détectés (coïncidences $A\wedge B$) pendant une durée fixe (par ex.\ quelques minutes, suffisamment pour accumuler des centaines d’événements et réduire l’erreur statistique). On obtient ainsi un taux de comptage~$N(\theta)$ en fonction de~$\theta$. Les résultats bruts doivent être corrigés de deux effets géométriques~: (i) la projection de la surface du détecteur selon l'angle, et (ii) l'acceptation commune des deux plaques (qui varie légèrement avec l'angle dans notre montage). Le premier point est important~: lorsque le télescope est incliné de~$\theta$, la surface effective présentée aux muons venant du zénith est réduite d'un facteur~$\cos\theta$. Inversement, pour des muons venant réellement d'une direction inclinée~$\theta$, la surface présentée est maximale. En pratique, pour relier au flux angulaire~$I(\theta)$ (défini par unité de surface perpendiculaire à la direction d'arrivée), il faut diviser le taux mesuré par~$\cos\theta$ (correction de projection). Le second point concerne la portion de ciel vue par les deux détecteurs en coïncidence~: dans notre cas, pour des angles modérés, on peut considérer qu'elle reste constante tant que la superposition des deux scintillateurs est complète.
+
+
+En pratique, une premiere idée peut consister à faire varier l'angle d'incidence des muons en deplacant de facon horizontale les scintillateurs. Les muons seraient alors selectionnés selon leur angle d'incidence, comme schematisé en figure \ref{fig:angle_non_nul}. Cependant, la mesure est tres imprecise car la selectyion des angles est tres impûre comme on peu le comprendre grace a la figure \ref{fig:range_des_angles}. En effet, la largeur des scintillateurs est de l'ordre de 20cm ce qui fait que la selection des angles est tres large.
+Une fois les scintillateurs correctements placés, pour chaque angle~$\theta$, on enregistre le nombre de muons détectés (coïncidences $A\wedge B$) pendant une durée fixe (par ex.\ quelques minutes, suffisamment pour accumuler des centaines d’événements et réduire l’erreur statistique). On obtient ainsi un taux de comptage~$N(\theta)$ en fonction de~$\theta$. Les résultats bruts doivent être corrigés d'un effet géométrique~: la projection de la surface du détecteur selon l'angle. Lorsque les scintillateurs sont deplacés la surface effective presenté au muons venant avec un angle d'incidence $\theta$, est réduite d'un facteur~$\cos\theta$. 
 
 Après ces corrections, on peut comparer la distribution normalisée~$I_{\mathrm{mesure}}(\theta)$ au modèle en~$\cos^{2}\theta$. Les données obtenues présentent une bonne conformité avec la loi attendue. Graphique~1 ci‑dessous montre, de façon qualitative, la tendance mesurée~: en représentant $N(\theta)$ corrigé en fonction de~$\cos\theta$, on obtient approximativement une droite, ce qui traduit
 \[
 N(\theta)\propto\cos^{2}\theta.
 \]
-Plus précisément, un ajustement polynomial donne une puissance~$n$ très proche de~2 pour la dépendance en cosinus. Par exemple, nos mesures indiquent un rapport
-\[
-\frac{N(60^\circ)}{N(0^\circ)} \approx \bigl(\cos 60^\circ\bigr)^2 = 0{,}25,
-\]
-en accord avec la loi~$\cos^2$ (compte tenu des incertitudes). Pour $\theta$ au‑delà de~70--$80^\circ$, le signal devient difficile à mesurer (très faible) et dévie de la simple loi~$\cos^2$ (chute plus rapide), cohérent avec l'atténuation atmosphérique supplémentaire non prise en compte par le modèle simplifié.
+
 
 Interprétation~: la loi $I(\theta)\propto\cos^2\theta$ résulte de la combinaison de deux effets principaux.  
 (i) Distribution isotrope à la production~: les pions parents des muons sont produits isotropiquement dans le référentiel du laboratoire (en première approximation), et leur désintégration donne des muons distribués également dans l'espace (avec un léger biais avant, négligeable ici). Ainsi, le flux de muons incident sur la Terre en l'absence d'atmosphère serait isotrope, donc $\propto\cos\theta$ simplement à cause de la projection de surface.  
