@@ -153,16 +153,24 @@ for i, angle in enumerate(angles[:-1]):  # Exclure l'angle inconnu
     elif angle == -1.408 * 180 / np.pi:
         errors[i] /= 2  # Diviser par 2 pour l'angle -1.408
 
+# Erreurs sur les angles (en degrés, ordre croissant en valeur absolue)
+errors_x = [0.18, 0.24, 0.52, 0.55]  # À adapter si tu as plus de 4 angles
+
+# Si tu as plus de 4 angles, complète la liste selon l'ordre de 'angles' (hors 180)
+while len(errors_x) < len(angles) - 1:
+    errors_x.append(errors_x[-1])  # Répète la dernière erreur si besoin
+errors_x.append(0)  # Pas d'erreur pour l'angle inconnu à 180°
+
 # Générer des données pour le fit
 fit_angles = np.linspace(min(angles_array), max(angles_array), 500)
 fit_counts = cos_squared(fit_angles, *popt)
 colors = ['blue'] * (len(angles) - 1) + ['red']  # Bleu pour les angles connus, rouge pour l'inconnu
 
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(fit_angles, fit_counts, color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")
+ax.plot(fit_angles, fit_counts, color='k', label="Fit: $a \cdot \cos^2(x + b) + c$",alpha=0.7)
 
-# Ajouter les points avec des erreurs verticales (Poisson)
-ax.errorbar(angles, counts, yerr=errors, fmt='o', color='blue', label="Données avec erreurs", zorder=3)
+# Ajouter les points avec erreurs verticales ET horizontales
+ax.errorbar(angles, counts, xerr=errors_x, yerr=errors, fmt='o', color='C1', label="Données avec erreurs", zorder=3,alpha=0.7, capsize=3)
 
 # Ajouter le fit au graphique
 textstr = (
