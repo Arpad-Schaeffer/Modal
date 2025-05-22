@@ -12,13 +12,17 @@ xmax = None   # ex: 5.0
 
 # Chemin vers votre fichier CSV (à ajuster)
 csv_file = "Nouvelle manip/Threshold_dect1.csv"
+csv_file_2 = "Nouvelle manip/Threshold.csv"
 
 # Lecture du CSV en sautant les deux premières lignes
 df = pd.read_csv(csv_file, skiprows=2)
+df_2 = pd.read_csv(csv_file_2, skiprows=2)
 
 # Extraction des données
 x = df['Threshold']
 y = df['Count']
+x_2 = df_2['Threshold_2']
+y_2 = df_2['Count_2']
 
 
 
@@ -27,13 +31,20 @@ y = df['Count']
 
 
 
+# Calcul des erreurs
+yerr = np.sqrt(y)
+yerr_2 = np.sqrt(y_2)
+xerr = np.full_like(x, 0.002, dtype=float)
+xerr_2 = np.full_like(x_2, 0.002, dtype=float)
+
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(x, y, '-o', label="Données brutes", markersize=5)
+ax.errorbar(x, y, xerr=xerr, yerr=yerr, fmt='o', color='C1', label="DECT 21", markersize=5)
+ax.errorbar(x_2, y_2, xerr=xerr_2, yerr=yerr_2, fmt='o', color='C0', label="DECT 34", markersize=5)
 
 
 textstr = (
     r"$\bf{TREX}$"
-    f"\n"
+    f"\n Etude de la réponse du scintillateurs 21 et 34"
         
     )
 ax.text(
@@ -44,7 +55,7 @@ ax.text(
     )
 
     # Configuration du graphique
-ax.set_xlabel("Seuil")
+ax.set_xlabel("Seuil (mV)")
 ax.set_ylabel("Nombre de coups (N)")
 ax.set_title("Reponse des scintillateurs en fonction du seuil")
 ax.legend()

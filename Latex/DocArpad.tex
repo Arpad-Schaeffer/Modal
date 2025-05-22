@@ -535,9 +535,14 @@ Après ces corrections, on peut comparer la distribution normalisée~$I_{\mathrm
 \[
 N(\theta)\propto\cos^{2}\theta.
 \]
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Images/coscarréavectroisscintillateurs.png}
+  \caption{Flux de muons mesuré en fonction de l'angle d'incidence $\theta$. On observe une décroissance du flux avec l'angle, confirmant la loi $\cos^2\theta$. On note l'imprecision de la mesure du au conditions experimentales.}
+  \label{fig:cos2s}
+\end{figure}
 
-
-Interprétation~: la loi $I(\theta)\propto\cos^2\theta$ résulte de la combinaison de deux effets principaux.  
+\textbf{Interprétation}~: la loi $I(\theta)\propto\cos^2\theta$ résulte de la combinaison de deux effets principaux.  
 (i) Distribution isotrope à la production~: les pions parents des muons sont produits isotropiquement dans le référentiel du laboratoire (en première approximation), et leur désintégration donne des muons distribués également dans l'espace (avec un léger biais avant, négligeable ici). Ainsi, le flux de muons incident sur la Terre en l'absence d'atmosphère serait isotrope, donc $\propto\cos\theta$ simplement à cause de la projection de surface.  
 (ii) Parcours atmosphérique variable~: les muons créés à un angle~$\theta$ doivent traverser une épaisseur d'atmosphère $X(\theta)$ plus grande que ceux venant du zénith. Pour un angle zénithal~$\theta$, la colonne d'air parcourue est approximativement
 \[
@@ -547,26 +552,79 @@ X(\theta)=\frac{X(0)}{\cos\theta}
 \[
 P_{\mathrm{survie}}(\theta)\approx\exp\bigl(-X(\theta)/\Lambda_{\mu}\bigr),
 \]
-avec $\Lambda_{\mu}$ la longueur d'atténuation (liée à la longueur de désintégration $\gamma c\tau$ des muons, de l'ordre de~6 km d'équivalent air pour des muons de quelques GeV). Pour des angles modérés, on peut développer à premier ordre :
+avec $\Lambda_{\mu}$ la longueur d'atténuation (liée à la longueur de désintégration $\gamma c\tau$ des muons, de l'ordre de~6 km d'équivalent air pour des muons de quelques GeV):
 \[
-P(\theta)\approx \exp\!\Bigl(-\bigl(\tfrac{X(0)}{\Lambda_\mu}\bigr)\bigl(\tfrac1{\cos\theta}-1\bigr)\Bigr)\approx \exp\!\Bigl(-\bigl(\tfrac1{\cos\theta}-1\bigr)\tfrac{X(0)}{\Lambda_\mu}\Bigr).
+P(\theta)\approx \exp\!\Bigl(-\bigl(\tfrac{X(0)}{\Lambda_\mu}\bigr)\tfrac1{\cos\theta}\Bigr)
 \]
 Si $\tfrac{X(0)}{\Lambda_\mu}$ n'est pas trop grand (typiquement 1--3), on peut approximer 
 \[
-\exp\!\Bigl(-\bigl(\tfrac1{\cos\theta}-1\bigr)\tfrac{X(0)}{\Lambda_\mu}\Bigr)\sim\cos^n\theta
+\exp\!\Bigl(-\tfrac1{\cos\theta}\tfrac{X(0)}{\Lambda_\mu}\Bigr)\sim\cos^n\theta
 \]
-pour un certain~$n$. Les valeurs réalistes donnent effectivement un $n\approx2$. Intuitivement, on combine cette atténuation en~$\cos\theta$ avec le facteur géométrique $\cos\theta$ d'un flux isotrope, ce qui produit $\cos^2\theta$ au total. En réalité, le spectre en énergie entre aussi en jeu : les muons plus inclinés doivent avoir une énergie plus grande pour survivre (sinon ils se désintègrent en route), ce qui modifie légèrement l'exposant~$n$ en fonction du seuil d'énergie considéré.
+pour un certain~$n$. Les valeurs réalistes donnent effectivement un $n\approx2$. En réalité, le spectre en énergie entre aussi en jeu : les muons plus inclinés doivent avoir une énergie plus grande pour survivre (sinon ils se désintègrent en route), ce qui modifie légèrement l'exposant~$n$ en fonction du seuil d'énergie considéré. 
 
-Nos résultats expérimentaux confirment donc bien la diminution du flux de muons cosmiques aux grands angles. Cette anisotropie est en accord avec la compréhension actuelle des gerbes atmosphériques : les muons proviennent majoritairement des pions produits à une altitude d’environ 15 km et voyageant vers le sol. Le fait qu’on observe encore des muons à des angles assez rasants illustre leur grande énergie initiale et la dilatation du temps de vie (sans relativité, aucun muon formé à 15 km ne pourrait parcourir plus de 600 m avant de se désintégrer, et ne parviendrait pas jusqu’à nous). Ces mesures angulaires rejoignent des observations globales : par exemple, en intégrant sur tous les angles, on trouve un flux global d’environ $170\text{muons}/\text{m}^2/\text{s}$ au niveau de la mer, dont la composante quasi-horizontale est très minoritaire.
+On osberve que la methode de mesure n'est pas entierment satisfaisante. Si on arrive a mettre en evidence une tendance, la modelisation des données est assez aproximative. C'est pourquoi on peut alors utiliser un autre dispositif experimental.
 
-En conclusion de cette partie, la mise en évidence expérimentale de la loi en $\cos^2\theta$ est une validation importante. Notre télescope à scintillateurs, en dépit de sa simplicité, a permis de cartographier l’intensité du rayonnement cosmique selon l’angle, en bon accord avec le modèle théorique. Cela illustre la nécessité de corriger de la projection géométrique lorsqu’on compare des taux de comptage entre configurations inclinées, et met en avant l’influence de l’absorption atmosphérique sur les particules cosmiques secondaires.
+\subsection{Deuxième méthode de mesure}
 
-\section{Mesure de l’énergie d’un muon}
+Le principe est le suivant : on ne deplace plus les scintillateurs mais on en place plus. On forme une matrice de scintilatteur domme on peut le voir figure METTRE LA REf et schematisé sur la figure \ref{fig:matrice_scintillateur}.
+Ainsi, en detenctant de la meme maniere les coincidences entre les scintillateur on peut retarcer le trajet du muons s'il sagit d'un muon. 
+Il faut alors prendre soin a re-optimiser les scintillateurs pour qu'ils soient tous dans la meme zone de fonctionnement.
+\begin{figure}[H]
+  \begin{minipage}
+  {0.45\textwidth}
+    \centering
+    \include{matrice.tex}
+    \caption{Configuration de la matrice des scintilateurs. Chaque scintillateurs est indéxé a la maniere des coeficients d'une matrice.}
+    \label{fig:matrice_scintillateur}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \include{matrice_et_trajs.tex}
+    \caption{Exemple de trajectoire d'un muon dans la matrice de scintillateurs.\\On voit que le muon traverse plusieurs scintillateurs, ce qui permet de le détecter uniquement certains angles dicrets. Ici en rouge $\theta = 0.989 rad$, en violet $\theta = 1.36 rad$ et en bleu $\theta = 0 rad$.}
+    \label{fig:matrice_scintillateur_2}
+  \end{minipage}
+\end{figure}
+
+Il sagit de choisir le bon treshold. Nous avons commencé par tracer grossierementr les caracteristiques de deux scintillateurs aleatoirement choiusis. Ces resultats sont representé figure \ref{fig:caracteristique_scintillateur_2}.
+ On appercoit qu'ils ont sensiblemtn les memes caracteristiques. On suppose donc que, etant de la meme facture, tous se comportent sensiblement pareil. On pose donc un treshold à TRHS = 22mV.
+
+\begin{figure}[H]
+  \begin{minipage}
+  {0.45\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/palier_dezoomé.png}
+    \caption{Caractéristique du scintillateur des scintillateurs 21 et 34. On appercoit mieux les courbes attendues avec la presence d'un palier au alentours des memes valeures.}
+    \label{fig:caracteristique_scintillateur_1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/palier_zommé.png}
+    \caption{Caractéristique du scintillateur des scintillateurs zommé sur la zone du palier. On observbe la chute de counts pour un seuil trop haut apres le palier. Le detcetecteur 34 a l'aire plus efficace que le 21. On suppoose alors que tout les scintillatyeurs on sensiblement les mêmes caractéristiques et on choisit pour le reste de l'étude THRS = 22mv}
+    \label{fig:caracteristique_scintillateur_2}
+  \end{minipage}
+\end{figure}
+
+On peut alors lancer une longue aquisitiopn de données. 
+On a pris soin de bien choisir la zone de fonctionnement des scintillateurs pour qu'ils soient tous dans la meme zone de fonctionnement. 
+On analyse alors les données et on trace les occurences des angles en fonction de l'angle pour essayer de verifier la loi $\cos^2\theta$.
+Il faut faire attention a bien normaliser les resultats en fonction du nombre de combinaisons possibles correspondantes pour chaque angle.
+Les resulktats obtentus sont representé figure \ref{fig:cos2s_2}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Images/distribution_angulaire.png}
+  \caption{Nombre de muons corrigé par le nombre de combinaisons possibles mesuré en fonction de l'angle d'incidence $\theta$. On observe une décroissance du flux avec l'angle, confirmant la loi $\cos^2\theta$. On note l'écartement au modèle aux grands angles.}
+  \label{fig:cos2s_2}
+\end{figure}
+
+ \section{Mesure de l’énergie d’un muon}
 Les muons cosmiques arrivant au sol possèdent un spectre continu d’énergies s’étendant de centaines de MeV à plusieurs dizaines de GeV. Leur énergie moyenne est d’environ 3–4 GeV, et un grand nombre sont minimisants (c’est-à-dire déposent l’énergie minimum par unité de longueur dans la matière, comme des particules traversant vite sans se freiner complètement). Dans cette section, nous cherchons à caractériser expérimentalement la manière dont les muons interagissent avec la matière, en particulier en observant combien d’énergie ils déposent dans le détecteur et comment un absorbeur de plomb placé sur leur trajectoire affecte le comptage.
 
 \begin{itemize}
   \item Dépôt d’énergie dans le scintillateur : distribution de Landau.
-  \item Expérience avec absorbeur de plomb : pertes par ionisation, bremsstrahlung et capture.
+  \item Expérience avec absorbeur de plomb : pertes par ionisation, bremv sstrahlung et capture.
   \item Analyse des effets expérimentaux : baisse de 15\% du taux de coïncidence, augmentation du dépôt d’énergie moyen.
 \end{itemize}
 

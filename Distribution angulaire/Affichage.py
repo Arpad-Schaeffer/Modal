@@ -122,7 +122,9 @@ textstr = (
 )
 ax.text(
     0.95, 0.95, textstr,
-    transform=ax.transAxes, va='top', ha='right'
+    transform=ax.transAxes, fontsize=10,
+    verticalalignment='top', horizontalalignment='right',
+    bbox=dict(boxstyle="round", facecolor="white", alpha=0.8)
 )
 
 # graduations automatiques sur les deux axes
