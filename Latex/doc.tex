@@ -218,6 +218,8 @@ La détection des muons nécessite une chaîne électronique rapide et fiable, c
 
 \section{Étude du signal}
 
+\subsection{Caractérisation temporelle du signal d’un muon}
+
 % --- ENCADRÉ DÉBUT ---
 
 \vspace{1em}
@@ -229,28 +231,30 @@ Analyser la forme, l’amplitude et la dépendance du signal détecté pour opti
 
 % --- FIN ENCADRÉ DÉBUT ---
 
-Pour caractériser la réponse du scintillateur plastique, nous avons observé à l’oscilloscope la forme du signal généré lors du passage d’un muon. Le signal présente une décroissance exponentielle, reflet de la désexcitation du matériau scintillant, convoluée avec la réponse du circuit RC de lecture.
+L’étude du signal issu de la détection d’un muon cosmique à l’aide d’un scintillateur plastique permet d’accéder à des informations précieuses sur la dynamique de la chaîne d’acquisition. Le signal typique, mesuré à l’oscilloscope, présente une décroissance exponentielle caractéristique, liée à la désexcitation des molécules du scintillateur, ainsi qu’une remontée associée à la réponse de l’électronique (constante de temps RC).
 
-\paragraph{Méthode :} Nous avons enregistré la courbe de tension en sortie du photomultiplicateur, puis ajusté la décroissance par une régression exponentielle de la forme :
-\[
-V(t) = V_0 \exp\left(-\frac{t}{\tau_{\text{eff}}}\right)
-\]
-où $\tau_{\text{eff}}$ est la constante de temps mesurée.
-
-\paragraph{Résultats :} En répétant la mesure sur plusieurs événements, nous avons extrait deux constantes :
-\begin{itemize}
-    \item Le temps de désexcitation du scintillateur plastique, $\tau_{\text{scint}}$ (typiquement 2–3 ns).
-    \item Le temps de relaxation du circuit RC, $\tau_{RC}$ (typiquement 10–20 ns).
-\end{itemize}
-Le signal observé est donc la convolution de ces deux décroissances exponentielles.
-
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
-    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_signal.png}
-    \caption{Exemple de signal mesuré en sortie du PM : points expérimentaux et ajustement exponentiel. On distingue la composante rapide (scintillateur) et la composante plus lente (circuit RC).}
+    \includegraphics[width=0.9\textwidth]{Images/Desexitation_Scintillateur_2.png}
+    \caption{Exemple de signal mesuré sur un muon cosmique, avec ajustements exponentiels sur la descente et la montée.}
+    \label{fig:signal-muon}
 \end{figure}
 
-\paragraph{Interprétation :} La mesure de $\tau_{\text{scint}}$ est cohérente avec les valeurs attendues pour ce type de plastique. La prise en compte de $\tau_{RC}$ permet d’optimiser le traitement du signal pour la suite des analyses.
+L’ajustement de deux exponentielles (descente et montée) sur les données expérimentales permet d’extraire deux constantes de temps :
+\begin{itemize}
+    \item $\tau_{\text{scint}}$ : constante de décroissance du scintillateur plastique (processus de désexcitation)
+    \item $\tau_{RC}$ : constante de temps de la chaîne électronique (filtrage RC)
+\end{itemize}
+
+\textbf{Résultats expérimentaux :}
+\begin{itemize}
+    \item $\tau_{\text{scint}} = 1{,}57~\text{ns}$
+    \item $\tau_{RC} = 3{,}25~\text{ns}$
+    \item Paramètres du fit descente : $a = -115{,}4$, $\tau = -1{,}57~\text{ns}$, $c = -0{,}429$
+    \item Paramètres du fit montée : $a = -0{,}759$, $\tau = 3{,}25~\text{ns}$, $c = -0{,}578$
+\end{itemize}
+
+\textbf{Interprétation :} La mesure de $\tau_{\text{scint}}$ est cohérente avec les valeurs attendues pour ce type de plastique.
 
 \subsection{Variation de la haute tension du photomultiplicateur}
 \begin{figure}[H]
