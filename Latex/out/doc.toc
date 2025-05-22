@@ -30,4 +30,3 @@
 \contentsline {section}{\numberline {8}Amélioration du TREX}{31}{section.8}%
 \contentsline {section}{\numberline {9}Perspectives supplémentaires}{35}{section.9}%
 \contentsline {section}{\numberline {10}Conclusion}{35}{section.10}%
-\contentsline {section}{Références}{36}{section.10}%
