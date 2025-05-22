@@ -256,89 +256,59 @@ L’ajustement de deux exponentielles (descente et montée) sur les données exp
 
 \textbf{Interprétation :} La mesure de $\tau_{\text{scint}}$ est cohérente avec les valeurs attendues pour ce type de plastique.
 
-\subsection{Variation de la haute tension du photomultiplicateur}
-\begin{figure}[H]
-  \centering
-  \include{variationHT}
-  \caption{Schéma de la chaîne électronique utilisée pour faire varier la haute tension du PM}
-  \label{fig:variation_HT}
-\end{figure}
-
-Nous avons ensuite étudié l’influence de la tension d’alimentation du photomultiplicateur (PM) sur le taux de détection.
-
-\paragraph{Méthode :} Pour chaque scintillateur/PM, nous avons fait varier la haute tension (HT) appliquée et mesuré le nombre de signaux détectés par unité de temps.
-
-\paragraph{Théorie :} Une tension trop basse conduit à un gain insuffisant : peu de signaux dépassent le seuil du discriminateur. À l’inverse, une tension trop élevée augmente le gain mais aussi le bruit de fond (courant d’obscurité, bruit thermique), ce qui accroît le nombre de faux signaux.
-
-\paragraph{Résultats :} On observe une zone optimale où le nombre de signaux “vrais” est maximal, avant que le bruit ne devienne prépondérant.
-
-\begin{figure}[H]
-    \centering
-    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_HT.png}
-    \caption{Nombre de signaux détectés en fonction de la haute tension appliquée au PM.}
-\end{figure}
-
-\paragraph{Conclusion :} Le choix de la tension optimale est un compromis entre sensibilité et bruit. Nous avons retenu une valeur de HT assurant un taux de détection élevé tout en limitant les faux positifs.
-
-\subsection{Variation du seuil du discriminateur}
-
-\begin{figure}[H]
-  \centering
-  \include{treshold}
-  \caption{Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur}
-  \label{fig:variation_seuil}
-\end{figure}
-
-Enfin, nous avons étudié l’effet du seuil (threshold, THR) du discriminateur sur le nombre de signaux détectés.
-
-\paragraph{Méthode :} Pour une tension de PM fixée, nous avons fait varier le seuil du discriminateur et compté le nombre d’événements enregistrés.
-
-\paragraph{Théorie :} Un seuil trop bas laisse passer tout le bruit (bruit thermique, radioactivité), tandis qu’un seuil trop haut élimine aussi les vrais signaux de muons.
-
-\paragraph{Résultats :} On observe une courbe typique : beaucoup d’événements à seuil bas (bruit dominant), puis un plateau correspondant aux vrais signaux, enfin une chute rapide lorsque le seuil dépasse l’amplitude des signaux muoniques.
-
-\begin{figure}[H]
-    \centering
-    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_threshold.png}
-    \caption{Nombre d’événements détectés en fonction du seuil du discriminateur.}
-\end{figure}
-
-\paragraph{Conclusion :} Le réglage du seuil est crucial pour optimiser le rapport signal/bruit. Nous avons choisi un seuil situé juste au-dessus du niveau de bruit, de façon à ne conserver que les signaux dus aux muons.
+\subsection{Optimisation conjointe de la haute tension et du seuil du discriminateur}
 
 % --- ENCADRÉ DÉBUT ---
 
 \vspace{1em}
 \begin{center}
-\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de l’optimisation des réglages électroniques]
-Ajuster simultanément la haute tension du PM et le seuil du discriminateur pour maximiser la détection des muons tout en minimisant le bruit de fond.
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Optimisation conjointe des réglages électroniques]
+Pour maximiser la détection des muons cosmiques tout en minimisant le bruit de fond, il est essentiel d’ajuster simultanément la haute tension (HT) appliquée au photomultiplicateur et le seuil du discriminateur.
 \end{tcolorbox}
 \end{center}
 
 % --- FIN ENCADRÉ DÉBUT ---
 
-\subsection{Optimisation conjointe de la haute tension et du seuil du discriminateur}
+\paragraph{Démarche expérimentale~:}
+Pour chaque scintillateur, nous avons mesuré le nombre d’événements détectés en fonction du seuil du discriminateur, pour plusieurs valeurs de HT. Cette cartographie permet d’identifier la zone optimale où le taux de détection des muons est maximal et le bruit de fond minimal.
 
 \begin{figure}[H]
   \centering
-  \include{optimisation_HT_seuil}
-  \caption{Schéma de la chaîne électronique utilisée pour l'optimisation conjointe de la haute tension et du seuil du discriminateur}
-  \label{fig:optimisation_HT_seuil}
+  \include{treshold}
+  \caption{Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur.}
+  \label{fig:variation_seuil}
 \end{figure}
 
-Pour affiner les réglages, nous avons ensuite optimisé conjointement la haute tension du PM et le seuil du discriminateur.
-
-\paragraph{Méthode :} En utilisant les courbes de réponse précédemment obtenues, nous avons choisi des points de fonctionnement pour chaque scintillateur/PM dans la zone optimale identifiée. Nous avons ensuite vérifié que le taux de détection des muons était maximal tout en maintenant un faible taux de bruit de fond.
-
-\paragraph{Résultats :} Les réglages optimisés permettent d’obtenir un taux de détection maximal avec un minimum de faux signaux. Par exemple, pour une HT de 1200 V et un seuil de -1,5 V, nous avons atteint un bon compromis sur plusieurs scintillateurs testés.
+\paragraph{Résultats~:}
 
 \begin{figure}[H]
     \centering
-    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_optimisation.png}
-    \caption{Résultats de l'optimisation conjointe : taux de détection en fonction de la haute tension et du seuil du discriminateur.}
+    %\includegraphics[width=0.7\textwidth]{Images/optimisation_scint1.png}
+    \fbox{\parbox{0.7\textwidth}{\centering\textit{Graphique à insérer : Scintillateur 1}}}
+    %\includegraphics[width=0.7\textwidth]{Images/optimisation_scint2.png}
+    \fbox{\parbox{0.7\textwidth}{\centering\textit{Graphique à insérer : Scintillateur 2}}}
+    %\includegraphics[width=0.7\textwidth]{Images/optimisation_scint3.png}
+    \fbox{\parbox{0.7\textwidth}{\centering\textit{Graphique à insérer : Scintillateur 3}}}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT, pour chaque scintillateur.}
+    \label{fig:optimisation_scint}
 \end{figure}
 
-\paragraph{Conclusion :} Cette optimisation conjointe permet d’affiner les performances de détection des muons. Les réglages finaux retenus pour chaque scintillateur/PM tiennent compte des caractéristiques individuelles tout en maximisant l’efficacité globale du système.
+\paragraph{Analyse et synthèse~:}
+L’analyse croisée des courbes obtenues permet de dégager, pour chaque scintillateur, un couple (HT, seuil) optimal :
+\begin{itemize}
+    \item \textbf{Scintillateur 1~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
+    \item \textbf{Scintillateur 2~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
+    \item \textbf{Scintillateur 3~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
+\end{itemize}
+Ces réglages assurent un taux de détection élevé tout en limitant les faux positifs. Ils constituent la base des mesures ultérieures sur les muons cosmiques.
 
+% \vspace{1em}
+% \textbf{Remarque~:} Les valeurs optimales sont à adapter selon les caractéristiques individuelles de chaque couple scintillateur/PM.
+
+% --- TRANSITION FLUIDE ---
+
+\vspace{1em}
+La section suivante détaille la mise en œuvre de la détection par coïncidence, étape clé pour isoler les vrais événements muoniques du bruit de fond résiduel.
 \newpage
 
 \section{Détection par coïncidence}
