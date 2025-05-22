@@ -92,11 +92,11 @@ Détecter les muons cosmiques en isolant les vrais événements du bruit grâce 
 
 % --- FIN ENCADRÉ DÉBUT ---
 
-Cette expérience repose sur un système de détection à scintillateur plastique couplé à un photomultiplicateur (PM). Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les éléments clés, illustrés par des schémas et photos.
+Cette expérience repose sur un système de détection à scintillateur plastique couplé à un photomultiplicateurs (PM). Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les éléments clés, illustrés par des schémas et photos.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{Images/PhotoMultiplierTubeAndScintillator.png}
+  \includegraphics[width=0.9\textwidth]{Images/Montage_Scintillateurs.png}
   \caption{Photo du montage de détection}
   \label{fig:setup}
 \end{figure}
@@ -174,6 +174,16 @@ Les PM présentent une excellente linéarité, une faible contribution au bruit,
 
 \subsection{Chaîne électronique}
 
+% --- ENCADRÉ DÉBUT ---
+
+\vspace{1em}
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la chaîne électronique]
+L’objectif de la chaîne électronique est d’assurer le traitement, le filtrage et la sélection des signaux issus des détecteurs afin de ne retenir que les événements pertinents. Elle permet d’optimiser la rapididité et le rapport signal/bruit, conditions essentielles pour une détection fiable et sélective des muons cosmiques.
+\end{tcolorbox}
+\end{center}
+
+% --- FIN ENCADRÉ DÉBUT ---
 
 La détection des muons nécessite une chaîne électronique rapide et fiable, composée de plusieurs instruments analogiques spécialisés. Voici les principaux modules utilisés et leur rôle dans l’expérience :
 
@@ -190,19 +200,8 @@ La détection des muons nécessite une chaîne électronique rapide et fiable, c
 \end{itemize}
 
 \begin{remarque}
-\textbf{Résumé~:} Le circuit électronique permet de récupérer le signal issu du photomultiplicateur, de l’afficher (oscilloscope) et de l’exploiter pour compter le nombre de muons, détecter les coïncidences, éliminer le bruit de fond, et mesurer le temps de vie des muons.
+\textbf{Synthèse~:} La chaîne électronique permet d’extraire efficacement les signaux utiles, d’éliminer le bruit et de garantir la fiabilité des mesures, condition essentielle pour toutes les analyses expérimentales du rapport.
 \end{remarque}
-
-\vspace{1em}
-\noindent
-\textbf{Schéma de la chaîne électronique analogique :}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\textwidth]{Images/PhotoMultiplierTubeAndScintillator.png}
-  \caption{Schéma fonctionnel de la chaîne électronique : PM alimenté par HT, suivi d’un circuit RC, amplificateur, discriminateur, delay, module de coïncidence, puis compteur. L’oscilloscope permet de visualiser les signaux à chaque étape.}
-  \label{fig:schema_elec_analogique}
-\end{figure}
 
 \vspace{1em}
 \noindent
@@ -210,25 +209,16 @@ La détection des muons nécessite une chaîne électronique rapide et fiable, c
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{Images/PhotoMultiplierTubeAndScintillator.png}
+  \includegraphics[width=0.9\textwidth]{Images/Montage_Electrique.png}
   \caption{Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}
   \label{fig:photo_instruments}
-\end{figure}
-
-\vspace{1em}
-\noindent
-\textbf{Schéma d’architecture globale (SiPM/PM + discri + coïncidence + acquisition) :}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Images/PhotoMultiplierTubeAndScintillator.png}
-  \caption{Diagramme d’architecture de l’électronique de détection (inspiré de \url{https://www.nupecc.org/presentations/pictures/detector_electronics_diagram.png}).}
-  \label{fig:diagramme_architecture}
 \end{figure}
 
 \newpage
 
 \section{Étude du signal}
+
+\subsection{Caractérisation temporelle du signal d’un muon}
 
 % --- ENCADRÉ DÉBUT ---
 
@@ -241,116 +231,93 @@ Analyser la forme, l’amplitude et la dépendance du signal détecté pour opti
 
 % --- FIN ENCADRÉ DÉBUT ---
 
-Pour caractériser la réponse du scintillateur plastique, nous avons observé à l’oscilloscope la forme du signal généré lors du passage d’un muon. Le signal présente une décroissance exponentielle, reflet de la désexcitation du matériau scintillant, convoluée avec la réponse du circuit RC de lecture.
+L’étude du signal issu de la détection d’un muon cosmique à l’aide d’un scintillateur plastique permet d’accéder à des informations précieuses sur la dynamique de la chaîne d’acquisition. Le signal typique, mesuré à l’oscilloscope, présente une décroissance exponentielle caractéristique, liée à la désexcitation des molécules du scintillateur, ainsi qu’une remontée associée à la réponse de l’électronique (constante de temps RC).
 
-\paragraph{Méthode :} Nous avons enregistré la courbe de tension en sortie du photomultiplicateur, puis ajusté la décroissance par une régression exponentielle de la forme :
-\[
-V(t) = V_0 \exp\left(-\frac{t}{\tau_{\text{eff}}}\right)
-\]
-où $\tau_{\text{eff}}$ est la constante de temps mesurée.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Desexitation_Scintillateur_2.png}
+    \caption{Exemple de signal mesuré sur un muon cosmique, avec ajustements exponentiels sur la descente et la montée.}
+    \label{fig:signal-muon}
+\end{figure}
 
-\paragraph{Résultats :} En répétant la mesure sur plusieurs événements, nous avons extrait deux constantes :
+L’ajustement de deux exponentielles (descente et montée) sur les données expérimentales permet d’extraire deux constantes de temps :
 \begin{itemize}
-    \item Le temps de désexcitation du scintillateur plastique, $\tau_{\text{scint}}$ (typiquement 2–3 ns).
-    \item Le temps de relaxation du circuit RC, $\tau_{RC}$ (typiquement 10–20 ns).
+    \item $\tau_{\text{scint}}$ : constante de décroissance du scintillateur plastique (processus de désexcitation)
+    \item $\tau_{RC}$ : constante de temps de la chaîne électronique (filtrage RC)
 \end{itemize}
-Le signal observé est donc la convolution de ces deux décroissances exponentielles.
 
-\begin{figure}[H]
-    \centering
-    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_signal.png}
-    \caption{Exemple de signal mesuré en sortie du PM : points expérimentaux et ajustement exponentiel. On distingue la composante rapide (scintillateur) et la composante plus lente (circuit RC).}
-\end{figure}
+\begin{remarque}
+\textbf{Synthèse~:} L’ajustement exponentiel du signal mesuré a permis d’extraire deux constantes caractéristiques~: $\tau_{\text{scint}} = 1{,}57$~ns (désexcitation du scintillateur) et $\tau_{RC} = 3{,}25$~ns (réponse de la chaîne électronique). La valeur obtenue pour $\tau_{\text{scint}}$ est parfaitement cohérente avec les propriétés attendues pour un scintillateur plastique, confirmant la qualité du montage et la validité de l’analyse temporelle réalisée.
+\end{remarque}
 
-\paragraph{Interprétation :} La mesure de $\tau_{\text{scint}}$ est cohérente avec les valeurs attendues pour ce type de plastique. La prise en compte de $\tau_{RC}$ permet d’optimiser le traitement du signal pour la suite des analyses.
-
-\subsection{Variation de la haute tension du photomultiplicateur}
-\begin{figure}[H]
-  \centering
-  \include{variationHT}
-  \caption{Schéma de la chaîne électronique utilisée pour faire varier la haute tension du PM}
-  \label{fig:variation_HT}
-\end{figure}
-
-Nous avons ensuite étudié l’influence de la tension d’alimentation du photomultiplicateur (PM) sur le taux de détection.
-
-\paragraph{Méthode :} Pour chaque scintillateur/PM, nous avons fait varier la haute tension (HT) appliquée et mesuré le nombre de signaux détectés par unité de temps.
-
-\paragraph{Théorie :} Une tension trop basse conduit à un gain insuffisant : peu de signaux dépassent le seuil du discriminateur. À l’inverse, une tension trop élevée augmente le gain mais aussi le bruit de fond (courant d’obscurité, bruit thermique), ce qui accroît le nombre de faux signaux.
-
-\paragraph{Résultats :} On observe une zone optimale où le nombre de signaux “vrais” est maximal, avant que le bruit ne devienne prépondérant.
-
-\begin{figure}[H]
-    \centering
-    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_HT.png}
-    \caption{Nombre de signaux détectés en fonction de la haute tension appliquée au PM.}
-\end{figure}
-
-\paragraph{Conclusion :} Le choix de la tension optimale est un compromis entre sensibilité et bruit. Nous avons retenu une valeur de HT assurant un taux de détection élevé tout en limitant les faux positifs.
-
-\subsection{Variation du seuil du discriminateur}
-
-\begin{figure}[H]
-  \centering
-  \include{treshold}
-  \caption{Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur}
-  \label{fig:variation_seuil}
-\end{figure}
-
-Enfin, nous avons étudié l’effet du seuil (threshold, THR) du discriminateur sur le nombre de signaux détectés.
-
-\paragraph{Méthode :} Pour une tension de PM fixée, nous avons fait varier le seuil du discriminateur et compté le nombre d’événements enregistrés.
-
-\paragraph{Théorie :} Un seuil trop bas laisse passer tout le bruit (bruit thermique, radioactivité), tandis qu’un seuil trop haut élimine aussi les vrais signaux de muons.
-
-\paragraph{Résultats :} On observe une courbe typique : beaucoup d’événements à seuil bas (bruit dominant), puis un plateau correspondant aux vrais signaux, enfin une chute rapide lorsque le seuil dépasse l’amplitude des signaux muoniques.
-
-\begin{figure}[H]
-    \centering
-    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_threshold.png}
-    \caption{Nombre d’événements détectés en fonction du seuil du discriminateur.}
-\end{figure}
-
-\paragraph{Conclusion :} Le réglage du seuil est crucial pour optimiser le rapport signal/bruit. Nous avons choisi un seuil situé juste au-dessus du niveau de bruit, de façon à ne conserver que les signaux dus aux muons.
+\subsection{Optimisation conjointe de la haute tension et du seuil du discriminateur}
 
 % --- ENCADRÉ DÉBUT ---
 
 \vspace{1em}
 \begin{center}
-\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de l’optimisation des réglages électroniques]
-Ajuster simultanément la haute tension du PM et le seuil du discriminateur pour maximiser la détection des muons tout en minimisant le bruit de fond.
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Optimisation conjointe des réglages électroniques]
+Pour maximiser la détection des muons cosmiques tout en minimisant le bruit de fond, il est essentiel d’ajuster simultanément la haute tension (HT) appliquée au photomultiplicateur et le seuil du discriminateur.
 \end{tcolorbox}
 \end{center}
 
 % --- FIN ENCADRÉ DÉBUT ---
 
-\subsection{Optimisation conjointe de la haute tension et du seuil du discriminateur}
+\paragraph{Démarche expérimentale~:}
+Pour chaque scintillateur, nous avons mesuré le nombre d’événements détectés en fonction du seuil du discriminateur, pour plusieurs valeurs de HT. Cette cartographie permet d’identifier la zone optimale où le taux de détection des muons est maximal et le bruit de fond minimal.
 
 \begin{figure}[H]
   \centering
-  \include{optimisation_HT_seuil}
-  \caption{Schéma de la chaîne électronique utilisée pour l'optimisation conjointe de la haute tension et du seuil du discriminateur}
-  \label{fig:optimisation_HT_seuil}
+  \include{treshold}
+  \caption{Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur.}
+  \label{fig:variation_seuil}
 \end{figure}
 
-Pour affiner les réglages, nous avons ensuite optimisé conjointement la haute tension du PM et le seuil du discriminateur.
-
-\paragraph{Méthode :} En utilisant les courbes de réponse précédemment obtenues, nous avons choisi des points de fonctionnement pour chaque scintillateur/PM dans la zone optimale identifiée. Nous avons ensuite vérifié que le taux de détection des muons était maximal tout en maintenant un faible taux de bruit de fond.
-
-\paragraph{Résultats :} Les réglages optimisés permettent d’obtenir un taux de détection maximal avec un minimum de faux signaux. Par exemple, pour une HT de 1200 V et un seuil de -1,5 V, nous avons atteint un bon compromis sur plusieurs scintillateurs testés.
+% Trois figures séparées pour chaque scintillateur
 
 \begin{figure}[H]
     \centering
-    %\includegraphics[width=0.7\textwidth]{chemin/vers/graphique_optimisation.png}
-    \caption{Résultats de l'optimisation conjointe : taux de détection en fonction de la haute tension et du seuil du discriminateur.}
+    \includegraphics[width=0.9\textwidth]{Images/Threshold_Scintillateur_1.png}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 1).}
+    \label{fig:optimisation_scint1}
 \end{figure}
 
-\paragraph{Conclusion :} Cette optimisation conjointe permet d’affiner les performances de détection des muons. Les réglages finaux retenus pour chaque scintillateur/PM tiennent compte des caractéristiques individuelles tout en maximisant l’efficacité globale du système.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Threshold_Scintillateur_2.png}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 2).}
+    \label{fig:optimisation_scint2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Threshold_Scintillateur_3.png}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 3).}
+    \label{fig:optimisation_scint3}
+\end{figure}
+
+% --- Synthèse unique, concise, orientée résultats, avec trous à remplir ---
+
+\begin{remarque}
+\textbf{Synthèse~:} L’analyse expérimentale a permis d’identifier, pour chaque scintillateur, le couple optimal (HT, seuil) assurant la meilleure efficacité de détection avec un bruit minimal. Les réglages retenus sont~:
+\begin{itemize}
+    \item \textbf{Scintillateur 1~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
+    \item \textbf{Scintillateur 2~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
+    \item \textbf{Scintillateur 3~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
+\end{itemize}
+\end{remarque}
 
 \newpage
 
 \section{Détection par coïncidence}
 \subsection{Principe de coïncidence}
+
+\vspace{1em}
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la coïncidence]
+Seuls les muons, très pénétrants, peuvent traverser plusieurs détecteurs alignés en quasi-ligne droite et produire des signaux quasi simultanés dans chacun. Les bruits aléatoires, eux, n’ont qu’une probabilité infime d’apparaître exactement en même temps dans deux détecteurs distincts.
+\end{tcolorbox}
+\end{center}
 
 \paragraph{Pourquoi la coïncidence ?}
 
@@ -369,13 +336,6 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
     \caption{Montage electronique de coïncidence avec les scintillateurs.}
     \label{fig:coincidence_sans_delais}
 \end{figure}
-
-\vspace{1em}
-\begin{center}
-\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la coïncidence]
-\textbf{Idée clé :} Seuls les muons, très pénétrants, peuvent traverser plusieurs détecteurs alignés en quasi-ligne droite et produire des signaux quasi simultanés dans chacun. Les bruits aléatoires, eux, n’ont qu’une probabilité infime d’apparaître exactement en même temps dans deux détecteurs distincts.
-\end{tcolorbox}
-\end{center}
 
 \paragraph{Schéma explicatif}
 
@@ -418,19 +378,6 @@ Pour que la coïncidence ne laisse passer que les \og vrais\fg{} muons et non de
 \noindent
 
 \subsection{Résultats expérimentaux}
-\subsubsection{Caractéristique des scintillateurs}
-Nous avons commencé par mesurer le nombre d’évènements en sortie des scintillateurs individuellement, le montage se réduit donc à un scintillateur, l’amplificateur, le discriminateur et le compteur.
-
-On trace ainsi le nombre d’évènement en fonction du seuil du discriminateur (THR). En effet le paramètre THR sera important à optimiser par la suite afin d’avoir un nombre suffisant d’évènement (seuil bas) sans pour autant détecter du bruit (seuil haut).
-
-\begin{figure}[ht!]
-    \centering
-%    \includegraphics[width=0.7\textwidth]{caracteristique_scintillateur.png}
-    \caption[Caractéristique du scintillateur haut]{Caractéristique du scintillateur haut}
-\end{figure}
-
-On remarque le nombre très élevé d’évènements, on détecte de l’ordre de 10000 évènements par seconde par m$^2$, alors que l’ordre de grandeur du flux muonique à la surface de la Terre est de 100 muons/s/m$^2$. Ce qui justifie la nécessité de procéder par coïncidence.
-
 \subsubsection{Coïncidence à 2 scintillateurs}
 Nous avons mis en place l’expérimentation décrite ci-dessus avec 2 scintillateurs.
 
@@ -440,10 +387,10 @@ Nous avons aussi estimé le nombre de coïncidence fortuites, celles-ci désigne
 
 Cela nous permet d’estimer la pureté de notre signal, ici il y a environ 10\% des évènements qui sont fortuits. Les coïncidences "réelles" désignent alors les 90\% restants.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
     \centering
-%    \includegraphics[width=0.7\textwidth]{coincidence_2scint_seuil.png}
-    \caption[Nombre d’évènement en 1min en fonction du seuil]{Nombre d’évènement en 1min en fonction du seuil pour 2 scintillateurs en coïncidence, width = 30ns}
+    \includegraphics[width=0.9\textwidth]{Images/Coincidences_2_Scintillateurs.png}
+    \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 4min en fonction du seuil pour 2 scintillateurs en coïncidence, width = 30ns}
 \end{figure}
 
 Aussi, nous voyons que le signal permet d’avoir un grand nombre d’évènement aux alentours de THR = -1V, width = 40ns. Au-delà de ces valeurs, le nombre de coïncidence fortuite commence à beaucoup augmenter, montrant que le bruit devient important. Nous nous fixerons donc proche de ces valeurs pour les mesures suivantes.
@@ -459,10 +406,10 @@ Enfin, l’ordre de grandeur de détection est à présent de 100 coïncidences 
 \subsubsection{Coïncidence à 3 scintillateurs}
 Afin d’avoir un signal encore plus pur (faire diminuer le nombre de coïncidence fortuite), nous passons aux coïncidences avec 3 scintillateurs selon le même principe.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-%    \includegraphics[width=0.7\textwidth]{coincidence_3scint_width.png}
-    \caption{Nombre d’évènement en 1min en fonction du width pour 3 scintillateurs en coïncidence}
+    \includegraphics[width=0.9\textwidth]{Images/Coincidences_3_Scintillateurs.png}
+    \caption{Nombre d’évènement en 10min en fonction du width pour 3 scintillateurs en coïncidence}
 \end{figure}
 
 On remarque que le nombre de coïncidences fortuites est quasi-nul, nous pouvons donc, pour la suite des expériences, considérer qu’une coïncidence à 3 scintillateurs est une détection d’un muon.
@@ -530,7 +477,7 @@ Les muons cosmiques arrivant au sol possèdent un spectre continu d’énergies 
   \item Analyse des effets expérimentaux : baisse de 15\% du taux de coïncidence, augmentation du dépôt d’énergie moyen.
 \end{itemize}
 
-Dépôt d’énergie dans le scintillateur (spectre de Landau) : Lorsqu’un muon traverse un scintillateur de épaisseur donnée, l’énergie qu’il y perd par ionisation fluctue d’un événement à l’autre. Ces fluctuations de $dE$ proviennent de processus stochastiques : un muon peut perdre un peu plus d’énergie s’il crée un delta-ray (électron secondaire de haute énergie) ou un peu moins s’il traverse sans collision violente. La distribution théorique du dépôt d’énergie dans une mince couche de matière est décrite par la statistique de Landau (distribution de Landau), caractérisée par un pic le plus probable et une longue traîne vers les hautes énergies perdues. Typiquement, pour un muon minimum ionisant traversant ~1 cm de plastique (1–1,2 g/cm²), le dépôt d’énergie le plus probable est de l’ordre de 1–2 MeV, alors que la moyenne de la distribution est légèrement supérieure (quelques MeV) en raison de la contribution de la traîne. Dans notre détecteur, cette énergie déposée se traduit en un nombre de photons scintillants puis en une amplitude de signal PM proportionnelle. En enregistrant ces amplitudes (via un multi-channel analyzer par exemple), on pourrait observer le spectre d’énergie déposée : on s’attend à un pic de Landau assez large centré aux alentours de 1–2 MeV, avec une queue étendue jusqu’à peut-être 5–10 MeV due aux pertes occasionnelles plus importantes.
+Dépôt d’énergie dans le scintillator (spectre de Landau) : Lorsqu’un muon traverse un scintillateur de épaisseur donnée, l’énergie qu’il y perd par ionisation fluctue d’un événement à l’autre. Ces fluctuations de $dE$ proviennent de processus stochastiques : un muon peut perdre un peu plus d’énergie s’il crée un delta-ray (électron secondaire de haute énergie) ou un peu moins s’il traverse sans collision violente. La distribution théorique du dépôt d’énergie dans une mince couche de matière est décrite par la statistique de Landau (distribution de Landau), caractérisée par un pic le plus probable et une longue traîne vers les hautes énergies perdues. Typiquement, pour un muon minimum ionisant traversant ~1 cm de plastique (1–1,2 g/cm²), le dépôt d’énergie le plus probable est de l’ordre de 1–2 MeV, alors que la moyenne de la distribution est légèrement supérieure (quelques MeV) en raison de la contribution de la traîne. Dans notre détecteur, cette énergie déposée se traduit en un nombre de photons scintillants puis en une amplitude de signal PM proportionnelle. En enregistrant ces amplitudes (via un multi-channel analyzer par exemple), on pourrait observer le spectre d’énergie déposée : on s’attend à un pic de Landau assez large centré aux alentours de 1–2 MeV, avec une queue étendue jusqu’à peut-être 5–10 MeV due aux pertes occasionnelles plus importantes.
 
 Dans le cadre de cette expérience, plutôt que de mesurer directement le spectre d’amplitude (ce qui nécessiterait un spectromètre d’amplitude calibré), nous avons étudié le dépôt d’énergie de manière indirecte en examinant l’effet d’un absorbeur sur le taux de comptage et sur le signal.
 
@@ -588,7 +535,7 @@ Principe expérimental~: Pour mesurer le temps de vie du muon, nous avons config
   \]
   Ce signal \(S\) indique \og muon entrant et s'arrêtant dans B à l'instant \(t_0\) \fg{}.
 
-  \item Un signal de stop est produit lorsqu'un scintilllement ultérieur survient dans B (ou éventuellement dans C) indiquant le passage de la particule de désintégration (un électron de quelques dizaines de MeV). Ici, on utilise typiquement le scintillateur C inférieur pour détecter l'électron émis vers le bas depuis B. Le stop peut ainsi être C seul (ou B seul, mais utiliser C permet d'éviter certains bruits, car l'électron de désintégration a de fortes chances de traverser C s'il est émis vers le bas). Dans notre montage, nous avons pris comme stop le signal C sur une seconde entrée du TAC. Ainsi, dès qu'un pulse est détecté dans C après le start, le TAC s'arrête.
+  \item Un signal de stop est produit lorsqu'un scintillement ultérieur survient dans B (ou éventuellement dans C) indiquant le passage de la particule de désintégration (un électron de quelques dizaines de MeV). Ici, on utilise typiquement le scintillateur C inférieur pour détecter l'électron émis vers le bas depuis B. Le stop peut ainsi être C seul (ou B seul, mais utiliser C permet d'éviter certains bruits, car l'électron de désintégration a de fortes chances de traverser C s'il est émis vers le bas). Dans notre montage, nous avons pris comme stop le signal C sur une seconde entrée du TAC. Ainsi, dès qu'un pulse est détecté dans C après le start, le TAC s'arrête.
 
   \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique multi‑voies (MCA) qui remplit un histogramme du nombre d'événements en fonction de V, donc en fonction du temps écoulé. Après avoir accumulé suffisamment d'événements (plusieurs milliers idéalement), on obtient une distribution \(N(\Delta t)\), c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
 \end{itemize}
@@ -607,7 +554,7 @@ Dans un matériau riche en protons (scintillateur plastique = CH, Z faible), la 
 
 Un autre aspect est la vérification de la relativité : notre mesure de $\tau \approx 2,1~\mu$s concerne des muons au repos dans le détecteur. Mais ces mêmes muons avaient une durée de vie beaucoup plus longue durant leur vol du ciel vers la Terre. Par exemple, un muon de 3 GeV ($\gamma \approx 30$) a une durée de vie dilatée $\gamma \tau \sim 66~\mu$s dans le référentiel terrestre, ce qui lui permet de parcourir près de 20 km (suffisant pour descendre de la haute atmosphère). Une expérience que nous réalisons implicitement est de sélectionner les muons ayant assez ralenti pour s’arrêter : ces muons ont en fait perdu toute leur énergie cinétique, donc dans notre référentiel ils ne sont plus relativistes (ou faiblement, $\gamma \approx 1$), et l’on mesure donc leur temps de vie propre. Ainsi, la cohérence de notre résultat avec les mesures en laboratoire de muons stoppés** confirme rétroactivement que la dilatation du temps a bien opéré en vol pour les muons cosmiques rapides. Si on mesurait le temps de vie de muons en vol sans les arrêter, on trouverait une valeur beaucoup plus grande proportionnelle à leur $\gamma$.
 
-Technique TAC et limites : Le recours au TAC s’est avéré efficace pour mesurer des temps de l’ordre de la microseconde avec une bonne résolution (~10 ns). Nous avons tout de même dû tenir compte de sa limite de durée : notre TAC était réglé pour une pleine échelle de 10 μs (par exemple), ce qui signifie qu’au-delà de 10 μs sans stop, il arrête la conversion (soit en saturant, soit en annulant l’événement). Ainsi, les muons dont la désintégration prend plus de cette fenêtre d’observation ne sont pas comptés correctement. Cependant, étant donné que 10 μs correspond à plus de 4 fois $\tau$, la fraction de muons se désintégrant plus tard est faible ($e^{-10/2,2} \approx 0,006$ soit <1%). Nous avons donc négligé l’effet de coupure à 10 μs sur l’ajustement, ou le cas échéant, nous l’avons inclus dans le fond constant.
+Technique TAC et limites : Le recours au TAC s’est avéré efficace pour mesurer des temps de l’ordre de la microseconde avec une bonne résolution (~10 ns). Nous avons tout de même dû tenir compte de sa limite de durée : notre TAC était réglé pour une pleine échelle de  10 μs (par exemple), ce qui signifie qu’au-delà de 10 μs sans stop, il arrête la conversion (soit en saturant, soit en annulant l’événement). Ainsi, les muons dont la désintégration prend plus de cette fenêtre d’observation ne sont pas comptés correctement. Cependant, étant donné que 10 μs correspond à plus de 4 fois $\tau$, la fraction de muons se désintégrant plus tard est faible ($e^{-10/2,2} \approx 0,006$ soit <1%). Nous avons donc négligé l’effet de coupure à 10 μs sur l’ajustement, ou le cas échéant, nous l’avons inclus dans le fond constant.
 
 En définitive, la mesure du temps de vie du muon constitue le point culminant de cette série d’expériences, en combinant toutes les techniques : détection par coïncidence (pour trouver les muons arrêtés), chronométrage rapide, analyse statistique. Le résultat obtenu est en accord avec les prédictions du Modèle Standard (la désintégration muonique est un processus de type interaction faible, dont la probabilité par unité de temps est $\lambda = 1/\tau \approx 0,45~\mu\text{s}^{-1}$, indépendante du temps). C’est une confirmation expérimentale importante de plus, réalisée ici avec un appareillage de paillasse. De plus, cela nous relie aux expériences historiques de garnissage de chambres à brouillard par les muons (où l’on découvrit en 1941 que les “mesotrons” avaient une durée de vie d’environ 2 microsecondes). Aujourd’hui, des mesures modernes beaucoup plus précises (expérience MuLan, etc.) atteignent une exactitude de l’ordre de $10^{-6}$ sur $\tau_\mu$, car ce paramètre sert de test précis de l’universalité des interactions faibles et permet de déduire la constante de Fermi. Notre mesure didactique reste bien sûr loin de ces précisions, mais elle n’en illustre pas moins la validité du principe.
 
@@ -664,12 +611,6 @@ Pour améliorer encore la précision et la portée de l’expérience, on pourra
 
 En synthèse, cette série d’expériences nous a permis de caractériser avec succès les propriétés des muons cosmiques : leur flux, leur distribution directionnelle, leur pouvoir pénétrant et leur durée de vie, le tout en accord quantitatif avec les valeurs acceptées (dans la limite des incertitudes expérimentales) et avec les prédictions du modèle standard des particules. Le montage expérimental, d’abord traditionnel puis modernisé, a démontré la faisabilité d’une physique de précision avec des moyens relativement simples. Les muons cosmiques, jadis mystérieux “rayons pénétrants”, se révèlent ainsi être d’excellents messagers pour tester des concepts fondamentaux (tels que la relativité et la désintégration exponentielle) et pour initier à la physique des particules. Les améliorations apportées par les nouvelles technologies (SiPM, FPGA) ouvrent la voie à des dispositifs plus compacts et performants, susceptibles d’être déployés dans des projets variés (mesures en altitude, muographie, réseau de capteurs cosmiques citoyen, etc.).
 
-Perspectives : À l’avenir, on pourrait concevoir un réseau de télescopes à muons interconnectés pour étudier la cohérence temporelle des gerbes étendues (lorsqu’un rayon cosmique primaire génère simultanément plusieurs muons détectés par des stations espacées). On pourrait également utiliser la muographie pour des applications concrètes d’imagerie non invasive en géosciences ou en archéologie. Ainsi, du laboratoire étudiant jusqu’aux expériences de pointe, la détection des muons continue d’être un domaine riche, à la fois pour former à la démarche expérimentale rigoureuse et pour contribuer à des découvertes scientifiques interdisciplinaires.
-
-En conclusion, le travail réalisé a atteint ses objectifs : nous disposons d’un rapport détaillé de 40-50 pages couvrant la présentation théorique des muons, la description du montage expérimental, l’analyse des données (coïncidences, distribution angulaire $\cos^2\theta$, perte d’énergie, temps de vie) et la discussion des améliorations techniques. Les résultats obtenus illustrent de façon claire, structurée et scientifiquement rigoureuse les phénomènes associés aux muons cosmiques, témoignant de la cohérence globale de l’expérience. Ce rapport pourra servir de base à de futurs développements ou enseignements autour de la physique des particules cosmiques et de leurs techniques de détection.
-
-\section*{Références}
-\addcontentsline{toc}{section}{Références}
 \begin{thebibliography}{9}
 \bibitem{knoll2010} G.~F. Knoll, \emph{Radiation Detection and Measurement}, 4th ed., Wiley, 2010.
 \bibitem{bethe1930} H. Bethe, ``Zur Theorie des Durchgangs schneller Korpuskularstrahlen durch Materie,'' \emph{Ann. Phys.}, vol.~5, no.~3, 1930.
