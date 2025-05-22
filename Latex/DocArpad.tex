@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt,twoside]{article}
 
-
+\usepackage{subcaption}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -190,7 +190,7 @@ La détection des muons nécessite une chaîne électronique rapide et fiable, c
 \end{itemize}
 
 \begin{remarque}
-\textbf{Résumé~:} Le circuit électronique permet de récupérer le signal issu du photomultiplicateur, de l’afficher (oscilloscope) et de l’exploiter pour compter le nombre de muons, détecter les coïncidences, éliminer le bruit de fond, et mesurer le temps de vie des muons.
+\textbf{Résumé~:} Le circuit électronique permet de récupérer le signal issu du photomultiplicateurs, de l’afficher (oscilloscope) et de l’exploiter pour compter le nombre de muons, détecter les coïncidences, éliminer le bruit de fond, et mesurer le temps de vie des muons.
 \end{remarque}
 
 \vspace{1em}
@@ -366,7 +366,7 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
 \begin{figure}[H]
     \centering
     \include{coincidence_sans_delais}
-    \caption{Montage electronique de coïncidence avec les scintillateurs.}
+    \caption{Montage electronique de coïncidence avec les scintillateurs.Les ensembles scintillateurs + PMs sont reliés à un discriminateur, qui envoie le signal au module de coïncidence. Le module de coïncidence ne laisse passer que les signaux simultanés des deux scintillateurs. On visualise le signal de coincidence sur l'oscilloscope et on declanche un compteur sur une durée d'aquisition. Cela permet d'ajuster quatitaviement le parametre width du discriminateur.}
     \label{fig:coincidence_sans_delais}
 \end{figure}
 
@@ -378,6 +378,21 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
 \end{center}
 
 \paragraph{Schéma explicatif}
+\begin{figure}[H]
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \include{recouvrement_petit_width}
+    \caption{Schéma de output de recouvrement entre trois scintillateurs. Ici, la largeur de recouvrement est plus petite. On comprend que la discrimination du bruit est plus efficace mais que plus de muons sont "ratés".}
+    \label{fig:recouvrement_petit_width}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.48\textwidth} 
+    \centering
+    \include{recouvrment_grand_width}
+    \caption{Schéma de output de recouvrement entre trois scintillateurs. Ici, la largeur de recouvrement est plus grande. On comprend que la discrimination du bruit est moins efficace mais que moins de muons sont "ratés".}
+    \label{fig:recouvrement_grand_width}
+  \end{minipage}
+\end{figure}
 
 \begin{figure}[H]
     \centering
@@ -406,7 +421,8 @@ Pour que la coïncidence ne laisse passer que les \og vrais\fg{} muons et non de
 \begin{figure}[H]
     \centering
     \include{coincidences_delai}
-    \caption{Montage électronique de coïncidence avec un retardateur.}
+    \caption{Montage électronique de coïncidence avec un retardateur. L'ensemble du circuit est le même que précédemment, mais on introduit 
+    un retardateur sur l'un des signaux avant de le faire passer dans le module de coïncidence. Cela permet de mesurer le bruit de fond aléatoire et de mesurer la véritable incidence des muons.}
     \label{fig:coincidence_avec_delais}
 \end{figure}
 \vspace{1em}
@@ -419,7 +435,7 @@ Pour que la coïncidence ne laisse passer que les \og vrais\fg{} muons et non de
 
 \subsection{Résultats expérimentaux}
 \subsubsection{Caractéristique des scintillateurs}
-Nous avons commencé par mesurer le nombre d’évènements en sortie des scintillateurs individuellement, le montage se réduit donc à un scintillateur, l’amplificateur, le discriminateur et le compteur.
+Nous avons commencé par mesurer le nombre d’événements en sortie des scintillateurs individuellement, le montage se réduit donc à un scintillateur, l’amplificateur, le discriminateur et le compteur.
 
 On trace ainsi le nombre d’évènement en fonction du seuil du discriminateur (THR). En effet le paramètre THR sera important à optimiser par la suite afin d’avoir un nombre suffisant d’évènement (seuil bas) sans pour autant détecter du bruit (seuil haut).
 
@@ -485,6 +501,31 @@ L'un des caract\`eres notables du rayonnement cosmique muonique au niveau du sol
 avec $n \approx 2$ aux 'energies cosmiques typiques. Autrement dit, le flux diff\'erentiel de muons est approximativement proportionnel \`a $\cos^2\theta$ pour des angles mod\'er\'es. Des mesures plus fines montrent qu'\`a tr\`es grands angles ($\theta > 60^\circ$), la distribution s'att\'enue plus fortement que le simple $\cos^2$ en raison de la courbure terrestre (au-del\`a d'un certain angle, les muons provenant de l'horizon ont parcouru une distance atmosph\`erique si grande qu'aucun n'atteint le sol) et de la s\'election en 'energie (seuls les muons les plus 'energiques arrivent depuis des angles rasants sans se d\'esint\'egrer). N\'eanmoins, dans l'intervalle $0^\circ \le \theta \leq 60^\circ$, on peut consid\'erer la loi $\cos^2\theta$ comme une bonne approximation pour le flux muonique au niveau de la mer.
 
 \subsection{Mise en œuvre expérimentale}
+
+\begin{figure}
+  \begin{minipage}{0.3\textwidth}
+    \centering
+    \include{angle_nul}
+    \caption{Montage de mesure de l'angle nul.\\Les trois scintillateurs sont alignés, comme depuis le début du TREX.}
+    \label{fig:angle_nul}
+  \end{minipage}
+  \hfill
+  \begin{minipage}
+  {0.3\textwidth}
+    \centering
+    \include{angle_non_nul}
+    \caption{Montage de mesure pour un angle non nul.\\Les trois scintillateurs sont déplacés horizontalement pour sélectionner les muons incidents.}
+    \label{fig:angle_non_nul}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.3\textwidth}
+    \centering
+    \include{range_des_angles}
+    \caption{Effet de la largeur des scintillateurs sur la pureté angulaire. On voit que la largeur réelle des scintillateurs ne permet pas une sélection très pure des angles.}
+    \label{fig:range_des_angles}
+  \end{minipage}
+  \caption{Montages expérimentaux pour la mesure angulaire des muons.}
+\end{figure}
 Pour chaque angle~$\theta$, on enregistre le nombre de muons détectés (coïncidences $A\wedge B$) pendant une durée fixe (par ex.\ quelques minutes, suffisamment pour accumuler des centaines d’événements et réduire l’erreur statistique). On obtient ainsi un taux de comptage~$N(\theta)$ en fonction de~$\theta$. Les résultats bruts doivent être corrigés de deux effets géométriques~: (i) la projection de la surface du détecteur selon l'angle, et (ii) l'acceptation commune des deux plaques (qui varie légèrement avec l'angle dans notre montage). Le premier point est important~: lorsque le télescope est incliné de~$\theta$, la surface effective présentée aux muons venant du zénith est réduite d'un facteur~$\cos\theta$. Inversement, pour des muons venant réellement d'une direction inclinée~$\theta$, la surface présentée est maximale. En pratique, pour relier au flux angulaire~$I(\theta)$ (défini par unité de surface perpendiculaire à la direction d'arrivée), il faut diviser le taux mesuré par~$\cos\theta$ (correction de projection). Le second point concerne la portion de ciel vue par les deux détecteurs en coïncidence~: dans notre cas, pour des angles modérés, on peut considérer qu'elle reste constante tant que la superposition des deux scintillateurs est complète.
 
 Après ces corrections, on peut comparer la distribution normalisée~$I_{\mathrm{mesure}}(\theta)$ au modèle en~$\cos^{2}\theta$. Les données obtenues présentent une bonne conformité avec la loi attendue. Graphique~1 ci‑dessous montre, de façon qualitative, la tendance mesurée~: en représentant $N(\theta)$ corrigé en fonction de~$\cos\theta$, on obtient approximativement une droite, ce qui traduit
@@ -588,7 +629,7 @@ Principe expérimental~: Pour mesurer le temps de vie du muon, nous avons config
   \]
   Ce signal \(S\) indique \og muon entrant et s'arrêtant dans B à l'instant \(t_0\) \fg{}.
 
-  \item Un signal de stop est produit lorsqu'un scintilllement ultérieur survient dans B (ou éventuellement dans C) indiquant le passage de la particule de désintégration (un électron de quelques dizaines de MeV). Ici, on utilise typiquement le scintillateur C inférieur pour détecter l'électron émis vers le bas depuis B. Le stop peut ainsi être C seul (ou B seul, mais utiliser C permet d'éviter certains bruits, car l'électron de désintégration a de fortes chances de traverser C s'il est émis vers le bas). Dans notre montage, nous avons pris comme stop le signal C sur une seconde entrée du TAC. Ainsi, dès qu'un pulse est détecté dans C après le start, le TAC s'arrête.
+  \item Un signal de stop est produit lorsqu'un scintillement ultérieur survient dans B (ou éventuellement dans C) indiquant le passage de la particule de désintégration (un électron de quelques dizaines de MeV). Ici, on utilise typiquement le scintillateur C inférieur pour détecter l'électron émis vers le bas depuis B. Le stop peut ainsi être C seul (ou B seul, mais utiliser C permet d'éviter certains bruits, car l'électron de désintégration a de fortes chances de traverser C s'il est émis vers le bas). Dans notre montage, nous avons pris comme stop le signal C sur une seconde entrée du TAC. Ainsi, dès qu'un pulse est détecté dans C après le start, le TAC s'arrête.
 
   \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique multi‑voies (MCA) qui remplit un histogramme du nombre d'événements en fonction de V, donc en fonction du temps écoulé. Après avoir accumulé suffisamment d'événements (plusieurs milliers idéalement), on obtient une distribution \(N(\Delta t)\), c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
 \end{itemize}
@@ -660,13 +701,18 @@ En termes d’incertitudes et d’erreurs, chaque mesure réalisée comporte des
 Pour améliorer encore la précision et la portée de l’expérience, on pourrait envisager :
 	•	D’augmenter le temps d’acquisition ou la surface des détecteurs pour raffiner la statistique, notamment sur la distribution angulaire extrême (approcher $80-90^\circ$ avec de meilleurs chiffres) et sur la courbe de désintégration (réduire l’erreur sur $\tau$ à quelques pourcentages).
 	•	D’implémenter un système de sélection de la charge des muons (par exemple en plaçant un aimant autour de l’absorbeur pour courber différemment l’électron de désintégration selon charge du muon parent) afin de mesurer séparément $\tau_{\mu^-}$ en présence de capture et $\tau_{\mu^+}$. Ce serait toutefois plus complexe et hors de portée d’une simple manip de laboratoire.
-	•	D’explorer le flux en fonction de l’énergie plus directement, par exemple en utilisant plusieurs absorbeurs d’épaisseurs variables et en comparant les taux. Cela permettrait de reconstituer le spectre énergétique des muons cosmiques de façon plus fine.
+	•	D’explorer le flux en fonction de l’énergie plus directement, par exemple en utilisant plusieurs absorbeurs d’épaisseurs variables et en comparant les taux. Cela permettrait de reconstituer le spectre énergétique des muons de façon plus fine.
 
 En synthèse, cette série d’expériences nous a permis de caractériser avec succès les propriétés des muons cosmiques : leur flux, leur distribution directionnelle, leur pouvoir pénétrant et leur durée de vie, le tout en accord quantitatif avec les valeurs acceptées (dans la limite des incertitudes expérimentales) et avec les prédictions du modèle standard des particules. Le montage expérimental, d’abord traditionnel puis modernisé, a démontré la faisabilité d’une physique de précision avec des moyens relativement simples. Les muons cosmiques, jadis mystérieux “rayons pénétrants”, se révèlent ainsi être d’excellents messagers pour tester des concepts fondamentaux (tels que la relativité et la désintégration exponentielle) et pour initier à la physique des particules. Les améliorations apportées par les nouvelles technologies (SiPM, FPGA) ouvrent la voie à des dispositifs plus compacts et performants, susceptibles d’être déployés dans des projets variés (mesures en altitude, muographie, réseau de capteurs cosmiques citoyen, etc.).
 
-Perspectives : À l’avenir, on pourrait concevoir un réseau de télescopes à muons interconnectés pour étudier la cohérence temporelle des gerbes étendues (lorsqu’un rayon cosmique primaire génère simultanément plusieurs muons détectés par des stations espacées). On pourrait également utiliser la muographie pour des applications concrètes d’imagerie non invasive en géosciences ou en archéologie. Ainsi, du laboratoire étudiant jusqu’aux expériences de pointe, la détection des muons continue d’être un domaine riche, à la fois pour former à la démarche expérimentale rigoureuse et pour contribuer à des découvertes scientifiques interdisciplinaires.
+En termes d’incertitudes et d’erreurs, chaque mesure réalisée comporte des sources d’erreur connues : l’incertitude statistique domine pour la mesure de $\tau_\mu$ (nécessité d’accumuler suffisamment d’événements), tandis que des erreurs systématiques (calibration des angles, épaisseur effective de l’atmosphère selon la météo) peuvent légèrement affecter la loi angulaire. Nous avons pris soin de les estimer : par exemple, l’angle $\theta$ a été ajusté visuellement avec une précision d’environ $\pm 1^\circ$, ce qui induit une incertitude de quelques pourcentages sur $\cos^2\theta$ aux plus grands angles. De même, la stabilité de l’électronique a été vérifiée pour minimiser les biais (la fenêtre de coïncidence bien fixée, etc.). Ainsi, nous sommes confiants que les écarts entre nos mesures et les valeurs théoriques restent dans les marges d’erreur expérimentales.
 
-En conclusion, le travail réalisé a atteint ses objectifs : nous disposons d’un rapport détaillé de 40-50 pages couvrant la présentation théorique des muons, la description du montage expérimental, l’analyse des données (coïncidences, distribution angulaire $\cos^2\theta$, perte d’énergie, temps de vie) et la discussion des améliorations techniques. Les résultats obtenus illustrent de façon claire, structurée et scientifiquement rigoureuse les phénomènes associés aux muons cosmiques, témoignant de la cohérence globale de l’expérience. Ce rapport pourra servir de base à de futurs développements ou enseignements autour de la physique des particules cosmiques et de leurs techniques de détection.
+Pour améliorer encore la précision et la portée de l’expérience, on pourrait envisager :
+	•	D’augmenter le temps d’acquisition ou la surface des détecteurs pour raffiner la statistique, notamment sur la distribution angulaire extrême (approcher $80-90^\circ$ avec de meilleurs chiffres) et sur la courbe de désintégration (réduire l’erreur sur $\tau$ à quelques pourcentages).
+	•	D’implémenter un système de sélection de la charge des muons (par exemple en plaçant un aimant autour de l’absorbeur pour courber différemment l’électron de désintégration selon charge du muon parent) afin de mesurer séparément $\tau_{\mu^-}$ en présence de capture et $\tau_{\mu^+}$. Ce serait toutefois plus complexe et hors de portée d’une simple manip de laboratoire.
+	•	D’explorer le flux en fonction de l’énergie plus directement, par exemple en utilisant plusieurs absorbeurs d’épaisseurs variables et en comparant les taux. Cela permettrait de reconstituer le spectre énergétique des muons de façon plus fine.
+
+En synthèse, cette série d’expériences nous a permis de caractériser avec succès les propriétés des muons cosmiques : leur flux, leur distribution directionnelle, leur pouvoir pénétrant et leur durée de vie, le tout en accord quantitatif avec les valeurs acceptées (dans la limite des incertitudes expérimentales) et avec les prédictions du modèle standard des particules. Le montage expérimental, d’abord traditionnel puis modernisé, a démontré la faisabilité d’une physique de précision avec des moyens relativement simples. Les muons cosmiques, jadis mystérieux “rayons pénétrants”, se révèlent ainsi être d’excellents messagers pour tester des concepts fondamentaux (tels que la relativité et la désintégration exponentielle) et pour initier à la physique des particules. Les améliorations apportées par les nouvelles technologies (SiPM, FPGA) ouvrent la voie à des dispositifs plus compacts et performants, susceptibles d’être déployés dans des projets variés (mesures en altitude, muographie, réseau de capteurs cosmiques citoyen, etc.).
 
 \section*{Références}
 \addcontentsline{toc}{section}{Références}

@@ -149,24 +149,28 @@ current_angle_counts = {}  # Comptage progressif des angles
 # Initialisation de l'histogramme et du fit
 bar_plot = None
 fit_line = None
+fit_params_text = None
+detection_count_text = None  # <-- Ajout
 
 def init():
     muon_line.set_data([], [])
     traj_text.set_text("")
-    global bar_plot, fit_line
+    global bar_plot, fit_line, fit_params_text, detection_count_text
     bar_plot = ax2.bar([], [], color='blue', alpha=0.7, label="Occurrences")
     fit_line, = ax2.plot([], [], color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")
-    return muon_line, traj_text, *bar_plot, fit_line
+    fit_params_text = ax2.text(0.05, 0.95, "", transform=ax2.transAxes, va='top', fontsize=12, color='black', bbox=dict(facecolor='white', alpha=0.7))
+    detection_count_text = ax2.text(0.95, 0.95, "", transform=ax2.transAxes, va='top', ha='right', fontsize=12, color='purple', bbox=dict(facecolor='white', alpha=0.7))  # <-- Ajout
+    return muon_line, traj_text, *bar_plot, fit_line, fit_params_text, detection_count_text  # <-- Ajout
 
 # Modifier la fonction animate pour inclure l'ajustement des poids
 def animate(frame):
-    global current_angles, current_angle_counts, bar_plot, fit_line
+    global current_angles, current_angle_counts, bar_plot, fit_line, fit_params_text, detection_count_text
 
     traj_idx = frame // frames_per_traj
     step = frame % frames_per_traj
 
     if traj_idx >= len(trajectories):
-        return muon_line, traj_text, *bar_plot, fit_line
+        return muon_line, traj_text, *bar_plot, fit_line, fit_params_text, detection_count_text  # <-- Ajout
 
     # Trajectoire actuelle
     comb, traj = trajectories[traj_idx]
@@ -223,9 +227,23 @@ def animate(frame):
                 bar.remove()
             bar_plot = ax2.bar(angles, counts, color='blue', alpha=0.7, label="Occurrences")
             fit_line.set_data(fit_angles, fit_counts)
-            ax2.legend()
+            ax2.legend([
+                "Occurrences",
+                r"Fit : $a \cos^2(x + b) + c$\n$a$=amplitude, $b$=décalage, $c$=offset"
+            ])
 
-    return muon_line, traj_text, *bar_plot, fit_line
+            # Affichage des paramètres du fit
+            fit_params_text.set_text(
+                f"a = {popt[0]:.2f}\nb = {popt[1]:.2f}\nc = {popt[2]:.2f}\n"
+                r"Fit : $a \cos^2(x + b) + c$"
+            )
+        else:
+            fit_params_text.set_text("")
+
+        # Affichage du nombre de détections
+        detection_count_text.set_text(f"Détections : {len(current_angles)}")  # <-- Ajout
+
+    return muon_line, traj_text, *bar_plot, fit_line, fit_params_text, detection_count_text  # <-- Ajout
 
 # Animation
 total_frames = len(trajectories) * frames_per_traj
