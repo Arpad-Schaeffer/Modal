@@ -1,15 +1,17 @@
 \babel@toc {french}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Photo du montage de détection}}{6}{figure.caption.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Schéma global d’un scintillateur couplé à un photomultiplicateur}}{8}{figure.caption.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}}{11}{figure.caption.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Exemple de signal mesuré sur un muon cosmique, avec ajustements exponentiels sur la descente et la montée.}}{13}{figure.caption.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur.}}{14}{figure.caption.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Nombre d’événements détectés en fonction du seuil pour différentes HT, pour chaque scintillateur.}}{14}{figure.caption.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Montage electronique de coïncidence avec les scintillateurs.}}{15}{figure.caption.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}}{16}{figure.caption.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Montage électronique de coïncidence avec un retardateur.}}{17}{figure.caption.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Caractéristique du scintillateur haut}}{17}{figure.caption.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Nombre d’évènement en 1min en fonction du seuil}}{18}{figure.caption.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 2 scintillateurs en coïncidence, THR = -1.8V}}{18}{figure.caption.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 3 scintillateurs en coïncidence}}{18}{figure.caption.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Nombre d’évènement en 2min en fonction du seuil pour 3 scintillateurs en coïncidence}}{19}{figure.caption.14}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Photo du montage de détection}}{7}{figure.caption.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Schéma global d’un scintillateur couplé à un photomultiplicateur}}{9}{figure.caption.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}}{12}{figure.caption.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Exemple de signal mesuré sur un muon cosmique, avec ajustements exponentiels sur la descente et la montée.}}{14}{figure.caption.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur.}}{15}{figure.caption.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 1).}}{15}{figure.caption.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 2).}}{16}{figure.caption.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 3).}}{17}{figure.caption.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Montage electronique de coïncidence avec les scintillateurs.}}{18}{figure.caption.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}}{19}{figure.caption.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Montage électronique de coïncidence avec un retardateur.}}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Caractéristique du scintillateur haut}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Nombre d’évènement en 1min en fonction du seuil}}{21}{figure.caption.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 2 scintillateurs en coïncidence, THR = -1.8V}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Nombre d’évènement en 1min en fonction du width pour 3 scintillateurs en coïncidence}}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Nombre d’évènement en 2min en fonction du seuil pour 3 scintillateurs en coïncidence}}{21}{figure.caption.16}%

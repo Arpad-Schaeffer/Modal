@@ -92,7 +92,7 @@ Détecter les muons cosmiques en isolant les vrais événements du bruit grâce 
 
 % --- FIN ENCADRÉ DÉBUT ---
 
-Cette expérience repose sur un système de détection à scintillateur plastique couplé à un photomultiplicateur (PM). Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les éléments clés, illustrés par des schémas et photos.
+Cette expérience repose sur un système de détection à scintillateur plastique couplé à un photomultiplicateurs (PM). Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les éléments clés, illustrés par des schémas et photos.
 
 \begin{figure}[H]
   \centering
@@ -179,7 +179,7 @@ Les PM présentent une excellente linéarité, une faible contribution au bruit,
 \vspace{1em}
 \begin{center}
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la chaîne électronique]
-L’objectif de la chaîne électronique est d’assurer le traitement, le filtrage et la sélection des signaux issus des détecteurs afin de ne retenir que les événements pertinents. Elle permet d’optimiser la rapidité et le rapport signal/bruit, conditions essentielles pour une détection fiable et sélective des muons cosmiques.
+L’objectif de la chaîne électronique est d’assurer le traitement, le filtrage et la sélection des signaux issus des détecteurs afin de ne retenir que les événements pertinents. Elle permet d’optimiser la rapididité et le rapport signal/bruit, conditions essentielles pour une détection fiable et sélective des muons cosmiques.
 \end{tcolorbox}
 \end{center}
 
@@ -279,40 +279,51 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
   \label{fig:variation_seuil}
 \end{figure}
 
-\paragraph{Résultats~:}
+% Trois figures séparées pour chaque scintillateur
 
 \begin{figure}[H]
     \centering
-    %\includegraphics[width=0.7\textwidth]{Images/optimisation_scint1.png}
-    \fbox{\parbox{0.7\textwidth}{\centering\textit{Graphique à insérer : Scintillateur 1}}}
-    %\includegraphics[width=0.7\textwidth]{Images/optimisation_scint2.png}
-    \fbox{\parbox{0.7\textwidth}{\centering\textit{Graphique à insérer : Scintillateur 2}}}
-    %\includegraphics[width=0.7\textwidth]{Images/optimisation_scint3.png}
-    \fbox{\parbox{0.7\textwidth}{\centering\textit{Graphique à insérer : Scintillateur 3}}}
-    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT, pour chaque scintillateur.}
-    \label{fig:optimisation_scint}
+    \includegraphics[width=0.9\textwidth]{Images/Threshold_Scintillateur_1.png}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 1).}
+    \label{fig:optimisation_scint1}
 \end{figure}
 
-\paragraph{Analyse et synthèse~:}
-L’analyse croisée des courbes obtenues permet de dégager, pour chaque scintillateur, un couple (HT, seuil) optimal :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Threshold_Scintillateur_2.png}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 2).}
+    \label{fig:optimisation_scint2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Threshold_Scintillateur_3.png}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 3).}
+    \label{fig:optimisation_scint3}
+\end{figure}
+
+% --- Synthèse unique, concise, orientée résultats, avec trous à remplir ---
+
+\begin{remarque}
+\textbf{Synthèse~:} L’analyse expérimentale a permis d’identifier, pour chaque scintillateur, le couple optimal (HT, seuil) assurant la meilleure efficacité de détection avec un bruit minimal. Les réglages retenus sont~:
 \begin{itemize}
     \item \textbf{Scintillateur 1~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
     \item \textbf{Scintillateur 2~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
     \item \textbf{Scintillateur 3~:} HT~$=\ldots$~V, seuil~$=\ldots$~V
 \end{itemize}
-Ces réglages assurent un taux de détection élevé tout en limitant les faux positifs. Ils constituent la base des mesures ultérieures sur les muons cosmiques.
+\end{remarque}
 
-% \vspace{1em}
-% \textbf{Remarque~:} Les valeurs optimales sont à adapter selon les caractéristiques individuelles de chaque couple scintillateur/PM.
-
-% --- TRANSITION FLUIDE ---
-
-\vspace{1em}
-La section suivante détaille la mise en œuvre de la détection par coïncidence, étape clé pour isoler les vrais événements muoniques du bruit de fond résiduel.
 \newpage
 
 \section{Détection par coïncidence}
 \subsection{Principe de coïncidence}
+
+\vspace{1em}
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la coïncidence]
+Seuls les muons, très pénétrants, peuvent traverser plusieurs détecteurs alignés en quasi-ligne droite et produire des signaux quasi simultanés dans chacun. Les bruits aléatoires, eux, n’ont qu’une probabilité infime d’apparaître exactement en même temps dans deux détecteurs distincts.
+\end{tcolorbox}
+\end{center}
 
 \paragraph{Pourquoi la coïncidence ?}
 
@@ -331,13 +342,6 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
     \caption{Montage electronique de coïncidence avec les scintillateurs.}
     \label{fig:coincidence_sans_delais}
 \end{figure}
-
-\vspace{1em}
-\begin{center}
-\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la coïncidence]
-\textbf{Idée clé :} Seuls les muons, très pénétrants, peuvent traverser plusieurs détecteurs alignés en quasi-ligne droite et produire des signaux quasi simultanés dans chacun. Les bruits aléatoires, eux, n’ont qu’une probabilité infime d’apparaître exactement en même temps dans deux détecteurs distincts.
-\end{tcolorbox}
-\end{center}
 
 \paragraph{Schéma explicatif}
 
@@ -391,7 +395,7 @@ On trace ainsi le nombre d’évènement en fonction du seuil du discriminateur 
     \caption[Caractéristique du scintillateur haut]{Caractéristique du scintillateur haut}
 \end{figure}
 
-On remarque le nombre très élevé d’évènements, on détecte de l’ordre de 10000 évènements par seconde par m$^2$, alors que l’ordre de grandeur du flux muonique à la surface de la Terre est de 100 muons/s/m$^2$. Ce qui justifie la nécessité de procéder par coïncidence.
+On remarque le nombre très élevé d’événements, on détecte de l’ordre de 10000 évènements par seconde par m$^2$, alors que l’ordre de grandeur du flux muonique à la surface de la Terre est de 100 muons/s/m$^2$. Ce qui justifie la nécessité de procéder par coïncidence.
 
 \subsubsection{Coïncidence à 2 scintillateurs}
 Nous avons mis en place l’expérimentation décrite ci-dessus avec 2 scintillateurs.
@@ -492,7 +496,7 @@ Les muons cosmiques arrivant au sol possèdent un spectre continu d’énergies 
   \item Analyse des effets expérimentaux : baisse de 15\% du taux de coïncidence, augmentation du dépôt d’énergie moyen.
 \end{itemize}
 
-Dépôt d’énergie dans le scintillateur (spectre de Landau) : Lorsqu’un muon traverse un scintillateur de épaisseur donnée, l’énergie qu’il y perd par ionisation fluctue d’un événement à l’autre. Ces fluctuations de $dE$ proviennent de processus stochastiques : un muon peut perdre un peu plus d’énergie s’il crée un delta-ray (électron secondaire de haute énergie) ou un peu moins s’il traverse sans collision violente. La distribution théorique du dépôt d’énergie dans une mince couche de matière est décrite par la statistique de Landau (distribution de Landau), caractérisée par un pic le plus probable et une longue traîne vers les hautes énergies perdues. Typiquement, pour un muon minimum ionisant traversant ~1 cm de plastique (1–1,2 g/cm²), le dépôt d’énergie le plus probable est de l’ordre de 1–2 MeV, alors que la moyenne de la distribution est légèrement supérieure (quelques MeV) en raison de la contribution de la traîne. Dans notre détecteur, cette énergie déposée se traduit en un nombre de photons scintillants puis en une amplitude de signal PM proportionnelle. En enregistrant ces amplitudes (via un multi-channel analyzer par exemple), on pourrait observer le spectre d’énergie déposée : on s’attend à un pic de Landau assez large centré aux alentours de 1–2 MeV, avec une queue étendue jusqu’à peut-être 5–10 MeV due aux pertes occasionnelles plus importantes.
+Dépôt d’énergie dans le scintillator (spectre de Landau) : Lorsqu’un muon traverse un scintillateur de épaisseur donnée, l’énergie qu’il y perd par ionisation fluctue d’un événement à l’autre. Ces fluctuations de $dE$ proviennent de processus stochastiques : un muon peut perdre un peu plus d’énergie s’il crée un delta-ray (électron secondaire de haute énergie) ou un peu moins s’il traverse sans collision violente. La distribution théorique du dépôt d’énergie dans une mince couche de matière est décrite par la statistique de Landau (distribution de Landau), caractérisée par un pic le plus probable et une longue traîne vers les hautes énergies perdues. Typiquement, pour un muon minimum ionisant traversant ~1 cm de plastique (1–1,2 g/cm²), le dépôt d’énergie le plus probable est de l’ordre de 1–2 MeV, alors que la moyenne de la distribution est légèrement supérieure (quelques MeV) en raison de la contribution de la traîne. Dans notre détecteur, cette énergie déposée se traduit en un nombre de photons scintillants puis en une amplitude de signal PM proportionnelle. En enregistrant ces amplitudes (via un multi-channel analyzer par exemple), on pourrait observer le spectre d’énergie déposée : on s’attend à un pic de Landau assez large centré aux alentours de 1–2 MeV, avec une queue étendue jusqu’à peut-être 5–10 MeV due aux pertes occasionnelles plus importantes.
 
 Dans le cadre de cette expérience, plutôt que de mesurer directement le spectre d’amplitude (ce qui nécessiterait un spectromètre d’amplitude calibré), nous avons étudié le dépôt d’énergie de manière indirecte en examinant l’effet d’un absorbeur sur le taux de comptage et sur le signal.
 
@@ -625,10 +629,6 @@ Pour améliorer encore la précision et la portée de l’expérience, on pourra
 	•	D’explorer le flux en fonction de l’énergie plus directement, par exemple en utilisant plusieurs absorbeurs d’épaisseurs variables et en comparant les taux. Cela permettrait de reconstituer le spectre énergétique des muons cosmiques de façon plus fine.
 
 En synthèse, cette série d’expériences nous a permis de caractériser avec succès les propriétés des muons cosmiques : leur flux, leur distribution directionnelle, leur pouvoir pénétrant et leur durée de vie, le tout en accord quantitatif avec les valeurs acceptées (dans la limite des incertitudes expérimentales) et avec les prédictions du modèle standard des particules. Le montage expérimental, d’abord traditionnel puis modernisé, a démontré la faisabilité d’une physique de précision avec des moyens relativement simples. Les muons cosmiques, jadis mystérieux “rayons pénétrants”, se révèlent ainsi être d’excellents messagers pour tester des concepts fondamentaux (tels que la relativité et la désintégration exponentielle) et pour initier à la physique des particules. Les améliorations apportées par les nouvelles technologies (SiPM, FPGA) ouvrent la voie à des dispositifs plus compacts et performants, susceptibles d’être déployés dans des projets variés (mesures en altitude, muographie, réseau de capteurs cosmiques citoyen, etc.).
-
-Perspectives : À l’avenir, on pourrait concevoir un réseau de télescopes à muons interconnectés pour étudier la cohérence temporelle des gerbes étendues (lorsqu’un rayon cosmique primaire génère simultanément plusieurs muons détectés par des stations espacées). On pourrait également utiliser la muographie pour des applications concrètes d’imagerie non invasive en géosciences ou en archéologie. Ainsi, du laboratoire étudiant jusqu’aux expériences de pointe, la détection des muons continue d’être un domaine riche, à la fois pour former à la démarche expérimentale rigoureuse et pour contribuer à des découvertes scientifiques interdisciplinaires.
-
-En conclusion, le travail réalisé a atteint ses objectifs : nous disposons d’un rapport détaillé de 40-50 pages couvrant la présentation théorique des muons, la description du montage expérimental, l’analyse des données (coïncidences, distribution angulaire $\cos^2\theta$, perte d’énergie, temps de vie) et la discussion des améliorations techniques. Les résultats obtenus illustrent de façon claire, structurée et scientifiquement rigoureuse les phénomènes associés aux muons cosmiques, témoignant de la cohérence globale de l’expérience. Ce rapport pourra servir de base à de futurs développements ou enseignements autour de la physique des particules cosmiques et de leurs techniques de détection.
 
 \section*{Références}
 \addcontentsline{toc}{section}{Références}
