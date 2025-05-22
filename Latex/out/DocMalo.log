@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.3)  22 MAY 2025 15:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.3)  22 MAY 2025 15:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1175,13 +1175,13 @@ File: polytechnique-logohori.pdf Graphic file (type pdf)
 Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 384.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
 [20]
-<Images/Coincidences_2_Scintillateurs.png, id=340, 715.473pt x 498.4221pt>
+<Images/Coincidences_2_Scintillateurs.png, id=340, 714.9912pt x 498.1812pt>
 File: Images/Coincidences_2_Scintillateurs.png Graphic file (type png)
 <use Images/Coincidences_2_Scintillateurs.png>
 Package pdftex.def Info: Images/Coincidences_2_Scintillateurs.png  used on input line 396.
-(pdftex.def)             Requested size: 435.32422pt x 303.26129pt.
+(pdftex.def)             Requested size: 435.32422pt x 303.32756pt.
 
-Underfull \vbox (badness 2126) has occurred while \output is active []
+Underfull \vbox (badness 2111) has occurred while \output is active []
 
 
 
@@ -1409,7 +1409,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  98i,12n,102p,2310b,836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on out/DocMalo.pdf (40 pages, 11257309 bytes).
+Output written on out/DocMalo.pdf (40 pages, 11257223 bytes).
 PDF statistics:
  575 PDF objects out of 1000 (max. 8388607)
  443 compressed objects within 5 object streams
