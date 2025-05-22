@@ -246,15 +246,9 @@ L’ajustement de deux exponentielles (descente et montée) sur les données exp
     \item $\tau_{RC}$ : constante de temps de la chaîne électronique (filtrage RC)
 \end{itemize}
 
-\textbf{Résultats expérimentaux :}
-\begin{itemize}
-    \item $\tau_{\text{scint}} = 1{,}57~\text{ns}$
-    \item $\tau_{RC} = 3{,}25~\text{ns}$
-    \item Paramètres du fit descente : $a = -115{,}4$, $\tau = -1{,}57~\text{ns}$, $c = -0{,}429$
-    \item Paramètres du fit montée : $a = -0{,}759$, $\tau = 3{,}25~\text{ns}$, $c = -0{,}578$
-\end{itemize}
-
-\textbf{Interprétation :} La mesure de $\tau_{\text{scint}}$ est cohérente avec les valeurs attendues pour ce type de plastique.
+\begin{remarque}
+\textbf{Synthèse~:} L’ajustement exponentiel du signal mesuré a permis d’extraire deux constantes caractéristiques~: $\tau_{\text{scint}} = 1{,}57$~ns (désexcitation du scintillateur) et $\tau_{RC} = 3{,}25$~ns (réponse de la chaîne électronique). La valeur obtenue pour $\tau_{\text{scint}}$ est parfaitement cohérente avec les propriétés attendues pour un scintillateur plastique, confirmant la qualité du montage et la validité de l’analyse temporelle réalisée.
+\end{remarque}
 
 \subsection{Optimisation conjointe de la haute tension et du seuil du discriminateur}
 
@@ -384,19 +378,6 @@ Pour que la coïncidence ne laisse passer que les \og vrais\fg{} muons et non de
 \noindent
 
 \subsection{Résultats expérimentaux}
-\subsubsection{Caractéristique des scintillateurs}
-Nous avons commencé par mesurer le nombre d’événements en sortie des scintillateurs individuellement, le montage se réduit donc à un scintillateur, l’amplificateur, le discriminateur et le compteur.
-
-On trace ainsi le nombre d’évènement en fonction du seuil du discriminateur (THR). En effet le paramètre THR sera important à optimiser par la suite afin d’avoir un nombre suffisant d’évènement (seuil bas) sans pour autant détecter du bruit (seuil haut).
-
-\begin{figure}[ht!]
-    \centering
-%    \includegraphics[width=0.7\textwidth]{caracteristique_scintillateur.png}
-    \caption[Caractéristique du scintillateur haut]{Caractéristique du scintillateur haut}
-\end{figure}
-
-On remarque le nombre très élevé d’événements, on détecte de l’ordre de 10000 évènements par seconde par m$^2$, alors que l’ordre de grandeur du flux muonique à la surface de la Terre est de 100 muons/s/m$^2$. Ce qui justifie la nécessité de procéder par coïncidence.
-
 \subsubsection{Coïncidence à 2 scintillateurs}
 Nous avons mis en place l’expérimentation décrite ci-dessus avec 2 scintillateurs.
 
@@ -406,10 +387,10 @@ Nous avons aussi estimé le nombre de coïncidence fortuites, celles-ci désigne
 
 Cela nous permet d’estimer la pureté de notre signal, ici il y a environ 10\% des évènements qui sont fortuits. Les coïncidences "réelles" désignent alors les 90\% restants.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
     \centering
-%    \includegraphics[width=0.7\textwidth]{coincidence_2scint_seuil.png}
-    \caption[Nombre d’évènement en 1min en fonction du seuil]{Nombre d’évènement en 1min en fonction du seuil pour 2 scintillateurs en coïncidence, width = 30ns}
+    \includegraphics[width=0.9\textwidth]{Images/Coincidences_2_Scintillateurs.png}
+    \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 4min en fonction du seuil pour 2 scintillateurs en coïncidence, width = 30ns}
 \end{figure}
 
 Aussi, nous voyons que le signal permet d’avoir un grand nombre d’évènement aux alentours de THR = -1V, width = 40ns. Au-delà de ces valeurs, le nombre de coïncidence fortuite commence à beaucoup augmenter, montrant que le bruit devient important. Nous nous fixerons donc proche de ces valeurs pour les mesures suivantes.
@@ -425,10 +406,10 @@ Enfin, l’ordre de grandeur de détection est à présent de 100 coïncidences 
 \subsubsection{Coïncidence à 3 scintillateurs}
 Afin d’avoir un signal encore plus pur (faire diminuer le nombre de coïncidence fortuite), nous passons aux coïncidences avec 3 scintillateurs selon le même principe.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-%    \includegraphics[width=0.7\textwidth]{coincidence_3scint_width.png}
-    \caption{Nombre d’évènement en 1min en fonction du width pour 3 scintillateurs en coïncidence}
+    \includegraphics[width=0.9\textwidth]{Images/Coincidences_3_Scintillateurs.png}
+    \caption{Nombre d’évènement en 10min en fonction du width pour 3 scintillateurs en coïncidence}
 \end{figure}
 
 On remarque que le nombre de coïncidences fortuites est quasi-nul, nous pouvons donc, pour la suite des expériences, considérer qu’une coïncidence à 3 scintillateurs est une détection d’un muon.

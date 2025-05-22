@@ -6,6 +6,8 @@ import os
 from datetime import datetime
 from matplotlib.ticker import AutoLocator, AutoMinorLocator
 
+save_fig = False  # Passez à False pour désactiver la sauvegarde
+
 # ---------------------------------------------------------------------------
 # Section 1 : Paramètres et définition de la fonction de régression
 # ---------------------------------------------------------------------------
@@ -17,7 +19,6 @@ ymax = 30000
 xmin_fit = 0.01
 xmax_fit = 1
 log = False # Si True, on utilise une échelle logarithmique pour l'axe des ordonnées
-save_fig = True
 
 # Liste des couples (tension, dect) à analyser
 couples = [

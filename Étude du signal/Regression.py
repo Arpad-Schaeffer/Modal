@@ -6,7 +6,7 @@ from matplotlib.ticker import AutoLocator, AutoMinorLocator
 import os
 from datetime import datetime
 
-
+save_fig = False  # Passez à False pour désactiver la sauvegarde
 
 # Chemin vers le fichier CSV avec metadata et données
 csv_file = "Data J1/DataJ2Chanel3CSV.CSV"  # Remplacez par le chemin réel
@@ -149,7 +149,6 @@ def make_filename_from_csv(csv_path):
     date_str = datetime.now().strftime("%Y%m%d_%H%M%S")
     return f"Latex/Images/Desexitation_Scintillateur_2.png"
 
-save_fig = True  # Passez à False pour désactiver la sauvegarde
 if save_fig:
     output_path = make_filename_from_csv(csv_file)
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
