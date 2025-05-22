@@ -8,7 +8,7 @@ def cos_squared(x, a, b, c):
     return a * (np.cos(np.radians(x) + b) ** 2) + c
 
 # Ouvrir et lire le fichier
-with open("mesures.txt", "r") as file:
+with open("Distribution angulaire\Data\mesures.txt", "r") as file:
     lines = file.readlines()
 
 # Extraire les noms des colonnes depuis la première ligne
