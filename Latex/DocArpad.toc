@@ -1,0 +1,49 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Présentation et objectifs}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Les Muons}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Objectifs de l’étude}{7}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Montage expérimental}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Principe de détection par scintillation}{8}{subsection.2.1}%
+\contentsline {paragraph}{Mécanisme de scintillation organique~:}{9}{subsection.2.1}%
+\contentsline {paragraph}{Caractéristiques pratiques~:}{9}{subsection.2.1}%
+\contentsline {paragraph}{Avantages et limites~:}{9}{subsection.2.1}%
+\contentsline {paragraph}{Principe et structure des tubes photomultiplicateurs (PM)}{10}{figure.caption.2}%
+\contentsline {paragraph}{Caractéristiques et limitations}{11}{figure.caption.2}%
+\contentsline {subsection}{\numberline {2.2}Chaîne électronique}{11}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Étude du signal}{14}{section.3}%
+\contentsline {paragraph}{Méthode :}{14}{section.3}%
+\contentsline {paragraph}{Résultats :}{14}{section.3}%
+\contentsline {paragraph}{Interprétation :}{14}{figure.caption.6}%
+\contentsline {subsection}{\numberline {3.1}Variation de la haute tension du photomultiplicateur}{15}{subsection.3.1}%
+\contentsline {paragraph}{Méthode :}{15}{figure.caption.7}%
+\contentsline {paragraph}{Théorie :}{15}{figure.caption.7}%
+\contentsline {paragraph}{Résultats :}{15}{figure.caption.7}%
+\contentsline {paragraph}{Conclusion :}{15}{figure.caption.8}%
+\contentsline {subsection}{\numberline {3.2}Variation du seuil du discriminateur}{16}{subsection.3.2}%
+\contentsline {paragraph}{Méthode :}{16}{figure.caption.9}%
+\contentsline {paragraph}{Théorie :}{16}{figure.caption.9}%
+\contentsline {paragraph}{Résultats :}{16}{figure.caption.9}%
+\contentsline {paragraph}{Conclusion :}{16}{figure.caption.10}%
+\contentsline {subsection}{\numberline {3.3}Optimisation conjointe de la haute tension et du seuil du discriminateur}{17}{subsection.3.3}%
+\contentsline {paragraph}{Méthode :}{17}{figure.caption.11}%
+\contentsline {paragraph}{Résultats :}{17}{figure.caption.11}%
+\contentsline {paragraph}{Conclusion :}{17}{figure.caption.12}%
+\contentsline {section}{\numberline {4}Détection par coïncidence}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Principe de coïncidence}{18}{subsection.4.1}%
+\contentsline {paragraph}{Pourquoi la coïncidence ?}{18}{subsection.4.1}%
+\contentsline {paragraph}{Schéma explicatif}{19}{figure.caption.13}%
+\contentsline {paragraph}{Définition de la coïncidence temporelle}{19}{figure.caption.15}%
+\contentsline {paragraph}{Probabilité de coïncidences fortuites}{20}{figure.caption.15}%
+\contentsline {subsection}{\numberline {4.2}Résultats expérimentaux}{20}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Caractéristique des scintillateurs}{20}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Coïncidence à 2 scintillateurs}{21}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Coïncidence à 3 scintillateurs}{22}{subsubsection.4.2.3}%
+\contentsline {section}{\numberline {5}Distribution angulaire du flux muonique}{22}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Mise en œuvre expérimentale}{23}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Deuxième méthode de mesure}{25}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Mesure de l’énergie d’un muon}{27}{section.6}%
+\contentsline {section}{\numberline {7}Mesure du temps de vie de muon}{31}{section.7}%
+\contentsline {section}{\numberline {8}Amélioration du TREX}{34}{section.8}%
+\contentsline {section}{\numberline {9}Perspectives supplémentaires}{38}{section.9}%
+\contentsline {section}{\numberline {10}Conclusion}{38}{section.10}%
+\contentsline {section}{Références}{40}{section.10}%
