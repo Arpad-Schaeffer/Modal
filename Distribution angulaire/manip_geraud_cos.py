@@ -2,12 +2,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
 from matplotlib.ticker import MultipleLocator, AutoLocator, AutoMinorLocator
+import os
  
 save_fig = True
 
 # Fonction cosinus carré pour le fit
-def cos_squared(x, a, b, c):
-    return a * (np.cos(np.radians(x) + b) ** 2) + c
+def cos_squared(x, a, b):
+    return a * (np.cos(np.radians(x)) ** 2) + b
 
 # Ouvrir et lire le fichier
 with open("Distribution angulaire/Data/mesures.txt", "r") as file:
@@ -130,7 +131,7 @@ counts = list(angle_counts.values())
 # Ajustement avec la fonction cosinus carré
 angles_array = np.array(angles[:-1])  # Exclure l'angle inconnu (180)
 counts_array = np.array(counts[:-1])  # Exclure le compte inconnu
-popt, pcov = curve_fit(cos_squared, angles_array, counts_array, p0=[1, 0, 0])
+popt, pcov = curve_fit(cos_squared, angles_array, counts_array, p0=[1, 0])
 chi_squared = np.sum(((counts_array - cos_squared(angles_array, *popt)) ** 2) / counts_array)
 
 # Calcul des erreurs de Poisson pour les counts, en tenant compte des divisions
@@ -169,7 +170,7 @@ fit_counts = cos_squared(fit_angles, *popt)
 colors = ['blue'] * (len(angles) - 1) + ['red']  # Bleu pour les angles connus, rouge pour l'inconnu
 
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(fit_angles, fit_counts, color='k', label="Fit: $a \cdot \cos^2(x + b) + c$",alpha=0.7)
+ax.plot(fit_angles, fit_counts, color='k', label="Fit: $a \cdot \cos^2(x) + c$",alpha=0.7)
 
 # Ajouter les points avec erreurs verticales ET horizontales
 ax.errorbar(angles, counts, xerr=errors_x, yerr=errors, fmt='o', color='C1', label="Données avec erreurs", zorder=3,alpha=0.7, capsize=3)
@@ -182,7 +183,6 @@ textstr = (
     f"\n"
     f"a = {popt[0]:.3f}\n"
     f"b = {popt[1]:.3f}\n"
-    f"c = {popt[2]:.3f}\n"
     r"$\chi^2 =$ "f"{chi_squared:.3f}"
 )
 ax.text(
@@ -214,14 +214,16 @@ ax.relim()
 ax.autoscale_view()
 
 plt.tight_layout()
+
+if save_fig:
+    os.makedirs("Latex/Images", exist_ok=True)
+    fig.savefig("Latex/Images/cos_angles.png", dpi=300, bbox_inches='tight')
+    print("Graphique sauvegardé dans : Latex/Images/cos_angles.png")
+
 plt.show()
 print(f"Paramètres du fit : {popt}")
 print(f"Covariance du fit : {pcov}")
 
-
-if save_fig:
-    plt.savefig("Latex/Images/cos_angles.png", dpi=300, bbox_inches='tight')
-    print(f"Graphique sauvegardé dans : Latex/Images/cos_angles.png")
 
 # plt.plot(fit_angles, fit_counts, color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")
 # plt.legend()

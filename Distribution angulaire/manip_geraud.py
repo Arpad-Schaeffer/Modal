@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
 from matplotlib.ticker import MultipleLocator, AutoLocator, AutoMinorLocator
+import os
  
 save_fig = True
 
@@ -176,7 +177,7 @@ colors = ['blue'] * (len(angles) - 1) + ['red']  # Bleu pour les angles connus, 
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(
     fit_angles, fit_counts, color='k',
-    label=r"Fit: $A\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)+C$",
+    label=r"Fit: $A\exp\left(-\frac{x^2}{2\sigma^2}\right)+C$",
     alpha=0.7
 )
 
@@ -229,8 +230,9 @@ print(f"Covariance du fit : {pcov}")
 
 
 if save_fig:
-    plt.savefig("Latex/Images/exp_angles.png", dpi=300, bbox_inches='tight')
-    print(f"Graphique sauvegardé dans : Latex/Images/exp_angles.png")
+    os.makedirs("Latex/Images", exist_ok=True)
+    fig.savefig("Latex/Images/exp_angles.png", dpi=300, bbox_inches='tight')
+    print("Graphique sauvegardé dans : Latex/Images/exp_angles.png")
 
 
 # plt.plot(fit_angles, fit_counts, color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")
