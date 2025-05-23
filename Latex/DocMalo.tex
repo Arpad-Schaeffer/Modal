@@ -129,7 +129,7 @@ Un scintillateur plastique idéal doit :
 \end{itemize}
 Aucun matériau ne satisfait parfaitement tous ces critères, mais les scintillateurs plastiques constituent un compromis très avantageux pour la détection de particules chargées (électrons, muons, protons, etc.), en particulier lorsqu'une grande rapidité et une géométrie flexible sont requises.
 
-\paragraph{Mécanisme de scintillation organique~:} L'excitation d'une molécule organique par le passage d'une particule ionisante conduit à la formation d'états électroniques excités (singlets et triplets). Après relaxation rapide vers le premier état excité singulet, la désexcitation vers l'état fondamental s'accompagne de l'émission d'un photon (fluorescence rapide). La majeure partie de la lumière utile provient de cette fluorescence prompte, dont la durée de vie est de l'ordre de quelques nanosecondes. Les processus plus lents (phosphorescence, fluorescence retardée) sont négligeables pour la détection en mode impulsionnel.
+\paragraph{Mécanisme de scintillation organique~:} L'excitation d'une particule ionisante conduit à la formation d'états électroniques excités (singlets et triplets). Après relaxation rapide vers le premier état excité singulet, la désexcitation vers l'état fondamental s'accompagne de l'émission d'un photon (fluorescence rapide). La majeure partie de la lumière utile provient de cette fluorescence prompte, dont la durée de vie est de l'ordre de quelques nanosecondes. Les processus plus lents (phosphorescence, fluorescence retardée) sont négligeables pour la détection en mode impulsionnel.
 
 \paragraph{Caractéristiques pratiques~:} Les scintillateurs plastiques sont disponibles sous forme de plaques, barres, fibres ou formes personnalisées. Leur rendement lumineux atteint typiquement 60--70\% de celui de l'anthracène (référence), avec une émission maximale autour de 400--430~nm (bleu/violet), bien adaptée aux photomultiplicateurs et SiPM. Leur atténuation optique (distance sur laquelle l'intensité lumineuse est divisée par deux) varie de quelques dizaines à plusieurs centaines de centimètres selon la pureté et la formulation. Leur densité ($\sim$1,03~g/cm$^3$) et leur forte teneur en hydrogène les rendent également sensibles aux neutrons rapides.
 
@@ -276,14 +276,6 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
 
 \begin{figure}[H]
   \centering
-  \include{variationHT}
-  \caption{Schéma de la chaîne électronique utilisée pour faire varier la haute tension du PM}
-  \label{fig:variation_HT}
-\end{figure}
-
-
-\begin{figure}[H]
-  \centering
   \include{treshold}
   \caption{Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur.}
   \label{fig:variation_seuil}
@@ -342,6 +334,13 @@ Ces résultats montrent que l’ajout d’un troisième scintillateur permet d�
 
 \subsection{Principe de coïncidence}
 
+\begin{figure}[H]
+    \centering
+    %\includegraphics[width=0.6\textwidth]{figures/schema_coincidence.pdf}
+    \fbox{\parbox{0.6\textwidth}{\centering\textit{Schéma à insérer : deux scintillateurs A et B alignés, un muon traverse les deux, signaux synchrones. Les bruits parasites (étoiles, zigzags) ne traversent qu'un seul détecteur à la fois.}}}
+    \caption{Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}
+\end{figure}
+
 \vspace{1em}
 \begin{center}
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la coïncidence]
@@ -368,10 +367,19 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
 \end{figure}
 
 \begin{figure}[H]
+  \begin{minipage}[t]{0.48\textwidth}
     \centering
-    %\includegraphics[width=0.6\textwidth]{figures/schema_coincidence.pdf}
-    \fbox{\parbox{0.6\textwidth}{\centering\textit{Schéma à insérer : deux scintillateurs A et B alignés, un muon traverse les deux, signaux synchrones. Les bruits parasites (étoiles, zigzags) ne traversent qu'un seul détecteur à la fois.}}}
-    \caption{Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}
+    \include{recouvrement_petit_width}
+    \caption{Schéma de output de recouvrement entre trois scintillateurs. Ici, la largeur de recouvrement est plus petite. On comprend que la discrimination du bruit est plus efficace mais que plus de muons sont "ratés".}
+    \label{fig:recouvrement_petit_width}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.48\textwidth} 
+    \centering
+    \include{recouvrment_grand_width}
+    \caption{Schéma de output de recouvrement entre trois scintillateurs. Ici, la largeur de recouvrement est plus grande. On comprend que la discrimination du bruit est moins efficace mais que moins de muons sont "ratés".}
+    \label{fig:recouvrement_grand_width}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[H]
