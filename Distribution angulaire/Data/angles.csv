@@ -1,0 +1,31 @@
+DECT1:
+Threshold:0.45
+Tension: 2000V
+
+DECT2:
+Threshold: 0.05
+Tension: 2020
+Delay = 63ns
+
+DECT3:
+Threshold: 0.3
+Tension: 2060
+delay = 31ns
+
+
+02/05/2025
+temps d'acquisition : 10min
+H32 = 22
+H21 = 26
+
+L32,L21,coincidences,coincidences_fortuites
+10,14,32,18
+3,11,69,25
+2,8,71,33
+7,12,52,24
+0,0,68,18
+-10,-18,43,14
+-13,-21,37,17
+-9,-15,56,24
+-0.5,-9,61,24 
+-2,-11,61,26
