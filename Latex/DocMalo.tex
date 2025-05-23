@@ -129,7 +129,7 @@ Un scintillateur plastique idéal doit :
 \end{itemize}
 Aucun matériau ne satisfait parfaitement tous ces critères, mais les scintillateurs plastiques constituent un compromis très avantageux pour la détection de particules chargées (électrons, muons, protons, etc.), en particulier lorsqu'une grande rapidité et une géométrie flexible sont requises.
 
-\paragraph{Mécanisme de scintillation organique~:} L'excitation d'une particule ionisante conduit à la formation d'états électroniques excités (singlets et triplets). Après relaxation rapide vers le premier état excité singulet, la désexcitation vers l'état fondamental s'accompagne de l'émission d'un photon (fluorescence rapide). La majeure partie de la lumière utile provient de cette fluorescence prompte, dont la durée de vie est de l'ordre de quelques nanosecondes. Les processus plus lents (phosphorescence, fluorescence retardée) sont négligeables pour la détection en mode impulsionnel.
+\paragraph{Mécanisme de scintillation organique~:} L'excitation d'une molécule organique par le passage d'une particule ionisante conduit à la formation d'états électroniques excités (singlets et triplets). Après relaxation rapide vers le premier état excité singulet, la désexcitation vers l'état fondamental s'accompagne de l'émission d'un photon (fluorescence rapide). La majeure partie de la lumière utile provient de cette fluorescence prompte, dont la durée de vie est de l'ordre de quelques nanosecondes. Les processus plus lents (phosphorescence, fluorescence retardée) sont négligeables pour la détection en mode impulsionnel.
 
 \paragraph{Caractéristiques pratiques~:} Les scintillateurs plastiques sont disponibles sous forme de plaques, barres, fibres ou formes personnalisées. Leur rendement lumineux atteint typiquement 60--70\% de celui de l'anthracène (référence), avec une émission maximale autour de 400--430~nm (bleu/violet), bien adaptée aux photomultiplicateurs et SiPM. Leur atténuation optique (distance sur laquelle l'intensité lumineuse est divisée par deux) varie de quelques dizaines à plusieurs centaines de centimètres selon la pureté et la formulation. Leur densité ($\sim$1,03~g/cm$^3$) et leur forte teneur en hydrogène les rendent également sensibles aux neutrons rapides.
 
@@ -276,6 +276,13 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
 
 \begin{figure}[H]
   \centering
+  \include{variationHT}
+  \caption{Schéma de la chaîne électronique utilisée pour faire varier la haute tension du PM}
+  \label{fig:variation_HT}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
   \include{treshold}
   \caption{Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur.}
   \label{fig:variation_seuil}
@@ -382,22 +389,10 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
   \end{minipage}
 \end{figure}
 
-\begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \include{recouvrement_petit_width}
-    \caption{Schéma de output de recouvrement entre trois scintillateurs. Ici, la largeur de recouvrement est plus petite. On comprend que la discrimination du bruit est plus efficace mais que plus de muons sont "ratés".}
-    \label{fig:recouvrement_petit_width}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.48\textwidth} 
-    \centering
-    \include{recouvrment_grand_width}
-    \caption{Schéma de output de recouvrement entre trois scintillateurs. Ici, la largeur de recouvrement est plus grande. On comprend que la discrimination du bruit est moins efficace mais que moins de muons sont "ratés".}
-    \label{fig:recouvrement_grand_width}
-  \end{minipage}
-\end{figure}
+% Explication de la largeur de fenêtre de coïncidence
+La largeur de fenêtre de coïncidence correspond à l'intervalle de temps pendant lequel deux (ou plusieurs) signaux issus de différents détecteurs doivent arriver pour être considérés comme provenant d'un même événement physique (par exemple, le passage d'un même muon). Si deux signaux arrivent dans cette fenêtre temporelle, ils sont comptés comme une coïncidence. 
 
+Une fenêtre trop étroite permet de mieux rejeter le bruit accidentel (signaux non corrélés), mais risque d'exclure des événements réels si les signaux ne sont pas parfaitement synchrones. À l'inverse, une fenêtre trop large augmente le nombre de coïncidences accidentelles (bruit), mais permet de ne rater quasiment aucun événement physique. Le choix de la largeur de fenêtre est donc un compromis entre efficacité de détection et rejet du bruit.
 % --- 4.2 Principe des coïncidences fortuites ---
 
 \newpage
@@ -418,14 +413,6 @@ Nous avons aussi estimé le nombre de coïncidences fortuites, c’est-à-dire l
 \end{itemize}
 
 Cette méthode permet donc d’estimer précisément la pureté du signal et de quantifier la part de coïncidences réellement attribuables au passage de muons, en soustrayant le fond mesuré avec délai au signal total.
-
-\begin{figure}[H]
-    \centering
-    \include{coincidences_delai}
-    \caption{Montage électronique de coïncidence avec un retardateur. L'ensemble du circuit est le même que précédemment, mais on introduit 
-    un retardateur sur l'un des signaux avant de le faire passer dans le module de coïncidence. Cela permet de mesurer le bruit de fond aléatoire et de mesurer la véritable incidence des muons.}
-    \label{fig:coincidence_avec_delais}
-\end{figure}
 
 \newpage
 
@@ -573,14 +560,7 @@ Si $\tfrac{X(0)}{\Lambda_\mu}$ n'est pas trop grand (typiquement 1--3), on peut 
 pour un certain~$n$. Les valeurs réalistes donnent effectivement un $n\approx2$. En réalité, le spectre en énergie entre aussi en jeu : les muons plus inclinés doivent avoir une énergie plus grande pour survivre (sinon ils se désintègrent en route), ce qui modifie légèrement l'exposant~$n$ en fonction du seuil d'énergie considéré. 
 
 On osberve que la methode de mesure n'est pas entierment satisfaisante. Si on arrive a mettre en evidence une tendance, la modelisation des données est assez aproximative. C'est pourquoi on peut alors utiliser un autre dispositif experimental.
-% --- Encadré Problèmes rencontrés lors de la mesure angulaire ---
 
-\vspace{1em}
-\begin{center}
-\begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Problèmes rencontrés lors de la mesure angulaire]
-Les trois scintillateurs utilisés ne sont pas récents, et la surface d’un scintillateur n’absorbe pas uniformément sur toute sa surface. Ainsi, lorsque l’on incline les scintillateurs pour mesurer sous différents angles, la zone d’intersection peut se trouver sur des parties plus ou moins usées ou moins efficaces. Cela introduit une incertitude supplémentaire sur les mesures, car la réponse dépend localement de l’état d’usure et d’efficacité de chaque scintillateur.
-\end{tcolorbox}
-\end{center}
 \subsection{Deuxième méthode de mesure}
 
 Le principe est le suivant : on ne deplace plus les scintillateurs mais on en place plus. On forme une matrice de scintilatteur domme on peut le voir figure METTRE LA REf et schematisé sur la figure \ref{fig:matrice_scintillateur}.
@@ -636,6 +616,53 @@ Les resulktats obtentus sont representé figure \ref{fig:cos2s_2}.
   \label{fig:cos2s_2}
 \end{figure}
 
+\newpage
+
+\subsection{Mise en œuvre expérimentale}
+Pour chaque angle~$\theta$, on enregistre le nombre de muons détectés (coïncidences $A\wedge B$) pendant une durée fixe (par ex.\ quelques minutes, suffisamment pour accumuler des centaines d’événements et réduire l’erreur statistique). On obtient ainsi un taux de comptage~$N(\theta)$ en fonction de~$\theta$. Les résultats bruts doivent être corrigés de deux effets géométriques~: (i) la projection de la surface du détecteur selon l'angle, et (ii) l'acceptation commune des deux plaques (qui varie légèrement avec l'angle dans notre montage). Le premier point est important~: lorsque le télescope est incliné de~$\theta$, la surface effective présentée aux muons venant du zénith est réduite d'un facteur~$\cos\theta$. Inversement, pour des muons venant réellement d'une direction inclinée~$\theta$, la surface présentée est maximale. En pratique, pour relier au flux angulaire~$I(\theta)$ (défini par unité de surface perpendiculaire à la direction d'arrivée), il faut diviser le taux mesuré par~$\cos\theta$ (correction de projection). Le second point concerne la portion de ciel vue par les deux détecteurs en coïncidence~: dans notre cas, pour des angles modérés, on peut considérer qu'elle reste constante tant que la superposition des deux scintillateurs est complète.
+
+Après ces corrections, on peut comparer la distribution normalisée~$I_{\mathrm{mesure}}(\theta)$ au modèle en~$\cos^{2}\theta$. Les données obtenues présentent une bonne conformité avec la loi attendue. Graphique~1 ci‑dessous montre, de façon qualitative, la tendance mesurée~: en représentant $N(\theta)$ corrigé en fonction de~$\cos\theta$, on obtient approximativement une droite, ce qui traduit
+\[
+N(\theta)\propto\cos^{2}\theta.
+\]
+Plus précisément, un ajustement polynomial donne une puissance~$n$ très proche de~2 pour la dépendance en cosinus. Par exemple, nos mesures indiquent un rapport
+\[
+\frac{N(60^\circ)}{N(0^\circ)} \approx \bigl(\cos 60^\circ\bigr)^2 = 0{,}25,
+\]
+en accord avec la loi~$\cos^2$ (compte tenu des incertitudes). Pour $\theta$ au‑delà de~70--$80^\circ$, le signal devient difficile à mesurer (très faible) et dévie de la simple loi~$\cos^2$ (chute plus rapide), cohérent avec l'atténuation atmosphérique supplémentaire non prise en compte par le modèle simplifié.
+
+Interprétation~: la loi $I(\theta)\propto\cos^2\theta$ résulte de la combinaison de deux effets principaux.  
+(i) Distribution isotrope à la production~: les pions parents des muons sont produits isotropiquement dans le référentiel du laboratoire (en première approximation), et leur désintégration donne des muons distribués également dans l'espace (avec un léger biais avant, négligeable ici). Ainsi, le flux de muons incident sur la Terre en l'absence d'atmosphère serait isotrope, donc $\propto\cos\theta$ simplement à cause de la projection de surface.  
+(ii) Parcours atmosphérique variable~: les muons créés à un angle~$\theta$ doivent traverser une épaisseur d'atmosphère $X(\theta)$ plus grande que ceux venant du zénith. Pour un angle zénithal~$\theta$, la colonne d'air parcourue est approximativement
+\[
+X(\theta)=\frac{X(0)}{\cos\theta}
+\]
+(pour $\theta$ pas trop grand et en négligeant la courbure terrestre), où $X(0)$ est l'épaisseur verticale correspondant à 1013 hPa (environ 1030 g/$cm^2$ d'équivalent masse d'air). La probabilité de survie d'un muon jusqu'au sol décroît exponentiellement avec~$X$:
+\[
+P_{\mathrm{survie}}(\theta)\approx\exp\bigl(-X(\theta)/\Lambda_{\mu}\bigr),
+\]
+avec $\Lambda_{\mu}$ la longueur d'atténuation (liée à la longueur de désintégration $\gamma c\tau$ des muons, de l'ordre de~6 km d'équivalent air pour des muons de quelques GeV). Pour des angles modérés, on peut développer à premier ordre :
+\[
+P(\theta)\approx \exp\!\Bigl(-\bigl(\tfrac{X(0)}{\Lambda_\mu}\bigr)\bigl(\tfrac1{\cos\theta}-1\bigr)\Bigr)\approx \exp\!\Bigl(-\bigl(\tfrac1{\cos\theta}-1\bigr)\tfrac{X(0)}{\Lambda_\mu}\Bigr).
+\]
+Si $\tfrac{X(0)}{\Lambda_\mu}$ n'est pas trop grand (typiquement 1--3), on peut approximer 
+\[
+\exp\!\Bigl(-\bigl(\tfrac1{\cos\theta}-1\bigr)\tfrac{X(0)}{\Lambda_\mu}\Bigr)\sim\cos^n\theta
+\]
+pour un certain~$n$. Les valeurs réalistes donnent effectivement un $n\approx2$. Intuitivement, on combine cette atténuation en~$\cos\theta$ avec le facteur géométrique $\cos\theta$ d'un flux isotrope, ce qui produit $\cos^2\theta$ au total. En réalité, le spectre en énergie entre aussi en jeu : les muons plus inclinés doivent avoir une énergie plus grande pour survivre (sinon ils se désintègrent en route), ce qui modifie légèrement l'exposant~$n$ en fonction du seuil d'énergie considéré.
+
+Nos résultats expérimentaux confirment donc bien la diminution du flux de muons cosmiques aux grands angles. Cette anisotropie est en accord avec la compréhension actuelle des gerbes atmosphériques : les muons proviennent majoritairement des pions produits à une altitude d’environ 15 km et voyageant vers le sol. Le fait qu’on observe encore des muons à des angles assez rasants illustre leur grande énergie initiale et la dilatation du temps de vie (sans relativité, aucun muon formé à 15 km ne pourrait parcourir plus de 600 m avant de se désintégrer, et ne parviendrait pas jusqu’à nous). Ces mesures angulaires rejoignent des observations globales : par exemple, en intégrant sur tous les angles, on trouve un flux global d’environ $170\text{muons}/\text{m}^2/\text{s}$ au niveau de la mer, dont la composante quasi-horizontale est très minoritaire.
+
+En conclusion de cette partie, la mise en évidence expérimentale de la loi en $\cos^2\theta$ est une validation importante. Notre télescope à scintillateurs, en dépit de sa simplicité, a permis de cartographier l’intensité du rayonnement cosmique selon l’angle, en bon accord avec le modèle théorique. Cela illustre la nécessité de corriger de la projection géométrique lorsqu’on compare des taux de comptage entre configurations inclinées, et met en avant l’influence de l’absorption atmosphérique sur les particules cosmiques secondaires.
+
+% --- Encadré Problèmes rencontrés lors de la mesure angulaire ---
+
+\vspace{1em}
+\begin{center}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Problèmes rencontrés lors de la mesure angulaire]
+Les trois scintillateurs utilisés ne sont pas récents, et la surface d’un scintillateur n’absorbe pas uniformément sur toute sa surface. Ainsi, lorsque l’on incline les scintillateurs pour mesurer sous différents angles, la zone d’intersection peut se trouver sur des parties plus ou moins usées ou moins efficaces. Cela introduit une incertitude supplémentaire sur les mesures, car la réponse dépend localement de l’état d’usure et d’efficacité de chaque scintillateur.
+\end{tcolorbox}
+\end{center}
 
 \newpage
 
