@@ -5,9 +5,9 @@ from matplotlib.ticker import MultipleLocator, AutoLocator, AutoMinorLocator
  
 save_fig = True
 
-# Fonction gaussienne pour le fit
-def gaussian(x, A, sigma, C):
-    return A * np.exp(-0.5 * (x / sigma) ** 2) + C
+# Fonction cosinus carré pour le fit
+def cos_squared(x, a, b, c):
+    return a * (np.cos(np.radians(x) + b) ** 2) + c
 
 # Ouvrir et lire le fichier
 with open("Distribution angulaire/Data/mesures.txt", "r") as file:
@@ -127,16 +127,11 @@ counts = list(angle_counts.values())
 #angles.append(180)
 #counts.append(unknown_angle_count)
 
-# Ajustement avec la fonction gaussienne
+# Ajustement avec la fonction cosinus carré
 angles_array = np.array(angles[:-1])  # Exclure l'angle inconnu (180)
 counts_array = np.array(counts[:-1])  # Exclure le compte inconnu
-p0 = [
-    counts_array.max(),                     # A initial
-    np.std(angles_array),                   # sigma initial
-    counts_array.min()                      # C initial
-]
-popt, pcov = curve_fit(gaussian, angles_array, counts_array, p0=p0)
-chi_squared = np.sum(((counts_array - gaussian(angles_array, *popt)) ** 2) / counts_array)
+popt, pcov = curve_fit(cos_squared, angles_array, counts_array, p0=[1, 0, 0])
+chi_squared = np.sum(((counts_array - cos_squared(angles_array, *popt)) ** 2) / counts_array)
 
 # Calcul des erreurs de Poisson pour les counts, en tenant compte des divisions
 errors = np.sqrt(np.array(counts))  # Erreurs de Poisson avant division
@@ -170,28 +165,24 @@ errors_x.append(0)  # Pas d'erreur pour l'angle inconnu à 180°
 
 # Générer des données pour le fit
 fit_angles = np.linspace(min(angles_array), max(angles_array), 500)
-fit_counts = gaussian(fit_angles, *popt)
+fit_counts = cos_squared(fit_angles, *popt)
 colors = ['blue'] * (len(angles) - 1) + ['red']  # Bleu pour les angles connus, rouge pour l'inconnu
 
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(
-    fit_angles, fit_counts, color='k',
-    label=r"Fit: $A\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)+C$",
-    alpha=0.7
-)
+ax.plot(fit_angles, fit_counts, color='k', label="Fit: $a \cdot \cos^2(x + b) + c$",alpha=0.7)
 
 # Ajouter les points avec erreurs verticales ET horizontales
 ax.errorbar(angles, counts, xerr=errors_x, yerr=errors, fmt='o', color='C1', label="Données avec erreurs", zorder=3,alpha=0.7, capsize=3)
 
-# Mise à jour du bloc texte du fit
+# Ajouter le fit au graphique
 textstr = (
     r"$\bf{TREX}$"
     f"\n"
-    r" Fit : $N = A\exp\left(-\frac{x^2}{2\sigma^2}\right) + C$"
+    r" Fit : $N = a\cos^2\left(x+b\right)+c$"
     f"\n"
-    f"A = {popt[0]:.3f}\n"
-    f"σ = {popt[1]:.3f}\n"
-    f"C = {popt[2]:.3f}\n"
+    f"a = {popt[0]:.3f}\n"
+    f"b = {popt[1]:.3f}\n"
+    f"c = {popt[2]:.3f}\n"
     r"$\chi^2 =$ "f"{chi_squared:.3f}"
 )
 ax.text(
@@ -205,7 +196,7 @@ ax.text(
 ax.set_xlabel("Angles (degrés)")
 ax.set_ylabel("Nombre de coups (N)")
 ax.set_title("Distribution des angulaire des muons pour un systeme à 12 scintillateurs")
-ax.legend()
+ax.legend(fontsize=11, loc='upper left', frameon=False, bbox_to_anchor=(0.02, 0.98), borderaxespad=1)
 ax.grid(False)
 
 # Graduations automatiques sur les deux axes
@@ -229,9 +220,8 @@ print(f"Covariance du fit : {pcov}")
 
 
 if save_fig:
-    plt.savefig("Latex/Images/exp_angles.png", dpi=300, bbox_inches='tight')
-    print(f"Graphique sauvegardé dans : Latex/Images/exp_angles.png")
-
+    plt.savefig("Latex/Images/cos_angles.png", dpi=300, bbox_inches='tight')
+    print(f"Graphique sauvegardé dans : Latex/Images/cos_angles.png")
 
 # plt.plot(fit_angles, fit_counts, color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")
 # plt.legend()
