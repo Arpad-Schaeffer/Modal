@@ -4,17 +4,19 @@ from scipy.optimize import curve_fit
 from matplotlib.ticker import MultipleLocator, AutoLocator, AutoMinorLocator
 import os
 
+# -----------------------------------------
+#dans ce doc j'ai essaye de retranscrire une modelisation plus juste en cos(a*x) pour avoir des DL plus juste et un chi suared plus petit.
+#mais jai pas l'impression que ca marche
+# -----------------------------------------
+
 save_fig = False
 
-# Fonction gaussienne pour le fit
-def gaussian(x, A, sigma, C):
-    return A * np.exp(-0.5 * (x / sigma) ** 2) + C
-
-def function(x, a, b, c):
-    return a * np.exp(-b /np.cos(x)) + c
+# Fonction cosinus carré pour le fit
+def cos_squared(x, a, b,c):
+    return a * (np.cos(c*np.radians(x)) ** 2) + b
 
 # Ouvrir et lire le fichier
-with open("Distribution angulaire/Data/mesures.txt", "r") as file:
+with open("Distribution angulaire\Data\mesures.txt", "r") as file:
     lines = file.readlines()
 
 # Extraire les noms des colonnes depuis la première ligne
@@ -89,7 +91,6 @@ for line in lines:
                 # Vérifier si toutes les colonnes de la combinaison sont dans les colonnes déclenchées
                 if all(col in triggered_columns for col in combination):
                     angle = angle *180 / np.pi  # Convertir l'angle en degrés
-                    print(f"Colonnes déclenchées : {triggered_columns}, Combinaison : {combination}, Angle : {angle}")
                     angle_counts[angle] = angle_counts.get(angle, 0) + 1
                     angle_found = True
                     break  # Une fois qu'une combinaison est trouvée, on arrête la recherche
@@ -126,23 +127,17 @@ for angle in angle_counts:
 # Créer un histogramme des angles
 angles = list(angle_counts.keys())
 counts = list(angle_counts.values())
-
+print(angles)
+print(counts)
 # Ajouter l'angle inconnu à 3.14
 #angles.append(180)
 #counts.append(unknown_angle_count)
 
-# Ajustement avec la fonction gaussienne
-angles_array = np.array(angles)  # Exclure l'angle inconnu (180)
-counts_array = np.array(counts)  # Exclure le compte inconnu
-p0 = [
-    counts_array.max(),                     # A initial
-    np.std(angles_array),                   # sigma initial
-    counts_array.min()                      # C initial
-]
+
 
 # Calcul des erreurs de Poisson pour les counts, en tenant compte des divisions
 errors = np.sqrt(np.array(counts))  # Erreurs de Poisson avant division
-for i, angle in enumerate(angles[:-1]):  # Exclure l'angle inconnu
+for i, angle in enumerate(angles):  # Exclure l'angle inconnu
     if angle == 0:
         errors[i] /= 4  # Diviser par 4 pour l'angle 0
     elif angle == 0.989 * 180 / np.pi:
@@ -161,43 +156,42 @@ for i, angle in enumerate(angles[:-1]):  # Exclure l'angle inconnu
         errors[i] /= 2  # Diviser par 2 pour l'angle 1.408
     elif angle == -1.408 * 180 / np.pi:
         errors[i] /= 2  # Diviser par 2 pour l'angle -1.408
-        
-        
-popt, pcov = curve_fit(gaussian, angles_array, counts_array, p0=p0)
-chi_squared = np.sum(((counts_array - gaussian(angles_array, *popt)) ** 2) / errors**2)
+
+# Erreurs sur les angles (en, ordre croissant en valeur absolue)
+errors_x = [2.98,4,2.92,2.92,2.98,0.46,0.22,0.22,0.46]  # Correspondance mise à jour pour les angles en degrés
+print(errors_x)
+
+# Ajustement avec la fonction cosinus carré
+angles_array = np.array(angles)  # Exclure l'angle inconnu (180)
+counts_array = np.array(counts)  # Exclure le compte inconnu
+popt, pcov = curve_fit(cos_squared, angles_array, counts_array, p0=[1500, 0,1.29])
+chi_squared = np.sum(((counts_array - cos_squared(angles_array, *popt)) ** 2) / errors**2)
 dof = len(counts_array) - len(popt)  # Degrés de liberté
 chi_squared_reduced = chi_squared / dof
 
 
-# Erreurs sur les angles (en degrés, ordre croissant en valeur absolue)
-errors_x = [2.98,4,2.92,2.92,2.98,0.46,0.22,0.22,0.46]  # Correspondance mise à jour pour les angles en degrés
-
 
 # Générer des données pour le fit
 fit_angles = np.linspace(min(angles_array), max(angles_array), 500)
-fit_counts = gaussian(fit_angles, *popt)
+fit_counts = cos_squared(fit_angles, *popt)
 colors = ['blue'] * (len(angles) - 1) + ['red']  # Bleu pour les angles connus, rouge pour l'inconnu
 
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(
-    fit_angles, fit_counts, color='k',
-    label=r"Fit: $A\exp\left(-\frac{x^2}{2\sigma^2}\right)+C$",
-    alpha=0.7
-)
+ax.plot(fit_angles, fit_counts, color='k', label="Fit: $a \cdot \cos^2(cx) + b$",alpha=0.7)
 
 # Ajouter les points avec erreurs verticales ET horizontales
 ax.errorbar(angles, counts, xerr=errors_x, yerr=errors, fmt='o', color='C1', label="Données avec erreurs", zorder=3,alpha=0.7, capsize=3)
 
-# Mise à jour du bloc texte du fit
+# Ajouter le fit au graphique
 textstr = (
     r"$\bf{TREX}$"
     f"\n"
-    r" Fit : $N = A\exp\left(-\frac{x^2}{2\sigma^2}\right) + C$"
+    r" Fit : $N = a\cos^2\left(cx\right)+b$"
     f"\n"
-    f"A = {popt[0]:.3f}\n"
-    f"σ = {popt[1]:.3f}\n"
-    f"C = {popt[2]:.3f}\n"
-    r"$\chi^2 =$ "f"{chi_squared_reduced:.3f}"
+    f"a = {popt[0]:.3f}\n"
+    f"b = {popt[1]:.3f}\n"
+    f"c = {popt[2]:.3f}\n"
+    r"$\chi^2_{red} =$ "f"{chi_squared_reduced:.3f}"
 )
 ax.text(
     0.95, 0.95, textstr,
@@ -210,91 +204,6 @@ ax.text(
 ax.set_xlabel("Angles (degrés)")
 ax.set_ylabel("Nombre de coups (N)")
 ax.set_title("Distribution des angulaire des muons pour un systeme à 12 scintillateurs")
-ax.legend()
-ax.grid(False)
-
-# Graduations automatiques sur les deux axes
-ax.xaxis.set_major_locator(AutoLocator())
-ax.xaxis.set_minor_locator(AutoMinorLocator())
-ax.yaxis.set_major_locator(AutoLocator())
-ax.yaxis.set_minor_locator(AutoMinorLocator())
-
-# Ticks sur tous les côtés, vers l'intérieur
-ax.tick_params(axis='both', which='major', direction='in', top=True, right=True, length=10)
-ax.tick_params(axis='both', which='minor', direction='in', top=True, right=True, length=5)
-
-# Échelle automatique
-ax.relim()
-ax.autoscale_view()
-
-plt.tight_layout()
-plt.show()
-print(f"Paramètres du fit : {popt}")
-print(f"Covariance du fit : {pcov}")
-
-
-if save_fig:
-    os.makedirs("Latex/Images", exist_ok=True)
-    fig.savefig("Latex/Images/exp_angles.png", dpi=300, bbox_inches='tight')
-    print("Graphique sauvegardé dans : Latex/Images/exp_angles.png")
-    
-#-----------------------------------------------------------------
-#essai de fit avec  une focntion plus rigoureuse 
-#------------------------------------------------------------------
-
-# Ajustement avec la fonction `function`
-p0_function = [
-    10**50,  # a initial
-    -1500,                   # b initial
-    1   # c initial
-]
-
-# Refaire le fit avec la fonction `function`
-popt_function, pcov_function = curve_fit(function, angles_array, counts_array, p0=p0_function)
-
-# Recalculer le chi-squared avec la fonction `function`
-chi_squared_function = np.sum(((counts_array - function(angles_array, *popt_function)) ** 2) / errors**2)
-dof_function = len(counts_array) - len(popt_function)  # Degrés de liberté
-chi_squared_reduced_function = chi_squared_function / dof_function
-
-print(f"Paramètres du fit (function) : {popt_function}")
-print(f"Chi-squared réduit (function) : {chi_squared_reduced_function:.3f}")
-
-# Générer des données pour le fit avec `function`
-fit_angles_function = np.linspace(min(angles_array), max(angles_array), 500)
-fit_counts_function = function(fit_angles_function, *popt_function)
-
-# Tracer le fit avec `function`
-fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(
-    fit_angles_function, fit_counts_function, color='k',
-    label=r"Fit: $a \exp\left(-\frac{b}{\cos(x)}\right) + c$",
-    alpha=0.7
-)
-ax.errorbar(angles, counts, xerr=errors_x, yerr=errors, fmt='o', color='C1', label="Données avec erreurs", zorder=3, alpha=0.7, capsize=3)
-
-# Ajouter le texte du fit
-textstr_function = (
-    r"$\bf{TREX}$"
-    f"\n"
-    r" Fit : $N = a\exp\left(-\frac{b}{\cos(x)}\right)+c$"
-    f"\n"
-    f"a = {popt_function[0]:.3f}\n"
-    f"b = {popt_function[1]:.3f}\n"
-    f"c = {popt_function[2]:.3f}\n"
-    r"$\chi^2_{red} =$ "f"{chi_squared_reduced_function:.3f}"
-)
-ax.text(
-    0.95, 0.95, textstr_function,
-    transform=ax.transAxes, fontsize=10,
-    verticalalignment='top', horizontalalignment='right',
-    bbox=dict(boxstyle="round", facecolor="white", alpha=0.8)
-)
-
-# Configuration du graphique
-ax.set_xlabel("Angles (degrés)")
-ax.set_ylabel("Nombre de coups (N)")
-ax.set_title("Fit avec la fonction $a \exp(-b / \cos(x)) + c$")
 ax.legend(fontsize=11, loc='upper left', frameon=False, bbox_to_anchor=(0.02, 0.98), borderaxespad=1)
 ax.grid(False)
 
@@ -313,40 +222,79 @@ ax.relim()
 ax.autoscale_view()
 
 plt.tight_layout()
+
+if save_fig:
+    os.makedirs("Latex/Images", exist_ok=True)
+    fig.savefig("Latex/Images/cos_angles.png", dpi=300, bbox_inches='tight')
+    print("Graphique sauvegardé dans : Latex/Images/cos_angles.png")
+
 plt.show()
+print(f"Paramètres du fit : {popt}")
+print(f"Covariance du fit : {pcov}")
+
+#-------------------------------------------------------------
+#test de lapporx de cos^2 pour les angles plus petits
+#-------------------------------------------------------------
+# Trier les angles et les comptes associés
+sorted_indices = np.argsort(angles_array)
+angles_array_sorted = angles_array[sorted_indices]
+counts_array_sorted = counts_array[sorted_indices]
+errors_sorted = errors[sorted_indices]
+
+# Exclure les deux angles les plus négatifs et les deux angles les plus positifs
+angles_trimmed = angles_array_sorted[2:-2]
+counts_trimmed = counts_array_sorted[2:-2]
+errors_trimmed = errors_sorted[2:-2]
+errors_x_trimmed = np.array([2.92,2.98,4,2.98,2.92])  # Erreurs sur les angles
 
 
+# Refaire le fit avec les données réduites
+popt_trimmed, pcov_trimmed = curve_fit(cos_squared, angles_trimmed, counts_trimmed, p0=[1500, 0,1])
 
+# Recalculer le chi-squared avec les données réduites
+chi_squared_trimmed = np.sum(((counts_trimmed - cos_squared(angles_trimmed, *popt_trimmed)) ** 2) / errors_trimmed**2)
+dof_trimmed = len(counts_trimmed) - len(popt_trimmed)  # Degrés de liberté
+chi_squared_reduced_trimmed = chi_squared_trimmed / dof_trimmed
 
+print(f"Paramètres du fit (données réduites) : {popt_trimmed}")
+print(f"Chi-squared réduit après exclusion : {chi_squared_reduced_trimmed:.3f}")
 
+# Générer des données pour le nouveau fit
+fit_angles_trimmed = np.linspace(min(angles_trimmed), max(angles_trimmed), 500)
+fit_counts_trimmed = cos_squared(fit_angles_trimmed, *popt_trimmed)
 
+# Tracer le nouveau fit
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(fit_angles_trimmed, fit_counts_trimmed, color='k', label="Fit (données réduites): $a \cdot \cos^2(cx) + b$", alpha=0.7)
+ax.errorbar(angles_trimmed, counts_trimmed, xerr=errors_x_trimmed, yerr=errors_trimmed, fmt='o', color='C1', label="Données réduites avec erreurs", zorder=3, alpha=0.7, capsize=3)
 
+# Ajouter le texte du fit
+textstr_trimmed = (
+    r"$\bf{TREX}$"
+    f"\n"
+    r" Fit : $N = a\cos^2\left(cx\right)+b$"
+    f"\n"
+    f"a = {popt_trimmed[0]:.3f}\n"
+    f"b = {popt_trimmed[1]:.3f}\n"
+    f"c = {popt_trimmed[2]:.3f}\n"
+    r"$\chi^2_{red} =$ "f"{chi_squared_reduced_trimmed:.3f}"
+)
+ax.text(
+    0.95, 0.95, textstr_trimmed,
+    transform=ax.transAxes, fontsize=10,
+    verticalalignment='top', horizontalalignment='right',
+    bbox=dict(boxstyle="round", facecolor="white", alpha=0.8)
+)
 
+# Configuration du graphique
+ax.set_xlabel("Angles (degrés)")
+ax.set_ylabel("Nombre de coups (N)")
+ax.set_title("Fit après exclusion des angles extrêmes")
+ax.legend(fontsize=11, loc='upper left', frameon=False, bbox_to_anchor=(0.02, 0.98), borderaxespad=1)
+ax.grid(False)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+plt.tight_layout()
+plt.show()
 
 
 # plt.plot(fit_angles, fit_counts, color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")

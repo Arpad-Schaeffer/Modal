@@ -3,15 +3,15 @@ import numpy as np
 from scipy.optimize import curve_fit
 from matplotlib.ticker import MultipleLocator, AutoLocator, AutoMinorLocator
 import os
- 
-save_fig = True
+
+save_fig = False
 
 # Fonction cosinus carré pour le fit
 def cos_squared(x, a, b):
     return a * (np.cos(np.radians(x)) ** 2) + b
 
 # Ouvrir et lire le fichier
-with open("Distribution angulaire/Data/mesures.txt", "r") as file:
+with open("Distribution angulaire\Data\mesures.txt", "r") as file:
     lines = file.readlines()
 
 # Extraire les noms des colonnes depuis la première ligne
@@ -86,7 +86,6 @@ for line in lines:
                 # Vérifier si toutes les colonnes de la combinaison sont dans les colonnes déclenchées
                 if all(col in triggered_columns for col in combination):
                     angle = angle *180 / np.pi  # Convertir l'angle en degrés
-                    print(f"Colonnes déclenchées : {triggered_columns}, Combinaison : {combination}, Angle : {angle}")
                     angle_counts[angle] = angle_counts.get(angle, 0) + 1
                     angle_found = True
                     break  # Une fois qu'une combinaison est trouvée, on arrête la recherche
@@ -123,20 +122,17 @@ for angle in angle_counts:
 # Créer un histogramme des angles
 angles = list(angle_counts.keys())
 counts = list(angle_counts.values())
-
+print(angles)
+print(counts)
 # Ajouter l'angle inconnu à 3.14
 #angles.append(180)
 #counts.append(unknown_angle_count)
 
-# Ajustement avec la fonction cosinus carré
-angles_array = np.array(angles[:-1])  # Exclure l'angle inconnu (180)
-counts_array = np.array(counts[:-1])  # Exclure le compte inconnu
-popt, pcov = curve_fit(cos_squared, angles_array, counts_array, p0=[1, 0])
-chi_squared = np.sum(((counts_array - cos_squared(angles_array, *popt)) ** 2) / counts_array)
+
 
 # Calcul des erreurs de Poisson pour les counts, en tenant compte des divisions
 errors = np.sqrt(np.array(counts))  # Erreurs de Poisson avant division
-for i, angle in enumerate(angles[:-1]):  # Exclure l'angle inconnu
+for i, angle in enumerate(angles):  # Exclure l'angle inconnu
     if angle == 0:
         errors[i] /= 4  # Diviser par 4 pour l'angle 0
     elif angle == 0.989 * 180 / np.pi:
@@ -156,13 +152,19 @@ for i, angle in enumerate(angles[:-1]):  # Exclure l'angle inconnu
     elif angle == -1.408 * 180 / np.pi:
         errors[i] /= 2  # Diviser par 2 pour l'angle -1.408
 
-# Erreurs sur les angles (en degrés, ordre croissant en valeur absolue)
-errors_x = [0.18, 0.24, 0.52, 0.55]  # À adapter si tu as plus de 4 angles
+# Erreurs sur les angles (en, ordre croissant en valeur absolue)
+errors_x = [2.98,4,2.92,2.92,2.98,0.46,0.22,0.22,0.46]  # Correspondance mise à jour pour les angles en degrés
+print(errors_x)
 
-# Si tu as plus de 4 angles, complète la liste selon l'ordre de 'angles' (hors 180)
-while len(errors_x) < len(angles) - 1:
-    errors_x.append(errors_x[-1])  # Répète la dernière erreur si besoin
-errors_x.append(0)  # Pas d'erreur pour l'angle inconnu à 180°
+# Ajustement avec la fonction cosinus carré
+angles_array = np.array(angles)  # Exclure l'angle inconnu (180)
+counts_array = np.array(counts)  # Exclure le compte inconnu
+popt, pcov = curve_fit(cos_squared, angles_array, counts_array, p0=[1, 0])
+chi_squared = np.sum(((counts_array - cos_squared(angles_array, *popt)) ** 2) / errors**2)
+dof = len(counts_array) - len(popt)  # Degrés de liberté
+chi_squared_reduced = chi_squared / dof
+
+
 
 # Générer des données pour le fit
 fit_angles = np.linspace(min(angles_array), max(angles_array), 500)
@@ -179,11 +181,11 @@ ax.errorbar(angles, counts, xerr=errors_x, yerr=errors, fmt='o', color='C1', lab
 textstr = (
     r"$\bf{TREX}$"
     f"\n"
-    r" Fit : $N = a\cos^2\left(x+b\right)+c$"
+    r" Fit : $N = a\cos^2\left(x\right)+b$"
     f"\n"
     f"a = {popt[0]:.3f}\n"
     f"b = {popt[1]:.3f}\n"
-    r"$\chi^2 =$ "f"{chi_squared:.3f}"
+    r"$\chi^2_{red} =$ "f"{chi_squared_reduced:.3f}"
 )
 ax.text(
     0.95, 0.95, textstr,
@@ -223,6 +225,68 @@ if save_fig:
 plt.show()
 print(f"Paramètres du fit : {popt}")
 print(f"Covariance du fit : {pcov}")
+
+#-------------------------------------------------------------
+#test de lapporx de cos^2 pour les angles plus petits
+#-------------------------------------------------------------
+# Trier les angles et les comptes associés
+sorted_indices = np.argsort(angles_array)
+angles_array_sorted = angles_array[sorted_indices]
+counts_array_sorted = counts_array[sorted_indices]
+errors_sorted = errors[sorted_indices]
+
+# Exclure les deux angles les plus négatifs et les deux angles les plus positifs
+angles_trimmed = angles_array_sorted[2:-2]
+counts_trimmed = counts_array_sorted[2:-2]
+errors_trimmed = errors_sorted[2:-2]
+errors_x_trimmed = np.array([2.92,2.98,4,2.98,2.92])  # Erreurs sur les angles
+
+# Refaire le fit avec les données réduites
+popt_trimmed, pcov_trimmed = curve_fit(cos_squared, angles_trimmed, counts_trimmed, p0=[1, 0])
+
+# Recalculer le chi-squared avec les données réduites
+chi_squared_trimmed = np.sum(((counts_trimmed - cos_squared(angles_trimmed, *popt_trimmed)) ** 2) / errors_trimmed**2)
+dof_trimmed = len(counts_trimmed) - len(popt_trimmed)  # Degrés de liberté
+chi_squared_reduced_trimmed = chi_squared_trimmed / dof_trimmed
+
+print(f"Paramètres du fit (données réduites) : {popt_trimmed}")
+print(f"Chi-squared réduit après exclusion : {chi_squared_reduced_trimmed:.3f}")
+
+# Générer des données pour le nouveau fit
+fit_angles_trimmed = np.linspace(min(angles_trimmed), max(angles_trimmed), 500)
+fit_counts_trimmed = cos_squared(fit_angles_trimmed, *popt_trimmed)
+
+# Tracer le nouveau fit
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(fit_angles_trimmed, fit_counts_trimmed, color='k', label="Fit (données réduites): $a \cdot \cos^2(x) + c$", alpha=0.7)
+ax.errorbar(angles_trimmed, counts_trimmed, xerr=errors_x_trimmed, yerr=errors_trimmed, fmt='o', color='C1', label="Données réduites avec erreurs", zorder=3, alpha=0.7, capsize=3)
+
+# Ajouter le texte du fit
+textstr_trimmed = (
+    r"$\bf{TREX}$"
+    f"\n"
+    r" Fit : $N = a\cos^2\left(x\right)+b$"
+    f"\n"
+    f"a = {popt_trimmed[0]:.3f}\n"
+    f"b = {popt_trimmed[1]:.3f}\n"
+    r"$\chi^2_{red} =$ "f"{chi_squared_reduced_trimmed:.3f}"
+)
+ax.text(
+    0.95, 0.95, textstr_trimmed,
+    transform=ax.transAxes, fontsize=10,
+    verticalalignment='top', horizontalalignment='right',
+    bbox=dict(boxstyle="round", facecolor="white", alpha=0.8)
+)
+
+# Configuration du graphique
+ax.set_xlabel("Angles (degrés)")
+ax.set_ylabel("Nombre de coups (N)")
+ax.set_title("Fit après exclusion des angles extrêmes")
+ax.legend(fontsize=11, loc='upper left', frameon=False, bbox_to_anchor=(0.02, 0.98), borderaxespad=1)
+ax.grid(False)
+
+plt.tight_layout()
+plt.show()
 
 
 # plt.plot(fit_angles, fit_counts, color='green', label="Fit: $a \cdot \cos^2(x + b) + c$")
