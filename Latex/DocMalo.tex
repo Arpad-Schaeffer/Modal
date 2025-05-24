@@ -354,10 +354,21 @@ Seuls les muons, très pénétrants, peuvent traverser plusieurs détecteurs ali
 \end{center}
 
 \begin{figure}[H]
+  \begin{minipage}
+    [t]{0.45\textwidth}
     \centering
-    %\includegraphics[width=0.6\textwidth]{figures/schema_coincidence.pdf}
-    \fbox{\parbox{0.6\textwidth}{\centering\textit{Schéma à insérer : deux scintillateurs A et B alignés, un muon traverse les deux, signaux synchrones. Les bruits parasites (étoiles, zigzags) ne traversent qu'un seul détecteur à la fois.}}}
-    \caption{Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}
+    \include{coincidence_schema.tex}
+    \caption{Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps (le temps de parcours est négligeable devant le temps de réponse du dispositif).}
+    \label{fig:coincidence_principle}
+  \end{minipage}
+  \hfill
+  \begin{minipage}
+    [t]{0.45\textwidth}
+    \centering
+    \include{bruit_coincidence.tex}
+    \caption{Principe de la coïncidence temporelle : les bruits aléatoires n’ont qu’une probabilité infime d’apparaître exactement en même temps dans deux détecteurs distincts. Les déclanchements spontanés peuvent venir de plusieurs composant(scintillateur , émission d'un photoélectron par le PMT, etc.)}
+    \label{fig:coincidence_principle2}
+  \end{minipage}
 \end{figure}
 
 \paragraph{Pourquoi la coïncidence ?}
@@ -623,7 +634,7 @@ Il s'agit de choisir le bon treshold. Nous avons commencé par tracer grossierem
   \begin{minipage}{0.45\textwidth}
     \centering
     \includegraphics[width=0.9\textwidth]{Images/palier_zommé.png}
-    \caption{Caractéristique du scintillateur des scintillateurs zommé sur la zone du palier. On observbe la chute de counts pour un seuil trop haut apres le palier. Le detcetecteur 34 a l'aire plus efficace que le 21. On suppoose alors que tout les scintillatyeurs on sensiblement les mêmes caractéristiques et on choisit pour le reste de l'étude THRS = 22mv}
+    \caption{Caractéristique du scintillateur des scintillateurs zommé sur la zone du palier. On observbe la chute de counts pour un seuil trop haut apres le palier. Le détetecteur 34 a l'aire plus efficace que le 21. On suppoose alors que tout les scintillatyeurs on sensiblement les mêmes caractéristiques et on choisit pour le reste de l'étude THRS = 22mv}
     \label{fig:caracteristique_scintillateur_2}
   \end{minipage}
 \end{figure}
@@ -631,14 +642,14 @@ Il s'agit de choisir le bon treshold. Nous avons commencé par tracer grossierem
 On peut alors lancer une longue acquisition de données. 
 On a pris soin de bien choisir la zone de fonctionnement des scintillateurs pour qu'ils soient tous dans la meme zone de fonctionnement. 
 On analyse alors les données et on trace les occurences des angles en fonction de l'angle pour essayer de verifier la loi $\cos^2\theta$.
-Il faut faire attention a bien normaliser les resultats en fonction du nombre de combinaisons possibles correspondantes pour chaque angle.
-Les resultats obtentus sont representé figure \ref{fig:cos2s_2}.
+Il faut faire attention a bien normaliser les résultats en fonction du nombre de combinaisons possibles correspondantes pour chaque angle.
+Les résultats obtenus sont représentés figure \ref{fig:cos2s_2}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{Images/distribution_angulaire.png}
   \caption{Nombre de muons corrigé par le nombre de combinaisons possibles mesuré en fonction de l'angle d'incidence $\theta$. On observe une décroissance du flux avec l'angle, confirmant la loi $\cos^2\theta$. On note l'écartement au modèle aux grands angles.
-  On note aussi la différence de qualitée des mesures entre 3 scintillateurs et la matrice de scintillateurs.}
+  On note aussi la différence de qualité des mesures entre 3 scintillateurs et la matrice de scintillateurs.}
   \label{fig:cos2s_2}
 \end{figure}
 
