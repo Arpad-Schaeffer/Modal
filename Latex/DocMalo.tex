@@ -140,7 +140,7 @@ Aucun matériau ne satisfait parfaitement tous ces critères, mais les scintilla
 \textbf{Synthèse~:} Les scintillateurs plastiques offrent une détection rapide et fiable des particules chargées, avec un bon compromis entre rendement lumineux, rapidité et robustesse. Ici, le choix du scintillateur plastique est motivé par la recherche d’une excellente précision temporelle (et non énergétique), indispensable pour la détection en coïncidence des muons.
 \end{remarque}
 
-\newpage
+
 
 \subsection{Photomultiplicateur (PM)}
 
@@ -175,7 +175,6 @@ Les PM présentent une excellente linéarité, une faible contribution au bruit,
 \textbf{Synthèse~:} Les photomultiplicateurs (PM) offrent une conversion et une amplification très efficaces de la lumière en signal électrique. Toutefois, leur fonctionnement impose des contraintes importantes, notamment une forte dépendance à des tensions d’alimentation élevées et une sensibilité accrue aux perturbations environnementales, susceptibles d’amplifier des signaux parasites.
 \end{remarque}
 
-\newpage
 
 \subsection{Chaîne électronique}
 
@@ -193,7 +192,7 @@ Voici les principaux instruments analogiques utilisés et leur rôle dans l’ex
 
 \begin{itemize}
   \item \textbf{Générateur haute tension} : Alimente les photomultiplicateurs (PM) avec une tension réglable typiquement entre 800 et 2100~V. Un réglage précis de la HT permet d’optimiser le gain du PM.
-  \item \textbf{Circuit RC (filtre passe-haut)} : Placé en sortie du PM, il permet de supprimer la composante continue et d’adapter la forme du signal pour l’amplification. Le circuit RC élimine les signaux lents et ne laisse passer que les impulsions rapides des muons.
+  \item \textbf{Circuit RC (filtre)} : Placé en sortie du PM, il permet de supprimer la composante continue et d’adapter la forme du signal pour l’amplification. Le circuit RC élimine les signaux lents et ne laisse passer que les impulsions rapides des muons.
   \item \textbf{Amplificateur} : Il augmente l’amplitude des signaux issus du PM pour les rendre exploitables par les modules suivants.
   \item \textbf{Discriminateur} : Ce module compare le signal amplifié à un seuil réglable (THR). Seules les impulsions dépassant ce seuil génèrent une sortie logique standard.
   \item \textbf{Retardateur} : Permet de décaler temporellement un signal logique afin d’ajuster la synchronisation entre plusieurs voies. Il est utile pour tester le taux de coïncidences fortuites ou pour compenser des différences de longueur de câble.
@@ -205,24 +204,22 @@ Voici les principaux instruments analogiques utilisés et leur rôle dans l’ex
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{Images/Montage_Electrique.png}
+  \includegraphics[width=0.8\textwidth]{Images/Montage_Electrique.png}
   \caption{Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}
   \label{fig:photo_instruments}
 \end{figure}
 
 \begin{remarque}
-\textbf{Synthèse~:} La chaîne électronique joue un rôle essentiel dans l’extraction des signaux utiles, leur traitement et leur analyse — qu’il s’agisse de mesurer le taux de détection ou de comptabiliser les coïncidences — tout en supprimant efficacement le bruit de fond.
+\textbf{Synthèse~:} La chaîne électronique joue un rôle essentiel dans l’extraction des signaux utiles, leur traitement et leur analyse — qu’il s’agisse de mesurer le taux de détection ou de comptabiliser les coïncidences — tout en supprimant efficacement le bruit de fond. Il s'agit d'optimiser les parametres de tout ces composants pour maximiser la qualité des données collectées.
 \end{remarque}
 
-
-\newpage
 
 \section{Étude du signal}
 \subsection{Caractérisation temporelle du signal d’un muon}
 
 % --- ENCADRÉ DÉBUT ---
 
-\vspace{1em}
+
 \begin{center}
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de l’étude du signal]
 Analyser la forme, l’amplitude et la dépendance du signal détecté pour optimiser les réglages et garantir la qualité des mesures.
@@ -235,7 +232,7 @@ L’étude du signal issu de la détection d’un muon cosmique à l’aide d’
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Desexitation_Scintillateur_2.png}
+    \includegraphics[width=0.8\textwidth]{Images/Desexitation_Scintillateur_2.png}
     \caption{Exemple de signal mesuré sur un muon cosmique, avec ajustements exponentiels sur la descente et la montée.}
     \label{fig:signal-muon}
 \end{figure}
@@ -248,9 +245,10 @@ L’ajustement de deux exponentielles (descente et montée) sur les données exp
 
 \begin{remarque}
 \textbf{Synthèse~:} L’ajustement exponentiel du signal mesuré a permis d’extraire deux constantes caractéristiques~: $\tau_{\text{scint}} = 1{,}57$~ns (désexcitation du scintillateur) et $\tau_{RC} = 3{,}25$~ns (réponse de la chaîne électronique). La valeur obtenue pour $\tau_{\text{scint}}$ est parfaitement cohérente avec les propriétés attendues pour un scintillateur plastique, confirmant l’analyse temporelle réalisée.
+Le même processus a été appliqué aux autres scintillateurs. Des constantes similaires ont été obtenues, confirmant la nature des scintillateurs plastiques utilisés.
 \end{remarque}
 
-\newpage
+
 
 \subsection{Optimisation conjointe de la haute tension et du seuil du discriminateur}
 
@@ -286,23 +284,31 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Threshold_Scintillateur_1.png}
-    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 1).}
+    \includegraphics[width=0.8\textwidth]{Images/Threshold_Scintillateur_1.png}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 1).
+    Les valeures de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
+    On observe l'absence de palier net, ce qui rend l'optimisation difficile, en plus d'un nombre de count anormalement élevé.}
     \label{fig:optimisation_scint1}
 \end{figure}
 
 \begin{figure}[H]
+  \begin{minipage}{0.49\textwidth}
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Threshold_Scintillateur_2.png}
-    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 2).}
+    \includegraphics[width=0.95\textwidth]{Images/Threshold_Scintillateur_2.png}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 2)
+    Les valeures de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
+    On observe l'absence de palier net, ce qui rend l'optimisation difficile.}
     \label{fig:optimisation_scint2}
-\end{figure}
-
-\begin{figure}[H]
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.49\textwidth}
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Threshold_Scintillateur_3.png}
-    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 3).}
+    \includegraphics[width=0.95\textwidth]{Images/Threshold_Scintillateur_3.png}
+    \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 3).
+    Les valeures de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
+    On observe l'absence de palier net, ce qui rend l'optimisation difficile.}
     \label{fig:optimisation_scint3}
+  \end{minipage}
 \end{figure}
 
 % --- ENCADRÉ PROBLÈMES DÉBUT ---
@@ -326,18 +332,26 @@ Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispe
 \begin{remarque}
 \textbf{Synthèse~:} Après optimisation, les réglages retenus pour chaque scintillateur sont les suivants :
 \begin{itemize}
-    \item \textbf{Scintillateur 1 :} Haute tension (HT) = \_\_\_\_~V, seuil du discriminateur = \_\_\_\_~V.
-    \item \textbf{Scintillateur 2 :} Haute tension (HT) = \_\_\_\_~V, seuil du discriminateur = \_\_\_\_~V.
-    \item \textbf{Scintillateur 3 :} Haute tension (HT) = \_\_\_\_~V, seuil du discriminateur = \_\_\_\_~V.
+    \item \textbf{Scintillateur 1 :} Haute tension (HT) = 2000~V, seuil du discriminateur = 0.45~V.
+    \item \textbf{Scintillateur 2 :} Haute tension (HT) = 2050~V, seuil du discriminateur = 0.05~V.
+    \item \textbf{Scintillateur 3 :} Haute tension (HT) = 2060~V, seuil du discriminateur = 0.3~V.
 \end{itemize}
-Ces valeurs permettent de maximiser le taux de détection des muons tout en minimisant le bruit de fond.
+Ces valeurs permettent de maximiser le taux de détection des muons tout en minimisant le bruit de fond. Elles permettent aussi d'avoir un nombre de count similaire entyre détecteurs.
 \end{remarque}
 
-\newpage
+
 
 \section{Détection par coïncidence}
 
 \subsection{Principe de coïncidence}
+
+
+
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la coïncidence]
+Seuls les muons, très pénétrants, peuvent traverser plusieurs détecteurs alignés en quasi-ligne droite et produire des signaux quasi simultanés dans chacun. Les bruits aléatoires, eux, n’ont qu’une probabilité infime d’apparaître exactement en même temps dans deux détecteurs distincts.
+\end{tcolorbox}
+\end{center}
 
 \begin{figure}[H]
     \centering
@@ -345,13 +359,6 @@ Ces valeurs permettent de maximiser le taux de détection des muons tout en mini
     \fbox{\parbox{0.6\textwidth}{\centering\textit{Schéma à insérer : deux scintillateurs A et B alignés, un muon traverse les deux, signaux synchrones. Les bruits parasites (étoiles, zigzags) ne traversent qu'un seul détecteur à la fois.}}}
     \caption{Principe de la coïncidence temporelle : seuls les muons traversent les deux détecteurs en même temps.}
 \end{figure}
-
-\vspace{1em}
-\begin{center}
-\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la coïncidence]
-Seuls les muons, très pénétrants, peuvent traverser plusieurs détecteurs alignés en quasi-ligne droite et produire des signaux quasi simultanés dans chacun. Les bruits aléatoires, eux, n’ont qu’une probabilité infime d’apparaître exactement en même temps dans deux détecteurs distincts.
-\end{tcolorbox}
-\end{center}
 
 \paragraph{Pourquoi la coïncidence ?}
 
@@ -362,7 +369,8 @@ Dans un détecteur isolé, le taux de comptage brut inclut non seulement les év
     \item \textbf{Rayons cosmiques secondaires} autres que les muons (particules $\alpha$, neutrons, électrons) stoppés dans le matériau.
 \end{itemize}
 
-Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes fictifs à un taux non négligeable. Par exemple, un photomultiplicateur à température ambiante peut avoir un bruit d’obscurité de quelques centaines de comptes par seconde. De même, l’environnement radioactif (rayonnement cosmique diffus, $\gamma$ du sol, etc.) peut induire des lueurs dans le scintillator. Il est donc essentiel de discriminer les signaux “muon” authentiques du bruit de fond.
+Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes fictifs à un taux non négligeable.
+ Il est donc essentiel de discriminer les signaux “muon” authentiques du bruit de fond.
 
 \begin{figure}[H]
     \centering
@@ -370,6 +378,12 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
     \caption{Montage electronique de coïncidence avec les scintillateurs.}
     \label{fig:coincidence_sans_delais}
 \end{figure}
+
+
+% Explication de la largeur de fenêtre de coïncidence
+La largeur de fenêtre de coïncidence correspond à l'intervalle de temps pendant lequel deux (ou plusieurs) signaux issus de différents détecteurs doivent arriver pour être considérés comme provenant d'un même événement physique (par exemple, le passage d'un même muon). Si deux signaux arrivent dans cette fenêtre temporelle, ils sont comptés comme une coïncidence. 
+
+Une fenêtre trop étroite permet de mieux rejeter le bruit accidentel (signaux non corrélés), mais risque d'exclure des événements réels si les signaux ne sont pas parfaitement synchrones. À l'inverse, une fenêtre trop large augmente le nombre de coïncidences accidentelles (bruit), mais permet de ne rater quasiment aucun événement physique. Le choix de la largeur de fenêtre est donc un compromis entre efficacité de détection et rejet du bruit.
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.48\textwidth}
@@ -387,13 +401,8 @@ Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes 
   \end{minipage}
 \end{figure}
 
-% Explication de la largeur de fenêtre de coïncidence
-La largeur de fenêtre de coïncidence correspond à l'intervalle de temps pendant lequel deux (ou plusieurs) signaux issus de différents détecteurs doivent arriver pour être considérés comme provenant d'un même événement physique (par exemple, le passage d'un même muon). Si deux signaux arrivent dans cette fenêtre temporelle, ils sont comptés comme une coïncidence. 
-
-Une fenêtre trop étroite permet de mieux rejeter le bruit accidentel (signaux non corrélés), mais risque d'exclure des événements réels si les signaux ne sont pas parfaitement synchrones. À l'inverse, une fenêtre trop large augmente le nombre de coïncidences accidentelles (bruit), mais permet de ne rater quasiment aucun événement physique. Le choix de la largeur de fenêtre est donc un compromis entre efficacité de détection et rejet du bruit.
 % --- 4.2 Principe des coïncidences fortuites ---
 
-\newpage
 
 \subsection{Principe des coïncidences fortuites}
 
@@ -417,7 +426,7 @@ Cette méthode permet donc d’estimer précisément la pureté du signal et de 
 \subsection{Résultats expérimentaux}
 \subsubsection{Coïncidence à 2 scintillateurs}
 
-Le graphique ci-dessous présente, pour le couple de scintillateurs 1 et 2, les résultats obtenus avec un seuil de 0{,}45~V et une haute tension de 2000~V pour le scintillateur 1, et un seuil de 0{,}05~V et une haute tension de 1950~V pour le scintillateur 2 (valeurs optimisées à partir des expériences précédentes).
+Le graphique ci-dessous (\ref{fig:coincidences_2_scintillateurs}) présente, pour le couple de scintillateurs 1 et 2, les résultats obtenus avec un seuil de 0{,}45~V et une haute tension de 2000~V pour le scintillateur 1, et un seuil de 0{,}05~V et une haute tension de 1950~V pour le scintillateur 2 (valeurs optimisées à partir des expériences précédentes).
 
 Pour chaque largeur de fenêtre de coïncidence (width), on a mesuré :
 \begin{itemize}
@@ -429,10 +438,12 @@ Pour chaque largeur de fenêtre de coïncidence (width), on a mesuré :
 On observe que lorsque la fenêtre de coïncidence est large, le nombre de coïncidences fortuites augmente fortement, tandis que pour des fenêtres plus étroites, la proportion de vrais muons devient dominante. Ce protocole permet donc d’optimiser le réglage du width pour maximiser la pureté du signal muonique tout en conservant un nombre d’événements suffisant.
 
 
-\begin{figure}[H]
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Coincidences_2_Scintillateurs.png}
-    \caption[Nombre d’évènement en 4 min en fonction du seuil]{Nombre d’évènement en 4min en fonction du seuil pour 2 scintillateurs en coïncidence}
+    \includegraphics[width=0.8\textwidth]{Images/Coincidences_2_Scintillateurs.png}
+    \caption[Nombre d’évènement en 4 min en fonction du seuil]{Nombre d’évènement en 4min en fonction du seuil pour 2 scintillateurs en coïncidence.
+    On voit que le nombre de coïncidences fortuites augmente fortement avec la largeur de fenêtre, tandis que le nombre de vrais muons détectés reste relativement stable et forme un palier au valeures de width optimales.}
+    \label{fig:coincidences_2_scintillateurs}
 \end{figure}
 
 \subsubsection{Coïncidence à 3 scintillateurs}
@@ -455,11 +466,12 @@ Pour chaque largeur de fenêtre de coïncidence (width), on a mesuré :
 
 On constate que l’utilisation de trois scintillateurs permet de réduire drastiquement le nombre de coïncidences fortuites, et que le ratio signal/bruit devient très élevé pour des fenêtres de coïncidence raisonnables. Ce protocole permet donc d’obtenir un signal muonique extrêmement pur, au prix d’un nombre d’événements plus faible.
 
-\begin{figure}[H]
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Coincidences_3_Scintillateurs.png}
+    \includegraphics[width=0.8\textwidth]{Images/Coincidences_3_Scintillateurs.png}
     \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 10 min en fonction du seuil pour 3 scintillateurs en coïncidence}
-\end{figure}
+    \label{fig:coincidences_3_scintillateurs}
+  \end{figure}
 
 % --- Encadré Problèmes rencontrés lors des mesures de coïncidences ---
 
