@@ -421,12 +421,11 @@ Nous avons aussi estimé le nombre de coïncidences fortuites, c’est-à-dire l
 
 Cette méthode permet donc d’estimer précisément la pureté du signal et de quantifier la part de coïncidences réellement attribuables au passage de muons, en soustrayant le fond mesuré avec délai au signal total.
 
-\newpage
 
 \subsection{Résultats expérimentaux}
 \subsubsection{Coïncidence à 2 scintillateurs}
 
-Le graphique ci-dessous (\ref{fig:coincidences_2_scintillateurs}) présente, pour le couple de scintillateurs 1 et 2, les résultats obtenus avec un seuil de 0{,}45~V et une haute tension de 2000~V pour le scintillateur 1, et un seuil de 0{,}05~V et une haute tension de 1950~V pour le scintillateur 2 (valeurs optimisées à partir des expériences précédentes).
+Le graphique ci-dessous (figure \ref{fig:coincidences_2_scintillateurs}) présente, pour le couple de scintillateurs 1 et 2, les résultats obtenus avec un seuil de 0{,}45~V et une haute tension de 2000~V pour le scintillateur 1, et un seuil de 0{,}05~V et une haute tension de 1950~V pour le scintillateur 2 (valeurs optimisées à partir des expériences précédentes).
 
 Pour chaque largeur de fenêtre de coïncidence (width), on a mesuré :
 \begin{itemize}
@@ -448,7 +447,7 @@ On observe que lorsque la fenêtre de coïncidence est large, le nombre de coïn
 
 \subsubsection{Coïncidence à 3 scintillateurs}
 
-Le graphique ci-dessous présente les résultats obtenus pour la coïncidence à 3 scintillateurs, avec les réglages suivants :
+Le graphique ci-dessous (figure \ref{fig:coincidences_3_scintillateurs}) présente les résultats obtenus pour la coïncidence à 3 scintillateurs, avec les réglages suivants :
 \begin{itemize}
     \item Scintillateur 1 : seuil de 0{,}45~V, haute tension de 2000~V
     \item Scintillateur 2 : seuil de 0{,}05~V, haute tension de 2050~V, delay = 63~ns
@@ -469,13 +468,13 @@ On constate que l’utilisation de trois scintillateurs permet de réduire drast
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/Coincidences_3_Scintillateurs.png}
-    \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 10 min en fonction du seuil pour 3 scintillateurs en coïncidence}
+    \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 10 min en fonction du seuil pour 3 scintillateurs en coïncidence.
+    Les coïncidences fortuites sont plus importantes que pour 2 scintillateurs, la ou l'incidence des muons est la même. Le choix de la width optimale est crucial pour maximiser le nombre de vrais muons détectés tout en minimisant le bruit de fond. On observe que pour une width de 20 ns, le taux de coïncidences fortuites est  faible , ce qui permet d’obtenir un signal muonique sensiblement pur.}
     \label{fig:coincidences_3_scintillateurs}
   \end{figure}
 
 % --- Encadré Problèmes rencontrés lors des mesures de coïncidences ---
 
-\vspace{1em}
 \begin{center}
 \begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Problèmes rencontrés lors des mesures de coïncidences]
 Lors des mesures de coïncidences (notamment à 3 scintillateurs), plusieurs difficultés majeures ont été rencontrées :
@@ -491,12 +490,12 @@ Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispe
 % --- Synthèse résultats coïncidences ---
 
 \begin{remarque}
-\textbf{Synthèse~:} Pour la coïncidence à 2 scintillateurs, la largeur de fenêtre optimale retenue est de \textbf{20 ns}, ce qui permet d’obtenir un taux de coïncidences fortuites inférieur à \textbf{10\%} du total. Pour 3 scintillateurs, une fenêtre de \textbf{20 ns} rend le taux de coïncidences fortuites négligeable (inférieur à \textbf{1\%}).
+\textbf{Synthèse~:} Pour la coïncidence à 2 scintillateurs, la largeur de fenêtre optimale retenue est de \textbf{20 ns}, ce qui permet d’obtenir un taux de coïncidences fortuites inférieur à \textbf{10\%} du total. Pour 3 scintillateurs, une fenêtre de \textbf{20 ns} rend le taux de coïncidences fortuites négligeable.
 
 Ces résultats montrent que l’ajout d’un troisième scintillateur permet d’obtenir un signal muonique extrêmement pur, au prix d’un nombre d’événements plus faible. Le réglage fin de la fenêtre de coïncidence est donc crucial pour maximiser la pureté du signal tout en conservant une statistique exploitable.
 \end{remarque}
 
-\newpage
+
 
 \section{Distribution angulaire du flux muonique}
 L'un des caract\`eres notables du rayonnement cosmique muonique au niveau du sol est son anisotropie en angle \text{\'enithal}. Les muons proviennent majoritairement de la verticale, c'est-\`a-dire de la direction du \text{\'enith} (car ils sont g\'en\'er\'es en haute atmosph\`ere et suivent grossi\`erement des trajectoires quasi-rectilignes vers le bas). Plus l'angle~$\theta$ par rapport \`a la verticale augmente (muons venant rasants de l'horizon), plus le parcours dans l'atmosph\`ere est long, et donc plus la probabilit\'e de survie du muon jusqu'au sol diminue. Ce ph\'enom\`ene se traduit par une loi empirique proche de
@@ -533,14 +532,18 @@ avec $n \approx 2$ aux 'energies cosmiques typiques. Autrement dit, le flux diff
 \end{figure}
 
 
-En pratique, une premiere idée peut consister à faire varier l'angle d'incidence des muons en deplacant de facon horizontale les scintillateurs. Les muons seraient alors selectionnés selon leur angle d'incidence, comme schematisé en figure \ref{fig:angle_non_nul}. Cependant, la mesure est tres imprecise car la selectyion des angles est tres impûre comme on peu le comprendre grace a la figure \ref{fig:range_des_angles}. En effet, la largeur des scintillateurs est de l'ordre de 20cm ce qui fait que la selection des angles est tres large.
-Une fois les scintillateurs correctements placés, pour chaque angle~$\theta$, on enregistre le nombre de muons détectés (coïncidences $A\wedge B$) pendant une durée fixe (par ex.\ quelques minutes, suffisamment pour accumuler des centaines d’événements et réduire l’erreur statistique). On obtient ainsi un taux de comptage~$N(\theta)$ en fonction de~$\theta$. Les résultats bruts doivent être corrigés d'un effet géométrique~: la projection de la surface du détecteur selon l'angle. Lorsque les scintillateurs sont deplacés la surface effective presenté au muons venant avec un angle d'incidence $\theta$, est réduite d'un facteur~$\cos\theta$. 
+En pratique, une premiere idée peut consister à faire varier l'angle d'incidence des muons en deplacant de facon horizontale les scintillateurs.
+Les muons seraient alors selectionnés selon leur angle d'incidence, comme schematisé en figure \ref{fig:angle_non_nul}.
+Cependant, la mesure est tres imprecise car la sélection des angles est très impûre comme on peu le comprendre grace a la figure \ref{fig:range_des_angles}.
+En effet, la largeur des scintillateurs est de l'ordre de 20cm ce qui fait que la sélection des angles est tres large.
+Une fois les scintillateurs correctements placés, pour chaque angle~$\theta$, on enregistre le nombre de muons détectés (coïncidences $A\wedge B\wedge C$) pendant une durée fixe. On obtient ainsi un taux de comptage~$N(\theta)$ en fonction de~$\theta$. Les résultats bruts doivent être corrigés d'un effet géométrique~: la projection de la surface du détecteur selon l'angle. Lorsque les scintillateurs sont deplacés la surface effective presenté au muons venant avec un angle d'incidence $\theta$, est réduite d'un facteur~$\cos\theta$. 
 
-Après ces corrections, on peut comparer la distribution normalisée~$I_{\mathrm{mesure}}(\theta)$ au modèle en~$\cos^{2}\theta$. Les données obtenues présentent une bonne conformité avec la loi attendue. Graphique~1 ci‑dessous montre, de façon qualitative, la tendance mesurée~: en représentant $N(\theta)$ corrigé en fonction de~$\cos\theta$, on obtient approximativement une droite, ce qui traduit
+Après ces corrections, on peut comparer la distribution normalisée~$I_{\mathrm{mesure}}(\theta)$ au modèle en~$\cos^{2}\theta$. Les données obtenues présentent une bonne conformité avec la loi attendue. 
+Figure \ref{fig:cos2s} ci‑dessous montre, de façon qualitative, la tendance mesurée~: en représentant $N(\theta)$ corrigé en fonction de~$\cos\theta$, on obtient approximativement une droite, ce qui traduit
 \[
 N(\theta)\propto\cos^{2}\theta.
 \]
-\begin{figure}[H]
+\begin{figure}[!h]
   \centering
   \includegraphics[width=0.7\textwidth]{Images/coscarréavectroisscintillateurs.png}
   \caption{Flux de muons mesuré en fonction de l'angle d'incidence $\theta$. On observe une décroissance du flux avec l'angle, confirmant la loi $\cos^2\theta$. On note l'imprecision de la mesure du au conditions experimentales.}
@@ -548,37 +551,47 @@ N(\theta)\propto\cos^{2}\theta.
 \end{figure}
 
 \textbf{Interprétation}~: la loi $I(\theta)\propto\cos^2\theta$ résulte de la combinaison de deux effets principaux.  
-(i) Distribution isotrope à la production~: les pions parents des muons sont produits isotropiquement dans le référentiel du laboratoire (en première approximation), et leur désintégration donne des muons distribués également dans l'espace (avec un léger biais avant, négligeable ici). Ainsi, le flux de muons incident sur la Terre en l'absence d'atmosphère serait isotrope, donc $\propto\cos\theta$ simplement à cause de la projection de surface.  
-(ii) Parcours atmosphérique variable~: les muons créés à un angle~$\theta$ doivent traverser une épaisseur d'atmosphère $X(\theta)$ plus grande que ceux venant du zénith. Pour un angle zénithal~$\theta$, la colonne d'air parcourue est approximativement
+(i) Distribution isotrope à la production~: les pions parents des muons sont produits isotropiquement dans le référentiel du laboratoire (en première approximation), et leur désintégration donne des muons distribués également dans l'espace (avec un léger biais avant, négligeable ici).
+Ainsi, le flux de muons incident sur la Terre en l'absence d'atmosphère serait isotrope, donc $\propto\cos\theta$ simplement à cause de la projection de surface.  
+(ii) Parcours atmosphérique variable~: les muons créés à un angle~$\theta$ doivent traverser une épaisseur d'atmosphère $X(\theta)$ plus grande que ceux venant du zénith. Pour un angle zénithal~$\theta$, la longueur parcourue est approximativement
 \[
-X(\theta)=\frac{X(0)}{\cos\theta}
+L(\theta)=\frac{L(0)}{\cos\theta}
 \]
-(pour $\theta$ pas trop grand et en négligeant la courbure terrestre), où $X(0)$ est l'épaisseur verticale correspondant à 1013 hPa (environ 1030 g/$cm^2$ d'équivalent masse d'air). La probabilité de survie d'un muon jusqu'au sol décroît exponentiellement avec~$X$:
+(pour $\theta$ pas trop grand et en négligeant la courbure terrestre), où $L(0)$ est l'épaisseur de l'atmosphère. La probabilité de survie d'un muon jusqu'au sol décroît exponentiellement avec~$L$:
 \[
-P_{\mathrm{survie}}(\theta)\approx\exp\bigl(-X(\theta)/\Lambda_{\mu}\bigr),
+P_{\mathrm{survie}}(\theta)\approx\exp\bigl(-L(\theta)/\Lambda_{\mu}\bigr),
 \]
 avec $\Lambda_{\mu}$ la longueur d'atténuation (liée à la longueur de désintégration $\gamma c\tau$ des muons, de l'ordre de~6 km d'équivalent air pour des muons de quelques GeV):
 \[
-P(\theta)\approx \exp\!\Bigl(-\bigl(\tfrac{X(0)}{\Lambda_\mu}\bigr)\tfrac1{\cos\theta}\Bigr)
+P(\theta)\approx \exp\!\Bigl(-\tfrac{L(0)}{\Lambda_\mu}\tfrac1{\cos\theta}\Bigr)
 \]
-Si $\tfrac{X(0)}{\Lambda_\mu}$ n'est pas trop grand (typiquement 1--3), on peut approximer 
+Si $\tfrac{L(0)}{\Lambda_\mu}$ n'est pas trop grand (typiquement 1--3), on peut approximer pour des petits angles~$\theta$:
 \[
 \exp\!\Bigl(-\tfrac1{\cos\theta}\tfrac{X(0)}{\Lambda_\mu}\Bigr)\sim\cos^n\theta
 \]
 pour un certain~$n$. Les valeurs réalistes donnent effectivement un $n\approx2$. En réalité, le spectre en énergie entre aussi en jeu : les muons plus inclinés doivent avoir une énergie plus grande pour survivre (sinon ils se désintègrent en route), ce qui modifie légèrement l'exposant~$n$ en fonction du seuil d'énergie considéré. 
 
-On osberve que la methode de mesure n'est pas entierment satisfaisante. Si on arrive a mettre en evidence une tendance, la modelisation des données est assez aproximative. C'est pourquoi on peut alors utiliser un autre dispositif experimental.
+On osberve que la méthode de mesure n'est pas entierment satisfaisante.
+Si on arrive à mettre en évidence une tendance, la modelisation des données est assez aproximative.
+C'est pourquoi on peut alors utiliser un autre dispositif experimental.
 
 \subsection{Deuxième méthode de mesure}
 
 
-\begin{figure}
-  
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.3\textwidth]{Images/matrice_scint.jpg}
+  \caption{Montage expérimental de la matrice de scintillateurs. On voit que les scintillateurs sont placés en quadrillage, ce qui permet de détecter les muons qui passent dans la direction des scintillateurs.}
+  \label{fig:scintillateur}
 \end{figure}
-Le principe est le suivant : on ne deplace plus les scintillateurs mais on en place plus. On forme une matrice de scintilatteur domme on peut le voir figure METTRE LA REf et schematisé sur la figure \ref{fig:matrice_scintillateur}.
-Ainsi, en detenctant de la meme maniere les coincidences entre les scintillateur on peut retarcer le trajet du muons s'il sagit d'un muon. 
+
+
+Le principe est le suivant : on ne deplace plus les scintillateurs mais on en place plus. 
+On forme une matrice de scintilatteur domme on peut le voir figure \ref{fig:scintillateur} et schematisé sur la figure \ref{fig:matrice_scintillateur}.
+Ainsi, en detenctant de la même maniere les coincidences entre les scintillateur on peut retracer le trajet du muons, s'il sagit d'un muon. 
 Il faut alors prendre soin a re-optimiser les scintillateurs pour qu'ils soient tous dans la meme zone de fonctionnement.
-\begin{figure}[H]
+
+\begin{figure}[!h]
   \begin{minipage}
   {0.45\textwidth}
     \centering
@@ -595,10 +608,10 @@ Il faut alors prendre soin a re-optimiser les scintillateurs pour qu'ils soient 
   \end{minipage}
 \end{figure}
 
-Il sagit de choisir le bon treshold. Nous avons commencé par tracer grossierement les caracteristiques de deux scintillateurs aleatoirement chouisis. Ces resultats sont representé figure \ref{fig:caracteristique_scintillateur_2}.
- On appercoit qu'ils ont sensiblemtn les memes caracteristiques. On suppose donc que, etant de la meme facture, tous se comportent sensiblement pareil. On pose donc un treshold à TRHS = 22mV.
+Il s'agit de choisir le bon treshold. Nous avons commencé par tracer grossierement les caracteristiques de deux scintillateurs aleatoirement choisis. Ces résultats sont representés figure \ref{fig:caracteristique_scintillateur_2}.
+ On appercoit qu'ils ont sensiblement les mêmes caractéristiques. On suppose donc que, étant de  même facture, tous se comportent sensiblement pareil. On pose donc un treshold à \textbf{TRHS = 22mV}.
 
-\begin{figure}[H]
+\begin{figure}[!h]
   \begin{minipage}
   {0.45\textwidth}
     \centering
@@ -615,77 +628,57 @@ Il sagit de choisir le bon treshold. Nous avons commencé par tracer grossiereme
   \end{minipage}
 \end{figure}
 
-On peut alors lancer une longue aquisitiopn de données. 
+On peut alors lancer une longue acquisition de données. 
 On a pris soin de bien choisir la zone de fonctionnement des scintillateurs pour qu'ils soient tous dans la meme zone de fonctionnement. 
 On analyse alors les données et on trace les occurences des angles en fonction de l'angle pour essayer de verifier la loi $\cos^2\theta$.
 Il faut faire attention a bien normaliser les resultats en fonction du nombre de combinaisons possibles correspondantes pour chaque angle.
-Les resulktats obtentus sont representé figure \ref{fig:cos2s_2}.
+Les resultats obtentus sont representé figure \ref{fig:cos2s_2}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{Images/distribution_angulaire.png}
-  \caption{Nombre de muons corrigé par le nombre de combinaisons possibles mesuré en fonction de l'angle d'incidence $\theta$. On observe une décroissance du flux avec l'angle, confirmant la loi $\cos^2\theta$. On note l'écartement au modèle aux grands angles.}
+  \caption{Nombre de muons corrigé par le nombre de combinaisons possibles mesuré en fonction de l'angle d'incidence $\theta$. On observe une décroissance du flux avec l'angle, confirmant la loi $\cos^2\theta$. On note l'écartement au modèle aux grands angles.
+  On note aussi la différence de qualitée des mesures entre 3 scintillateurs et la matrice de scintillateurs.}
   \label{fig:cos2s_2}
 \end{figure}
 
-\newpage
 
 \section{Mesure de l’énergie d’un muon}
-Les muons cosmiques arrivant au sol possèdent un spectre continu d’énergies s’étendant de centaines de MeV à plusieurs dizaines de GeV. Leur énergie moyenne est d’environ 3–4 GeV, et un grand nombre sont minimisants (c’est-à-dire déposent l’énergie minimum par unité de longueur dans la matière, comme des particules traversant vite sans se freiner complètement). Dans cette section, nous cherchons à caractériser expérimentalement la manière dont les muons interagissent avec la matière, en particulier en observant combien d’énergie ils déposent dans le détecteur et comment un absorbeur de plomb placé sur leur trajectoire affecte le comptage.
 
-\begin{itemize}
-  \item Dépôt d’énergie dans le scintillateur : distribution de Landau.
-  \item Expérience avec absorbeur de plomb : pertes par ionisation, bremsstrahlung et capture.
-  \item Analyse des effets expérimentaux : baisse de 15\% du taux de coïncidence, augmentation du dépôt d’énergie moyen.
-\end{itemize}
+Le principe de l’expérience repose sur l’atténuation du flux de muons cosmiques lorsqu’on interpose des plaques de plomb entre les particules incidentes et un détecteur à scintillateurs. Seuls les muons ayant une énergie suffisante pour traverser l’épaisseur de plomb atteignent le détecteur.
+Ainsi, plus l’épaisseur augmente, plus le nombre de muons détectés diminue, ce qui permet d’obtenir des informations sur leur énergie.
 
-Dépôt d’énergie dans le scintillator (spectre de Landau) : Lorsqu’un muon traverse un scintillateur de épaisseur donnée, l’énergie qu’il y perd par ionisation fluctue d’un événement à l’autre. Ces fluctuations de $dE$ proviennent de processus stochastiques : un muon peut perdre un peu plus d’énergie s’il crée un delta-ray (électron secondaire de haute énergie) ou un peu moins s’il traverse sans collision violente. La distribution théorique du dépôt d’énergie dans une mince couche de matière est décrite par la statistique de Landau (distribution de Landau), caractérisée par un pic le plus probable et une longue traîne vers les hautes énergies perdues. Typiquement, pour un muon minimum ionisant traversant ~1 cm de plastique (1–1,2 g/cm²), le dépôt d’énergie le plus probable est de l’ordre de 1–2 MeV, alors que la moyenne de la distribution est légèrement supérieure (quelques MeV) en raison de la contribution de la traîne. Dans notre détecteur, cette énergie déposée se traduit en un nombre de photons scintillants puis en une amplitude de signal PM proportionnelle. En enregistrant ces amplitudes (via un multi-channel analyzer par exemple), on pourrait observer le spectre d’énergie déposée : on s’attend à un pic de Landau assez large centré aux alentours de 1–2 MeV, avec une queue étendue jusqu’à peut-être 5–10 MeV due aux pertes occasionnelles plus importantes.
+La méthode expérimentale consiste à mesurer le nombre de coups par minute $N(x)$ en fonction de l’épaisseur de plomb $x$.
+ À chaque valeur de $x$, on associe une énergie minimale $E_{\min}(x)$ nécessaire pour traverser cette épaisseur, estimée par $E_{\min}(x) \approx \frac{dE}{dx} \cdot x \approx 19.3 \cdot x$ (en MeV), en supposant une perte d’énergie moyenne constante dans le plomb.
 
-Dans le cadre de cette expérience, plutôt que de mesurer directement le spectre d’amplitude (ce qui nécessiterait un spectromètre d’amplitude calibré), nous avons étudié le dépôt d’énergie de manière indirecte en examinant l’effet d’un absorbeur sur le taux de comptage et sur le signal.
-
-Expérience avec absorbeur de plomb : Nous avons inséré une plaque de plomb de 5 cm d’épaisseur au-dessus du scintillateur supérieur du télescope, de sorte que les muons devaient traverser ce blindage avant d’entrer dans les scintillateurs. Le plomb, matériau de numéro atomique élevé (Z=82) et de densité $\rho \approx 11,3$ g/cm³, sert de filtre absorbant : il va ralentir les muons en leur faisant perdre de l’énergie supplémentaire, et potentiellement en arrêter certains. Plusieurs phénomènes se produisent lorsqu’un muon traverse du plomb :
-	•	Perte d’énergie par ionisation accrue : La densité élevée fait qu’en 5 cm de Pb (soit ~56,5 g/cm²), un muon va perdre environ $\Delta E \approx (dE/dx) \times 56,5$ g/cm². Pour un muon minimum ionisant, $dE/dx \sim 1,5 - 2$ MeV·cm²/g dans le plomb (valeur typique dans les métaux), donc $\Delta E \sim 85$ à 110 MeV. Ainsi, un muon doit avoir au moins ~100 MeV d’énergie cinétique pour traverser cette épaisseur de plomb. Or pratiquement tous les muons cosmiques atteignant le sol ont bien plus que 100 MeV (puisque déjà 2 GeV sont perdus dans l’atmosphère). Donc la plupart des muons ne seront pas complètement arrêtés par 5 cm de plomb ; ils en ressortiront simplement un peu moins énergétiques (par exemple, un muon de 1 GeV ressort à ~0,9 GeV).
-	•	Production de rayonnement de freinage (bremsstrahlung) et secondaires : Un muon de plusieurs GeV traversant du plomb peut, s’il interagit avec le champ coulombien des noyaux, émettre un photon gamma de bremsstrahlung ou produire un changement de régime pour des énergies extrêmes. Cependant, le muon étant ~200 fois plus lourd que l’électron, le rayonnement de freinage est fortement supprimé par rapport à un électron. En dessous de plusieurs centaines de GeV, le mécanisme dominant de perte reste l’ionisation. Donc pour nos énergies (quelques GeV au plus), la contribution radiative dans 5 cm de plomb est mineure. Il peut y avoir création de quelques électrons δ (delta) dans le plomb, qui eux-mêmes pourraient donner un surcroît de lumière s’ils atteignent le scintillator.
-	•	Arrêt et capture des muons lents : Si un muon initialement peu énergétique (disons ~0,2–0,3 GeV) arrive dans le plomb, il se peut qu’il s’y arrête entièrement. Un muon stoppé dans le plomb (surtout s’il est μ⁻) a une probabilité de se faire capturer par un noyau de plomb (capture muonique) au lieu de se désintégrer, ce qui le fait disparaître sans émettre le signal attendu dans le scintillateur. Cependant, étant donné le spectre des muons cosmiques (très peu ont <300 MeV en arrivant au sol, car les moins énergétiques ont déjà majoritairement désintégré en vol), le nombre de muons arrêtés dans 5 cm de plomb devrait être faible. On estime que le plomb absorbe une fraction notable du flux seulement en dessous d’environ 1 GeV d’énergie muon. En d’autres termes, le plomb va retirer principalement la composante la plus “lente” du spectre et ralentir les autres.
-
-Expérimentalement, nous avons constaté deux effets en présence du plomb :
-1. Baisse du taux de coïncidence~: Le nombre de muons détectés en coïncidence $A \land B$ a diminué d'environ $\sim15\%$ lorsqu'on place une plaque de plomb. Cette diminution suggère que $\sim15\%$ des muons franchissant sans absorbeur sont soit arrêtés dans le plomb, soit retardés ou déviés au point de ne plus donner de coïncidence dans la fenêtre temporelle. Ce résultat concorde avec l'idée que le plomb filtre préférentiellement les muons de basse énergie du spectre. 
-
-Une estimation simplifiée~: si le spectre en énergie $N(E)$ est presque plat sous quelques GeV puis décroît fortement en dessous de $0{,}5$~GeV, retirer les muons de $E<0{,}3$~GeV peut représenter $10$--$20\%$ du flux total. Notre perte mesurée de $\sim15\%$ corrobore cette hypothèse. 
-
-On peut aussi exprimer cela en termes de longueur d’atténuation dans le plomb~: sur une épaisseur de 5~cm, on observe une atténuation de $\sim0{,}15$, soit 
+L’analyse des données repose sur l’ajustement de la courbe $N(x)$ selon une loi de puissance dérivée du spectre attendu des muons cosmiques : $N(E_{\min}) \propto E_{\min}^{1 - \gamma}$, avec $\gamma \approx 2.7$. Ce modèle permet alors d’estimer l’énergie moyenne des muons détectés via
 \[
-  L \,=\, \frac{5\,\mathrm{cm}}{0{,}15}\approx33\,\mathrm{cm} .
+\langle E \rangle \approx \frac{\gamma - 1}{\gamma - 2} \cdot E_{\min,\max},
 \]
-L'épaisseur de demi-atténuation (réduction de moitié du flux) vaut alors
-\[
-  d_{1/2} \,=\, 5\,\frac{\ln2}{\ln(1/0{,}85)} \approx20\,\mathrm{cm} .
-\]
+où $E_{\min,\max}$ correspond à la plus grande épaisseur de plomb utilisée.
 
-Ces ordres de grandeur illustrent la grande pénétration des muons, comparée par exemple aux rayons gamma pour lesquels quelques centimètres de plomb suffisent souvent à réduire le flux de moitié.
+Cependant, on observe parfois une \textit{hausse du nombre de coups pour de faibles épaisseurs de plomb}. Ce phénomène s’explique par des \textit{interactions secondaires} : les muons (ou autres particules) peuvent interagir dans le plomb et produire des électrons, photons (rayonnement de freinage), ou autres particules secondaires, qui peuvent elles-mêmes être détectées par les scintillateurs. Ces événements parasites peuvent fausser les mesures et doivent être pris en compte dans l’interprétation des résultats.
 
+\begin{figure}[!h]
+  \begin{minipage}
+  {0.45\textwidth}
+  \centering
+  \includegraphics[width=0.7\textwidth]{Images/energie.png}
+  \caption{Le nombre de coups diminue globalement avec l’épaisseur, traduisant l’atténuation des muons. Une légère hausse initiale peut être observée, due à la production de particules secondaires dans le plomb, susceptibles d’être détectées par les scintillateurs }
 
-Une estimation simplifiée~: si le spectre en énergie $N(E)$ est presque plat sous quelques GeV puis décroît fortement en dessous de $0{,}5$~GeV, retirer les muons de $E<0{,}3$~GeV peut représenter $10$--$20\%$ du flux total. Notre perte mesurée de $\sim15\%$ corrobore cette hypothèse. 
+  \label{fig:energie_1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.7\textwidth]{Images/plomb.jpg}
+  \caption{Montage expérimental pour la mesure de l’énergie des muons. On place des plaques de plomb de différentes épaisseurs au dessus des scintillateurs.}
+  \label{fig:energie_2}
+  \end{minipage}
+  \end{figure}
+Les muons cosmiques perdent leur énergie dans la matière principalement par \textit{ionisation} et \textit{excitation des atomes}, mécanismes dominants à des énergies intermédiaires (de quelques centaines de MeV à quelques GeV). À plus haute énergie, des processus radiatifs comme le \textit{bremsstrahlung}, la \textit{production de paires} ou des \textit{interactions hadroniques} avec les noyaux peuvent également contribuer. Ces processus peuvent générer des \textit{particules secondaires} (électrons, photons, pions, neutrons...) susceptibles d’être détectées par les scintillateurs, en particulier dans les premières couches de plomb. Ce mécanisme explique l’excès de comptage observé pour de faibles épaisseurs.
 
-On peut aussi exprimer cela en termes de longueur d'atténuation dans le plomb~: sur une épaisseur de 5~cm, on observe une atténuation de $\sim0{,}15$, soit 
-\[
-  L \,=\, \frac{5\,\mathrm{cm}}{0{,}15}\approx33\,\mathrm{cm} .
-\]
-L'épaisseur de demi-atténuation (réduction de moitié du flux) vaut alors
-\[
-  d_{1/2} \,=\, 5\,\frac{\ln2}{\ln(1/0{,}85)} \approx20\,\mathrm{cm} .
-\]
-
-Ces ordres de grandeur illustrent la grande pénétration des muons, comparée par exemple aux rayons gamma pour lesquels quelques centimètres de plomb suffisent souvent à réduire le flux de moitié.
-
-2.	Augmentation du dépôt d’énergie moyen dans le scintillateur : Bien que nous n’ayons pas mesuré le spectre d’énergie de manière résolue, des indices qualitatifs montrent que les signaux de scintillation moyens étaient légèrement plus intenses avec l’absorbeur. Ceci peut s’expliquer par le fait que les muons sortant du plomb sont plus lents (ils ont perdu de l’énergie cinétique) et un muon plus lent dépose plus d’énergie par cm dans le scintillateur (le $dE/dx$ croît quand la vitesse diminue, selon la formule de Bethe-Bloch). Autrement dit, en filtrant les muons, le plomb tend à “rendre les muons plus ionisants”. Par ailleurs, certains muons peuvent interagir dans le plomb et produire des secondaires (par exemple un bremsstrahlung donnant une cascade électromagnétique) qui ensuite ajoutent du dépôt d’énergie dans le scintillateur. Ces phénomènes pourraient se manifester par un léger durcissement du spectre de scintillation (plus d’événements dans la traîne de Landau). Faute d’analyse spectrale détaillée, nous notons simplement que la présence du plomb semble accroître légèrement la luminosité moyenne par événement, ce qui est qualitativement cohérent avec l’augmentation de $dE/dx$ à moindre vitesse.
-
-En combinant ces observations, on peut dresser un petit bilan énergétique : la majorité des muons cosmiques au sol possèdent quelques GeV et traverseront plusieurs décimètres de plomb sans être absorbés. Leur dépôt d’énergie dans 1 cm de plastique est modeste (quelques MeV), ce qui justifie qu’ils soient qualifiés de particules minimum ionisantes (MIP). Le fait qu’une épaisseur aussi conséquente que 5 cm de plomb n’ait réduit le flux que de 15 pourcent confirme la forte pénétration des muons comparée à d’autres rayonnements. En guise de comparaison, un rayon gamma de 3 GeV aurait une longueur d’atténuation bien plus courte dans le plomb via création de paires et diffusion Compton, et un neutron de haute énergie verrait aussi des interactions nucléaires. Les muons, eux, interagissent quasiment exclusivement par ionisation à ces énergies, ce qui explique leur pouvoir de pénétration.
-
-Du point de vue théorique, la perte d’énergie moyenne par ionisation suit la formule de Bethe-Bloch. Pour un muon de quelques GeV dans la matière, $-dE/dx \approx 1,5-2$ MeV·cm²/g dans les matériaux denses, puis augmente légèrement à plus basse énergie (effet relativiste minimal vers 3–4 MeV·cm²/g à $\beta \approx 0,96$, avant le régime de ralentissement non-relativiste où $dE/dx$ remonte fortement). Notre expérience, en ne détectant qu’une fraction des muons stoppés (les plus lents capturés dans le plomb pouvant nous échapper), ne permet pas de tracer toute la courbe, mais elle est cohérente avec ces ordres de grandeur.
-
-En conclusion, l’insertion d’un absorbeur de plomb a permis de tester la dépendance en énergie du flux de muons : on observe bien une légère réduction du taux due à l’élimination des muons de basse énergie, et on infère que la plupart des muons restants sont encore très pénétrants. Le détecteur à scintillation, de son côté, enregistre un dépôt d’énergie par muon en accord avec le comportement attendu d’un MIP (quelques MeV, distribution de Landau). Ces constats confirment la nature faiblement ionisante mais très pénétrante des muons cosmiques.
-
+Enfin, des incertitudes statistiques (bruit de comptage de type Poissonien) et systémiques (approximation de $dE/dx$, fluctuations d’énergie déposée, biais de sélection) limitent la précision de la mesure. Néanmoins, cette approche permet une estimation réaliste de l’ordre de grandeur de l’énergie des muons cosmiques (typiquement quelques centaines de MeV à quelques GeV), tout en illustrant des effets de physique des particules dans la matière.
 \section{Mesure du temps de vie de muon}
 Le muon est une particule instable qui se désintègre selon la réaction $\mu^- \to e^- + \bar{\nu}e + \nu\mu$ (ou $\mu^+ \to e^+ + \nu_e + \bar{\nu}_\mu$ pour l’antimuon). La durée de vie moyenne d’un muon au repos est $\tau \approx 2,2~\mu$s. Cette valeur relativement courte peut être mesurée en détectant des muons qui s’arrêtent dans un absorbeur puis en chronométrant le délai jusqu’à l’émission de l’électron de désintégration. C’est une expérience classique de physique nucléaire, qui offre une vérification directe de la désintégration exponentielle et permet d’illustrer quantitativement la dilatation du temps (puisque les muons cosmiques en vol “vivent” beaucoup plus longtemps que $2~\mu$s dans notre référentiel).
 
@@ -702,7 +695,8 @@ Principe expérimental~: Pour mesurer le temps de vie du muon, nous avons config
   \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique multi‑voies (MCA) qui remplit un histogramme du nombre d’événements en fonction de V, c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
 \end{itemize}
 
-Pour fiabiliser la mesure, on prend quelques précautions supplémentaires : par exemple, on insère un délai et une porte logique pour ne pas prendre en compte les désintégrations trop promptes (il peut y avoir un rayonnement induit dans B juste après l’arrêt du muon, comme des rayons X de désexcitation atomique, ou un muon prompt qui traverse trop vite). Dans notre cas, un veto de quelques dizaines de ns est appliqué autour du start pour éviter les contaminations. De plus, on doit tenir compte du bruit de fond de stop accidentel : il est possible qu’aucune désintégration ne soit détectée (muon capturé ou désintégré en émettant un électron vers le haut non intercepté) et qu’un autre muon indépendant passe plus tard déclenchant un stop fortuit. Cela crée un fond à long temps. Pour corriger, on peut mesurer séparément le niveau de ces arrêts aléatoires (par exemple en regardant les événements de stop très tardifs au-delà de quelques fois $\tau$) et le soustraire.
+Pour fiabiliser la mesure, on prend quelques précautions supplémentaires : par exemple, on insère un délai et une porte logique pour ne pas prendre en compte les désintégrations trop promptes (il peut y avoir un rayonnement induit dans B juste après l’arrêt du muon, comme des rayons X de désexcitation atomique, ou un muon prompt qui traverse trop vite).
+Dans notre cas, un veto de quelques dizaines de ns est appliqué autour du start pour éviter les contaminations. De plus, on doit tenir compte du bruit de fond de stop accidentel : il est possible qu’aucune désintégration ne soit détectée (muon capturé ou désintégré en émettant un électron vers le haut non intercepté) et qu’un autre muon indépendant passe plus tard déclenchant un stop fortuit. Cela crée un fond à long temps. Pour corriger, on peut mesurer séparément le niveau de ces arrêts aléatoires (par exemple en regardant les événements de stop très tardifs au-delà de quelques fois $\tau$) et le soustraire.
 
 Résultats obtenus : Le spectre de temps de désintégration mesuré suit bien une loi exponentielle décroissante. Sur l’histogramme des durées de vie $N(\Delta t)$, on observe un nombre important d’événements aux courts intervalles, puis ce nombre décroît au fur et à mesure que l’intervalle augmente. En traçant $N(\Delta t)$ en échelle semi-logarithmique, les points s’alignent approximativement sur une droite, signature caractéristique d’une décroissance exponentielle $N(t) = N_0 e^{-t/\tau}$. Un ajustement par une loi exponentielle nous a donné une valeur de temps de vie $\tau_{\mu,\text{mesuré}} = 2,08 \pm 0,15~\mu$s, en accord avec la valeur établie de $2,197,03 \pm 0,00022~\mu$s dans la littérature. L’incertitude de notre mesure est relativement grande (quelques %), principalement à cause du nombre limité de muons arrêtés collectés (quelques milliers d’événements) et du niveau de bruit de fond non négligeable à soustraire. Néanmoins, la compatibilité de $\tau$ avec la référence à mieux de 5% valide clairement la démarche.
 
