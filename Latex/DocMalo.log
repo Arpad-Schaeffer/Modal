@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.20)  23 MAY 2025 23:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.20)  24 MAY 2025 20:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -494,20 +494,7 @@ Package caption Info: french babel package is loaded.
 \c@continuedfloat=\count313
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
-)
-   defining Unicode char U+03BC (decimal 956)
-   defining Unicode char U+207B (decimal 8315)
-   defining Unicode char U+207A (decimal 8314)
-   defining Unicode char U+2212 (decimal 8722)
-   defining Unicode char U+2192 (decimal 8594)
-   defining Unicode char U+03B4 (decimal 948)
-   defining Unicode char U+1D49 (decimal 7497)
-   defining Unicode char U+2074 (decimal 8308)
-   defining Unicode char U+03C0 (decimal 960)
-   defining Unicode char U+03BD (decimal 957)
- (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
-Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
- (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks33
 \pgfutil@tempdima=\dimen259
 \pgfutil@tempdimb=\dimen260
@@ -646,82 +633,133 @@ Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepend=\dimen297
 ) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+)) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen298
+\pgffor@skip=\dimen299
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
+)) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count326
+\pgfplotmarksize=\dimen300
+)
+\tikz@lastx=\dimen301
+\tikz@lasty=\dimen302
+\tikz@lastxsaved=\dimen303
+\tikz@lastysaved=\dimen304
+\tikz@lastmovetox=\dimen305
+\tikz@lastmovetoy=\dimen306
+\tikzleveldistance=\dimen307
+\tikzsiblingdistance=\dimen308
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count327
+\tikznumberofchildren=\count328
+\tikznumberofcurrentchild=\count329
+\tikz@fig@count=\count330
+ (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count331
+\pgfmatrixcurrentcolumn=\count332
+\pgf@matrix@numberofcolumns=\count333
+)
+\tikz@expandcount=\count334
+ (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+   defining Unicode char U+03BC (decimal 956)
+   defining Unicode char U+207B (decimal 8315)
+   defining Unicode char U+207A (decimal 8314)
+   defining Unicode char U+2212 (decimal 8722)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+03B4 (decimal 948)
+   defining Unicode char U+1D49 (decimal 7497)
+   defining Unicode char U+2074 (decimal 8308)
+   defining Unicode char U+03C0 (decimal 960)
+   defining Unicode char U+03BD (decimal 957)
+ (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
+Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
+ (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks43
-\verbatim@line=\toks44
+\every@verbatim=\toks45
+\verbatim@line=\toks46
 \verbatim@in@stream=\read4
 ) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
  (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box64
-\tcb@upperbox=\box65
-\tcb@lowerbox=\box66
-\tcb@phantombox=\box67
-\c@tcbbreakpart=\count326
-\c@tcblayer=\count327
-\c@tcolorbox@number=\count328
-\l__tcobox_tmpa_box=\box68
-\l__tcobox_tmpa_dim=\dimen298
-\tcb@temp=\box69
-\tcb@temp=\box70
-\tcb@temp=\box71
-\tcb@temp=\box72
+\tcb@titlebox=\box68
+\tcb@upperbox=\box69
+\tcb@lowerbox=\box70
+\tcb@phantombox=\box71
+\c@tcbbreakpart=\count335
+\c@tcblayer=\count336
+\c@tcolorbox@number=\count337
+\l__tcobox_tmpa_box=\box72
+\l__tcobox_tmpa_dim=\dimen309
+\tcb@temp=\box73
+\tcb@temp=\box74
+\tcb@temp=\box75
+\tcb@temp=\box76
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'french'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 44.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 45.
  (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count329
-\l__pdf_internal_box=\box73
-)
-No file DocMalo.aux.
+\l__color_backend_stack_int=\count338
+\l__pdf_internal_box=\box77
+) (DocMalo.aux (variationHT.aux) (treshold.aux) (coincidence_sans_delais.aux) (recouvrement_petit_width.aux) (recouvrment_grand_width.aux) (angle_nul.aux) (angle_non_nul.aux) (range_des_angles.aux) (matrice.aux) (matrice_et_trajs.aux))
 \openout1 = `DocMalo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Info: Redefining \degres on input line 44.
-LaTeX Info: Redefining \up on input line 44.
-Package hyperref Info: Link coloring OFF on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Info: Redefining \degres on input line 45.
+LaTeX Info: Redefining \up on input line 45.
+Package hyperref Info: Link coloring OFF on input line 45.
+ (DocMalo.out) (DocMalo.out)
 \@outlinefile=\write4
 \openout4 = `DocMalo.out'.
 
-(C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count330
-\scratchdimen=\dimen299
-\scratchbox=\box74
-\nofMPsegments=\count331
-\nofMParguments=\count332
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count333
-\MPscratchDim=\dimen300
-\MPnumerator=\count334
-\makeMPintoPDFobject=\count335
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count339
+\scratchdimen=\dimen310
+\scratchbox=\box78
+\nofMPsegments=\count340
+\nofMParguments=\count341
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count342
+\MPscratchDim=\dimen311
+\MPnumerator=\count343
+\makeMPintoPDFobject=\count344
+\everyMPtoPDFconversion=\toks48
 ) (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -762,20 +800,20 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 44.
-Package microtype Info: Applying patch `item' on input line 44.
-Package microtype Info: Applying patch `toc' on input line 44.
-Package microtype Info: Applying patch `eqnum' on input line 44.
-Package microtype Info: Applying patch `footnote' on input line 44.
-Package microtype Info: Applying patch `verbatim' on input line 44.
-LaTeX Info: Redefining \microtypesetup on input line 44.
+LaTeX Info: Redefining \microtypecontext on input line 45.
+Package microtype Info: Applying patch `item' on input line 45.
+Package microtype Info: Applying patch `toc' on input line 45.
+Package microtype Info: Applying patch `eqnum' on input line 45.
+Package microtype Info: Applying patch `footnote' on input line 45.
+Package microtype Info: Applying patch `verbatim' on input line 45.
+LaTeX Info: Redefining \microtypesetup on input line 45.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 44.
+LaTeX Info: Redefining \showhyphens on input line 45.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -784,12 +822,12 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<polytechnique-armes.pdf, id=6, 195.20929pt x 257.65259pt>
+<polytechnique-armes.pdf, id=102, 195.20929pt x 257.65259pt>
 File: polytechnique-armes.pdf Graphic file (type pdf)
 <use polytechnique-armes.pdf>
-Package pdftex.def Info: polytechnique-armes.pdf  used on input line 46.
+Package pdftex.def Info: polytechnique-armes.pdf  used on input line 47.
 (pdftex.def)             Requested size: 268.93037pt x 354.92172pt.
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 46.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 47.
  (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -797,1867 +835,323 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Info: Redefining \\ on input line 46.
-<polytechnique-filetcourt.pdf, id=7, 28.40613pt x 2.1681pt>
+LaTeX Info: Redefining \\ on input line 47.
+<polytechnique-filetcourt.pdf, id=103, 28.40613pt x 2.1681pt>
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 46.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 47.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 46.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 47.
  (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 46.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 47.
  (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 46.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 47.
  (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 46.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 47.
  (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 46.
+(Font)              <17.28> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 46.
+(Font)              <12> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 46.
-<polytechnique-logovert.pdf, id=8, 322.46072pt x 560.54622pt>
+(Font)              <10> on input line 47.
+<polytechnique-logovert.pdf, id=104, 322.46072pt x 560.54622pt>
 File: polytechnique-logovert.pdf Graphic file (type pdf)
 <use polytechnique-logovert.pdf>
-Package pdftex.def Info: polytechnique-logovert.pdf  used on input line 46.
+Package pdftex.def Info: polytechnique-logovert.pdf  used on input line 47.
 (pdftex.def)             Requested size: 66.82324pt x 116.1684pt.
  [1
 
 {C:/Users/padou/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./polytechnique-armes.pdf> <./polytechnique-filetcourt.pdf> <./polytechnique-logovert.pdf>]
-LaTeX Info: Redefining \\ on input line 48.
-<polytechnique-filetlongrouge.pdf, id=46, 124.21407pt x 2.1681pt>
-File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
-<use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 48.
-(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
-
-No file DocMalo.toc.
-\tf@toc=\write5
-\openout5 = `DocMalo.toc'.
-
 LaTeX Info: Redefining \\ on input line 49.
+<polytechnique-filetlongrouge.pdf, id=142, 124.21407pt x 2.1681pt>
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
 Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 49.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
-No file DocMalo.lof.
-\tf@lof=\write6
-\openout6 = `DocMalo.lof'.
-
-<polytechnique-logohori.pdf, id=47, 625.50987pt x 227.64648pt>
+ (DocMalo.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 3.
+<polytechnique-logohori.pdf, id=165, 625.50987pt x 227.64648pt>
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 50.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 31.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
+ [2
 
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 50.
+ <./polytechnique-logohori.pdf> <./polytechnique-filetlongrouge.pdf>])
+\tf@toc=\write5
+\openout5 = `DocMalo.toc'.
 
-[2
-
- <./polytechnique-logohori.pdf> <./polytechnique-filetlongrouge.pdf>]
-LaTeX Info: Redefining \\ on input line 52.
+LaTeX Info: Redefining \\ on input line 50.
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 52.
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 50.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+ (DocMalo.lof
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 17.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [3])
+\tf@lof=\write6
+\openout6 = `DocMalo.lof'.
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 51.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [4{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+LaTeX Info: Redefining \\ on input line 53.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 53.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/17.28'.
 (microtype)             Ignoring protrusion settings for this character.
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 53.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 54.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 54.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 54.
-
-
-LaTeX Warning: Citation `wikimuon' on page 3 undefined on input line 54.
-
-
-LaTeX Warning: Citation `knoll2010' on page 3 undefined on input line 54.
-
-
-LaTeX Warning: Citation `bethe1930' on page 3 undefined on input line 65.
-
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 66.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 67.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 66.
-
-[3{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+ [5{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 68.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 69.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 80.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 81.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 80.
-
-[4]
-LaTeX Info: Redefining \\ on input line 82.
+ [6]
+LaTeX Info: Redefining \\ on input line 83.
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 82.
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 83.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
-<Images/Montage_Scintillateurs.png, id=86, 1284.8pt x 963.6pt>
+<Images/Montage_Scintillateurs.png, id=293, 1284.8pt x 963.6pt>
 File: Images/Montage_Scintillateurs.png Graphic file (type png)
 <use Images/Montage_Scintillateurs.png>
-Package pdftex.def Info: Images/Montage_Scintillateurs.png  used on input line 98.
+Package pdftex.def Info: Images/Montage_Scintillateurs.png  used on input line 99.
 (pdftex.def)             Requested size: 435.32422pt x 326.4875pt.
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 103.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 104.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 103.
-
-[5 <./Images/Montage_Scintillateurs.png>]
+ [7 <./Images/Montage_Scintillateurs.png>]
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 105.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 106.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 134.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 135.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 134.
-
-[6]
+ [8]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 142.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 143.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 142.
-
-[7]
+ [9]
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 144.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 145.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
-<Images/PhotoMultiplierTubeAndScintillator.png, id=103, 501.875pt x 200.75pt>
+<Images/PhotoMultiplierTubeAndScintillator.png, id=310, 501.875pt x 200.75pt>
 File: Images/PhotoMultiplierTubeAndScintillator.png Graphic file (type png)
 <use Images/PhotoMultiplierTubeAndScintillator.png>
-Package pdftex.def Info: Images/PhotoMultiplierTubeAndScintillator.png  used on input line 160.
+Package pdftex.def Info: Images/PhotoMultiplierTubeAndScintillator.png  used on input line 161.
 (pdftex.def)             Requested size: 338.58632pt x 135.44218pt.
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 176.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 176.
-
-[8 <./Images/PhotoMultiplierTubeAndScintillator.png>]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
 Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 177.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 177.
-
-[9]
+ [10 <./Images/PhotoMultiplierTubeAndScintillator.png>]
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 178.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [11]
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 179.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 180.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
-<Images/Montage_Electrique.png, id=116, 1284.8pt x 963.6pt>
+<Images/Montage_Electrique.png, id=323, 1284.8pt x 963.6pt>
 File: Images/Montage_Electrique.png Graphic file (type png)
 <use Images/Montage_Electrique.png>
-Package pdftex.def Info: Images/Montage_Electrique.png  used on input line 207.
+Package pdftex.def Info: Images/Montage_Electrique.png  used on input line 208.
 (pdftex.def)             Requested size: 435.32422pt x 326.4875pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 211.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 212.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 211.
-
-[10]
+ [12]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 217.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 218.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 217.
-
-[11 <./Images/Montage_Electrique.png>]
-LaTeX Info: Redefining \\ on input line 219.
+ [13 <./Images/Montage_Electrique.png>]
+LaTeX Info: Redefining \\ on input line 220.
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 219.
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 220.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 220.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 221.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
-<Images/Desexitation_Scintillateur_2.png, id=127, 609.2361pt x 395.7987pt>
+<Images/Desexitation_Scintillateur_2.png, id=335, 609.2361pt x 395.7987pt>
 File: Images/Desexitation_Scintillateur_2.png Graphic file (type png)
 <use Images/Desexitation_Scintillateur_2.png>
-Package pdftex.def Info: Images/Desexitation_Scintillateur_2.png  used on input line 237.
+Package pdftex.def Info: Images/Desexitation_Scintillateur_2.png  used on input line 238.
 (pdftex.def)             Requested size: 435.32422pt x 282.81877pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 241.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 242.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 241.
-
-[12]
+ [14]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 252.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 253.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 252.
-
-[13 <./Images/Desexitation_Scintillateur_2.png>]
+ [15 <./Images/Desexitation_Scintillateur_2.png>]
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 254.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 255.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
 \openout2 = `variationHT.aux'.
 
  (variationHT.tex
-variationHT.tex:3: Undefined control sequence.
-l.3 \tikzset
-            {every picture/.style={line width=0.75pt}} %set default line wid...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-variationHT.tex:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-variationHT.tex:9: Undefined control sequence.
-l.9 \draw
-           [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:11: Undefined control sequence.
-l.11 \draw
-            [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:13: Undefined control sequence.
-l.13 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:16: Undefined control sequence.
-l.16 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:18: Undefined control sequence.
-l.18 \draw
-            [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:20: Undefined control sequence.
-l.20 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:23: Undefined control sequence.
-l.23 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:25: Undefined control sequence.
-l.25 \draw
-            [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:27: Undefined control sequence.
-l.27 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:30: Undefined control sequence.
-l.30 \draw
-              (353.84,55.06) .. controls (393.84,25.06) and (394.24,101.52) ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:32: Undefined control sequence.
-l.32 \draw
-              (353.84,75.06) .. controls (393.84,45.06) and (394.24,101.52) ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:34: Undefined control sequence.
-l.34 \draw
-              (353.84,95.06) .. controls (393.84,65.06) and (394.24,101.52) ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:36: Undefined control sequence.
-l.36 \draw
-            [fill={rgb, 255:red, 255; green, 0; blue, 32 }  ,fill opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:38: Undefined control sequence.
-l.38 \draw
-             (489,26) -- (559,26) -- (559,66) -- (489,66) -- cycle(553,32) -...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:40: Undefined control sequence.
-l.40 \draw
-             (313.2,116.11) -- (368.64,116.11) -- (368.64,121.89) -- (313.2,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:42: Undefined control sequence.
-l.42 \draw
-             (313.2,121.89) -- (368.64,121.89) -- (368.64,127.68) -- (313.2,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:44: Undefined control sequence.
-l.44 \draw
-             (313.2,110.32) -- (368.64,110.32) -- (368.64,116.11) -- (313.2,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:47: Undefined control sequence.
-l.47 \draw
-              (340.64,102.64) -- (340.64,110.2) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:49: Undefined control sequence.
-l.49 \draw
-              (340.4,82.89) -- (340.49,87.27) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:51: Undefined control sequence.
-l.51 \draw
-              (339.78,62.58) -- (339.87,66.97) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:53: Undefined control sequence.
-l.53 \draw
-             (489,77) -- (559,77) -- (559,117) -- (489,117) -- cycle(553,83)...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:55: Undefined control sequence.
-l.55 \draw
-              (459,78) .. controls (491.84,77.28) and (458.64,103.68) .. (48...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:57: Undefined control sequence.
-l.57 \draw
-              (458,65) .. controls (490.84,64.28) and (458.64,51.68) .. (489...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:60: Undefined control sequence.
-l.60 \draw
-           (493,37) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:62: Undefined control sequence.
-l.62 \draw
-           (418,31.2) node [anchor=north west][inner sep=0.75pt]   [align=le...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:64: Undefined control sequence.
-l.64 \draw
-           (328.8,26.55) node [anchor=north west][inner sep=0.75pt]   [align...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:66: Undefined control sequence.
-l.66 \draw
-           (186.4,28.2) node [anchor=north west][inner sep=0.75pt]   [align=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:68: Undefined control sequence.
-l.68 \draw
-           (310,130) node [anchor=north west][inner sep=0.75pt]   [align=lef...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:70: Undefined control sequence.
-l.70 \draw
-           (495,84) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-variationHT.tex:72: Undefined control sequence.
-l.72 \draw
-           (503,95) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 72.
-(C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+ (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-variationHT.tex:74: Undefined control sequence.
-l.74 \draw
-           (530,93) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-variationHT.tex:77: LaTeX Error: \begin{figure} on input line 270 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+\openout2 = `treshold.aux'.
 
+ (treshold.tex)
+<Images/Threshold_Scintillateur_1.png, id=348, 634.5306pt x 395.7987pt>
+File: Images/Threshold_Scintillateur_1.png Graphic file (type png)
+<use Images/Threshold_Scintillateur_1.png>
+Package pdftex.def Info: Images/Threshold_Scintillateur_1.png  used on input line 289.
+(pdftex.def)             Requested size: 435.32422pt x 271.54927pt.
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 276.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 293.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 276.
-
-[14]
-Overfull \vbox (85.8488pt too high) has occurred while \output is active []
-
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 276.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 276.
-
-[15
+ [16
 
 {C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-]
-\openout2 = `treshold.aux'.
-
- (treshold.tex
-treshold.tex:3: Undefined control sequence.
-l.3 \tikzset
-            {every picture/.style={line width=0.75pt}} %set default line wid...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-treshold.tex:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-treshold.tex:9: Undefined control sequence.
-l.9 \draw
-           [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:11: Undefined control sequence.
-l.11 \draw
-            [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:13: Undefined control sequence.
-l.13 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:16: Undefined control sequence.
-l.16 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:18: Undefined control sequence.
-l.18 \draw
-            [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:20: Undefined control sequence.
-l.20 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:23: Undefined control sequence.
-l.23 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:25: Undefined control sequence.
-l.25 \draw
-            [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:27: Undefined control sequence.
-l.27 \draw
-            [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:30: Undefined control sequence.
-l.30 \draw
-              (353.84,55.06) .. controls (393.84,25.06) and (392,102) .. (43...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:32: Undefined control sequence.
-l.32 \draw
-              (353.84,75.06) .. controls (393.84,45.06) and (392,102) .. (43...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:34: Undefined control sequence.
-l.34 \draw
-              (353.84,95.06) .. controls (393.84,65.06) and (392,102) .. (43...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:36: Undefined control sequence.
-l.36 \draw
-            [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:38: Undefined control sequence.
-l.38 \draw
-             (564,12) -- (634,12) -- (634,52) -- (564,52) -- cycle(628,18) -...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:40: Undefined control sequence.
-l.40 \draw
-             (313.2,116.11) -- (368.64,116.11) -- (368.64,121.89) -- (313.2,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:42: Undefined control sequence.
-l.42 \draw
-             (313.2,121.89) -- (368.64,121.89) -- (368.64,127.68) -- (313.2,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:44: Undefined control sequence.
-l.44 \draw
-             (313.2,110.32) -- (368.64,110.32) -- (368.64,116.11) -- (313.2,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:47: Undefined control sequence.
-l.47 \draw
-              (340.64,102.64) -- (340.64,110.2) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:49: Undefined control sequence.
-l.49 \draw
-              (340.4,82.89) -- (340.49,87.27) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:51: Undefined control sequence.
-l.51 \draw
-              (339.78,62.58) -- (339.87,66.97) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:53: Undefined control sequence.
-l.53 \draw
-            [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:55: Undefined control sequence.
-l.55 \draw
-             (564,80) -- (634,80) -- (634,120) -- (564,120) -- cycle(628,86)...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:57: Undefined control sequence.
-l.57 \draw
-              (504,72) .. controls (544,42) and (524.71,27.29) .. (564,36) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:59: Undefined control sequence.
-l.59 \draw
-              (504,72) .. controls (544,42) and (524,126) .. (564,96) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:61: Undefined control sequence.
-l.61 \draw
-              (456,60) -- (492,60) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:62: Undefined control sequence.
-l.62 \draw
-           [shift={(492,60)}, rotate = 0] [color={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:64: Undefined control sequence.
-l.64 \draw
-              (456,72) -- (492,72) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:65: Undefined control sequence.
-l.65 \draw
-           [shift={(492,72)}, rotate = 0] [color={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:67: Undefined control sequence.
-l.67 \draw
-              (456,84) -- (492,84) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:68: Undefined control sequence.
-l.68 \draw
-           [shift={(492,84)}, rotate = 0] [color={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:71: Undefined control sequence.
-l.71 \draw
-           (574,17) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:73: Undefined control sequence.
-l.73 \draw
-           (420,27) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:75: Undefined control sequence.
-l.75 \draw
-           (328.8,27) node [anchor=north west][inner sep=0.75pt]   [align=le...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:77: Undefined control sequence.
-l.77 \draw
-           (186.4,28.2) node [anchor=north west][inner sep=0.75pt]   [align=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:79: Undefined control sequence.
-l.79 \draw
-           (310,130) node [anchor=north west][inner sep=0.75pt]   [align=lef...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:81: Undefined control sequence.
-l.81 \draw
-           (465,110) node [anchor=north west][inner sep=0.75pt]   [align=lef...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:83: Undefined control sequence.
-l.83 \draw
-           (578,97) node [anchor=north west][inner sep=0.75pt]  [font=\footn...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:85: Undefined control sequence.
-l.85 \draw
-           (607,96) node [anchor=north west][inner sep=0.75pt]  [font=\footn...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-treshold.tex:87: Undefined control sequence.
-l.87 \draw
-           (572,81) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-treshold.tex:90: LaTeX Error: \begin{figure} on input line 277 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
-Overfull \vbox (167.8488pt too high) has occurred while \output is active []
-
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 283.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 283.
-
-[16
 
 
 
 ]
-<Images/Threshold_Scintillateur_1.png, id=161, 634.5306pt x 395.7987pt>
-File: Images/Threshold_Scintillateur_1.png Graphic file (type png)
-<use Images/Threshold_Scintillateur_1.png>
-Package pdftex.def Info: Images/Threshold_Scintillateur_1.png  used on input line 288.
-(pdftex.def)             Requested size: 435.32422pt x 271.54927pt.
-<Images/Threshold_Scintillateur_2.png, id=162, 628.0263pt x 395.7987pt>
+<Images/Threshold_Scintillateur_2.png, id=357, 628.0263pt x 395.7987pt>
 File: Images/Threshold_Scintillateur_2.png Graphic file (type png)
 <use Images/Threshold_Scintillateur_2.png>
-Package pdftex.def Info: Images/Threshold_Scintillateur_2.png  used on input line 295.
+Package pdftex.def Info: Images/Threshold_Scintillateur_2.png  used on input line 296.
 (pdftex.def)             Requested size: 435.32422pt x 274.35759pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 299.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 300.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 299.
-
-[17 <./Images/Threshold_Scintillateur_1.png>]
-<Images/Threshold_Scintillateur_3.png, id=169, 634.2897pt x 395.7987pt>
+ [17 <./Images/Threshold_Scintillateur_1.png>]
+<Images/Threshold_Scintillateur_3.png, id=364, 634.2897pt x 395.7987pt>
 File: Images/Threshold_Scintillateur_3.png Graphic file (type png)
 <use Images/Threshold_Scintillateur_3.png>
-Package pdftex.def Info: Images/Threshold_Scintillateur_3.png  used on input line 302.
+Package pdftex.def Info: Images/Threshold_Scintillateur_3.png  used on input line 303.
 (pdftex.def)             Requested size: 435.32422pt x 271.6459pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 306.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 307.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 306.
-
-[18 <./Images/Threshold_Scintillateur_2.png>]
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 334.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 334.
-
-[19 <./Images/Threshold_Scintillateur_3.png>]
+ [18 <./Images/Threshold_Scintillateur_2.png>]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
 Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 335.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 335.
-
-[20]
-LaTeX Info: Redefining \\ on input line 337.
+ [19 <./Images/Threshold_Scintillateur_3.png>]
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 336.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [20]
+LaTeX Info: Redefining \\ on input line 338.
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 337.
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 338.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 339.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 340.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
 \openout2 = `coincidence_sans_delais.aux'.
 
- (coincidence_sans_delais.tex
-coincidence_sans_delais.tex:5: Undefined control sequence.
-l.5 \tikzset
-             {_rshtctho0/.code = {\pgfsetadditionalshadetransform{ \pgftrans...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:5: Missing $ inserted.
-<inserted text> 
-                $
-l.5 \tikzset {_
-               rshtctho0/.code = {\pgfsetadditionalshadetransform{ \pgftrans...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-coincidence_sans_delais.tex:5: Extra }, or forgotten $.
-l.5 ... { 0 bp }  }  \pgftransformscale{1.8 }  }}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-coincidence_sans_delais.tex:10: Undefined control sequence.
-l.10 \tikzset
-             {every picture/.style={line width=0.75pt}} %set default line wi...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:11: Missing $ inserted.
-<inserted text> 
-                $
-l.11 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-coincidence_sans_delais.tex:12: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 \begin{tikzpicture}
-                        [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-coincidence_sans_delais.tex:16: Undefined control sequence.
-l.16 \draw
-            [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:18: Undefined control sequence.
-l.18 \draw
-             (576,0) -- (646,0) -- (646,40) -- (576,40) -- cycle(640,6) -- (...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:20: Undefined control sequence.
-l.20 \draw
-            [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:22: Undefined control sequence.
-l.22 \draw
-             (576,56) -- (646,56) -- (646,96) -- (576,96) -- cycle(640,62) -...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:24: Undefined control sequence.
-l.24 \draw
-              (528,60) .. controls (568,30) and (536.71,15.29) .. (576,24) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:26: Undefined control sequence.
-l.26 \draw
-              (528,72) .. controls (568,42) and (536,107) .. (576,77) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:28: Undefined control sequence.
-l.28 \draw
-              (456,60) -- (480,60) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:29: Undefined control sequence.
-l.29 \draw
-           [shift={(480,60)}, rotate = 0] [color={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:31: Undefined control sequence.
-l.31 \draw
-              (456,72) -- (480,72) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:32: Undefined control sequence.
-l.32 \draw
-           [shift={(480,72)}, rotate = 0] [color={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:34: Undefined control sequence.
-l.34 \draw
-              (456,84) -- (480,84) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:35: Undefined control sequence.
-l.35 \draw
-           [shift={(480,84)}, rotate = 0] [color={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:37: Undefined control sequence.
-l.37 \draw
-            [fill={rgb, 255:red, 144; green, 19; blue, 254 }  ,fill opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:39: Undefined control sequence.
-l.39 \draw
-              (480,72) -- (516,72) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:40: Undefined control sequence.
-l.40 \draw
-           [shift={(516,72)}, rotate = 0] [color={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:42: Undefined control sequence.
-l.42 \draw
-              (480,84) -- (516,72) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:43: Undefined control sequence.
-l.43 \draw
-           [shift={(516,72)}, rotate = 341.57] [color={rgb, 255:red, 0; gree...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:45: Undefined control sequence.
-l.45 \draw
-              (480,60) -- (516,72) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:46: Undefined control sequence.
-l.46 \draw
-           [shift={(516,72)}, rotate = 18.43] [color={rgb, 255:red, 0; green...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 51.
-(C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-coincidence_sans_delais.tex:52: Undefined control sequence.
-l.52 \draw
-              (420,72) -- (432,72) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:55: Undefined control sequence.
-l.55 \draw
-           (580,11) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:57: Undefined control sequence.
-l.57 \draw
-           (417,31.2) node [anchor=north west][inner sep=0.75pt]   [align=le...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:59: Undefined control sequence.
-l.59 \draw
-           (445,98) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:61: Undefined control sequence.
-l.61 \draw
-           (590,73) node [anchor=north west][inner sep=0.75pt]  [font=\footn...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:63: Undefined control sequence.
-l.63 \draw
-           (619,72) node [anchor=north west][inner sep=0.75pt]  [font=\footn...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:65: Undefined control sequence.
-l.65 \draw
-           (584,63) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:67: Undefined control sequence.
-l.67 \draw
-           (485.4,23) node [anchor=north west][inner sep=0.75pt]   [align=le...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:69: Undefined control sequence.
-l.69 \draw
-           (505.4,30) node [anchor=north west][inner sep=0.75pt]   [align=le...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:72: Undefined control sequence.
-l.72 \draw
-           (577,44) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:74: Undefined control sequence.
-l.74 \draw
-           (304,61) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-coincidence_sans_delais.tex:76: Undefined control sequence.
-l.76 \draw
-           (304,70) node [anchor=north west][inner sep=0.75pt]   [align=left...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-coincidence_sans_delais.tex:82: LaTeX Error: \begin{figure} on input line 366 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.82 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
-c:/Users/padou/OneDrive/Bureau/cours/X/physique/Modal/Modal/Latex/DocMalo.tex:371: Missing } inserted.
-<inserted text> 
-                }
-l.371 \end{figure}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
+ (coincidence_sans_delais.tex)
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 372.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 373.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 372.
-
-[21]
+ [21]
 \openout2 = `recouvrement_petit_width.aux'.
 
  (recouvrement_petit_width.tex
-recouvrement_petit_width.tex:3: Undefined control sequence.
-l.3 \tikzset
-            {every picture/.style={line width=0.75pt}} %set default line wid...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-recouvrement_petit_width.tex:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-recouvrement_petit_width.tex:9: Undefined control sequence.
-l.9 \draw
-             (170,230) -- (170,63) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:10: Undefined control sequence.
-l.10 \draw
-           [shift={(170,60)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:12: Undefined control sequence.
-l.12 \draw
-              (150,210) -- (337,210) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:13: Undefined control sequence.
-l.13 \draw
-           [shift={(340,210)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:15: Undefined control sequence.
-l.15 \draw
-           [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:17: Undefined control sequence.
-l.17 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:19: Undefined control sequence.
-l.19 \draw
-           [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:21: Undefined control sequence.
-l.21 \draw
-           [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]  ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:22: Undefined control sequence.
-l.22 \draw
-           [shift={(250,220)}, rotate = 180] [color={rgb, 255:red, 0; green,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:23: Undefined control sequence.
-l.23 \draw
-           [shift={(240,220)}, rotate = 180] [color={rgb, 255:red, 0; green,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:26: Undefined control sequence.
-l.26 \draw
-           (250,230) node   [align=left] {\begin{minipage}[lt]{40.8pt}\setle...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (1.34837pt too wide) in paragraph at lines 27--28
 []\T1/lmr/m/n/6 (-20) recouvrement 
  []
-
-recouvrement_petit_width.tex:30: Undefined control sequence.
-l.30 \draw
-           (380,210) node   [align=left] {\begin{minipage}[lt]{40.8pt}\setle...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:34: Undefined control sequence.
-l.34 \draw
-           (210,70) node   [align=left] {\begin{minipage}[lt]{40.8pt}\setlen...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:38: Undefined control sequence.
-l.38 \draw
-           (370,117) node  [color={rgb, 255:red, 126; green, 211; blue, 33 }...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:42: Undefined control sequence.
-l.42 \draw
-           (370,147) node  [color={rgb, 255:red, 74; green, 144; blue, 226 }...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrement_petit_width.tex:46: Undefined control sequence.
-l.46 \draw
-           (370,177) node  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-recouvrement_petit_width.tex:51: LaTeX Error: \begin{minipage} on input line 374 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.51 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 )
 \openout2 = `recouvrment_grand_width.aux'.
 
  (recouvrment_grand_width.tex
-recouvrment_grand_width.tex:3: Undefined control sequence.
-l.3 \tikzset
-            {every picture/.style={line width=0.75pt}} %set default line wid...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-recouvrment_grand_width.tex:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-recouvrment_grand_width.tex:9: Undefined control sequence.
-l.9 \draw
-             (170,230) -- (170,63) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:10: Undefined control sequence.
-l.10 \draw
-           [shift={(170,60)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:12: Undefined control sequence.
-l.12 \draw
-              (150,210) -- (337,210) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:13: Undefined control sequence.
-l.13 \draw
-           [shift={(340,210)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:15: Undefined control sequence.
-l.15 \draw
-           [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:17: Undefined control sequence.
-l.17 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:19: Undefined control sequence.
-l.19 \draw
-           [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:21: Undefined control sequence.
-l.21 \draw
-           [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]  ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:22: Undefined control sequence.
-l.22 \draw
-           [shift={(280,220)}, rotate = 180] [color={rgb, 255:red, 0; green,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:23: Undefined control sequence.
-l.23 \draw
-           [shift={(230,220)}, rotate = 180] [color={rgb, 255:red, 0; green,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:26: Undefined control sequence.
-l.26 \draw
-           (260,230) node   [align=left] {\begin{minipage}[lt]{40.8pt}\setle...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (1.34837pt too wide) in paragraph at lines 27--28
 []\T1/lmr/m/n/6 (-20) recouvrement 
  []
 
-recouvrment_grand_width.tex:30: Undefined control sequence.
-l.30 \draw
-           (380,210) node   [align=left] {\begin{minipage}[lt]{40.8pt}\setle...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:34: Undefined control sequence.
-l.34 \draw
-           (210,70) node   [align=left] {\begin{minipage}[lt]{40.8pt}\setlen...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:38: Undefined control sequence.
-l.38 \draw
-           (370,117) node  [color={rgb, 255:red, 126; green, 211; blue, 33 }...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:42: Undefined control sequence.
-l.42 \draw
-           (370,147) node  [color={rgb, 255:red, 74; green, 144; blue, 226 }...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-recouvrment_grand_width.tex:46: Undefined control sequence.
-l.46 \draw
-           (370,177) node  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-recouvrment_grand_width.tex:51: LaTeX Error: \begin{minipage} on input line 381 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.51 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 388.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 396.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 388.
-
-[22
+ [22
 
 
 
-]
-Overfull \vbox (85.8488pt too high) has occurred while \output is active []
-
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 388.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 388.
-
-[23
 
 
 
@@ -2665,647 +1159,148 @@ LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 388.
 
 
 ]
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 395.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 24 undefined on input line 395.
-
-[24]
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 397.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 398.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 414.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 415.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 25 undefined on input line 414.
-
-[25]
+ [23]
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 416.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 417.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 417.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 418.
  (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<Images/Coincidences_2_Scintillateurs.png, id=218, 715.473pt x 498.4221pt>
+<Images/Coincidences_2_Scintillateurs.png, id=402, 715.473pt x 498.4221pt>
 File: Images/Coincidences_2_Scintillateurs.png Graphic file (type png)
 <use Images/Coincidences_2_Scintillateurs.png>
-Package pdftex.def Info: Images/Coincidences_2_Scintillateurs.png  used on input line 433.
+Package pdftex.def Info: Images/Coincidences_2_Scintillateurs.png  used on input line 434.
 (pdftex.def)             Requested size: 435.32422pt x 303.26129pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 436.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 437.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 26 undefined on input line 436.
-
-[26{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+ [24{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 456.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 457.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 27 undefined on input line 456.
-
-[27 <./Images/Coincidences_2_Scintillateurs.png>]
-<Images/Coincidences_3_Scintillateurs.png, id=233, 715.473pt x 498.4221pt>
+ [25 <./Images/Coincidences_2_Scintillateurs.png>]
+<Images/Coincidences_3_Scintillateurs.png, id=416, 715.473pt x 498.4221pt>
 File: Images/Coincidences_3_Scintillateurs.png Graphic file (type png)
 <use Images/Coincidences_3_Scintillateurs.png>
-Package pdftex.def Info: Images/Coincidences_3_Scintillateurs.png  used on input line 459.
+Package pdftex.def Info: Images/Coincidences_3_Scintillateurs.png  used on input line 460.
 (pdftex.def)             Requested size: 435.32422pt x 303.26129pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 476.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 477.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 28 undefined on input line 476.
-
-[28 <./Images/Coincidences_3_Scintillateurs.png>]
+ [26 <./Images/Coincidences_3_Scintillateurs.png>]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 486.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 487.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 29 undefined on input line 486.
-
-[29]
-LaTeX Info: Redefining \\ on input line 488.
+ [27]
+LaTeX Info: Redefining \\ on input line 489.
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 488.
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 489.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
 File: polytechnique-filetcourt.pdf Graphic file (type pdf)
 <use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 495.
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 496.
 (pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
 \openout2 = `angle_nul.aux'.
 
- (angle_nul.tex
-angle_nul.tex:3: Undefined control sequence.
-l.3 \tikzset
-            {every picture/.style={line width=0.75pt}} %set default line wid...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-angle_nul.tex:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-angle_nul.tex:9: Undefined control sequence.
-l.9 \draw
-          [line width=1.5]    (119,200) -- (221,200) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:10: Undefined control sequence.
-l.10 \draw
-           [shift={(217,200)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:11: Undefined control sequence.
-l.11 \draw
-           [shift={(123,200)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:13: Undefined control sequence.
-l.13 \draw
-           [line width=1.5]    (119,150) -- (221,150) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:14: Undefined control sequence.
-l.14 \draw
-           [shift={(217,150)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:15: Undefined control sequence.
-l.15 \draw
-           [shift={(123,150)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:17: Undefined control sequence.
-l.17 \draw
-           [line width=1.5]    (119,100) -- (221,100) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:18: Undefined control sequence.
-l.18 \draw
-           [shift={(217,100)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:19: Undefined control sequence.
-l.19 \draw
-           [shift={(123,100)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:21: Undefined control sequence.
-l.21 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:22: Undefined control sequence.
-l.22 \draw
-           [shift={(170,140)}, rotate = 270] [color={rgb, 255:red, 208; gree...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:24: Undefined control sequence.
-l.24 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:25: Undefined control sequence.
-l.25 \draw
-           [shift={(210,140)}, rotate = 270] [color={rgb, 255:red, 208; gree...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:27: Undefined control sequence.
-l.27 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_nul.tex:28: Undefined control sequence.
-l.28 \draw
-           [shift={(130,140)}, rotate = 270] [color={rgb, 255:red, 208; gree...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-angle_nul.tex:33: LaTeX Error: \begin{minipage} on input line 498 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
+ (angle_nul.tex)
 \openout2 = `angle_non_nul.aux'.
 
- (angle_non_nul.tex
-angle_non_nul.tex:3: Undefined control sequence.
-l.3 \tikzset
-            {every picture/.style={line width=0.75pt}} %set default line wid...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-angle_non_nul.tex:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-angle_non_nul.tex:9: Undefined control sequence.
-l.9 \draw
-          [line width=1.5]    (249,200) -- (351,200) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:10: Undefined control sequence.
-l.10 \draw
-           [shift={(347,200)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:11: Undefined control sequence.
-l.11 \draw
-           [shift={(253,200)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:13: Undefined control sequence.
-l.13 \draw
-           [line width=1.5]    (279,150) -- (381,150) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:14: Undefined control sequence.
-l.14 \draw
-           [shift={(377,150)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:15: Undefined control sequence.
-l.15 \draw
-           [shift={(283,150)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:17: Undefined control sequence.
-l.17 \draw
-           [line width=1.5]    (309,100) -- (411,100) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:18: Undefined control sequence.
-l.18 \draw
-           [shift={(407,100)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:19: Undefined control sequence.
-l.19 \draw
-           [shift={(313,100)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:21: Undefined control sequence.
-l.21 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:22: Undefined control sequence.
-l.22 \draw
-           [shift={(335.14,138.74)}, rotate = 299.05] [color={rgb, 255:red, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:24: Undefined control sequence.
-l.24 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:25: Undefined control sequence.
-l.25 \draw
-           [shift={(375.14,138.74)}, rotate = 299.05] [color={rgb, 255:red, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:27: Undefined control sequence.
-l.27 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-angle_non_nul.tex:28: Undefined control sequence.
-l.28 \draw
-           [shift={(295.14,138.74)}, rotate = 299.05] [color={rgb, 255:red, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-angle_non_nul.tex:33: LaTeX Error: \begin{minipage} on input line 505 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 509--509
+ (angle_non_nul.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 510--510
 \T1/lmr/m/n/12 (+20) d�-pla-c�s ho-ri-zon-ta-le-ment
  []
 
 \openout2 = `range_des_angles.aux'.
 
-(range_des_angles.tex
-range_des_angles.tex:3: Undefined control sequence.
-l.3 \tikzset
-            {every picture/.style={line width=0.75pt}} %set default line wid...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-range_des_angles.tex:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-range_des_angles.tex:9: Undefined control sequence.
-l.9 \draw
-          [line width=1.5]    (409,200) -- (511,200) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:10: Undefined control sequence.
-l.10 \draw
-           [shift={(507,200)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:11: Undefined control sequence.
-l.11 \draw
-           [shift={(413,200)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:13: Undefined control sequence.
-l.13 \draw
-           [line width=1.5]    (439,150) -- (541,150) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:14: Undefined control sequence.
-l.14 \draw
-           [shift={(537,150)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:15: Undefined control sequence.
-l.15 \draw
-           [shift={(443,150)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:17: Undefined control sequence.
-l.17 \draw
-           [line width=1.5]    (469,100) -- (571,100) ;
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:18: Undefined control sequence.
-l.18 \draw
-           [shift={(567,100)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:19: Undefined control sequence.
-l.19 \draw
-           [shift={(473,100)}, rotate = 180] [fill={rgb, 255:red, 0; green, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:21: Undefined control sequence.
-l.21 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:22: Undefined control sequence.
-l.22 \draw
-           [shift={(455.14,138.74)}, rotate = 299.05] [color={rgb, 255:red, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:24: Undefined control sequence.
-l.24 \draw
-           [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:25: Undefined control sequence.
-l.25 \draw
-           [shift={(487.68,139.64)}, rotate = 254.48] [color={rgb, 255:red, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:27: Undefined control sequence.
-l.27 \draw
-           [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-range_des_angles.tex:28: Undefined control sequence.
-l.28 \draw
-           [shift={(492.93,137.07)}, rotate = 315] [color={rgb, 255:red, 74;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-range_des_angles.tex:33: LaTeX Error: \begin{minipage} on input line 513 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
+(range_des_angles.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 521.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 522.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 30 undefined on input line 521.
-
-[30]
-Overfull \vbox (972.21977pt too high) has occurred while \output is active []
-
+ [28]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 521.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 530.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [29
 
 
-LaTeX Warning: Reference `LastPage' on page 31 undefined on input line 521.
 
+
+
+
+
+
+
+]
+<Images/coscarréavectroisscintillateurs.png, id=440, 722.7pt x 433.62pt>
+File: Images/coscarréavectroisscintillateurs.png Graphic file (type png)
+<use Images/coscarréavectroisscintillateurs.png>
+Package pdftex.def Info: Images/coscarréavectroisscintillateurs.png  used on input line 533.
+(pdftex.def)             Requested size: 338.58632pt x 203.15302pt.
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 555.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [30{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./Images/coscarréavectroisscintillateurs.png>]
+File: polytechnique-filetcourt.pdf Graphic file (type pdf)
+<use polytechnique-filetcourt.pdf>
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 560.
+(pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
+\openout2 = `matrice.aux'.
+
+ (matrice.tex)
+Overfull \hbox (8.2679pt too wide) in paragraph at lines 59--569
+ [][] 
+ []
+
+\openout2 = `matrice_et_trajs.aux'.
+
+(matrice_et_trajs.tex)
+Overfull \hbox (9.58789pt too wide) in paragraph at lines 68--576
+ [][] 
+ []
+
+<Images/palier_dezoomé.png, id=451, 722.7pt x 433.62pt>
+File: Images/palier_dezoomé.png Graphic file (type png)
+<use Images/palier_dezoomé.png>
+Package pdftex.def Info: Images/palier_dezoomé.png  used on input line 589.
+(pdftex.def)             Requested size: 195.89456pt x 117.53549pt.
+<Images/palier_zommé.png, id=452, 722.7pt x 433.62pt>
+File: Images/palier_zommé.png Graphic file (type png)
+<use Images/palier_zommé.png>
+Package pdftex.def Info: Images/palier_zommé.png  used on input line 596.
+(pdftex.def)             Requested size: 195.89456pt x 117.53549pt.
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 600.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
 [31
 
 
@@ -3313,900 +1308,162 @@ LaTeX Warning: Reference `LastPage' on page 31 undefined on input line 521.
 
 
 
-
-
-
 ]
-
-LaTeX Warning: Reference `fig:angle_non_nul' on page 32 undefined on input line 523.
-
-
-LaTeX Warning: Reference `fig:range_des_angles' on page 32 undefined on input line 523.
-
-<Images/coscarréavectroisscintillateurs.png, id=256, 722.7pt x 433.62pt>
-File: Images/coscarréavectroisscintillateurs.png Graphic file (type png)
-<use Images/coscarréavectroisscintillateurs.png>
-Package pdftex.def Info: Images/coscarréavectroisscintillateurs.png  used on input line 532.
-(pdftex.def)             Requested size: 338.58632pt x 203.15302pt.
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 540.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-LaTeX Warning: Reference `LastPage' on page 32 undefined on input line 540.
-
-[32 <./Images/coscarréavectroisscintillateurs.png>]
-File: polytechnique-filetcourt.pdf Graphic file (type pdf)
-<use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 559.
-(pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
-
-
-LaTeX Warning: Reference `fig:matrice_scintillateur' on page 33 undefined on input line 561.
-
-\openout2 = `matrice.aux'.
-
-(matrice.tex
-matrice.tex:3: Undefined control sequence.
-l.3 \tikzset
-            {every picture/.style={line width=0.75pt}} %set default line wid...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-matrice.tex:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-matrice.tex:9: Undefined control sequence.
-l.9 \draw
-           [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:11: Undefined control sequence.
-l.11 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:13: Undefined control sequence.
-l.13 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:15: Undefined control sequence.
-l.15 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:17: Undefined control sequence.
-l.17 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:19: Undefined control sequence.
-l.19 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:21: Undefined control sequence.
-l.21 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:23: Undefined control sequence.
-l.23 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:25: Undefined control sequence.
-l.25 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:27: Undefined control sequence.
-l.27 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:29: Undefined control sequence.
-l.29 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:31: Undefined control sequence.
-l.31 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:34: Undefined control sequence.
-l.34 \draw
-           (149.88,60) node   [align=left] {34};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:36: Undefined control sequence.
-l.36 \draw
-           (229.88,60) node   [align=left] {33};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:38: Undefined control sequence.
-l.38 \draw
-           (309.88,60) node   [align=left] {32};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:40: Undefined control sequence.
-l.40 \draw
-           (150.12,100) node   [align=left] {24};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:42: Undefined control sequence.
-l.42 \draw
-           (230.12,100) node   [align=left] {23};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:44: Undefined control sequence.
-l.44 \draw
-           (310.12,100) node   [align=left] {22};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:46: Undefined control sequence.
-l.46 \draw
-           (389.88,100) node   [align=left] {21};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:48: Undefined control sequence.
-l.48 \draw
-           (389.88,60) node   [align=left] {31};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:50: Undefined control sequence.
-l.50 \draw
-           (389.88,140) node   [align=left] {11};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:52: Undefined control sequence.
-l.52 \draw
-           (310.12,140) node   [align=left] {12};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:54: Undefined control sequence.
-l.54 \draw
-           (230.12,140) node   [align=left] {13};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice.tex:56: Undefined control sequence.
-l.56 \draw
-           (150.12,140) node   [align=left] {14};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-matrice.tex:59: LaTeX Error: \begin{minipage} on input line 565 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
-\openout2 = `matrice_et_trajs.aux'.
-
- (matrice_et_trajs.tex
-matrice_et_trajs.tex:3: Undefined control sequence.
-l.3 \tikzset
-            {every picture/.style={line width=0.75pt}} %set default line wid...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-matrice_et_trajs.tex:5: LaTeX Error: Environment tikzpicture undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{tikzpicture}
-                       [x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-matrice_et_trajs.tex:9: Undefined control sequence.
-l.9 \draw
-           [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:11: Undefined control sequence.
-l.11 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:13: Undefined control sequence.
-l.13 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:15: Undefined control sequence.
-l.15 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:17: Undefined control sequence.
-l.17 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:19: Undefined control sequence.
-l.19 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:21: Undefined control sequence.
-l.21 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:23: Undefined control sequence.
-l.23 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:25: Undefined control sequence.
-l.25 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:27: Undefined control sequence.
-l.27 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:29: Undefined control sequence.
-l.29 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:31: Undefined control sequence.
-l.31 \draw
-            [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:33: Undefined control sequence.
-l.33 \draw
-           [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:34: Undefined control sequence.
-l.34 \draw
-           [shift={(230,100)}, rotate = 204.44] [color={rgb, 255:red, 208; g...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:36: Undefined control sequence.
-l.36 \draw
-           [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:37: Undefined control sequence.
-l.37 \draw
-           [shift={(309.88,80)}, rotate = 195.24] [color={rgb, 255:red, 144;...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:39: Undefined control sequence.
-l.39 \draw
-           [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:40: Undefined control sequence.
-l.40 \draw
-           [shift={(390,100)}, rotate = 270] [color={rgb, 255:red, 65; green...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:43: Undefined control sequence.
-l.43 \draw
-           (149.88,60) node   [align=left] {34};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:45: Undefined control sequence.
-l.45 \draw
-           (229.88,60) node   [align=left] {33};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:47: Undefined control sequence.
-l.47 \draw
-           (309.88,60) node   [align=left] {32};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:49: Undefined control sequence.
-l.49 \draw
-           (150.12,100) node   [align=left] {24};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:51: Undefined control sequence.
-l.51 \draw
-           (230.12,100) node   [align=left] {23};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:53: Undefined control sequence.
-l.53 \draw
-           (310.12,100) node   [align=left] {22};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:55: Undefined control sequence.
-l.55 \draw
-           (389.88,100) node   [align=left] {21};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:57: Undefined control sequence.
-l.57 \draw
-           (389.88,60) node   [align=left] {31};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:59: Undefined control sequence.
-l.59 \draw
-           (389.88,140) node   [align=left] {11};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:61: Undefined control sequence.
-l.61 \draw
-           (310.12,140) node   [align=left] {12};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:63: Undefined control sequence.
-l.63 \draw
-           (230.12,140) node   [align=left] {13};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-matrice_et_trajs.tex:65: Undefined control sequence.
-l.65 \draw
-           (150.12,140) node   [align=left] {14};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-matrice_et_trajs.tex:68: LaTeX Error: \begin{minipage} on input line 573 ended by \end{tikzpicture}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.68 \end{tikzpicture}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 580.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 33 undefined on input line 580.
-
-[33{C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
-Overfull \vbox (1057.3488pt too high) has occurred while \output is active []
-
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 580.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 34 undefined on input line 580.
-
-[34
-
-
-
-
-
-
-]
-
-LaTeX Warning: Reference `fig:caracteristique_scintillateur_2' on page 35 undefined on input line 581.
-
-<Images/palier_dezoomé.png, id=275, 722.7pt x 433.62pt>
-File: Images/palier_dezoomé.png Graphic file (type png)
-<use Images/palier_dezoomé.png>
-Package pdftex.def Info: Images/palier_dezoomé.png  used on input line 588.
-(pdftex.def)             Requested size: 195.89456pt x 117.53549pt.
-<Images/palier_zommé.png, id=276, 722.7pt x 433.62pt>
-File: Images/palier_zommé.png Graphic file (type png)
-<use Images/palier_zommé.png>
-Package pdftex.def Info: Images/palier_zommé.png  used on input line 595.
-(pdftex.def)             Requested size: 195.89456pt x 117.53549pt.
-
-LaTeX Warning: Reference `fig:cos2s_2' on page 35 undefined on input line 605.
-
-<Images/distribution_angulaire.png, id=277, 722.7pt x 433.62pt>
+<Images/distribution_angulaire.png, id=460, 722.7pt x 433.62pt>
 File: Images/distribution_angulaire.png Graphic file (type png)
 <use Images/distribution_angulaire.png>
-Package pdftex.def Info: Images/distribution_angulaire.png  used on input line 609.
+Package pdftex.def Info: Images/distribution_angulaire.png  used on input line 610.
 (pdftex.def)             Requested size: 338.58632pt x 203.15302pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 613.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 35 undefined on input line 613.
-
-[35 <./Images/palier_dezoomé.png> <./Images/palier_zommé.png>]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
 Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 614.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 36 undefined on input line 614.
-
-[36 <./Images/distribution_angulaire.png>]
-File: polytechnique-filetcourt.pdf Graphic file (type pdf)
-<use polytechnique-filetcourt.pdf>
-Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 616.
-(pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
+ [32 <./Images/palier_dezoomé.png> <./Images/palier_zommé.png>]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 636.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 615.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 37 undefined on input line 636.
-
-[37]
-Underfull \vbox (badness 6559) has occurred while \output is active []
-
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 660.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 38 undefined on input line 660.
-
-[38]
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 662.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 39 undefined on input line 662.
-
-[39]
-LaTeX Info: Redefining \\ on input line 664.
+ [33 <./Images/distribution_angulaire.png>]
+LaTeX Info: Redefining \\ on input line 617.
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 664.
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 617.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 681.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 634.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 40 undefined on input line 681.
-
-[40]
+ [34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 647.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [35]
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 668.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [36]
+LaTeX Info: Redefining \\ on input line 673.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 673.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 679.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [37]
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
 Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 694.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 41 undefined on input line 694.
-
-[41]
+ [38]
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 704.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+ [39]
+LaTeX Info: Redefining \\ on input line 707.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 707.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
 Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 715.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 42 undefined on input line 715.
-
-[42]
-LaTeX Info: Redefining \\ on input line 720.
-File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
-<use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 720.
-(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 726.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 43 undefined on input line 726.
-
-[43]
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 741.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 44 undefined on input line 741.
-
-[44]
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 751.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 45 undefined on input line 751.
-
-[45]
-LaTeX Info: Redefining \\ on input line 754.
-File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
-<use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 754.
-(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
-File: polytechnique-logohori.pdf Graphic file (type pdf)
-<use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 762.
-(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 46 undefined on input line 762.
-
-[46]
+ [40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 764.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 717.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 47 undefined on input line 764.
-
-[47]
+ [41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 770.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 723.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 48 undefined on input line 770.
-
-[48]
+ [42]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 778.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 731.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 49 undefined on input line 778.
-
-[49]
-LaTeX Info: Redefining \\ on input line 781.
+ [43]
+LaTeX Info: Redefining \\ on input line 734.
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 781.
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 734.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
-LaTeX Info: Redefining \\ on input line 786.
+LaTeX Info: Redefining \\ on input line 739.
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 786.
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 739.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 797.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 750.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 50 undefined on input line 797.
-
-[50]
+ [44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 806.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 759.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 51 undefined on input line 806.
-
-[51]
-LaTeX Info: Redefining \\ on input line 807.
+ [45]
+LaTeX Info: Redefining \\ on input line 760.
 File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
 <use polytechnique-filetlongrouge.pdf>
-Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 807.
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 760.
 (pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
-
-
-Package lastpage Warning: Rerun to get the references right on input line 814.
-
-
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 763.
+ (C:\Users\padou\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ 
 AED: lastpage setting LastPage
 File: polytechnique-logohori.pdf Graphic file (type pdf)
 <use polytechnique-logohori.pdf>
-Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 814.
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 767.
 (pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
-
-LaTeX Warning: Reference `LastPage' on page 52 undefined on input line 814.
-
-[52] (DocMalo.aux (variationHT.aux) (treshold.aux) (coincidence_sans_delais.aux) (recouvrement_petit_width.aux) (recouvrment_grand_width.aux) (angle_nul.aux) (angle_non_nul.aux) (range_des_angles.aux) (matrice.aux) (matrice_et_trajs.aux))
+[46] (DocMalo.aux (variationHT.aux) (treshold.aux) (coincidence_sans_delais.aux) (recouvrement_petit_width.aux) (recouvrment_grand_width.aux) (angle_nul.aux) (angle_non_nul.aux) (range_des_angles.aux) (matrice.aux) (matrice_et_trajs.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `DocMalo.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `DocMalo.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  A96EA384A56D838CB7C4F4C1AACFE18F;4991.
+Package rerunfilecheck Info: File `DocMalo.out' has not changed.
+(rerunfilecheck)             Checksum: BBBEDD96AC56C6D59A9B9D7289AAD5E9;4783.
  ) 
 Here is how much of TeX's memory you used:
- 29120 strings out of 474486
- 558309 string characters out of 5743755
- 1960542 words of memory out of 5000000
- 50528 multiletter control sequences out of 15000+600000
- 653279 words of font info for 226 fonts, out of 8000000 for 9000
+ 31761 strings out of 474486
+ 622310 string characters out of 5743755
+ 1951542 words of memory out of 5000000
+ 53115 multiletter control sequences out of 15000+600000
+ 653125 words of font info for 224 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,12n,102p,2328b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,102p,2328b,874s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx6.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/padou/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on DocMalo.pdf (52 pages, 11499438 bytes).
+Output written on DocMalo.pdf (46 pages, 11508429 bytes).
 PDF statistics:
- 496 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 57965 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 670 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
+ 58157 words of extra memory for PDF output out of 61914 (max. 10000000)
 

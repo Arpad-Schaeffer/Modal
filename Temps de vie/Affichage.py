@@ -69,7 +69,7 @@ r2 = 1 - ss_res / ss_tot
 # courbe de fit
 y_fit = linear(x_fit, *params)
 ax.plot(
-    x_fit, y_fit, '-', color='red'
+    x_fit, y_fit, '-',  color='k'
     # label supprimé pour usage dans textbox
 )
 
@@ -78,11 +78,9 @@ ax.plot(
 # -----------------------------
 ax.errorbar(
     deltaT, channel, yerr=err_channel, xerr=err_deltaT,
-    fmt='o', ms=5, capsize=3, label='Calibration'
+    fmt='o',color='C1', ms=5, capsize=3, label='Calibration'
 )
     
-ax.set_ylabel("Channel (proportionnel au délai)")
-ax.set_xlabel("deltaT (us)")
 
 # légende des points en haut à gauche sans cadre, avec marge
 ax.legend(
@@ -101,29 +99,35 @@ textstr = (
     f"χ²/ndf = {red_chi2:.2f}\n"
     f"R² = {r2:.2f}"
 )
-print(textstr)
+
 ax.text(
-    0.95, 0.95, textstr,
-    transform=ax.transAxes, va='top', ha='right'
+    0.95, 0.05, textstr,
+    transform=ax.transAxes, fontsize=10,
+    verticalalignment='bottom', horizontalalignment='right',
+    bbox=dict(boxstyle="round", facecolor="white", alpha=0.8)
 )
 
-# graduations automatiques sur les deux axes
+
+ax.set_ylabel("Channel (proportionnel au délai)")
+ax.set_xlabel("deltaT (us)")
+ax.set_title("Calibration du canal en fonction du délai")
+ax.legend(fontsize=11, loc='upper left', frameon=False, bbox_to_anchor=(0.02, 0.98), borderaxespad=1)
+ax.grid(False)
+
+
+# Graduations automatiques sur les deux axes
 ax.xaxis.set_major_locator(AutoLocator())
 ax.xaxis.set_minor_locator(AutoMinorLocator())
 ax.yaxis.set_major_locator(AutoLocator())
 ax.yaxis.set_minor_locator(AutoMinorLocator())
 
-# ticks sur tous les côtés, vers l'intérieur
+# Ticks sur tous les côtés, vers l'intérieur
 ax.tick_params(axis='both', which='major', direction='in', top=True, right=True, length=10)
 ax.tick_params(axis='both', which='minor', direction='in', top=True, right=True, length=5)
 
-# échelle automatique
+# Échelle automatique
 ax.relim()
 ax.autoscale_view()
 
-# ajuster la limite y : passer de ymax+1 à ymax*1.2
-ymin, ymax = ax.get_ylim()
-ax.set_ylim(ymin, ymax * 1.3)
-
-plt.tight_layout(h_pad=0.1)
+plt.tight_layout()
 plt.show()
