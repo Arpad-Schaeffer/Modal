@@ -16,6 +16,7 @@
 \usepackage{cleveref}
 \usepackage{float}
 \usepackage{caption}
+\captionsetup{font=footnotesize}
 \usepackage{tikz}
 \graphicspath{{figures/}}
 % allow common Unicode in math
@@ -47,8 +48,7 @@
 \maketitle
 
 \tableofcontents
-\listoffigures
-\newpage
+
 
 \section{Présentation et objectifs}
 \subsection{Les Muons}
@@ -96,18 +96,17 @@ Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les élé
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{Images/Montage_Scintillateurs.png}
-  \caption{Photo du montage de détection}
+  \includegraphics[width=0.5\textwidth]{Images/Montage_Scintillateurs.png}
+  \caption{Photo du montage de détection. Trois scintillateurs sont superposé, reliés au PMTs et à la chaîne électronique.}
   \label{fig:setup}
 \end{figure}
 
-\newpage
 
 \subsection{Scintillateur plastique}
 
 % --- ENCADRÉ DÉBUT ---
 
-\vspace{1em}
+
 \begin{center}
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe du scintillateur plastique]
 Convertir l’énergie déposée par une particule chargée en lumière visible, permettant ainsi la détection à haute précision temporelle des muons cosmiques.
@@ -204,7 +203,7 @@ Voici les principaux instruments analogiques utilisés et leur rôle dans l’ex
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{Images/Montage_Electrique.png}
+  \includegraphics[width=0.6\textwidth]{Images/Montage_Electrique.png}
   \caption{Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}
   \label{fig:photo_instruments}
 \end{figure}
@@ -266,14 +265,14 @@ Pour maximiser la détection des muons cosmiques tout en minimisant le bruit de 
 \paragraph{Démarche expérimentale~:}
 Pour chaque scintillateur, nous avons mesuré le nombre d’événements détectés en fonction du seuil du discriminateur, pour plusieurs valeurs de HT. Cette cartographie permet d’identifier la zone optimale où le taux de détection des muons est maximal et le bruit de fond minimal.
 
-\begin{figure}[H]
+\begin{figure}[!h]
   \centering
   \include{variationHT}
   \caption{Schéma de la chaîne électronique utilisée pour faire varier la haute tension du PM}
   \label{fig:variation_HT}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!h]
   \centering
   \include{treshold}
   \caption{Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur.}
@@ -284,9 +283,9 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/Threshold_Scintillateur_1.png}
+    \includegraphics[width=0.7\textwidth]{Images/Threshold_Scintillateur_1.png}
     \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 1).
-    Les valeures de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
+    Les valeurs de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
     On observe l'absence de palier net, ce qui rend l'optimisation difficile, en plus d'un nombre de count anormalement élevé.}
     \label{fig:optimisation_scint1}
 \end{figure}
@@ -296,7 +295,7 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
     \centering
     \includegraphics[width=0.95\textwidth]{Images/Threshold_Scintillateur_2.png}
     \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 2)
-    Les valeures de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
+    Les valeurs de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
     On observe l'absence de palier net, ce qui rend l'optimisation difficile.}
     \label{fig:optimisation_scint2}
   \end{minipage}
@@ -305,9 +304,10 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
     \centering
     \includegraphics[width=0.95\textwidth]{Images/Threshold_Scintillateur_3.png}
     \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 3).
-    Les valeures de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
+    Les valeurs de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
     On observe l'absence de palier net, ce qui rend l'optimisation difficile.}
     \label{fig:optimisation_scint3}
+
   \end{minipage}
 \end{figure}
 
@@ -651,19 +651,16 @@ Ainsi, plus l’épaisseur augmente, plus le nombre de muons détectés diminue,
 La méthode expérimentale consiste à mesurer le nombre de coups par minute $N(x)$ en fonction de l’épaisseur de plomb $x$.
  À chaque valeur de $x$, on associe une énergie minimale $E_{\min}(x)$ nécessaire pour traverser cette épaisseur, estimée par $E_{\min}(x) \approx \frac{dE}{dx} \cdot x \approx 19.3 \cdot x$ (en MeV), en supposant une perte d’énergie moyenne constante dans le plomb.
 
-L’analyse des données repose sur l’ajustement de la courbe $N(x)$ selon une loi de puissance dérivée du spectre attendu des muons cosmiques : $N(E_{\min}) \propto E_{\min}^{1 - \gamma}$, avec $\gamma \approx 2.7$. Ce modèle permet alors d’estimer l’énergie moyenne des muons détectés via
-\[
-\langle E \rangle \approx \frac{\gamma - 1}{\gamma - 2} \cdot E_{\min,\max},
-\]
+L’analyse des données repose sur l’ajustement de la courbe $N(x)$ selon une loi de puissance dérivée du spectre attendu des muons cosmiques : $N(E_{\min}) \propto E_{\min}^{1 - \gamma}$, avec $\gamma \approx 2.7$. 
 où $E_{\min,\max}$ correspond à la plus grande épaisseur de plomb utilisée.
 
 Cependant, on observe parfois une \textit{hausse du nombre de coups pour de faibles épaisseurs de plomb}. Ce phénomène s’explique par des \textit{interactions secondaires} : les muons (ou autres particules) peuvent interagir dans le plomb et produire des électrons, photons (rayonnement de freinage), ou autres particules secondaires, qui peuvent elles-mêmes être détectées par les scintillateurs. Ces événements parasites peuvent fausser les mesures et doivent être pris en compte dans l’interprétation des résultats.
 
 \begin{figure}[!h]
   \begin{minipage}
-  {0.45\textwidth}
+  {0.49\textwidth}
   \centering
-  \includegraphics[width=0.7\textwidth]{Images/energie.png}
+  \includegraphics[width=0.9\textwidth]{Images/energie.png}
   \caption{Le nombre de coups diminue globalement avec l’épaisseur, traduisant l’atténuation des muons. Une légère hausse initiale peut être observée, due à la production de particules secondaires dans le plomb, susceptibles d’être détectées par les scintillateurs }
 
   \label{fig:energie_1}
@@ -678,7 +675,15 @@ Cependant, on observe parfois une \textit{hausse du nombre de coups pour de faib
   \end{figure}
 Les muons cosmiques perdent leur énergie dans la matière principalement par \textit{ionisation} et \textit{excitation des atomes}, mécanismes dominants à des énergies intermédiaires (de quelques centaines de MeV à quelques GeV). À plus haute énergie, des processus radiatifs comme le \textit{bremsstrahlung}, la \textit{production de paires} ou des \textit{interactions hadroniques} avec les noyaux peuvent également contribuer. Ces processus peuvent générer des \textit{particules secondaires} (électrons, photons, pions, neutrons...) susceptibles d’être détectées par les scintillateurs, en particulier dans les premières couches de plomb. Ce mécanisme explique l’excès de comptage observé pour de faibles épaisseurs.
 
-Enfin, des incertitudes statistiques (bruit de comptage de type Poissonien) et systémiques (approximation de $dE/dx$, fluctuations d’énergie déposée, biais de sélection) limitent la précision de la mesure. Néanmoins, cette approche permet une estimation réaliste de l’ordre de grandeur de l’énergie des muons cosmiques (typiquement quelques centaines de MeV à quelques GeV), tout en illustrant des effets de physique des particules dans la matière.
+Enfin, des incertitudes statistiques (bruit de comptage de type Poissonien) et systémiques (approximation de $dE/dx$, fluctuations d’énergie déposée, biais de sélection) limitent la précision de la mesure.
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Images/plot_gamma.png}
+  \caption{On trace $\ln N$ en fonction de $\ln E_{\min}$. L’ajustement par une droite permet d’estimer l’exposant $\gamma$ du spectre des muons.
+  On voit que la loi ne puissance n'est pas du tout vérifié (même si l'ordre de grandeur est le même). Cela est surrement du au petite epaisseurs de plombs qui ont pu etre mises en place et aussi à l'imprecision globale des mesures.}
+  \label{fig:energie_fit}
+\end{figure}
+
 \section{Mesure du temps de vie de muon}
 Le muon est une particule instable qui se désintègre selon la réaction $\mu^- \to e^- + \bar{\nu}e + \nu\mu$ (ou $\mu^+ \to e^+ + \nu_e + \bar{\nu}_\mu$ pour l’antimuon). La durée de vie moyenne d’un muon au repos est $\tau \approx 2,2~\mu$s. Cette valeur relativement courte peut être mesurée en détectant des muons qui s’arrêtent dans un absorbeur puis en chronométrant le délai jusqu’à l’émission de l’électron de désintégration. C’est une expérience classique de physique nucléaire, qui offre une vérification directe de la désintégration exponentielle et permet d’illustrer quantitativement la dilatation du temps (puisque les muons cosmiques en vol “vivent” beaucoup plus longtemps que $2~\mu$s dans notre référentiel).
 
