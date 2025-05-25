@@ -742,7 +742,13 @@ Ces limitations expliquent les écarts observés entre la loi théorique et les 
 
 \section{Mesure du temps de vie de muon}
 Le muon est une particule instable qui se désintègre selon la réaction $\mu^- \to e^- + \bar{\nu}e + \nu\mu$ (ou $\mu^+ \to e^+ + \nu_e + \bar{\nu}_\mu$ pour l’antimuon). La durée de vie moyenne d’un muon au repos est $\tau \approx 2,2~\mu$s. Cette valeur relativement courte peut être mesurée en détectant des muons qui s’arrêtent dans un absorbeur puis en chronométrant le délai jusqu’à l’émission de l’électron de désintégration. C’est une expérience classique de physique nucléaire, qui offre une vérification directe de la désintégration exponentielle et permet d’illustrer quantitativement la dilatation du temps (puisque les muons cosmiques en vol “vivent” beaucoup plus longtemps que $2~\mu$s dans notre référentiel).
-
+\begin{figure}
+  \centering
+  \include{verrre-au-plomb}
+  \caption{Principe de la mesure du temps de vie du muon.\\
+On place un absorbeur épais (ici en verre au plomb) pour arrêter les muons, et on mesure le temps écoulé jusqu'à la désintégration.}  
+  \label{fig:muon_lifetime}
+\end{figure}
 Principe expérimental~: Pour mesurer le temps de vie du muon, nous avons configuré le détecteur avec trois scintillateurs en coïncidence~: notons-les~A (haut), B (milieu) et C (bas). Le scintillateur du milieu B sert d'absorbeur épais pour arrêter les muons~; il est plus épais que A et C (par exemple 5~cm d'épaisseur, contre 1~cm pour A et C). Les photomultiplicateurs associés fournissent des signaux sur lesquels on applique la logique suivante~:
 \begin{itemize}
   \item Un signal de start (déclenchement) est généré lorsqu'un muon traverse A et B mais pas C. En pratique, cela signifie qu'on cherche des coïncidences~A\(\land\)B en condition d'anti‑coïncidence avec C (notée \(\overline{C}\)). Autrement dit, le muon a été détecté dans A et B, mais il n'a pas atteint C, ce qui implique qu'il s'est arrêté quelque part entre B et C (idéalement dans B). Dans notre électronique NIM, ceci est réalisé en envoyant les signaux de A, B, C dans une unité logique qui forme le signal
