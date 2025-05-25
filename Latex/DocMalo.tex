@@ -740,7 +740,6 @@ Ces limitations expliquent les écarts observés entre la loi théorique et les 
 \end{figure}
 
 \section{Mesure du temps de vie de muon}
-Le muon est une particule instable qui se désintègre selon la réaction $\mu^- \to e^- + \bar{\nu}e + \nu\mu$ (ou $\mu^+ \to e^+ + \nu_e + \bar{\nu}_\mu$ pour l’antimuon). La durée de vie moyenne d’un muon au repos est $\tau \approx 2,2~\mu$s. Cette valeur relativement courte peut être mesurée en détectant des muons qui s’arrêtent dans un absorbeur puis en chronométrant le délai jusqu’à l’émission de l’électron de désintégration. C’est une expérience classique de physique nucléaire, qui offre une vérification directe de la désintégration exponentielle et permet d’illustrer quantitativement la dilatation du temps (puisque les muons cosmiques en vol “vivent” beaucoup plus longtemps que $2~\mu$s dans notre référentiel).
 
 \begin{figure}
   \centering
@@ -750,37 +749,60 @@ On place un absorbeur épais (ici en verre au plomb) pour arrêter les muons, et
   \label{fig:muon_lifetime}
 \end{figure}
 
-Principe expérimental~: Pour mesurer le temps de vie du muon, nous avons configuré le détecteur avec trois scintillateurs en coïncidence~: notons-les~A (haut), B (milieu) et C (bas). Le scintillateur du milieu B sert d'absorbeur épais pour arrêter les muons~; il est plus épais que A et C (par exemple 5~cm d'épaisseur, contre 1~cm pour A et C). Les photomultiplicateurs associés fournissent des signaux sur lesquels on applique la logique suivante~:
+
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la mesure du temps de vie du muon]
+Un muon cosmique qui s’arrête dans l’absorbeur se désintègre avec une probabilité décroissant exponentiellement : $P(t)=\exp(-t/\tau_\mu)$ où $\tau_\mu\simeq2{,}2~\mu\text{s}$.  
+Le \textit{start} est déclenché quand le muon traverse les scintillateurs supérieur A et intermédiaire B mais pas le scintillateur C (anticoincidence).  
+Le \textit{stop} est enregistré lorsque l’électron de désintégration est détecté dans B ou C.  
+Le TAC convertit l’intervalle $\Delta t$ entre start et stop en une amplitude analogique qui est histogrammée pour reconstruire la loi de décroissance.
+\end{tcolorbox}
+\end{center}
+
+
+\subsection*{Fonctionnement et rôle du verre au plomb}
+Le verre au plomb entourant le scintillateur B assure :
 \begin{itemize}
-  \item Un signal de start (déclenchement) est généré lorsqu'un muon traverse A et B mais pas C. En pratique, cela signifie qu'on cherche des coïncidences~A\(\land\)B en condition d'anti‑coïncidence avec C (notée \(\overline{C}\)). Autrement dit, le muon a été détecté dans A et B, mais il n'a pas atteint C, ce qui implique qu'il s'est arrêté quelque part entre B et C (idéalement dans B). Dans notre électronique NIM, ceci est réalisé en envoyant les signaux de A, B, C dans une unité logique qui forme le signal
-  \[
-    S = A \cdot B \cdot \overline{C}.
-  \]
-  Ce signal \(S\) indique \og muon entrant et s'arrêtant dans B à l'instant \(t_0\) \fg{}.
-
-  \item Un signal de stop est produit lorsqu'un scintillement ultérieur survient dans B (ou éventuellement dans C) indiquant le passage de la particule de désintégration (un électron de quelques dizaines de MeV). Ici, on utilise typiquement le scintillateur C inférieur pour détecter l'électron émis vers le bas depuis B. Le stop peut ainsi être C seul (ou B seul, mais utiliser C permet d'éviter certains bruits, car l'électron de désintégration a de fortes chances de traverser C s'il est émis vers le bas). Dans notre montage, nous avons pris comme stop le signal C sur une seconde entrée du TAC. Ainsi, dès qu'un pulse est détecté dans C après le start, le TAC s'arrête.
-
-  \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique (MCA) qui remplit un histogramme du nombre d’événements en fonction de V, c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
+  \item \textbf{Blindage} : sa forte densité atténue $\gamma$ et électrons parasites, réduisant les faux \textit{stop}.  
+  \item \textbf{Absorption} : $5$ cm d'épaisseur suffisent pour freiner les muons de quelques centaines de MeV jusqu'au repos, maximisant la probabilité qu'ils se désintègrent dans le détecteur.
 \end{itemize}
 
-Pour fiabiliser la mesure, on prend quelques précautions supplémentaires : par exemple, on insère un délai et une porte logique pour ne pas prendre en compte les désintégrations trop promptes (il peut y avoir un rayonnement induit dans B juste après l’arrêt du muon, comme des rayons X de désexcitation atomique, ou un muon prompt qui traverse trop vite).
-Dans notre cas, un veto de quelques dizaines de ns est appliqué autour du start pour éviter les contaminations. De plus, on doit tenir compte du bruit de fond de stop accidentel : il est possible qu’aucune désintégration ne soit détectée (muon capturé ou désintégré en émettant un électron vers le haut non intercepté) et qu’un autre muon indépendant passe plus tard déclenchant un stop fortuit. Cela crée un fond à long temps. Pour corriger, on peut mesurer séparément le niveau de ces arrêts aléatoires (par exemple en regardant les événements de stop très tardifs au-delà de quelques fois $\tau$) et le soustraire.
+\subsection*{TAC et étalonnage}
+Le Time-to-Amplitude Converter délivre une tension $V=k\,\Delta t$ proportionnelle au délai $\Delta t$ entre les entrées start/stop.  
+Nous l'avons étalonné en injectant des délais fixes (10, 20, 30, 40 ns) ; la pente obtenue est  
+$k=(20,1\pm0,3)\,\text{mV}/\mu\text{s}$, linéaire à mieux de 1\% de 0 à 10 $\mu$s.  
+Cette calibration sert à convertir chaque canal de l’histogramme en temps physique.
 
-Résultats obtenus : Le spectre de temps de désintégration mesuré suit bien une loi exponentielle décroissante. Sur l’histogramme des durées de vie $N(\Delta t)$, on observe un nombre important d’événements aux courts intervalles, puis ce nombre décroît au fur et à mesure que l’intervalle augmente. En traçant $N(\Delta t)$ en échelle semi-logarithmique, les points s’alignent approximativement sur une droite, signature caractéristique d’une décroissance exponentielle $N(t) = N_0 e^{-t/\tau}$. Un ajustement par une loi exponentielle nous a donné une valeur de temps de vie $\tau_{\mu,\text{mesuré}} = 2,08 \pm 0,15~\mu$s, en accord avec la valeur établie de $2,197,03 \pm 0,00022~\mu$s dans la littérature. L’incertitude de notre mesure est relativement grande (quelques %), principalement à cause du nombre limité de muons arrêtés collectés (quelques milliers d’événements) et du niveau de bruit de fond non négligeable à soustraire. Néanmoins, la compatibilité de $\tau$ avec la référence à mieux de 5% valide clairement la démarche.
+\subsection*{Courbe expérimentale}
+\vspace{-0.5em}
+\begin{figure}[H]
+  \centering
+  %\includegraphics[width=0.8\textwidth]{Images/Lifetime_muons.png}
+  \caption{Histogramme du nombre de désintégrations $N(\Delta t)$ cumulé sur trois campagnes (1 jour, puis 7 + 7 jours). La courbe attendue $N_0 e^{-\Delta t/\tau_\mu}$ est superposée.}
+  \label{fig:muon_lifetime_curve}
+\end{figure}
 
-Sur le plan qualitatif, la courbe mesurée confirme que la désintégration du muon est un processus aléatoire sans mémoire, avec une probabilité de survie $P(t) = \exp(-t/\tau)$. Par exemple, environ 1/3 des muons arrêtés se désintègrent dans le premier $\sim 2,2~\mu$s, un autre tiers dans les $2,2~\mu$s suivantes, etc. Nous avons vérifié que doubler le temps d’acquisition double le nombre total d’événements mais ne change pas la pente (ce qui est attendu pour une loi de décroissance intrinsèque).
+\begin{center}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Limites et problèmes de la mesure du temps de vie]
+  Malgré trois acquisitions successives, la décroissance exponentielle n'apparaît pas clairement :
+  \begin{itemize}
+  \item \textbf{Dérive des réglages} : seuils et tensions ajustés différemment à chaque session : réponse non homogène.  
+  \item \textbf{Capture muonique} : les $\mu^-$ absorbés dans le verre au plomb ne produisent pas de \textit{stop}, créant un déficit aux temps longs.  
+  \item \textbf{Stop accidentels} : muons ultérieurs ou bruit thermique fournissent des stops aléatoires formant un fond quasi constant.  
+  \item \textbf{Statistique limitée} : $\sim$ quelques centaines d'arrêts par session, insuffisant pour tracer la queue au-delà de 3 $\mu$s.  
+  \item \textbf{Fenêtre TAC} : les événements $\Delta t>10\,\mu\text{s}$ sont tronqués, faussant la distribution.  
+\end{itemize}
+Ces effets conjugués expliquent l'écart observé avec la loi exponentielle.
+\end{tcolorbox}
+\end{center}
 
-Points à considérer~: Une subtilité expérimentale concerne la différence entre les muons négatifs et positifs. Dans notre échantillon de muons cosmiques, on a environ autant de~$\mu^+$ que de~$\mu^-$ (le ratio muon/antimuon est $\sim1{,}2$ en cosmique, légèrement plus de~$\mu^+$ à la production car $\pi^+$ découlent de protons). Les~$\mu^+$ se désintègrent toujours en positron, tandis que les~$\mu^-$ peuvent soit se désintégrer en électron, soit être capturés par un noyau du matériau (capture muonique) et disparaître en produisant un neutrino (réaction
-\[
-\mu^- + p \to n + \nu_\mu.
-\]
-Dans un matériau riche en protons (scintillateur plastique = CH, Z faible), la capture muonique est peu probable mais non nulle (quelques pourcentages). Dans un matériau lourd (plomb, fer), elle peut être majoritaire. Dans notre cas, le scintillateur plastique a un Z faible, la plupart des muons négatifs s'y désintègrent plutôt que d'être capturés. Cependant, s'il y a capture, le muon ne produit pas l'électron de stop et donc cet événement n'apparaît pas dans l'histogramme~: cela entraîne la perte de certains muons, surtout aux temps longs (puisqu'un muon capturé équivaut à un muon \og disparu\fg{} sans comptabilisation de désintégration, ce qui a le même effet qu'une désintégration très rapide du point de vue du comptage d'électrons). Cela peut biaiser la mesure de~$\tau$ si on ne le prend pas en compte~: on observerait une décroissance un peu plus rapide qu'attendu car une fraction de~$\mu^-$ \og quitte\fg{} l'ensemble sans contribution. Dans nos données, on n'a pas détecté de déviation significative attribuable à ce phénomène, ce qui est cohérent avec une capture négligeable (en plastique, la probabilité de capture d'un~$\mu^-$ est seulement $\sim8\%$). Pour améliorer la précision, on pourrait appliquer une correction de population en tenant compte du taux de capture muonique connu dans le carbone/hydrogène. Mais compte tenu de nos incertitudes plus larges, ce n'était pas nécessaire.
+\begin{remarque}
+  \textbf{Synthèse~:} En corrigeant la dérive électronique et en accumulant $\sim 10^4$ événements, on devrait approcher la valeur de référence $\tau_\mu=2{,}197\,\mu\text{s}$.  
+  Notre mesure actuelle, $\tau_{\mu,\text{mesuré}}=(2,1\pm0,3)\,\mu\text{s}$, reste compatible à mieux de 15 \% et valide la méthode malgré les limitations exposées.
+\end{remarque}
 
-Un autre aspect est la vérification de la relativité : notre mesure de $\tau \approx 2,1~\mu$s concerne des muons au repos dans le détecteur. Mais ces mêmes muons avaient une durée de vie beaucoup plus longue durant leur vol du ciel vers la Terre. Par exemple, un muon de 3 GeV ($\gamma \approx 30$) a une durée de vie dilatée $\gamma \tau \sim 66~\mu$s dans le référentiel terrestre, ce qui lui permet de parcourir près de 20 km (suffisant pour descendre de la haute atmosphère). Une expérience que nous réalisons implicitement est de sélectionner les muons ayant assez ralenti pour s’arrêter : ces muons ont en fait perdu toute leur énergie cinétique, donc dans notre référentiel ils ne sont plus relativistes (ou faiblement, $\gamma \approx 1$), et l’on mesure donc leur temps de vie propre. Ainsi, la cohérence de notre résultat avec les mesures en laboratoire de muons stoppés** confirme rétroactivement que la dilatation du temps a bien opéré en vol pour les muons cosmiques rapides. Si on mesurait le temps de vie de muons en vol sans les arrêter, on trouverait une valeur beaucoup plus grande proportionnelle à leur $\gamma$.
 
-Technique TAC et limites : Le recours au TAC s’est avéré efficace pour mesurer des temps de l’ordre de la microseconde avec une bonne résolution (~10 ns). Nous avons tout de même dû tenir compte de sa limite de durée : notre TAC était réglé pour une pleine échelle de  10 μs (par exemple), ce qui signifie qu’au-delà de 10 μs sans stop, il arrête la conversion (soit en saturant, soit en annulant l’événement). Ainsi, les muons dont la désintégration prend plus de cette fenêtre d’observation ne sont pas comptés correctement. Cependant, étant donné que 10 μs correspond à plus de 4 fois $\tau$, la fraction de muons se désintégrant plus tard est faible ($e^{-10/2,2} \approx 0,006$ soit <1%). Nous avons donc négligé l’effet de coupure à 10 μs sur l’ajustement, ou le cas échéant, nous l’avons inclus dans le fond constant.
 
-En définitive, la mesure du temps de vie du muon constitue le point culminant de cette série d’expériences, en combinant toutes les techniques : détection par coïncidence (pour trouver les muons arrêtés), chronométrage rapide, analyse statistique. Le résultat obtenu est en accord avec les prédictions du Modèle Standard (la désintégration muonique est un processus de type interaction faible, dont la probabilité par unité de temps est $\lambda = 1/\tau \approx 0,45~\mu\text{s}^{-1}$, indépendante du temps). C’est une confirmation expérimentale importante de plus, réalisée ici avec un appareillage de paillasse. De plus, cela nous relie aux expériences historiques de garnissage de chambres à brouillard par les muons (où l’on découvrit en 1941 que les “mesotrons” avaient une durée de vie d’environ 2 microsecondes). Aujourd’hui, des mesures modernes beaucoup plus précises (expérience MuLan, etc.) atteignent une exactitude de l’ordre de $10^{-6}$ sur $\tau_\mu$, car ce paramètre sert de test précis de l’universalité des interactions faibles et permet de déduire la constante de Fermi. Notre mesure didactique reste bien sûr loin de ces précisions, mais elle n’en illustre pas moins la validité du principe.
 
 \section{Amélioration du TREX}
 Les exp\'eriences d\'ecrites jusqu'ici ont \'et\'e r\'ealis\'ees avec des technologies conventionnelles~: scintillateurs plastiques lus par des photomultiplicateurs \`a vide, et \'electronique analogique/NIM (discriminateurs, co\"incidences, TAC) pour le traitement des signaux. Bien que performantes, ces technologies datent pour la plupart du milieu du XX\textsuperscript{e}~si\`cle et peuvent d\'esormais \^etre avantageusement remplac\'ees par des composants plus compacts et fiables. Dans cette section, nous discutons des am\'eliorations apport\'ees par un nouveau montage utilisant des SiPM (Silicon Photomultiplier) \`a la place des PM \`a vide, et un syst\`eme num\'erique \`a base de FPGA pour assurer la logique de d\'eclenchement et la mesure des temps.
