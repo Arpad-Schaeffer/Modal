@@ -1014,4 +1014,507 @@ Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 217.
 File: Images/Desexitation_Scintillateur_2.png Graphic file (type png)
 <use Images/Desexitation_Scintillateur_2.png>
 Package pdftex.def Info: Images/Desexitation_Scintillateur_2.png  used on input line 234.
-(pdftex.def)             Requested size: 
+(pdftex.def)             Requested size: 386.95897pt x 251.39581pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 240.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[10 <./Images/Desexitation_Scintillateur_2.png>]
+File: polytechnique-filetcourt.pdf Graphic file (type pdf)
+<use polytechnique-filetcourt.pdf>
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 252.
+(pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
+\openout2 = `variationHT.aux'.
+
+ (./variationHT.tex
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 72.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pcr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
+\openout2 = `treshold.aux'.
+
+ (./treshold.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Images/Threshold_Scintillateur_1.png, id=258, 634.5306pt x 395.7987pt>
+File: Images/Threshold_Scintillateur_1.png Graphic file (type png)
+<use Images/Threshold_Scintillateur_1.png>
+Package pdftex.def Info: Images/Threshold_Scintillateur_1.png  used on input line 286.
+(pdftex.def)             Requested size: 338.58632pt x 211.20364pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 292.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[11
+
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
+
+
+]
+<Images/Threshold_Scintillateur_2.png, id=269, 628.0263pt x 395.7987pt>
+File: Images/Threshold_Scintillateur_2.png Graphic file (type png)
+<use Images/Threshold_Scintillateur_2.png>
+Package pdftex.def Info: Images/Threshold_Scintillateur_2.png  used on input line 296.
+(pdftex.def)             Requested size: 225.16267pt x 141.9016pt.
+<Images/Threshold_Scintillateur_3.png, id=270, 634.2897pt x 395.7987pt>
+File: Images/Threshold_Scintillateur_3.png Graphic file (type png)
+<use Images/Threshold_Scintillateur_3.png>
+Package pdftex.def Info: Images/Threshold_Scintillateur_3.png  used on input line 305.
+(pdftex.def)             Requested size: 225.16267pt x 140.50046pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 313.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[12
+
+
+
+ <./Images/Threshold_Scintillateur_1.png>]
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 344.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[13 <./Images/Threshold_Scintillateur_2.png> <./Images/Threshold_Scintillateur_3.png>]
+LaTeX Info: Redefining \\ on input line 344.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 344.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+File: polytechnique-filetcourt.pdf Graphic file (type pdf)
+<use polytechnique-filetcourt.pdf>
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 346.
+(pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
+\openout2 = `coincidence_schema.aux'.
+
+ (./coincidence_schema.tex
+Underfull \hbox (badness 1320) in paragraph at lines 56--57
+[]\T1/lmr/m/n/10 (+20) Signaux si-mul-
+ []
+
+)
+Overfull \hbox (10.04526pt too wide) in paragraph at lines 60--360
+ [][] 
+ []
+
+\openout2 = `bruit_coincidence.aux'.
+
+(./bruit_coincidence.tex
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+[]\T1/lmr/m/n/10 (+20) Bruit dis-cri-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+[]\T1/lmr/m/n/10 (+20) D�clanchement
+ []
+
+)
+Overfull \hbox (10.04526pt too wide) in paragraph at lines 49--368
+ [][] 
+ []
+
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 385.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[14
+
+
+
+
+
+
+]
+\openout2 = `coincidence_sans_delais.aux'.
+
+ (./coincidence_sans_delais.tex)
+\openout2 = `recouvrement_petit_width.aux'.
+
+ (./recouvrement_petit_width.tex
+Overfull \hbox (1.34837pt too wide) in paragraph at lines 27--28
+[]\T1/lmr/m/n/6 (-20) recouvrement 
+ []
+
+)
+\openout2 = `recouvrment_grand_width.aux'.
+
+ (./recouvrment_grand_width.tex
+Overfull \hbox (1.34837pt too wide) in paragraph at lines 27--28
+[]\T1/lmr/m/n/6 (-20) recouvrement 
+ []
+
+)
+File: polytechnique-filetcourt.pdf Graphic file (type pdf)
+<use polytechnique-filetcourt.pdf>
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 418.
+(pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 424.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[15
+
+
+
+
+
+
+
+
+
+]
+File: polytechnique-filetcourt.pdf Graphic file (type pdf)
+<use polytechnique-filetcourt.pdf>
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 436.
+(pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 437.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 443.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[16{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+<Images/Coincidences_2_Scintillateurs.png, id=311, 715.473pt x 498.4221pt>
+File: Images/Coincidences_2_Scintillateurs.png Graphic file (type png)
+<use Images/Coincidences_2_Scintillateurs.png>
+Package pdftex.def Info: Images/Coincidences_2_Scintillateurs.png  used on input line 453.
+(pdftex.def)             Requested size: 386.95897pt x 269.56221pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 472.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[17 <./Images/Coincidences_2_Scintillateurs.png>]
+<Images/Coincidences_3_Scintillateurs.png, id=320, 715.473pt x 498.4221pt>
+File: Images/Coincidences_3_Scintillateurs.png Graphic file (type png)
+<use Images/Coincidences_3_Scintillateurs.png>
+Package pdftex.def Info: Images/Coincidences_3_Scintillateurs.png  used on input line 481.
+(pdftex.def)             Requested size: 386.95897pt x 269.56221pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 499.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[18 <./Images/Coincidences_3_Scintillateurs.png>]
+LaTeX Info: Redefining \\ on input line 511.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 511.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 517.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[19]
+File: polytechnique-filetcourt.pdf Graphic file (type pdf)
+<use polytechnique-filetcourt.pdf>
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 518.
+(pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
+\openout2 = `angle_nul.aux'.
+
+ (./angle_nul.tex)
+\openout2 = `angle_non_nul.aux'.
+
+ (./angle_non_nul.tex)
+\openout2 = `range_des_angles.aux'.
+
+ (./range_des_angles.tex)
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 551.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[20
+
+
+
+
+
+
+
+
+
+]
+<Images/coscarréavectroisscintillateurs.png, id=343, 722.7pt x 433.62pt>
+File: Images/coscarréavectroisscintillateurs.png Graphic file (type png)
+<use Images/coscarréavectroisscintillateurs.png>
+Package pdftex.def Info: Images/coscarréavectroisscintillateurs.png  used on input line 559.
+(pdftex.def)             Requested size: 338.58632pt x 203.15302pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 560.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 560.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 578.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[21{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./Images/coscarréavectroisscintillateurs.png>]
+File: polytechnique-filetcourt.pdf Graphic file (type pdf)
+<use polytechnique-filetcourt.pdf>
+Package pdftex.def Info: polytechnique-filetcourt.pdf  used on input line 589.
+(pdftex.def)             Requested size: 28.40604pt x 2.16808pt.
+<Images/matrice_scint.jpg, id=355, 3854.4pt x 5139.2pt>
+File: Images/matrice_scint.jpg Graphic file (type jpg)
+<use Images/matrice_scint.jpg>
+Package pdftex.def Info: Images/matrice_scint.jpg  used on input line 594.
+(pdftex.def)             Requested size: 145.11053pt x 193.45665pt.
+\openout2 = `matrice.aux'.
+
+ (./matrice.tex)
+Overfull \hbox (8.2679pt too wide) in paragraph at lines 59--609
+ [][] 
+ []
+
+\openout2 = `matrice_et_trajs.aux'.
+
+(./matrice_et_trajs.tex)
+Overfull \hbox (9.58789pt too wide) in paragraph at lines 68--616
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 624.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[22 <./Images/matrice_scint.jpg>]
+<Images/palier_dezoomé.png, id=367, 722.7pt x 433.62pt>
+File: Images/palier_dezoomé.png Graphic file (type png)
+<use Images/palier_dezoomé.png>
+Package pdftex.def Info: Images/palier_dezoomé.png  used on input line 629.
+(pdftex.def)             Requested size: 195.89456pt x 117.53549pt.
+<Images/palier_zommé.png, id=368, 722.7pt x 433.62pt>
+File: Images/palier_zommé.png Graphic file (type png)
+<use Images/palier_zommé.png>
+Package pdftex.def Info: Images/palier_zommé.png  used on input line 636.
+(pdftex.def)             Requested size: 195.89456pt x 117.53549pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 647.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[23
+
+
+
+
+
+
+ <./Images/palier_dezoomé.png> <./Images/palier_zommé.png>]
+<Images/distribution_angulaire.png, id=378, 722.7pt x 433.62pt>
+File: Images/distribution_angulaire.png Graphic file (type png)
+<use Images/distribution_angulaire.png>
+Package pdftex.def Info: Images/distribution_angulaire.png  used on input line 650.
+(pdftex.def)             Requested size: 338.58632pt x 203.15302pt.
+LaTeX Info: Redefining \\ on input line 657.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 657.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 668.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[24 <./Images/distribution_angulaire.png>]
+<Images/energie.png, id=388, 722.7pt x 433.62pt>
+File: Images/energie.png Graphic file (type png)
+<use Images/energie.png>
+Package pdftex.def Info: Images/energie.png  used on input line 673.
+(pdftex.def)             Requested size: 213.31125pt x 127.98296pt.
+<Images/plomb.jpg, id=389, 5139.2pt x 3854.4pt>
+File: Images/plomb.jpg Graphic file (type jpg)
+<use Images/plomb.jpg>
+Package pdftex.def Info: Images/plomb.jpg  used on input line 681.
+(pdftex.def)             Requested size: 152.36281pt x 114.21548pt.
+<Images/plot_gamma.png, id=390, 722.7pt x 433.62pt>
+File: Images/plot_gamma.png Graphic file (type png)
+<use Images/plot_gamma.png>
+Package pdftex.def Info: Images/plot_gamma.png  used on input line 691.
+(pdftex.def)             Requested size: 338.58632pt x 203.15302pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \\ on input line 697.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 697.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 699.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[25 <./Images/energie.png> <./Images/plomb.jpg>]
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 709.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[26 <./Images/plot_gamma.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 723.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[27]
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 731.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[28]
+LaTeX Info: Redefining \\ on input line 732.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 732.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 740.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 748.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 750.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 759.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[32]
+LaTeX Info: Redefining \\ on input line 759.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 759.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+LaTeX Info: Redefining \\ on input line 764.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 764.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 775.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[33]
+LaTeX Info: Redefining \\ on input line 785.
+File: polytechnique-filetlongrouge.pdf Graphic file (type pdf)
+<use polytechnique-filetlongrouge.pdf>
+Package pdftex.def Info: polytechnique-filetlongrouge.pdf  used on input line 785.
+(pdftex.def)             Requested size: 124.21375pt x 2.16808pt.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 788.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[34]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 788.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+File: polytechnique-logohori.pdf Graphic file (type pdf)
+<use polytechnique-logohori.pdf>
+Package pdftex.def Info: polytechnique-logohori.pdf  used on input line 792.
+(pdftex.def)             Requested size: 156.35799pt x 56.90453pt.
+[35] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(out/DocMalo.aux (out/variationHT.aux) (out/treshold.aux) (out/coincidence_schema.aux) (out/bruit_coincidence.aux) (out/coincidence_sans_delais.aux) (out/recouvrement_petit_width.aux) (out/recouvrment_grand_width.aux) (out/angle_nul.aux) (out/angle_non_nul.aux) (out/range_des_angles.aux) (out/matrice.aux) (out/matrice_et_trajs.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-04-14>
+ ***********
+Package rerunfilecheck Info: File `DocMalo.out' has not changed.
+(rerunfilecheck)             Checksum: BBBEDD96AC56C6D59A9B9D7289AAD5E9;4783.
+ ) 
+Here is how much of TeX's memory you used:
+ 31992 strings out of 469608
+ 620965 string characters out of 5470601
+ 1029796 words of memory out of 5000000
+ 57858 multiletter control sequences out of 15000+600000
+ 733500 words of font info for 254 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,12n,102p,2310b,874s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on out/DocMalo.pdf (35 pages, 14784100 bytes).
+PDF statistics:
+ 591 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 64321 words of extra memory for PDF output out of 74296 (max. 10000000)
+
