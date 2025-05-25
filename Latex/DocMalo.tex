@@ -553,8 +553,13 @@ avec $n \approx 2$ aux 'energies cosmiques typiques. Autrement dit, le flux diff
 \end{figure}
 
 
-En pratique, une premiere idée peut consister à faire varier l'angle d'incidence des muons en deplacant de facon horizontale les scintillateurs.
-Les muons seraient alors selectionnés selon leur angle d'incidence, comme schematisé en figure \ref{fig:angle_non_nul}.
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la sélection angulaire par déplacement des scintillateurs]
+En pratique, une première idée consiste à faire varier l’angle d’incidence des muons en déplaçant horizontalement les scintillateurs.
+ Les muons sont alors sélectionnés selon leur angle d’incidence, comme schématisé en figure~\ref{fig:angle_non_nul}.
+ 
+\end{tcolorbox}
+\end{center}
 Cependant, la mesure est tres imprecise car la sélection des angles est très impûre comme on peu le comprendre grace a la figure \ref{fig:range_des_angles}.
 En effet, la largeur des scintillateurs est de l'ordre de 20cm ce qui fait que la sélection des angles est tres large.
 Une fois les scintillateurs correctements placés, pour chaque angle~$\theta$, on enregistre le nombre de muons détectés (coïncidences $A\wedge B\wedge C$) pendant une durée fixe. On obtient ainsi un taux de comptage~$N(\theta)$ en fonction de~$\theta$. Les résultats bruts doivent être corrigés d'un effet géométrique~: la projection de la surface du détecteur selon l'angle. Lorsque les scintillateurs sont deplacés la surface effective presenté au muons venant avec un angle d'incidence $\theta$, est réduite d'un facteur~$\cos\theta$. 
@@ -592,9 +597,20 @@ Si $\tfrac{L(0)}{\Lambda_\mu}$ n'est pas trop grand (typiquement 1--3), on peut 
 \]
 pour un certain~$n$. Les valeurs réalistes donnent effectivement un $n\approx2$. En réalité, le spectre en énergie entre aussi en jeu : les muons plus inclinés doivent avoir une énergie plus grande pour survivre (sinon ils se désintègrent en route), ce qui modifie légèrement l'exposant~$n$ en fonction du seuil d'énergie considéré. Néanmoins, dans l'intervalle $0^\circ \le \theta \leq 60^\circ$, on peut consid\'erer la loi $\cos^2\theta$ comme une bonne approximation pour le flux muonique au niveau de la mer.
 
-On osberve que la méthode de mesure n'est pas entierement satisfaisante.
-Si on arrive à mettre en évidence une tendance, la modelisation des données est assez aproximative.
-C'est pourquoi on peut alors utiliser un autre dispositif experimental.
+\begin{center}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Limites et problèmes de la sélection angulaire par déplacement des scintillateurs]
+Cette méthode présente plusieurs limitations expérimentales :
+\begin{itemize}
+    \item \textbf{Sélection angulaire imprécise~:} La largeur importante des scintillateurs (environ 20~cm) fait que chaque configuration sélectionne en réalité une large gamme d’angles, ce qui réduit la pureté directionnelle de la mesure (voir figure~\ref{fig:range_des_angles}).
+    \item \textbf{Effet géométrique~:} La surface effective du détecteur diminue avec l’angle, ce qui nécessite une correction par un facteur $\cos\theta$ pour comparer les taux de comptage.
+    \item \textbf{Statistique limitée~:} Pour les grands angles, le flux de muons détectés devient faible, ce qui augmente l’incertitude statistique.
+    \item \textbf{Alignement et reproductibilité~:} Le repositionnement manuel des scintillateurs peut introduire des erreurs d’alignement et de reproductibilité d’une mesure à l’autre.
+    \item \textbf{Homogeneité des scintillateurs~:} Les différentes zones d'impact des muons peut introduire des biais si les scintillateurs ne sont pas parfaitement homogènes en efficacité de détection.
+  \end{itemize}
+Ces limitations expliquent la dispersion des résultats (si on arrive à mettre en évidence une tendance, la modelisation des données est assez aproximative.) et motivent l’utilisation de dispositifs plus performants, comme la matrice de scintillateurs.
+\end{tcolorbox}
+\end{center}
+
 
 \subsection{Deuxième méthode de mesure}
 
