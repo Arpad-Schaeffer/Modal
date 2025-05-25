@@ -55,9 +55,18 @@ fichier = "Temps de vie/3dayslifetimespe.Spe"
 try:
     donnees = lire_spectre_spe(fichier)
 
-    # Limiter les données aux canaux 0 à 100
-    x_data = np.arange(20, 101)
-    y_data = donnees[20:101]
+    # Rebinning par k=3
+    k = 4
+    donnees_rebin = [
+        sum(donnees[i:i+k]) for i in range(0, len(donnees), k)
+    ]
+    # Incertitudes sur chaque bin rebiné (racine du nombre de coups)
+    y_err = [np.sqrt(n) for n in donnees_rebin]
+
+    # Adapter les bornes pour x_data, y_data et y_err après rebinning
+    x_data = np.arange(20 // k, (100 // k) + 1)
+    y_data = donnees_rebin[20 // k : (100 // k) + 1]
+    y_err = y_err[20 // k : (100 // k) + 1]
 
     # Ajustement exponentiel
     params, _ = curve_fit(fonction_exponentielle, x_data, y_data, p0=(1, 0.01, 1))
@@ -65,10 +74,15 @@ try:
     # Générer les données ajustées
     y_fit = fonction_exponentielle(x_data, *params)
 
+    # Calcul du chi carré réduit
+    chi2 = np.sum(((y_data - y_fit) / y_err) ** 2)
+    ddl = len(y_data) - len(params)  # degrés de liberté
+    chi2_reduit = chi2 / ddl if ddl > 0 else np.nan
+
     # Affichage des données et du fit
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.plot(x_data, y_data, 'o', label="Données brutes", markersize=5)
-    ax.plot(x_data, y_fit, '-', label="Fit exponentiel", color="red")
+    ax.errorbar(x_data, y_data, yerr=y_err, fmt='o',color ='C1',label="Données brutes", markersize=5, capsize=3)
+    ax.plot(x_data, y_fit, '-', label="Fit exponentiel", color="k")
 
     #calcul de tau
     tau = (1 / params[1]-16.8)/203
@@ -81,7 +95,8 @@ try:
         f"a = {params[0]:.3f}\n"
         f"b = {params[1]:.3f}\n"
         f"c = {params[2]:.3f}\n"
-        f"tau = {tau:.3f}"
+        rf"$\tau$ = {-tau:.3f}$\mu s$"
+        f"\n$\chi^2_{{\mathrm{{réduit}}}}$ = {chi2_reduit:.2f}"
     )
     ax.text(
         0.95, 0.95, textstr,
