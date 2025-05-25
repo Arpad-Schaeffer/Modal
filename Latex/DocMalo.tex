@@ -52,7 +52,7 @@
 
 \section{Présentation et objectifs}
 \subsection{Les Muons}
-Les muons cosmiques sont des particules élémentaires de la famille des leptons, analogues à l’électron mais environ 207 fois plus massifs (masse $m_\mu \approx 105{,}7\ \mathrm{MeV}/c^2$) et dotés d’une charge électrique de $-e$ (muon négatif $\mu^-$) ou $+e$ (antimuon $\mu^+$) \cite{wikimuon,knoll2010}. Leur durée de vie propre est courte, de l’ordre de $\tau_\mu = 2{,}2\ \mu\mathrm{s}$. 
+Les muons cosmiques sont des particules élémentaires de la famille des leptons, analogues à l’électron mais environ 207 fois plus massifs (masse $m_\mu \approx 105{,}7\ \mathrm{MeV}/c^2$) et dotés d’une charge électrique de $-e$ (muon négatif $\mu^-$) ou $+e$ (antimuon $\mu^+$) \cite{knoll2010, wikimuon}. Leur durée de vie propre est courte, de l’ordre de $\tau_\mu = 2{,}2\ \mu\mathrm{s}$. 
 
 Malgré cette brièveté, les muons cosmiques sont abondamment observés au niveau du sol grâce au mécanisme de dilatation temporelle de la relativité restreinte\,:
 se déplaçant à des vitesses relativistes, leurs horloges internes \og ralentissent\fg{} dans le référentiel du laboratoire, ce qui leur permet de parcourir de grandes distances avant de se désintégrer.
@@ -60,7 +60,7 @@ se déplaçant à des vitesses relativistes, leurs horloges internes \og ralenti
 En effet, produits à environ 15~km d’altitude par la décomposition de mésons~$\pi$ dans les gerbes de rayons cosmiques, la plupart des muons atteignent le sol avant de se désintégrer en un électron (ou positron) et deux neutrinos, selon la réaction : $\mu^- \to e^- + \bar{\nu}_e + \nu_\mu$.
 
 Ils ont un flux typique d’environ $1\ \text{muon}\,\mathrm{cm^{-2}}\,\mathrm{min^{-1}}$
-pour les détecteurs horizontaux. Ce flux dépend fortement de l’angle d’arrivée des muons, suivant approximativement une loi en $\cos^2\theta$ (flux maximal à la verticale, $\theta=0$) du fait de l’absorption accrue dans l’atmosphère pour les trajets inclinés.
+pour les détecteurs horizontaux. Ce flux dépend fortement de l’angle d’arrivée des muons du fait de l’absorption accrue dans l’atmosphère pour les trajets inclinés.
 
 Par ailleurs, les muons cosmiques, en tant que particules très pénétrantes, interagissent peu avec la matière sur de faibles épaisseurs : ils perdent en moyenne $\sim2\ \mathrm{GeV}$ par ionisation lors de leur traversée de toute l’atmosphère, ce qui correspond à un dépôt d’énergie d’environ $1\text{-}2\ \mathrm{MeV}\,\mathrm{g^{-1}}\,\mathrm{cm^2}$
 dans la matière solide (valeur typique pour un muon minimum ionisant) – une perte modeste comparée à leur énergie totale souvent de l’ordre de plusieurs GeV en arrivant au sol (énergie moyenne $\approx4\ \mathrm{GeV}$) \cite{bethe1930}.
@@ -70,13 +70,13 @@ dans la matière solide (valeur typique pour un muon minimum ionisant) – une 
 
 \textbf{Détection et coïncidence}~: Mettre en place un télescope à scintillateurs plastiques afin de détecter les muons cosmiques et d’isoler les véritables événements muoniques du bruit de fond (bruit électronique, radioactivité naturelle, etc.). L’objectif est de comprendre l’importance de la coïncidence temporelle entre plusieurs détecteurs pour éliminer les faux signaux et garantir que seuls les muons traversant successivement plusieurs plaques sont comptés. Cette étape permet de valider la méthode de détection et d’estimer l’efficacité du dispositif.
 
-\textbf{Distribution angulaire}~: Mesurer le flux de muons en fonction de l’angle d’incidence $\theta$ par rapport à la verticale, et vérifier expérimentalement la loi $I(\theta)\propto\cos^2\!\theta$. Cette étude met en évidence l’anisotropie du rayonnement cosmique au sol, liée à la géométrie du montage et à l’atténuation atmosphérique accrue pour les muons venant de directions inclinées. L’objectif est de confronter les mesures au modèle théorique et de comprendre l’origine physique de cette loi angulaire.
+\textbf{Distribution angulaire}~: Mesurer le flux de muons en fonction de l’angle d’incidence $\theta$ par rapport à la verticale. Cette étude met en évidence l’anisotropie du rayonnement cosmique au sol, liée à la géométrie du montage et à l’atténuation atmosphérique accrue pour les muons venant de directions inclinées. L’objectif est de confronter les mesures au modèle théorique et de comprendre l’origine physique de cette loi angulaire.
 
 \textbf{Dépôt d’énergie}~: Étudier le pouvoir de pénétration des muons à l’aide d’absorbeurs de plomb placés sur leur trajectoire. On cherche à observer comment l’ajout d’une épaisseur de plomb réduit le flux détecté et modifie le dépôt d’énergie dans le scintillateur. Cette expérience permet de caractériser la nature très pénétrante des muons cosmiques, de quantifier leur perte d’énergie par ionisation, et d’illustrer la distribution de Landau du dépôt d’énergie.
 
 \textbf{Temps de vie du muon}~: Chronométrer la désintégration des muons arrêtés dans un absorbeur pour déterminer expérimentalement leur temps de vie propre $\tau_\mu$. Cette mesure met en évidence la décroissance exponentielle caractéristique des particules instables et permet de comparer la valeur obtenue à la valeur de référence du modèle standard. Elle illustre aussi la dilatation du temps relativiste vécue par les muons cosmiques en vol.
 
-\textbf{Modernisation technique}~: Remplacer les photomultiplicateurs traditionnels par des détecteurs SiPM (Silicon Photomultiplier) et utiliser un traitement numérique par FPGA pour gagner en compacité, robustesse et rapidité. L’objectif est de montrer l’apport des technologies modernes en instrumentation, d’améliorer la portabilité du dispositif, et de faciliter l’acquisition et l’analyse des données. Cette étape ouvre la voie à des applications avancées (muographie, mesures en altitude, etc.).
+\textbf{Modernisation technique}~: Remplacer les photomultiplicateurs traditionnels par des détecteurs SiPM (Silicon Photomultiplier) et utiliser un traitement numérique pour gagner en compacité, robustesse et rapidité. L’objectif est de montrer l’apport des technologies modernes en instrumentation, d’améliorer la portabilité du dispositif, et de faciliter l’acquisition et l’analyse des données.
 
 \newpage
 
@@ -96,11 +96,12 @@ Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les élé
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{Images/Montage_Scintillateurs.png}
+  \includegraphics[width=0.9\textwidth]{Images/Montage_Scintillateurs.png}
   \caption{Photo du montage de détection. Trois scintillateurs sont superposé, reliés au PMTs et à la chaîne électronique.}
   \label{fig:setup}
 \end{figure}
 
+\newpage
 
 \subsection{Scintillateur plastique}
 
@@ -115,31 +116,26 @@ Convertir l’énergie déposée par une particule chargée en lumière visible,
 
 % --- FIN ENCADRÉ DÉBUT ---
 
-Les scintillateurs plastiques sont des matériaux organiques capables de convertir l'énergie déposée par une particule chargée en lumière visible (scintillation). Cette technique, parmi les plus anciennes et les plus répandues pour la détection de rayonnements ionisants, repose sur la fluorescence rapide de molécules organiques intégrées dans une matrice polymère (typiquement polystyrène ou polyvinyltoluène).
+Les scintillateurs plastiques, matériaux organiques, convertissent l'énergie déposée par une particule chargée en lumière visible via la fluorescence rapide de molécules dans une matrice polymère (polystyrène ou polyvinyltoluène).
 
-Un scintillateur plastique idéal doit :
+Un scintillateur idéal doit :
 \begin{itemize}
-    \item Posséder une efficacité élevée de conversion de l'énergie déposée en lumière détectable ;
-    \item Présenter une réponse linéaire (le rendement lumineux est proportionnel à l'énergie déposée sur une large gamme) ;
-    \item Être transparent à sa propre émission pour maximiser la collecte de lumière ;
-    \item Avoir un temps de décroissance de la luminescence très court (typiquement 1--3~ns), permettant la génération de signaux rapides ;
-    \item Être de bonne qualité optique et disponible en grandes dimensions ;
-    \item Avoir un indice de réfraction proche de celui du verre ($\sim$1,5) pour un couplage efficace avec les photodétecteurs.
+    \item Convertir efficacement l'énergie déposée en lumière détectable ;
+    \item Présenter une réponse lumineuse linéaire ;
+    \item Être transparent à sa propre émission ;
+    \item Avoir un temps de décroissance très court (1--3~ns) ;
+    \item Être optiquement pur, disponible en grandes dimensions ;
+    \item Avoir un indice de réfraction proche du verre ($\sim$1,5).
 \end{itemize}
-Aucun matériau ne satisfait parfaitement tous ces critères, mais les scintillateurs plastiques constituent un compromis très avantageux pour la détection de particules chargées (électrons, muons, protons, etc.), en particulier lorsqu'une grande rapidité et une géométrie flexible sont requises.
+Bien qu'aucun matériau ne remplisse parfaitement ces critères, les scintillateurs plastiques offrent un excellent compromis pour détecter rapidement des particules chargées avec une géométrie flexible.
 
-\paragraph{Mécanisme de scintillation organique~:} L'excitation d'une molécule organique par le passage d'une particule ionisante conduit à la formation d'états électroniques excités (singlets et triplets). Après relaxation rapide vers le premier état excité singulet, la désexcitation vers l'état fondamental s'accompagne de l'émission d'un photon (fluorescence rapide). La majeure partie de la lumière utile provient de cette fluorescence prompte, dont la durée de vie est de l'ordre de quelques nanosecondes. Les processus plus lents (phosphorescence, fluorescence retardée) sont négligeables pour la détection en mode impulsionnel.
+\textbf{Mécanisme de scintillation organique~:} L'excitation d'une molécule organique par le passage d'une particule ionisante conduit à la formation d'états électroniques excités (singlets et triplets). Après relaxation rapide vers le premier état excité singulet, la désexcitation vers l'état fondamental s'accompagne de l'émission d'un photon (fluorescence rapide). La majeure partie de la lumière utile provient de cette fluorescence prompte, dont la durée de vie est de l'ordre de quelques nanosecondes. Les processus plus lents (phosphorescence, fluorescence retardée) sont négligeables pour la détection en mode impulsionnel.
 
-\paragraph{Caractéristiques pratiques~:} Les scintillateurs plastiques sont disponibles sous forme de plaques, barres, fibres ou formes personnalisées. Leur rendement lumineux atteint typiquement 60--70\% de celui de l'anthracène (référence), avec une émission maximale autour de 400--430~nm (bleu/violet), bien adaptée aux photomultiplicateurs et SiPM. Leur atténuation optique (distance sur laquelle l'intensité lumineuse est divisée par deux) varie de quelques dizaines à plusieurs centaines de centimètres selon la pureté et la formulation. Leur densité ($\sim$1,03~g/cm$^3$) et leur forte teneur en hydrogène les rendent également sensibles aux neutrons rapides.
-
-\paragraph{Avantages et limites~:} Les scintillateurs plastiques sont rapides, robustes, peu coûteux et facilement usinables en grandes surfaces. Leur rendement lumineux est inférieur à celui des cristaux inorganiques (NaI, CsI), mais leur rapidité et leur flexibilité géométrique les rendent incontournables en physique des particules (détecteurs de trajectoire, calorimètres, télescopes à muons, etc.). Leur réponse est linéaire pour les électrons et muons relativistes, mais moins efficace pour les particules lourdes (protons, $\alpha$) à cause du quenching (effet de Birks).
-
+\textbf{Avantages et limites~:} Les scintillateurs plastiques sont rapides, robustes, peu coûteux et facilement usinables en grandes surfaces. Leur rendement lumineux est inférieur à celui des cristaux inorganiques (NaI, CsI), mais leur rapidité et leur flexibilité géométrique les rendent incontournables en physique des particules (détecteurs de trajectoire, calorimètres, télescopes à muons, etc.). Leur réponse est linéaire pour les électrons et muons relativistes, mais moins efficace pour les particules lourdes (protons, $\alpha$) à cause du quenching (effet de Birks).
 
 \begin{remarque}
 \textbf{Synthèse~:} Les scintillateurs plastiques offrent une détection rapide et fiable des particules chargées, avec un bon compromis entre rendement lumineux, rapidité et robustesse. Ici, le choix du scintillateur plastique est motivé par la recherche d’une excellente précision temporelle (et non énergétique), indispensable pour la détection en coïncidence des muons.
 \end{remarque}
-
-
 
 \subsection{Photomultiplicateur (PM)}
 
@@ -162,13 +158,11 @@ Amplifier les faibles signaux lumineux issus du scintillateur pour obtenir une i
   \label{fig:pm_scintillator}
 \end{figure}
 
-\paragraph{Structure}
-Ce tube sous vide comporte une photocathode (effet photoélectrique) et une série de dynodes (multiplicateur d'électrons) en cascade. La photocathode convertit les photons incidents en électrons (photoélectrons) par effet photoélectrique. Ces électrons sont ensuite accélérés et multipliés à chaque dynode par émission secondaire, aboutissant à un signal final amplifié de $10^6$ à $10^{10}$ électrons collectés à l'anode.
+\textbf{Structure}
+Ce tube sous vide comporte une photocathode et une série de dynodes en cascade. La photocathode convertit les photons incidents en électrons par effet photoélectrique. Ces électrons sont ensuite accélérés et multipliés à chaque dynode par émission secondaire, aboutissant à un signal final amplifié de $10^6$ à $10^{10}$ électrons collectés à l'anode.
 
-La réponse temporelle d'un PM est rapide (quelques ns), et la linéarité de l'amplification permet de conserver l'information sur l'intensité lumineuse initiale. Les PM sont disponibles dans une grande variété de tailles et de sensibilités spectrales (UV, visible, proche IR). Leur efficacité quantique (rapport entre le nombre d'électrons émis et le nombre de photons incidents) atteint typiquement 20--30\%.
-
-\paragraph{Caractéristiques et limitations}
-Les PM présentent une excellente linéarité, une faible contribution au bruit, et une grande rapidité. Cependant, ils sont sensibles aux champs magnétiques, nécessitent une alimentation haute tension (typiquement 1500 V), et doivent être protégés de la lumière ambiante pour éviter les dommages. Le bruit de fond (courant d'obscurité) provient principalement de l'émission thermique d'électrons à la photocathode, mais reste négligeable pour la détection de signaux intenses comme ceux des muons cosmiques.
+\textbf{Caractéristiques et limitations}
+Les PM présentent une excellente linéarité, une faible contribution au bruit, et une grande rapidité (réponse temporelle de quelques ns). Cependant, ils sont sensibles aux champs magnétiques, nécessitent une alimentation haute tension (typiquement 1500 V), et doivent être protégés de la lumière ambiante pour éviter les dommages. Le bruit de fond (courant d'obscurité) provient principalement de l'émission thermique d'électrons à la photocathode, mais reste négligeable pour la détection de signaux intenses comme ceux des muons cosmiques.
 
 \begin{remarque}
 \textbf{Synthèse~:} Les photomultiplicateurs (PM) offrent une conversion et une amplification très efficaces de la lumière en signal électrique. Toutefois, leur fonctionnement impose des contraintes importantes, notamment une forte dépendance à des tensions d’alimentation élevées et une sensibilité accrue aux perturbations environnementales, susceptibles d’amplifier des signaux parasites.
@@ -182,34 +176,47 @@ Les PM présentent une excellente linéarité, une faible contribution au bruit,
 \vspace{1em}
 \begin{center}
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la chaîne électronique]
-L’objectif de la chaîne électronique est d’assurer le traitement, le filtrage et la sélection des signaux issus des détecteurs afin de ne retenir que les événements pertinents. Elle permet d’optimiser le rapport signal/bruit, essentiel pour une détection fiable et sélective des muons cosmiques.
+La chaîne électronique traite, filtre et sélectionne les signaux détectés pour isoler les événements pertinents, optimisant ainsi le rapport signal/bruit.
 \end{tcolorbox}
 \end{center}
 
-% --- FIN ENCADRÉ DÉBUT ---
-Voici les principaux instruments analogiques utilisés et leur rôle dans l’expérience :
-
-\begin{itemize}
-  \item \textbf{Générateur haute tension} : Alimente les photomultiplicateurs (PM) avec une tension réglable typiquement entre 800 et 2100~V. Un réglage précis de la HT permet d’optimiser le gain du PM.
-  \item \textbf{Circuit RC (filtre)} : Placé en sortie du PM, il permet de supprimer la composante continue et d’adapter la forme du signal pour l’amplification. Le circuit RC élimine les signaux lents et ne laisse passer que les impulsions rapides des muons.
-  \item \textbf{Amplificateur} : Il augmente l’amplitude des signaux issus du PM pour les rendre exploitables par les modules suivants.
-  \item \textbf{Discriminateur} : Ce module compare le signal amplifié à un seuil réglable (THR). Seules les impulsions dépassant ce seuil génèrent une sortie logique standard.
-  \item \textbf{Retardateur} : Permet de décaler temporellement un signal logique afin d’ajuster la synchronisation entre plusieurs voies. Il est utile pour tester le taux de coïncidences fortuites ou pour compenser des différences de longueur de câble.
-  \item \textbf{Module de coïncidence} : Combine les signaux logiques issus de plusieurs discriminateurs. Il délivre une impulsion uniquement si tous les signaux d’entrée arrivent dans une fenêtre temporelle variable (typiquement 10–50~ns). Cela permet de sélectionner les événements où un muon traverse plusieurs détecteurs simultanément.
-  \item \textbf{Compteur} : Enregistre le nombre d’impulsions issues du module de coïncidence pendant une durée donnée. Il permet de mesurer le taux de détection.
-  \item \textbf{Oscilloscope} : Permet de visualiser en temps réel les signaux analogiques à chaque étape de la chaîne (sortie PM, amplificateur, discriminateur). Il est essentiel pour ajuster les seuils et vérifier la forme des impulsions.
-  \item \textbf{TAC} : Convertit le délai entre deux signaux en une tension proportionnelle.
-\end{itemize}
-
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{Images/Montage_Electrique.png}
-  \caption{Photo des principaux modules électroniques utilisés : générateur HT, amplificateur, discriminateur, delay, coïncidence, compteur, oscilloscope Tektronix.}
+  \includegraphics[width=0.7\textwidth]{Images/Montage_Electrique.png}
+  \caption{Photo des principaux modules électroniques utilisés.}
   \label{fig:photo_instruments}
 \end{figure}
 
+% --- FIN ENCADRÉ DÉBUT ---
+
+\begin{center}
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Instrument utilisés} & \textbf{Rôle dans l’expérience} \\
+\hline
+Générateur HT & Alimente les PM avec une tension réglable pour ajuster le gain. \\
+\hline
+Circuit RC (filtre) & Supprime la composante continue, laisse passer les impulsions rapides. \\
+\hline
+Amplificateur & Augmente l’amplitude des signaux du PM. \\
+\hline
+Discriminateur & Ne laisse passer que les impulsions franchissant un seuil défini. \\
+\hline
+Retardateur & Décale un signal pour synchroniser ou tester les coïncidences fortuites. \\
+\hline
+Module de coïncidence & Sélectionne les événements simultanés sur plusieurs détecteurs. \\
+\hline
+Compteur & Compte les impulsions de coïncidence. \\
+\hline
+Oscilloscope & Visualise les signaux pour réglages et vérifications. \\
+\hline
+TAC & Convertit un délai entre deux signaux en tension. \\
+\hline
+\end{tabular}
+\end{center}
+
 \begin{remarque}
-\textbf{Synthèse~:} La chaîne électronique joue un rôle essentiel dans l’extraction des signaux utiles, leur traitement et leur analyse — qu’il s’agisse de mesurer le taux de détection ou de comptabiliser les coïncidences — tout en supprimant efficacement le bruit de fond. Il s'agit d'optimiser les parametres de tout ces composants pour maximiser la qualité des données collectées.
+\textbf{Synthèse~:} La chaîne électronique joue un rôle essentiel dans l’extraction des signaux utiles, leur traitement et leur analyse. Il s'agit d'optimiser les parametres de tout ces composants pour maximiser la qualité des données collectées.
 \end{remarque}
 
 
@@ -580,9 +587,9 @@ Si $\tfrac{L(0)}{\Lambda_\mu}$ n'est pas trop grand (typiquement 1--3), on peut 
 \[
 \exp\!\Bigl(-\tfrac1{\cos\theta}\tfrac{X(0)}{\Lambda_\mu}\Bigr)\sim\cos^n\theta
 \]
-pour un certain~$n$. Les valeurs réalistes donnent effectivement un $n\approx2$. En réalité, le spectre en énergie entre aussi en jeu : les muons plus inclinés doivent avoir une énergie plus grande pour survivre (sinon ils se désintègrent en route), ce qui modifie légèrement l'exposant~$n$ en fonction du seuil d'énergie considéré. 
+pour un certain~$n$. Les valeurs réalistes donnent effectivement un $n\approx2$. En réalité, le spectre en énergie entre aussi en jeu : les muons plus inclinés doivent avoir une énergie plus grande pour survivre (sinon ils se désintègrent en route), ce qui modifie légèrement l'exposant~$n$ en fonction du seuil d'énergie considéré. Néanmoins, dans l'intervalle $0^\circ \le \theta \leq 60^\circ$, on peut consid\'erer la loi $\cos^2\theta$ comme une bonne approximation pour le flux muonique au niveau de la mer.
 
-On osberve que la méthode de mesure n'est pas entierment satisfaisante.
+On osberve que la méthode de mesure n'est pas entierement satisfaisante.
 Si on arrive à mettre en évidence une tendance, la modelisation des données est assez aproximative.
 C'est pourquoi on peut alors utiliser un autre dispositif experimental.
 
