@@ -162,7 +162,7 @@ Amplifier les faibles signaux lumineux issus du scintillateur pour obtenir une i
 Ce tube sous vide comporte une photocathode et une série de dynodes en cascade. La photocathode convertit les photons incidents en électrons par effet photoélectrique. Ces électrons sont ensuite accélérés et multipliés à chaque dynode par émission secondaire, aboutissant à un signal final amplifié de $10^6$ à $10^{10}$ électrons collectés à l'anode.
 
 \textbf{Caractéristiques et limitations}
-Les PM présentent une excellente linéarité, une faible contribution au bruit, et une grande rapidité (réponse temporelle de quelques ns). Cependant, ils sont sensibles aux champs magnétiques, nécessitent une alimentation haute tension (typiquement 1500 V), et doivent être protégés de la lumière ambiante pour éviter les dommages. Le bruit de fond (courant d'obscurité) provient principalement de l'émission thermique d'électrons à la photocathode, mais reste négligeable pour la détection de signaux intenses comme ceux des muons cosmiques.
+Les PM présentent une excellente linéarité, une faible contribution au bruit, et une grande rapidité (réponse temporelle de quelques ns). Cependant, ils sont sensibles aux champs magnétiques, nécessitent une alimentation haute tension (HT) (typiquement 1500 V), et doivent être protégés de la lumière ambiante pour éviter les dommages. Le bruit de fond (courant d'obscurité) provient principalement de l'émission thermique d'électrons à la photocathode, mais reste négligeable pour la détection de signaux intenses comme ceux des muons cosmiques.
 
 \begin{remarque}
 \textbf{Synthèse~:} Les photomultiplicateurs (PM) offrent une conversion et une amplification très efficaces de la lumière en signal électrique. Toutefois, leur fonctionnement impose des contraintes importantes, notamment une forte dépendance à des tensions d’alimentation élevées et une sensibilité accrue aux perturbations environnementales, susceptibles d’amplifier des signaux parasites.
@@ -228,20 +228,20 @@ TAC & Convertit un délai entre deux signaux en tension. \\
 
 \begin{center}
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de l’étude du signal]
-Analyser la forme, l’amplitude et la dépendance du signal détecté pour optimiser les réglages et garantir la qualité des mesures.
+L’étude du signal issu de la détection d’un muon cosmique à l’aide d’un scintillateur plastique permet d’accéder à des informations précieuses sur la dynamique de la chaîne d’acquisition. Il s’agit d’analyser la forme, l’amplitude et la dépendance du signal détecté pour optimiser les réglages et garantir la qualité des mesures.
 \end{tcolorbox}
 \end{center}
 
 % --- FIN ENCADRÉ DÉBUT ---
 
-L’étude du signal issu de la détection d’un muon cosmique à l’aide d’un scintillateur plastique permet d’accéder à des informations précieuses sur la dynamique de la chaîne d’acquisition. Le signal typique, mesuré à l’oscilloscope, présente une décroissance exponentielle caractéristique, liée à la désexcitation des molécules du scintillateur, ainsi qu’une remontée associée à la réponse de l’électronique (constante de temps RC).
-
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Images/Desexitation_Scintillateur_2.png}
-    \caption{Exemple de signal mesuré sur un muon cosmique, avec ajustements exponentiels sur la descente et la montée.}
-    \label{fig:signal-muon}
+  \centering
+  \include{scintillateur}
+  \caption{Schéma de la chaîne électronique utilisée pour visualiser le signal d’un muon cosmique.}
+  \label{fig:scintillator}
 \end{figure}
+
+Le signal typique, mesuré à l’oscilloscope, présente une décroissance exponentielle caractéristique, liée à la désexcitation des molécules du scintillateur, ainsi qu’une remontée associée à la réponse de l’électronique (constante de temps RC).
 
 L’ajustement de deux exponentielles (descente et montée) sur les données expérimentales permet d’extraire deux constantes de temps :
 \begin{itemize}
@@ -249,12 +249,19 @@ L’ajustement de deux exponentielles (descente et montée) sur les données exp
     \item $\tau_{RC}$ : constante de temps de la chaîne électronique (filtrage RC)
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/Desexitation_Scintillateur_2.png}
+    \caption{Exemple de signal mesuré sur un muon cosmique, avec ajustements exponentiels sur la descente et la montée.}
+    \label{fig:signal-muon}
+\end{figure}
+
 \begin{remarque}
 \textbf{Synthèse~:} L’ajustement exponentiel du signal mesuré a permis d’extraire deux constantes caractéristiques~: $\tau_{\text{scint}} = 1{,}57$~ns (désexcitation du scintillateur) et $\tau_{RC} = 3{,}25$~ns (réponse de la chaîne électronique). La valeur obtenue pour $\tau_{\text{scint}}$ est parfaitement cohérente avec les propriétés attendues pour un scintillateur plastique, confirmant l’analyse temporelle réalisée.
 Le même processus a été appliqué aux autres scintillateurs. Des constantes similaires ont été obtenues, confirmant la nature des scintillateurs plastiques utilisés.
 \end{remarque}
 
-
+\newpage
 
 \subsection{Optimisation conjointe de la haute tension et du seuil du discriminateur}
 
@@ -263,26 +270,19 @@ Le même processus a été appliqué aux autres scintillateurs. Des constantes s
 \vspace{1em}
 \begin{center}
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Optimisation conjointe des réglages électroniques]
-Pour maximiser la détection des muons cosmiques tout en minimisant le bruit de fond, il est essentiel d’ajuster simultanément la haute tension (HT) appliquée au photomultiplicateur et le seuil du discriminateur.
+Pour maximiser la détection des muons cosmiques tout en minimisant le bruit de fond, il est essentiel d’ajuster simultanément la HT appliquée au PM et le seuil du discriminateur.
 \end{tcolorbox}
 \end{center}
 
 % --- FIN ENCADRÉ DÉBUT ---
 
-\paragraph{Démarche expérimentale~:}
-Pour chaque scintillateur, nous avons mesuré le nombre d’événements détectés en fonction du seuil du discriminateur, pour plusieurs valeurs de HT. Cette cartographie permet d’identifier la zone optimale où le taux de détection des muons est maximal et le bruit de fond minimal.
+\textbf{Démarche expérimentale~:}
+Pour chaque scintillateur, nous avons mesuré le nombre d’événements détectés en fonction du seuil du discriminateur, pour plusieurs valeurs de haute-tension. Cette cartographie est censée permettre d’identifier la zone optimale où le taux de détection des muons est maximal et le bruit de fond minimal.
 
-\begin{figure}[!h]
-  \centering
-  \include{variationHT}
-  \caption{Schéma de la chaîne électronique utilisée pour faire varier la haute tension du PM}
-  \label{fig:variation_HT}
-\end{figure}
-
-\begin{figure}[!h]
+\begin{figure}[H]
   \centering
   \include{treshold}
-  \caption{Schéma de la chaîne électronique utilisée pour faire varier le seuil du discriminateur.}
+  \caption{Schéma de la chaîne électronique utilisée pour faire varier la haute tension et le seuil du discriminateur.}
   \label{fig:variation_seuil}
 \end{figure}
 
@@ -292,7 +292,6 @@ Pour chaque scintillateur, nous avons mesuré le nombre d’événements détect
     \centering
     \includegraphics[width=0.7\textwidth]{Images/Threshold_Scintillateur_1.png}
     \caption{Nombre d’événements détectés en fonction du seuil pour différentes HT (Scintillateur 1).
-    Les valeurs de HT utilisées sont 2000~V (rouge), 1950~V(vert) et 1900~V (bleu).
     On observe l'absence de palier net, ce qui rend l'optimisation difficile, en plus d'un nombre de count anormalement élevé.}
     \label{fig:optimisation_scint1}
 \end{figure}
@@ -346,7 +345,7 @@ Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispe
 Ces valeurs permettent de maximiser le taux de détection des muons tout en minimisant le bruit de fond. Elles permettent aussi d'avoir un nombre de count similaire entyre détecteurs.
 \end{remarque}
 
-
+\newpage
 
 \section{Détection par coïncidence}
 
@@ -439,6 +438,7 @@ Nous avons aussi estimé le nombre de coïncidences fortuites, c’est-à-dire l
 
 Cette méthode permet donc d’estimer précisément la pureté du signal et de quantifier la part de coïncidences réellement attribuables au passage de muons, en soustrayant le fond mesuré avec délai au signal total.
 
+\newpage
 
 \subsection{Résultats expérimentaux}
 \subsubsection{Coïncidence à 2 scintillateurs}
@@ -450,18 +450,21 @@ Pour chaque largeur de fenêtre de coïncidence (width), on a mesuré :
     \item le nombre total de coïncidences enregistrées en 4 minutes (sans délai)~;
     \item le nombre de coïncidences fortuites (avec un délai de 63~ns appliqué sur l’un des signaux, ce qui supprime les vraies coïncidences muoniques)~;
     \item la différence entre les deux, qui correspond au nombre de “vrais” muons détectés.
+    \item le ratio entre le nombre de vraies coïncidences et le nombre de coïncidences fortuites, indicateur direct de la pureté du signal.
 \end{itemize}
 
-On observe que lorsque la fenêtre de coïncidence est large, le nombre de coïncidences fortuites augmente fortement, tandis que pour des fenêtres plus étroites, la proportion de vrais muons devient dominante. Ce protocole permet donc d’optimiser le réglage du width pour maximiser la pureté du signal muonique tout en conservant un nombre d’événements suffisant.
+On observe que le nombre de coïncidences fortuites augmente avec la largeur de la fenêtre de coïncidence. Ce protocole permet donc d’optimiser le réglage du width pour maximiser la pureté du signal muonique tout en conservant un nombre d’événements suffisant.
 
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/Coincidences_2_Scintillateurs.png}
     \caption[Nombre d’évènement en 4 min en fonction du seuil]{Nombre d’évènement en 4min en fonction du seuil pour 2 scintillateurs en coïncidence.
     On voit que le nombre de coïncidences fortuites augmente fortement avec la largeur de fenêtre, tandis que le nombre de vrais muons détectés reste relativement stable et forme un palier au valeures de width optimales.}
     \label{fig:coincidences_2_scintillateurs}
 \end{figure}
+
+\newpage
 
 \subsubsection{Coïncidence à 3 scintillateurs}
 
@@ -476,18 +479,18 @@ Ces valeurs ont été choisies à partir des optimisations précédentes.
 Pour chaque largeur de fenêtre de coïncidence (width), on a mesuré :
 \begin{itemize}
     \item le nombre total de coïncidences enregistrées en 10 minute (sans délai)~;
-    \item le nombre de coïncidences fortuites (avec deux délais appliqués sur les signaux des scintillateurs 2 et 3, supprimant ainsi les vraies coïncidences muoniques)~;
+    \item le nombre de coïncidences fortuites (avec deux délais différents)~;
     \item la différence entre les deux, qui correspond au nombre de “vrais” muons détectés~;
     \item le ratio entre le nombre de vraies coïncidences et le nombre de coïncidences fortuites, indicateur direct de la pureté du signal.
 \end{itemize}
 
-On constate que l’utilisation de trois scintillateurs permet de réduire drastiquement le nombre de coïncidences fortuites, et que le ratio signal/bruit devient très élevé pour des fenêtres de coïncidence raisonnables. Ce protocole permet donc d’obtenir un signal muonique extrêmement pur, au prix d’un nombre d’événements plus faible.
+On constate que l’utilisation de trois scintillateurs permet de réduire le nombre de coïncidences fortuites, et que le ratio signal/bruit devient plus élevé. Ce protocole permet donc d’obtenir un signal muonique pur, au prix d’un nombre d’événements plus faible.
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/Coincidences_3_Scintillateurs.png}
     \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 10 min en fonction du seuil pour 3 scintillateurs en coïncidence.
-    Les coïncidences fortuites sont plus importantes que pour 2 scintillateurs, la ou l'incidence des muons est la même. Le choix de la width optimale est crucial pour maximiser le nombre de vrais muons détectés tout en minimisant le bruit de fond. On observe que pour une width de 20 ns, le taux de coïncidences fortuites est  faible , ce qui permet d’obtenir un signal muonique sensiblement pur.}
+    Le choix de la width optimale est crucial pour maximiser le nombre de vrais muons détectés tout en minimisant le bruit de fond. On observe que pour une width de 20 ns, le taux de coïncidences fortuites est  faible , ce qui permet d’obtenir un signal muonique sensiblement pur.}
     \label{fig:coincidences_3_scintillateurs}
   \end{figure}
 
@@ -513,7 +516,7 @@ Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispe
 Ces résultats montrent que l’ajout d’un troisième scintillateur permet d’obtenir un signal muonique extrêmement pur, au prix d’un nombre d’événements plus faible. Le réglage fin de la fenêtre de coïncidence est donc crucial pour maximiser la pureté du signal tout en conservant une statistique exploitable.
 \end{remarque}
 
-
+\newpage
 
 \section{Distribution angulaire du flux muonique}
 L'un des caract\`eres notables du rayonnement cosmique muonique au niveau du sol est son anisotropie en angle \text{\'enithal}. Les muons proviennent majoritairement de la verticale, c'est-\`a-dire de la direction du \text{\'enith} (car ils sont g\'en\'er\'es en haute atmosph\`ere et suivent grossi\`erement des trajectoires quasi-rectilignes vers le bas). Plus l'angle~$\theta$ par rapport \`a la verticale augmente (muons venant rasants de l'horizon), plus le parcours dans l'atmosph\`ere est long, et donc plus la probabilit\'e de survie du muon jusqu'au sol diminue. Ce ph\'enom\`ene se traduit par une loi empirique proche de
