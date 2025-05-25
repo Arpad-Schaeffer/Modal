@@ -328,6 +328,7 @@ Lors de l’optimisation conjointe du seuil et de la haute tension, plusieurs di
     \item \textbf{Absence de palier net} : il était difficile d’identifier un palier clair dans la courbe de comptage ; lorsque l’on s’en approchait, le nombre de counts devenait trop faible pour modéliser correctement la zone.
     \item \textbf{Durée d’acquisition limitée} : chaque point correspond à un count par minute ; augmenter la durée pour améliorer la statistique aurait nécessité un temps d’acquisition très long (nombre de seuils $\times$ temps d’acquisition $\times$ 3 scintillateurs $\times$ nombre de tensions).
     \item \textbf{Variabilité d’un jour à l’autre} : les mesures n’étaient pas reproductibles d’un jour à l’autre, traduisant une grande sensibilité aux réglages de HT et de seuil.
+    \item \textbf{Ratio signal/bruit inattendu} : on s’attendait à ce que le ratio (nombre de vrais muons détectés divisé par le nombre de fausses coïncidences) soit plus grand pour 3 scintillateurs que pour 2, mais nous avons observé l’inverse. Cela peut s’expliquer par le très faible nombre de détections, malgré un temps d’acquisition de 10 minutes, ce qui augmente l’incertitude statistique et peut fausser le ratio mesuré. Il est aussi possible qu’une défaillance ou une usure d'un des scintillateurs ait fortement réduit la zone de détection réelle (plus petite que la surface du scintillateur), ce qui diminue le nombre de “vrais” muons détectés. À noter que pour les mesures à 2 scintillateurs, nous avions sélectionné les deux détecteurs les plus efficaces, ce qui a permis d’obtenir de meilleures données.
 \end{itemize}
 Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispersion des résultats.
 \end{tcolorbox}
@@ -386,7 +387,7 @@ Dans un détecteur isolé, le taux de comptage brut inclut non seulement les év
     \item \textbf{Rayons cosmiques secondaires} autres que les muons (particules $\alpha$, neutrons, électrons) stoppés dans le matériau.
 \end{itemize}
 
-Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes fictifs à un taux non négligeable.
+Pris individuellement, un scintillateur + PM peut ainsi enregistrer des comptes fictfs à un taux non négligeable.
  Il est donc essentiel de discriminer les signaux “muon” authentiques du bruit de fond.
 
 \begin{figure}[H]
@@ -490,7 +491,7 @@ On constate que l’utilisation de trois scintillateurs permet de réduire le no
     \centering
     \includegraphics[width=0.8\textwidth]{Images/Coincidences_3_Scintillateurs.png}
     \caption[Nombre d’évènement en 4min en fonction du seuil]{Nombre d’évènement en 10 min en fonction du seuil pour 3 scintillateurs en coïncidence.
-    Le choix de la width optimale est crucial pour maximiser le nombre de vrais muons détectés tout en minimisant le bruit de fond. On observe que pour une width de 20 ns, le taux de coïncidences fortuites est  faible , ce qui permet d’obtenir un signal muonique sensiblement pur.}
+    Le choix de la width optimale est crucial pour maximiser le nombre de vrais muons détectés tout en minimisant le bruit de fond. On observe que pour une width de 20 ns, le taux de coïncidences fortuites est faible tout en ayant un nombre de coïncidences raisonnable, ce qui permet d’obtenir un signal muonique sensiblement pur.}
     \label{fig:coincidences_3_scintillateurs}
   \end{figure}
 
@@ -503,6 +504,7 @@ Lors des mesures de coïncidences (notamment à 3 scintillateurs), plusieurs dif
     \item \textbf{Nombre de coïncidences très faible} : surtout avec 3 scintillateurs, le taux de coïncidences était très bas, nécessitant des temps d'acquisition très longs (parfois 10 minutes par point), ce qui a rendu les manipulations longues et sujettes à de grandes incertitudes statistiques.
     \item \textbf{Différences entre scintillateurs} : le nombre de coïncidences à 2 scintillateurs dépendait fortement de la paire choisie, les scintillateurs étant très différents en efficacité. De nombreux tests ont été nécessaires pour choisir la meilleure combinaison.
     \item \textbf{Retard dans les câbles} : le retard dû à la longueur des câbles diffère selon le scintillateur. Nous avons supposé cet effet négligeable, mais il a pu influencer les mesures.
+    \item \textbf{Ratio signal/bruit inattendu} : on s’attendait à ce que le ratio (nombre de vrais muons détectés divisé par le nombre de fausses coïncidences) soit plus grand pour 3 scintillateurs que pour 2, mais nous avons observé l’inverse. Cela peut s’expliquer par le très faible nombre de détections, malgré un temps d’acquisition de 10 minutes, ce qui augmente l’incertitude statistique et peut fausser le ratio mesuré. Il est aussi possible qu’une défaillance ou une usure d'un des scintillateurs ait fortement réduit la zone de détection réelle (plus petite que la surface du scintillateur), ce qui diminue le nombre de “vrais” muons détectés. À noter que pour les mesures à 2 scintillateurs, nous avions sélectionné les deux détecteurs les plus efficaces, ce qui a permis d’obtenir de meilleures données.
 \end{itemize}
 Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispersion des résultats.
 \end{tcolorbox}
@@ -511,9 +513,9 @@ Ces limitations ont rendu l’optimisation fine difficile et expliquent la dispe
 % --- Synthèse résultats coïncidences ---
 
 \begin{remarque}
-\textbf{Synthèse~:} Pour la coïncidence à 2 scintillateurs, la largeur de fenêtre optimale retenue est de \textbf{20 ns}, ce qui permet d’obtenir un taux de coïncidences fortuites inférieur à \textbf{10\%} du total. Pour 3 scintillateurs, une fenêtre de \textbf{20 ns} rend le taux de coïncidences fortuites négligeable.
+\textbf{Synthèse~:} Pour la coïncidence à 2 scintillateurs, la largeur de fenêtre optimale retenue est de \textbf{20 ns}, ce qui permet d’obtenir un taux de coïncidences fortuites inférieur à \textbf{10\%} du total. Pour 3 scintillateurs, une fenêtre de \textbf{20 ns} rend le taux de coïncidences fortuites faible tout en ayant un nombre de coïncidences raisonnable.
 
-Ces résultats montrent que l’ajout d’un troisième scintillateur permet d’obtenir un signal muonique extrêmement pur, au prix d’un nombre d’événements plus faible. Le réglage fin de la fenêtre de coïncidence est donc crucial pour maximiser la pureté du signal tout en conservant une statistique exploitable.
+Ces résultats étaient censés montrer que l’ajout d’un troisième scintillateur permet d’obtenir un signal muonique plus pur, au prix d’un nombre d’événements plus faible. Le réglage fin de la fenêtre de coïncidence est donc crucial pour maximiser la pureté du signal tout en conservant une statistique exploitable.
 \end{remarque}
 
 \newpage
@@ -751,7 +753,7 @@ Principe expérimental~: Pour mesurer le temps de vie du muon, nous avons config
 
   \item Un signal de stop est produit lorsqu'un scintillement ultérieur survient dans B (ou éventuellement dans C) indiquant le passage de la particule de désintégration (un électron de quelques dizaines de MeV). Ici, on utilise typiquement le scintillateur C inférieur pour détecter l'électron émis vers le bas depuis B. Le stop peut ainsi être C seul (ou B seul, mais utiliser C permet d'éviter certains bruits, car l'électron de désintégration a de fortes chances de traverser C s'il est émis vers le bas). Dans notre montage, nous avons pris comme stop le signal C sur une seconde entrée du TAC. Ainsi, dès qu'un pulse est détecté dans C après le start, le TAC s'arrête.
 
-  \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique multi‑voies (MCA) qui remplit un histogramme du nombre d’événements en fonction de V, c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
+  \item Le TAC (Time-to-Amplitude Converter) mesure le temps \(\Delta t\) entre le start \(S\) et le stop C. Chaque paire d'événements (muon stoppé puis désintégration) produit une impulsion analogique dont l'amplitude V est proportionnelle à \(\Delta t\). On envoie ces impulsions dans un convertisseur analogique‑numérique (MCA) qui remplit un histogramme du nombre d’événements en fonction de V, c'est‑à‑dire le nombre de muons désintégrés après un temps \(\Delta t\) donné dans l'absorbeur.
 \end{itemize}
 
 Pour fiabiliser la mesure, on prend quelques précautions supplémentaires : par exemple, on insère un délai et une porte logique pour ne pas prendre en compte les désintégrations trop promptes (il peut y avoir un rayonnement induit dans B juste après l’arrêt du muon, comme des rayons X de désexcitation atomique, ou un muon prompt qui traverse trop vite).
