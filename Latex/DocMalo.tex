@@ -741,7 +741,7 @@ Ces limitations expliquent les écarts observés entre la loi théorique et les 
 
 \section{Mesure du temps de vie de muon}
 
-\begin{figure}
+\begin{figure}[!h]
   \centering
   \include{verrre-au-plomb}
   \caption{Principe de la mesure du temps de vie du muon.
@@ -752,10 +752,11 @@ On place un absorbeur épais (ici en verre au plomb) pour arrêter les muons, et
 
 \begin{center}
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la mesure du temps de vie du muon]
-Un muon cosmique qui s’arrête dans l’absorbeur se désintègre avec une probabilité décroissant exponentiellement : $P(t)=\exp(-t/\tau_\mu)$ où $\tau_\mu\simeq2{,}2~\mu\text{s}$.  
+Un muon cosmique qui s’arrête dans l’absorbeur (ici du verre au plomb) se désintègre avec une probabilité décroissant exponentiellement : $P(t)=\exp(-t/\tau_\mu)$ où $\tau_\mu\simeq2{,}2~\mu\text{s}$.  
+On utilise trois scintillateurs en coïncidence comme précédemment, mais le verre au plomb joue un rôle clé : il produit un premier signal lors de l’interaction initiale du muon (lorsqu’il s’arrête), puis un second signal, plus tard, lors de la désintégration du muon en un électron détecté.  
 Le \textit{start} est déclenché quand le muon traverse les scintillateurs supérieur A et intermédiaire B mais pas le scintillateur C (anticoincidence).  
 Le \textit{stop} est enregistré lorsque l’électron de désintégration est détecté dans B ou C.  
-Le TAC convertit l’intervalle $\Delta t$ entre start et stop en une amplitude analogique qui est histogrammée pour reconstruire la loi de décroissance.
+Le TAC convertit l’intervalle $\Delta t$ entre start et stop en une amplitude analogique qui est histogrammée pour reconstruire la loi de décroissance exponentielle.
 \end{tcolorbox}
 \end{center}
 
