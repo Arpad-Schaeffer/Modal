@@ -96,7 +96,7 @@ Pour mieux comprendre la chaîne de mesure, nous décrivons ci-dessous les élé
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{Images/Montage_Scintillateurs.png}
+  \includegraphics[width=0.8\textwidth]{Images/Montage_Scintillateurs.png}
   \caption{Photo du montage de détection. Trois scintillateurs sont superposé, reliés au PMTs et à la chaîne électronique.}
   \label{fig:setup}
 \end{figure}
@@ -603,11 +603,13 @@ C'est pourquoi on peut alors utiliser un autre dispositif experimental.
   \label{fig:scintillateur}
 \end{figure}
 
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la matrice de scintillateurs]
+Au lieu de déplacer les scintillateurs pour sélectionner différents angles, on utilise une matrice fixe de scintillateurs disposés en grille (\ref{fig:matrice_scintillateur}; \ref{fig:matrice_scintillateur_2}). Chaque muon traversant la matrice active une combinaison unique de scintillateurs, ce qui permet de reconstituer sa trajectoire et donc son angle d’incidence. Cette méthode permet de mesurer simultanément le flux de muons pour plusieurs directions discrètes, tout en améliorant la pureté angulaire et la statistique des mesures.
+\end{tcolorbox}
+\end{center}
 
-Le principe est le suivant : on ne deplace plus les scintillateurs mais on en place plus. 
-On forme une matrice de scintilatteur domme on peut le voir figure \ref{fig:scintillateur} et schematisé sur la figure \ref{fig:matrice_scintillateur}.
-Ainsi, en detenctant de la même maniere les coincidences entre les scintillateur on peut retracer le trajet du muons, s'il sagit d'un muon. 
-Il faut alors prendre soin a re-optimiser les scintillateurs pour qu'ils soient tous dans la meme zone de fonctionnement.
+Il faut alors prendre soin à re-optimiser les scintillateurs pour qu'ils soient tous dans la même zone de fonctionnement.
 
 \begin{figure}[!h]
   \begin{minipage}
@@ -626,7 +628,7 @@ Il faut alors prendre soin a re-optimiser les scintillateurs pour qu'ils soient 
   \end{minipage}
 \end{figure}
 
-Il s'agit de choisir le bon treshold. Nous avons commencé par tracer grossierement les caracteristiques de deux scintillateurs aleatoirement choisis. Ces résultats sont representés figure \ref{fig:caracteristique_scintillateur_2}.
+Il s'agit de choisir le bon treshold. Nous avons commencé par tracer grossierement les caractéristiques de deux scintillateurs aleatoirement choisis. Ces résultats sont representés figure \ref{fig:caracteristique_scintillateur_2}.
  On appercoit qu'ils ont sensiblement les mêmes caractéristiques. On suppose donc que, étant de  même facture, tous se comportent sensiblement pareil. On pose donc un treshold à \textbf{TRHS = 22mV}.
 
 \begin{figure}[!h]
@@ -662,11 +664,14 @@ Les résultats obtenus sont représentés figure \ref{fig:cos2s_2}.
 
 
 \section{Mesure de l’énergie d’un muon}
+\begin{center}
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!60!black, title=Principe de la mesure de l'énergie des muons cosmiques]
+L’expérience consiste à interposer des plaques de plomb de différentes épaisseurs entre le flux de muons cosmiques et un détecteur à scintillateurs. Seuls les muons possédant une énergie suffisante pour traverser toute l’épaisseur de plomb sont détectés. Ainsi, en augmentant progressivement l’épaisseur de plomb et en mesurant le nombre de muons détectés, on observe une diminution du flux mesuré. Cette atténuation permet d’obtenir des informations sur la distribution en énergie des muons cosmiques : plus l’épaisseur est grande, plus seuls les muons les plus énergétiques sont comptés.
+\end{tcolorbox}
+\end{center}
 
-Le principe de l’expérience repose sur l’atténuation du flux de muons cosmiques lorsqu’on interpose des plaques de plomb entre les particules incidentes et un détecteur à scintillateurs. Seuls les muons ayant une énergie suffisante pour traverser l’épaisseur de plomb atteignent le détecteur.
-Ainsi, plus l’épaisseur augmente, plus le nombre de muons détectés diminue, ce qui permet d’obtenir des informations sur leur énergie.
 
-La méthode expérimentale consiste à mesurer le nombre de coups par minute $N(x)$ en fonction de l’épaisseur de plomb $x$.
+On mesure donc le nombre de coups par minute $N(x)$ en fonction de l’épaisseur de plomb $x$.
  À chaque valeur de $x$, on associe une énergie minimale $E_{\min}(x)$ nécessaire pour traverser cette épaisseur, estimée par $E_{\min}(x) \approx \frac{dE}{dx} \cdot x \approx 19.3 \cdot x$ (en MeV), en supposant une perte d’énergie moyenne constante dans le plomb.
 
 L’analyse des données repose sur l’ajustement de la courbe $N(x)$ selon une loi de puissance dérivée du spectre attendu des muons cosmiques : $N(E_{\min}) \propto E_{\min}^{1 - \gamma}$, avec $\gamma \approx 2.7$.Cela est représenté figure \ref{fig:energie_fit}.On voit que la loi n'est pas pas retrouvé ce qui est du aux imprécisions des mesures, mais le même ordre de grandeur est retrouvé.
@@ -692,7 +697,20 @@ Cependant, on observe parfois une \textit{hausse du nombre de coups pour de faib
   \end{figure}
 Les muons cosmiques perdent leur énergie dans la matière principalement par \textit{ionisation} et \textit{excitation des atomes}, mécanismes dominants à des énergies intermédiaires (de quelques centaines de MeV à quelques GeV). À plus haute énergie, des processus radiatifs comme le \textit{bremsstrahlung}, la \textit{production de paires} ou des \textit{interactions hadroniques} avec les noyaux peuvent également contribuer. Ces processus peuvent générer des \textit{particules secondaires} (électrons, photons, pions, neutrons...) susceptibles d’être détectées par les scintillateurs, en particulier dans les premières couches de plomb. Ce mécanisme explique l’excès de comptage observé pour de faibles épaisseurs.
 
-Enfin, des incertitudes statistiques (bruit de comptage de type Poissonien) et systémiques (approximation de $dE/dx$, fluctuations d’énergie déposée, biais de sélection) limitent la précision de la mesure.
+\begin{center}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!80!black, title=Problèmes et limitations de la mesure de l'énergie des muons cosmiques]
+La mesure de l’énergie des muons par atténuation dans le plomb présente plusieurs difficultés expérimentales :
+\begin{itemize}
+    \item \textbf{Production de particules secondaires~:} Les muons (ou autres particules) peuvent interagir dans le plomb et produire des électrons ou photons secondaires, qui sont aussi détectés par les scintillateurs. Cela fausse le comptage, surtout pour les faibles épaisseurs de plomb.
+    \item \textbf{Statistique limitée~:} Le flux de muons suffisamment énergétiques pour traverser de grandes épaisseurs de plomb est faible, ce qui impose des temps d’acquisition longs et augmente l’incertitude statistique.
+    \item \textbf{Imprécisions sur l’épaisseur et l’alignement~:} Les tolérances sur l’épaisseur réelle du plomb et l’alignement des plaques peuvent introduire des erreurs systématiques sur l’énergie minimale estimée.
+    \item \textbf{Hypothèses simplificatrices~:} L’estimation de l’énergie minimale repose sur une perte d’énergie moyenne constante ($dE/dx$), alors qu’en réalité il existe des fluctuations importantes (straggling) et des contributions variables selon l’énergie.
+    \item \textbf{Bruit de fond et coïncidences accidentelles~:} Des événements parasites (radioactivité, bruit électronique) peuvent être comptés à tort comme des muons traversant le plomb, surtout pour les faibles taux de comptage.
+\end{itemize}
+Ces limitations expliquent les écarts observés entre la loi théorique et les résultats expérimentaux, et imposent une interprétation prudente des mesures.
+\end{tcolorbox}
+\end{center}
+
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.7\textwidth]{Images/plot_gamma.png}
